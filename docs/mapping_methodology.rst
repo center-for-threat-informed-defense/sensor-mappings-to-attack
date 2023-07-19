@@ -49,6 +49,7 @@ Step 1:  Identify Platform Event Logs
 -------------------------------------
 
 Cyber security has emerged as an essential component of technology platforms, and consequently vendors tend to offer a variety of documentation on the security capabilities of their platform. Peruse the platform documentation (e.g. security reference architectures, security benchmarks, security documentation of various services, etc.) to identify event IDs offered by a platform for detecting workloads on the platform. Keep the following in mind while selecting event IDs:
+
 - The scope of the events mapped by this project is telemetry that can be collected by a sensor or logging system that may be used to collect information relevant to identifying the action being performed, sequence of actions, or the results of those actions by an adversary. 
 - The selected events should be native to the platform, i.e. produced by the operating system themselves. For example, event IDs developed directly in a third-party tool are considered out of scope.
 - The event IDs selected to be mapped as part of this project tend to be events that are marketed as native and made available on the platform. The intent is not to provide a mapping for all settings/features of individual platform services that are security related. This is a non-trivial undertaking that may be explored at a later time.
