@@ -25,3 +25,7 @@ The resulting mapping between Events and ATT&CK allow cyber defenders to create 
 
 We encourage you to review the mappings, use them, and tell us what you think. Please see the guidance for contributors if you are interested in `contributing <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/CONTRIBUTING.md>`_. You are also welcome to submit issues for any technical questions/concerns or contact `ctid@mitre-engenuity.org <mailto:ctid@mitre-engenuity.org>`_ directly for more general inquiries. 
 
+Notice
+------
+© 2023 MITRE Engenuity. Approved for public release. Document number PRS_NUMBER.
+This project makes use of ATT&CK®: `ATT&CK Terms of Use <https://attack.mitre.org/resources/terms-of-use/>`__
