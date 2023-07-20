@@ -28,7 +28,7 @@ Scope
 -----
 
 Security Event Scope
---------------------
+^^^^^^^^^^^^^^^^^^^^
 - Windows Security Events
 - Sysmon
 - Auditd
