@@ -35,9 +35,6 @@ Security Engineer
 Usage
 -----
 
-User Stories
-------------
-
 Understanding Current Visibility​
 SOCs can understand which techniques they have visibility into given their current set of tools and capabilities. ​
 
