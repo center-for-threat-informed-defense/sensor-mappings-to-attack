@@ -4,7 +4,7 @@ Cyber threat detections starts with understanding the data sources and sensors t
 
 Background
 ----------
-Sensor Mappings to ATT&CK helps security operations centers and security leadsers understand whether they can detect ATT&CK techniques given the data sources (sensors, logs, tools, and capabilities) available to them or, if they can't , what they can do to change that. This means they can't easily answer questions such as:
+Sensor Mappings to ATT&CK helps security operations centers and security leaders understand whether they can detect ATT&CK techniques given the data sources (sensors, logs, tools, and capabilities) available to them or, if they can't , what they can do to change that. This means they can't easily answer questions such as:
 - What's my coverage for ATT&CK techniques given my current tools? 
 - If I were to add Tool X, how does that coverage change?
 - I'm concerned about a particular technique in a recent threat report. Can I see it if it were to happen in my environment and, if so, where do I look?
