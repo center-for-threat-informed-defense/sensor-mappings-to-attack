@@ -37,3 +37,12 @@ Usage
 
 User Stories
 ------------
+
+Understanding Current Visibility​
+SOCs can understand which techniques they have visibility into given their current set of tools and capabilities. ​
+
+Filling Defensive Gaps – analytics, tools, etc.​
+SOCs can understand what tools and capabilities to acquire or enable in order to fill gaps.  ​
+
+Finding Threats​
+SOCs can understand which of their tools and capabilities to look in for specific techniques used by adversaries.​
