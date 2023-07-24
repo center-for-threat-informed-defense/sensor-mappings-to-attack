@@ -13,7 +13,7 @@ ATT&CK Data Sources do not describe fully the specific events or sensors that ca
 
 STIX Representation and Mapping Tools 
 -------------------------------------
-To make the mapping between sensors and ATT&CK easily accessible to defenders that use STIX, the mappings are also published in a machine-readable STIX 2 representation. This format uses STIX representation to represent the mappings between events and ATT&CK. 
+To make the mapping between sensor events and ATT&CK easily accessible to defenders that use STIX, the mappings are also published in a machine-readable STIX 2 representation. This format uses STIX representation to represent the mappings between sensor events and ATT&CK. 
 
 A set of Python tools is provided to support data manipulation, including the creation of new mappings and the customization of existing mappings. A command line interface (CLI) tool is available for validation of mapping file syntax, ensuring conformity to the data format specification and accurate references of ATT&CK Data Sources. The CLI tool also supports the production of ATT&CK Navigator layers and Markdown Summary visualizations from mapping files. 
 
