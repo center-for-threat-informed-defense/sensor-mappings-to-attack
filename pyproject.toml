@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{ include = "sensor_mappings_to_attack" }]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 
 
 [tool.poetry.group.dev.dependencies]
