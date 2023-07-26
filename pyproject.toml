@@ -9,6 +9,7 @@ packages = []
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pytz = "^2023.3"
 
 
 [tool.poetry.group.dev.dependencies]
