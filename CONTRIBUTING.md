@@ -6,7 +6,7 @@ Thanks for contributing to Sensor Mappings to ATT&CK!
 
 You are welcome to comment on issues, open new issues, and open pull requests.
 
-Pull requests should target the **main** branch of the repository.
+Pull requests should target the **[main](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main)** branch of the repository.
 
 Also, if you contribute any source code, we need you to agree to the following
 Developer's Certificate of Origin below.
