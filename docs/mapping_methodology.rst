@@ -25,6 +25,7 @@ components:
 Adversary behaviors can be described by mapping them to the appropriate tactics, techniques, and sub-techniques in ATT&CK. To detect these behaviors, ATT&CK has a detection section that maps directly to the collection source (data sources). 
 
 Data Sources usually fall into one of the following buckets: 
+
 - Granular basic system artifacts (e.g., process, file, registry)
 - Granular basic user activities (e.g., logon session)
 - Abstract types of system artifacts, with children as sub-types (e.g., scheduled jobs)
