@@ -32,6 +32,8 @@ Data Sources usually fall into one of the following buckets:
 
 The data source list can incorporate different variations of how the action could be performed for a particular technique. This attribute is intended to be restricted to a defined list to allow analysis of technique coverage based on unique data sources. For example, "what techniques can I detect if I have process monitoring in place?"
 
+**Data Elements:** names, definitions, and attributes that are being used or captured in an event
+
 **Sensors:** an agent or service capable of detecting or measuring information across many different sources on a host in real-time and providing raw data with high precision and accuracy 
 
 Sensors can be broken out into 2 categories: 
@@ -45,7 +47,8 @@ Sensors can be broken out into 2 categories:
       - Files, Registry
       - Scheduled Tasks, Cron Jobs, Launch Agents
       - Memory Data 
--  **Network:** data gathered from network communications, typically outbound connections
+**Network:** data gathered from network communications, typically outbound connections
+
    - Examples: 
       - Firewall Logs
       - Proxy Logs
