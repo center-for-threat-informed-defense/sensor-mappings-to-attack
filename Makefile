@@ -4,6 +4,7 @@
 
 include make/*.mk
 
+.DEFAULT_GOAL := help
 ROOTDIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 .PHONY: help

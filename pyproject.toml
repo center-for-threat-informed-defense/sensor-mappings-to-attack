@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sensor-mappings-to-attack"
+version = "1.0.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "Apache License"
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytz = "^2023.3"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^4.5.0"
+sphinx-autobuild = "^2021.3.14"
+sphinx-rtd-theme = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
