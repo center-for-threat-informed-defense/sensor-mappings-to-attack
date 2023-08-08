@@ -1,27 +1,19 @@
 # Sensor Mappings to ATT&CK
 
-<!-- TODO Put a one paragraph summary of the project here. -->
+Sensor Mappings to ATT&CK (SMTA) is a Center for Threat-Informed Defense (Center) project that
+assists security operations teams and security leaders understand which tools, capabilities, and
+events can help detect real-world adversary TTPs in their environments. SMTA builds on [MITRE ATT&CK®](https://attack.mitre.org/)
+Data Sources by connecting the conceptual data source representions of information that can be collected 
+to concrete logs, sensors, and other security capabilities that provide that type of data. This work complements
+the Center's [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) project by allowing defenders to use both resources to understand their overall defensive coverage and make threat-informed decisions.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
+<img src="./docs/_static/wmi-example.png" width="900px">
 
 **Table Of Contents:**
-
-<!--
-TODO The table of contents should include only h2-h6, NOT h1. The "Markdown All In One"
-extension for VS Code will update the TOC automatically for you:
-https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
-Set the extension's TOC:Levels setting to "2..6"
--->
 
 - [Getting Started](#getting-started)
 - [Getting Involved](#getting-involved)
 - [Questions and Feedback](#questions-and-feedback)
-- [How Do I Contribute?](#how-do-i-contribute)
 - [Notice](#notice)
 
 ## Getting Started
@@ -29,53 +21,41 @@ Set the extension's TOC:Levels setting to "2..6"
 <!-- TODO Write one paragraph about how users should get started,
      and update the table of resources below. -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
+This scope of this project includes mappings to ATT&CK Data Sources from:
+- Sysmon (all events) 
+- Windows Event Log (security-relevant events) 
+- Auditd 
+- CloudTrail 
+- OSQuery
+- ZEEK
 
-| Resource        | Description              |
-| --------------- | ------------------------ |
-| [Resource 1](#) | Description of resource. |
-| [Resource 2](#) | Description of resource. |
-| [Resource 3](#) | Description of resource. |
+The mapping structure, methodology, and scenarios are fully described in [the project website](https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/).
+
+| Resource                     | Description                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [Project Website](#)         | Documentation, methodology, and use cases.     |
+| [Mappings](#)                | In-scope sensors mapped to ATT&CK.             |
+| [ATT&CK Navigator Layers](#) | ATT&CK Navigator layers for the SMTA mappings. |
 
 ## Getting Involved
 
-<!-- TODO Add some bullets telling users how to get involved. -->
+There are several ways that you can get involved with this project and help advance
+threat-informed defense.
 
-There are several ways that you can get involved with this project and help
-advance threat-informed defense:
+Please review the mappings, use them, and tell us what you think. We welcome your review
+and feedback on the SMTA mappings, our methodology, and other resources.
 
-- **Way to get involved 1.** Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- **Way to get involved 2.** Ut enim ad minim veniam, quis nostrud exercitation ullamco
-  laboris nisi ut aliquip ex ea commodo consequat.
-- **Way to get involved 3.** Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur.
+We are interested developing additional tools and resources to help the community
+understand and make threat-informed decisions in their risk management programs. Share
+your ideas and we will consider them as we explore additional research projects.
 
 ## Questions and Feedback
 
-Please submit issues for any technical questions/concerns or contact
-[ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=Question%20about%20sensor-mappings-to-attack)
-directly for more general inquiries.
+Please submit [issues](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/issues) for any technical questions/concerns
+or contact [ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=subject=Question%20about%20sensor-mappings-to-attack) directly for more general inquiries.
 
-Also see the guidance for contributors if are you interested in contributing or simply
-reporting issues.
-
-## How Do I Contribute?
-
-We welcome your feedback and contributions to help advance
-Sensor Mappings to ATT&CK. Please see the guidance for contributors if are you
-interested in [contributing or simply reporting issues.](/CONTRIBUTING.md)
-
-Please submit
-[issues](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/issues) for
-any technical questions/concerns or contact
-[ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=subject=Question%20about%20sensor-mappings-to-attack)
-directly for more general inquiries.
+We welcome your feedback and contributions to help advance SMTA. Please see the guidance for 
+contributors if are you interested in [contributing or simply reporting issues.](/CONTRIBUTING.md)
 
 ## Notice
 
@@ -92,3 +72,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 KIND, either express or implied. See the License for the specific language governing
 permissions and limitations under the License.
+
+This project makes use of MITRE ATT&CK®
+
+[ATT&CK Terms of Use](https://attack.mitre.org/resources/terms-of-use/)
