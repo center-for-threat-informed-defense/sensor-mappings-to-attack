@@ -7,7 +7,7 @@ Data Sources by connecting the conceptual data source representions of informati
 to concrete logs, sensors, and other security capabilities that provide that type of data. This work complements
 the Center's [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) project by allowing defenders to use both resources to understand their overall defensive coverage and make threat-informed decisions.  
 
-<img src="./docs/_static/wmi-example.png" width="900px">
+<img src="./docs/_static/WMI-example.png" width="900px">
 
 **Table Of Contents:**
 
