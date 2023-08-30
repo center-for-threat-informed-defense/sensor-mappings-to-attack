@@ -73,7 +73,7 @@ After understanding the capabilities of the event ID and gathering the basic fac
 
 
 Step 1:  Identify Platform Events/Telemetry
--------------------------------------
+-------------------------------------------
 
 Sensors/Tools generate logs of real-time data that is indicative of a sequence of actions conducted by the user of a computer system. With those actions having a potential to inform a defender of adversary activity, this is the first location to look for further evidence. Typically, Sensors can be broken out into 2 categories: 
 
@@ -120,22 +120,28 @@ The most common way to bring context to the event is by applying the description
 Identify the Source of Data 
 ***************************
 
-Start with **identifying the source of data**. In a Windows environment, we can collect information pertaining to "Processes" from built-in event providers such as Microsoft-Windows-Security-Auditing and open third-party tools, including Sysmon. This step also takes into account the overall event where a process can be represented as the main data element around an adversary action. This could include actions such as a process connected to an IP address, modifying a registry, or creating a file.
+Start with **identifying the source of data**. In a Windows environment, we can collect information pertaining to "Processes" from built-in event providers such as Microsoft-Windows-Security-Auditing and open third-party tools, including Sysmon. 
 
 .. image:: _static/WSE.png
    :width: 600
 
-Documenting the data elements and descriptions will provide us with additional information that should help us to answer to questions such as:
+Think about the questions below for additional context on potential source of the data. 
 
 - *why were these security events generated in my environment? (Activity)*
 - *what operating system supports its generation? (Platform)*
-- *where were they collected? (Collection Layer)*
 
-Example: Let's use security event*4688: A new process has been created* provided by Microsoft Windows security auditing as a basic example to understand this step of the methodology. 
+Example: Let's use security event 4688: A new process has been created provided by Microsoft Windows security auditing as a basic example to understand this step of the methodology. 
 
 - The action that triggered the generation of this event was the creation of a new process (Activity). 
-- This security event can be collected by using the built-in event logging application for devices that work with the Windows operating system (Platform). 
-- Because we are working with a built-in application, this security event was collected at the host level (Collection Layer).
+- This security event can be collected by using the built-in event logging application for devices that work with the Windows operating system (Platform). Within a Windows environment, it is typically known to have a "process" as a source of data that. 
+
+
+Lets look at Sysmon EID 1, Sysmon EID 8, WinEvtx 4688, and WinEvtx 4696. The image below shows that the definition all have some correlation with either starting or executing a process. 
+
+.. image:: _static/DEF3.png
+   :width: 700
+
+This step also takes into account the overall event where a process can be represented as the main data element around an adversary action. This could include actions such as a process connected to an IP address, modifying a registry, or creating a file.
 
 Step 3: Relationship Correlation
 --------------------------------
@@ -143,35 +149,43 @@ Step 3: Relationship Correlation
 Identify the Data Element
 *************************
 
-Next in reviewing the event ID, **identify the data element**. Once we identify and understand more about sources of data that can be mapped to an ATT&CK data source, we can start identifying data elements within the event fields that could help us eventually represent adversary behavior from a data perspective. The image below displays how we can extend the concept of an event log and capture the data elements featured within it. 
+Next in reviewing the event ID, **identify the data element**. Once we identify and understand more about sources of data that can be mapped to an ATT&CK data source, we can start identifying data elements within the event fields that could help us eventually represent adversary behavior from a data perspective. 
 
-.. image:: _static/PDS.png
-   :width: 900
+The use of Data Elements help to name ATT&CK Data Sources related to the adversary behavior. For example, if an adversary modifies a Windows Registry value, collection of Windows Registry telemetry is needed. **How the adversary modified the registry, such as the process or user that performed the action, is how we pinpoint the data elements.** Below continuing on with our process example. As we think about how an adversary can create a process we are left with process, user, command, and thread. 
 
-The use of Data Elements help to name ATT&CK Data Sources related to the adversary behavior. For example, if an adversary modifies a Windows Registry value, collection of Windows Registry telemetry is needed. How the adversary modified the registry, such as the process or user that performed the action, is additional context we can leverage. 
+.. image:: _static/DE3.png
+   :width: 700
 
-.. image:: _static/DE1.png
-   :width: 500
-
-This method can also be used to provide a general idea of what is needed to be collected. For example, data elements that provide metadata about network traffic can be grouped together and be associated with Netflow.
+Identifying the main data object to collect data from and/or all the data objects that define the context of the source of data is a method that can also be applied. This method can also be used to provide a general idea of what is needed to be collected. For example, data elements that provide metadata about network traffic can be grouped together and be associated with Netflow.
 
 .. image:: _static/DE2.png
-   :width: 500
+   :width: 600
+
+The image below displays how we can extend the concept of an event log and capture the data elements featured within it. 
+
+.. image:: _static/DE5.png
+   :width: 600
+
 
 There is a fundamental rule that should be considered when defining: **there is no one correct way to define data elements**. Please look to your organizational needs to help define what data elements means to you.
 
 Identify Relationships among Data Elements
 ******************************************
 
-By documenting the event collection, source (creation of a new process), and data elements (user account and process), we can start describing **interactions among elements through relationships**. Relationships in ATT&CK have been categorized between *activity* and *information*. Activity relationships are the ones that make references to the action that triggered the generation of the event. Informational relationships are theo nes defined based on the metadata provided by the event. 
+By documenting the event collection, source (creation of a new process), and data elements (user account and process), we can start describing **interactions among elements through relationships**. Relationships in ATT&CK have been categorized between *activity* and *information*. Activity relationships are the ones that make references to the action that triggered the generation of the event. Informational relationships are the ones defined based on the metadata provided by the event. 
 
 .. image:: _static/RDE1.png
-   :width: 500
+   :width: 600
 
 As the groupings grow, the similarities appear where different platforms or sensors tend to link to the same ATT&CK Data Source. 
 
-.. image:: _static/RDE3.png
-   :width: 500
+.. image:: _static/RDE4.png
+   :width: 600
+
+As discussed by `OSSEM <https://github.com/OTRF/OSSEM>`_ at their ATT&CKcon 2018 and 2019 presentation. The activity of the relationship leads to Data Components. Data Components will help us to categorize relationships among data elements based on the security context they describe (i.e. Creation, Execution, Deletion). 
+
+.. image:: _static/RDE5.png
+   :width: 700
 
 Note: Pay attention to the differences between similar data sources and events. Two events with the same field names can represent different data. For example, process data collected from Sysmon 1, Windows Event 4688, and/or Windows Event 4696 could provide visibility into behaviors associated with T1134: Access Token Manipulation. But when looking for T1543: Create or Modify System Process, data should not be collected from Windows Event 4696 to prove adversary activity as this technique does not involve the use of system tokens. The following visuals are provided to help illustrate this example:
 
@@ -186,7 +200,7 @@ Note: Pay attention to the differences between similar data sources and events. 
 Step 4: Telemetry Source Correlation 
 ---------------------------------------------
 
-This is by far the hardest level to find for correlation because at times it requires some reverse engineering. `OSSEM <https://github.com/OTRF/OSSEM>`, `Telemetry Source <https://github.com/jsecurity101/TelemetrySource>`, and other open source research projects do a good job of explaining how they approach this process. 
+This is by far the hardest level to find for correlation because at times it requires some reverse engineering. `OSSEM <https://github.com/OTRF/OSSEM>`_, `Telemetry Source <https://github.com/jsecurity101/TelemetrySource>`_, and other open source research projects do a good job of explaining how they approach this process. 
 
 ..
    Fill in the rest for this correlation piece : Identifying Telemetry Source (ETW/Kernal Callbacks/APIs/etc.)

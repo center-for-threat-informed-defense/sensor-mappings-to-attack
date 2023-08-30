@@ -19,7 +19,6 @@ threat-informed decisions.
     :maxdepth: 2
     :caption: Contents
 
-    introduction
     overview
     use_cases
     mapping_methodology
