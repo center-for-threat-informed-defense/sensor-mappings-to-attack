@@ -56,9 +56,21 @@ Mappings are created by analyzing each in-scope event log/sensor in relation to 
 The methodology consists of the following steps:
 
 - **Identify Platform Events/Telemetry** - Identify the *native* event logs available on the platform.
-- **Event ID Review** - For each identified event, understand the security capabilities it provides.
-- **Identify Mappable ATT&CK Data Sources** - Identify the ATT&CK Data Sources mappable to event IDs.
-- **Create a Mapping** - Creating a mapping based on the information gathered from the previous steps. 
+- **Description Correlation** - For each identified event, understand the security capabilities it provides.
+- **Relationship Correlation** - Identify the ATT&CK Data Sources mappable to event IDs.
+- **Telemetry Source Correlation** - Creating a mapping based on the information gathered from the previous steps. 
+
+Adversary behaviors can be described by mapping them to the appropriate tactics, techniques, and sub-techniques in ATT&CK. To detect these behaviors, ATT&CK has a detection section that maps directly to the collection source (data sources). 
+
+`ATT&CK's Data Sources <http://attack.mitre.org/datasources/>`_ usually fall into one of the following buckets: 
+
+- Granular basic system artifacts (e.g., process, file, registry)
+- Granular basic user activities (e.g., logon session)
+- Abstract types of system artifacts, with children as sub-types (e.g., scheduled jobs)
+- Associated network traffic (e.g., wmi and registry), in such cases, it's important to capture the set of protocols that encompasses this traffic, so that users may understand where they need to look in their logs/PCAPs/DPI appliances/etc.
+
+After understanding the capabilities of the event ID and gathering the basic facts about its operation, as identified in the previous step, review the ATT&CK matrix and identify the data source the event is able to detect. 
+
 
 Step 1:  Identify Platform Events/Telemetry
 -------------------------------------
@@ -91,9 +103,6 @@ Sensors/Tools generate logs of real-time data that is indicative of a sequence o
 
 Sensor documentation on the security capabilities of each platform (e.g., security reference architectures, security benchmarks, security documentation of various services) is reviewed to identify event IDs offered by the platform for detecting workloads on the platform. 
 
-..
-   more info about events/telemetry? or maybe images?
-
 Keep the following in mind while selecting event IDs:
 
 - The scope of the events mapped by this project is telemetry that can be collected by a sensor or logging system that may be used to collect information relevant to identifying the action being performed, sequence of actions, or the results of those actions by an adversary. 
@@ -101,52 +110,85 @@ Keep the following in mind while selecting event IDs:
 - The event IDs selected to be mapped as part of this project tend to be events that are marketed as native and made available on the platform. The intent is not to provide a mapping for all settings/features of individual platform services that are security related. This is a non-trivial undertaking that may be explored at a later time.
 
 
-Step 2:  Event ID Review
-------------------------
+Step 2: Description Correlation
+-------------------------------
 
-What makes sensors/tools useful to defenders is the meaning and context associated with the event/telemetry. For each identified event ID, consult the available documentation to understand its capabilities. Gather specific facts about the event ID that will later help in mapping the event to the set of ATT&CK Data Sources it is able to detect. The most common way to bring context to data is by applying the description and other types of metadata (Data Elements/Fields). When documented these Data Fields can help us understand our capabilities/gaps, and make creating detections more efficient.
+What makes sensors useful to defenders is the meaning and context associated with the event. For each identified event ID, consult the available documentation to understand its capabilities. Gather specific facts about the event ID that will later help in mapping the event to the set of ATT&CK Data Sources it is able to detect. 
 
-Start with identifying the source of data. In a Windows environment, we can collect information pertaining to "Processes" from built-in event providers such as Microsoft-Windows-Security-Auditing and open third-party tools, including Sysmon. This step also takes into account the overall event where a process can be represented as the main data element around an adversary action. This could include actions such as a process connected to an IP address, modifying a registry, or creating a file.
+The most common way to bring context to the event is by applying the description and other types of metadata (Data Elements/Fields). When documented the description, elements, and fields can help us understand what the sensor is truly capturing, and make creating detections more efficient.
 
-.. image:: _static/Windows Security Events Featuring a Process Data Element.png
+Identify the Source of Data 
+***************************
+
+Start with **identifying the source of data**. In a Windows environment, we can collect information pertaining to "Processes" from built-in event providers such as Microsoft-Windows-Security-Auditing and open third-party tools, including Sysmon. This step also takes into account the overall event where a process can be represented as the main data element around an adversary action. This could include actions such as a process connected to an IP address, modifying a registry, or creating a file.
+
+.. image:: _static/WSE.png
    :width: 600
 
-Documenting security telemetry collected within a network environment will provide us with data and information that should help us to answer to questions such as *why were these security events generated in my environment? (Activity)*, *what operating system supports its generation? (Platform)*, *where were they collected? (Collection Layer)*
+Documenting the data elements and descriptions will provide us with additional information that should help us to answer to questions such as:
 
-Example: Let's use security event *4688: A new process has been created* provided by *Microsoft Windows security auditing* as a basic example to understand this step of the methodology. The action that triggered the generation of this event was the creation of a new process (Activity). This security event can be collected by using the built-in event logging application for devices that work with the Windows operating system (Platform). Because we are working with a built-in application, this security event was collected at the host level.
+- *why were these security events generated in my environment? (Activity)*
+- *what operating system supports its generation? (Platform)*
+- *where were they collected? (Collection Layer)*
 
-Next in reviewing the event ID, *identify the data element*. Once we identify and understand more about sources of data that can be mapped to an ATT&CK data source, we can start identifying data elements within the data fields that could help us eventually represent adversary behavior from a data perspective. The image below displays how we can extend the concept of an event log and capture the data elements featured within it. 
+Example: Let's use security event*4688: A new process has been created* provided by Microsoft Windows security auditing as a basic example to understand this step of the methodology. 
 
-.. image:: _static/Process Data Source - Data Element.png
+- The action that triggered the generation of this event was the creation of a new process (Activity). 
+- This security event can be collected by using the built-in event logging application for devices that work with the Windows operating system (Platform). 
+- Because we are working with a built-in application, this security event was collected at the host level (Collection Layer).
+
+Step 3: Relationship Correlation
+--------------------------------
+
+Identify the Data Element
+*************************
+
+Next in reviewing the event ID, **identify the data element**. Once we identify and understand more about sources of data that can be mapped to an ATT&CK data source, we can start identifying data elements within the event fields that could help us eventually represent adversary behavior from a data perspective. The image below displays how we can extend the concept of an event log and capture the data elements featured within it. 
+
+.. image:: _static/PDS.png
    :width: 900
 
-Note: Pay attention to the differences between similar data sources and events. Two events with the same field names can represent different data. 
+The use of Data Elements help to name ATT&CK Data Sources related to the adversary behavior. For example, if an adversary modifies a Windows Registry value, collection of Windows Registry telemetry is needed. How the adversary modified the registry, such as the process or user that performed the action, is additional context we can leverage. 
+
+.. image:: _static/DE1.png
+   :width: 500
+
+This method can also be used to provide a general idea of what is needed to be collected. For example, data elements that provide metadata about network traffic can be grouped together and be associated with Netflow.
+
+.. image:: _static/DE2.png
+   :width: 500
+
+There is a fundamental rule that should be considered when defining: **there is no one correct way to define data elements**. Please look to your organizational needs to help define what data elements means to you.
+
+Identify Relationships among Data Elements
+******************************************
+
+By documenting the event collection, source (creation of a new process), and data elements (user account and process), we can start describing **interactions among elements through relationships**. Relationships in ATT&CK have been categorized between *activity* and *information*. Activity relationships are the ones that make references to the action that triggered the generation of the event. Informational relationships are theo nes defined based on the metadata provided by the event. 
+
+.. image:: _static/RDE1.png
+   :width: 500
+
+As the groupings grow, the similarities appear where different platforms or sensors tend to link to the same ATT&CK Data Source. 
+
+.. image:: _static/RDE3.png
+   :width: 500
+
+Note: Pay attention to the differences between similar data sources and events. Two events with the same field names can represent different data. For example, process data collected from Sysmon 1, Windows Event 4688, and/or Windows Event 4696 could provide visibility into behaviors associated with T1134: Access Token Manipulation. But when looking for T1543: Create or Modify System Process, data should not be collected from Windows Event 4696 to prove adversary activity as this technique does not involve the use of system tokens. The following visuals are provided to help illustrate this example:
+
+.. image:: _static/T1543EX.png
+   :width: 600
+
+.. image:: _static/T1134EX.png
+   :width: 600
+   
 
 
-Step 3: Identify Mappable ATT&CK Data Sources 
+Step 4: Telemetry Source Correlation 
 ---------------------------------------------
-Adversary behaviors can be described by mapping them to the appropriate tactics, techniques, and sub-techniques in ATT&CK. To detect these behaviors, ATT&CK has a detection section that maps directly to the collection source (data sources). 
 
-`ATT&CK's Data Sources <http://attack.mitre.org/datasources/>`_ usually fall into one of the following buckets: 
+This is by far the hardest level to find for correlation because at times it requires some reverse engineering. `OSSEM <https://github.com/OTRF/OSSEM>`, `Telemetry Source <https://github.com/jsecurity101/TelemetrySource>`, and other open source research projects do a good job of explaining how they approach this process. 
 
-- Granular basic system artifacts (e.g., process, file, registry)
-- Granular basic user activities (e.g., logon session)
-- Abstract types of system artifacts, with children as sub-types (e.g., scheduled jobs)
-- Associated network traffic (e.g., wmi and registry), in such cases, it's important to capture the set of protocols that encompasses this traffic, so that users may understand where they need to look in their logs/PCAPs/DPI appliances/etc.
+..
+   Fill in the rest for this correlation piece : Identifying Telemetry Source (ETW/Kernal Callbacks/APIs/etc.)
+ 
 
-The data source list can incorporate different variations of how the action could be performed for a particular technique. This attribute is intended to be restricted to a defined list to allow analysis of technique coverage based on unique data sources. For example, "what techniques can I detect if I have process monitoring in place?" 
-
-After understanding the capabilities of the event ID and gathering the basic facts about its operation, as identified in the previous step, review the ATT&CK matrix and identify the data source the event is able to detect. 
-
-Step 4:  Create A Mapping
--------------------------
-The previous steps enabled you to gather the information required to create a mapping file for an event. As pulled from the original `ATT&CK's Data Source Methodology <https://github.com/mitre-attack/attack-datasources/blob/main/docs/methodology.md>`_ the below is what we are looking for when reviewing events:
-- Identifying Sources of Data:
-   - Why were these security events generated in my environment?
-   - What operating system supports its generation?
-   - Where were they collected? 
-- Identifying Data Elements
-   - Data Elements help us not only to represent (elements) and describe (attributes) relevant network security concepts, but also to get a better understanding of the interactions (relationships) among them. 
-- Identifying Relationships Among Data Elements 
-   - By documenting telemetry collected within a network environment we were able to identify the activity that triggered the generation of security telemetry and data elements that were involved in an action
-- Identifying Telemetry Source (ETW/Kernal Callbacks/APIs/etc.)
