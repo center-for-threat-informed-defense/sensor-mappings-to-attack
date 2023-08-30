@@ -120,7 +120,6 @@ Next in reviewing the event ID, *identify the data element*. Once we identify an
 .. image:: _static/Process Data Source - Data Element.png
    :width: 900
 
-
 Note: Pay attention to the differences between similar data sources and events. Two events with the same field names can represent different data. 
 
 
