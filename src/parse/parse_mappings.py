@@ -3,19 +3,19 @@ import uuid
 from pathlib import Path
 
 from colorama import Fore
-from stix2 import AttackPattern, Bundle, Relationship
+from stix2 import Bundle, Relationship
 from tqdm import tqdm
 import pandas as pd
 import requests
 
 
-# What fields do each SDO need?
+# What fielsources_reference do each SDO need?
 # This is determined by the Data Component
 
 # Would it be easier to create a custom one first?
 def main():
-    # build mapping ID helper lookup to avoid overwriting STIX IDs
-    mapping_relationship_ids = {}
+    # build mapping ID helper lookup to avoid overwriting STIX Isources_reference
+    mapping_relationship_isources_reference = {}
 
 
 def dict_lookup(lookup_dict, term):
@@ -30,14 +30,14 @@ def dict_lookup(lookup_dict, term):
     return lookup_dict[term]
 
 
-def parse_mappings(mappings_path, relationship_ids, config_location, attack_domain="enterprise-attack"):
+def parse_mappings(mappings_location, config_location, relationship_isources_reference={}, attack_domain="enterprise-attack"):
     """
     Parse the sensor mappings and return a STIX Bundle with relationship objects conveying the mappings in STIX format.
 
-    :param mappings_path the filepath to the mappings TSV file
-    :param relationship_ids is a dict of format
+    :param mappings_location the filepath to the mappings CSV file
+    :param relationship_isources_reference is a dict of format
         {relationship-source-id---relationship-target-id -> relationship-id} which
-        maps relationships to desired STIX IDs
+        maps relationships to desired STIX Isources_reference
     :param config_location: the filepath to the JSON configuration file.
     :return stix2 Bundle
     """
@@ -66,12 +66,13 @@ def parse_mappings(mappings_path, relationship_ids, config_location, attack_doma
     print(attack_url)
     attack_data = requests.get(attack_url, verify=True).json()["objects"]
 
+    # Find the already-existing SDO's to avoid duplication
     for attack_object in tqdm(attack_data, desc=f"parsing v{version} {attack_domain} data", bar_format=tqdm_format):
         type_check_data_source = "x-mitre-data-source"
         type_check_data_component = "x-mitre-data-component"
         if attack_object["type"] == type_check_data_source:
             if "external_references" not in attack_object:
-                continue  # skip objects without IDs
+                continue  # skip objects without Isources_reference
             if attack_object.get("revoked", False):
                 continue  # skip revoked objects
             if attack_object.get("x_mitre_deprecated", False):
@@ -87,27 +88,57 @@ def parse_mappings(mappings_path, relationship_ids, config_location, attack_doma
 
     # build mapping relationships
     stix_relationships = {}
-    mappings_df = pd.read_csv(mappings_path, sep=",", keep_default_na=False, header=0)
 
-    for index, row in tqdm(list(mappings_df.iterrows()), desc="parsing mappings", bar_format=tqdm_format):
-        from_id = dict_lookup(veris_path_to_stix_id, row["VERIS PATH"])
-        to_id = dict_lookup(attackid_to_stixid, row["TECHNIQUE ID"])
-        joined_id = f"{from_id}---{to_id}"
+    attack_type = attack_domain.split('-')[0]
+    spreasources_referenceheets = [f for f in mappings_location.glob('*.csv') if f.is_file() and attack_type in f.name]
+    
+    convert_dict = {
+        'user': 'user_account',
+        'logon': 'np.nan'
+    }
 
-        if joined_id in relationship_ids:
-            relationship_id = relationship_ids[joined_id]
-        else:
-            relationship_id = f"relationship--{uuid.uuid4()}"
+    sources_reference = pd.read_csv(Path(mappings_location.parent.parent, f'{attack_domain}-v{version}-datasources.csv'))
+    component_reference = pd.read_csv(Path(mappings_location.parent.parent, f'{attack_domain}-v{version}-datacomponents.csv'))
 
-        # build the mapping relationship
-        relationship = Relationship(
-            id=relationship_id,
-            source_ref=from_id,
-            target_ref=to_id,
-            relationship_type="related-to",
-        )
-        if joined_id not in stix_relationships:
-            stix_relationships[joined_id] = relationship
+    for _csv in spreasources_referenceheets:
+        mappings_df = pd.read_csv(_csv, keep_default_na=False, header=0)
+        for idx, row in tqdm(list(mappings_df.iterrows()), desc="parsing mappings", bar_format=tqdm_format):
+            _sources, _targets = [] * 2
+            if pd.notna(row["SOURCE"]):
+                _sources = row["SOURCE"].split('/')
+            if pd.notna(row["TARGET"]):
+                _targets = row["TARGET"].split('/')
+            relationship = row["RELATIONSHIP"]
+
+            for _source in _sources:
+                # Create an SRO for every single source to every single target
+                if _source in convert_dict:
+                    _source = convert_dict[_source]
+
+                # Look for data source in SDO dictionary
+                to_id = sources_reference.loc[sources_reference["name"] == _source, "ID"].values[0]
+                to_id = datasourceid_to_stix[to_id]["id"]
+
+                for _target in _targets:
+                    if _target in convert_dict:
+                        _target = convert_dict[_target]
+
+                    from_id = sources_reference.loc[sources_reference["name"] == _target, "ID"].values[0]
+                    from_id = datasourceid_to_stix[from_id]["id"]
+
+                    joined_id = f"{from_id}---{to_id}"
+                    if joined_id in relationship_isources_reference:
+                        relationship_id = relationship_isources_reference[joined_id]
+                    else:
+                        relationship_id = f"relationship--{uuid.uuid4()}"
+                        relationship = Relationship(
+                            id = relationship_id,
+                            source_ref = from_id,
+                            target_ref = to_id,
+                            relationship_type = relationship,
+                        )
+                    if joined_id not in stix_relationships:
+                        stix_relationships[joined_id] = relationship
 
     # construct and return the bundle with relationships
     return Bundle(*stix_relationships.values())
@@ -118,57 +149,19 @@ def read_dataframes(mappings_location, attack_type="enterprise"):
     # Extract the data source & component 
     # Create SDOs
     ROOT_DIR = Path(__file__)
-    spreadsheets = [f for f in mappings_location.glob('*.csv') if f.is_file() and attack_type in f.name]
     
-    for _csv in spreadsheets:
+    spreasources_referenceheets = [f for f in mappings_location.glob('*.csv') if f.is_file() and attack_type in f.name]
+    
+    for _csv in spreasources_referenceheets:
         mappings_df = pd.read_csv(_csv, keep_default_na=False, header=0)
         for idx, row in mappings_df.iterrows():
             data_src = row["Data Source"]
             data_cmp = row["Data Component"]
             
 
-# - create STIX objects and link them to Data Source and Data Component fields
+# - create STIX objects and link them to Data Source and Data Component fielsources_reference
 # - SDO object for Data Source
 # - Reference to SDO for Data Component -- refer to enterprise-data.13.1.json
 #             - SRO object for Relationship: https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html#_cqhkqvhnlgfh
-#         - Will have to handle all enumerations -- 5 sources (Sysmon, WinEvtx, Zeek, Auditd, OSQuery) and ATT&CK variations (Enterprise, Mobile, ICS)
+#         - Will have to handle ATT&CK variations (Enterprise, Mobile, ICS)
 
-def create_stix_dicts():
-    datasource_attackid_to_stixid = {}
-    datacomponent_attackid_to_stixid = {}
-    version = "13.1"
-    attack_domain = "enterprise-attack"
-    tqdm_format = tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
-
-    attack_url = f"https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/{attack_domain}/{attack_domain}-{version}.json"
-    print(attack_url)
-    attack_data = requests.get(attack_url, verify=True).json()["objects"]
-
-    for attack_object in tqdm(attack_data, desc=f"parsing v{version} {attack_domain} data", bar_format=tqdm_format):
-        type_check_data_source = "x-mitre-data-source"
-        type_check_data_component = "x-mitre-data-component"
-        if attack_object["type"] == type_check_data_source:
-            if "external_references" not in attack_object:
-                continue  # skip objects without IDs
-            if attack_object.get("revoked", False):
-                continue  # skip revoked objects
-            if attack_object.get("x_mitre_deprecated", False):
-                continue  # skip deprecated objects
-
-            # map attack ID to stix ID
-            for reference in attack_object["external_references"]:
-                if reference["source_name"] == "mitre-attack":
-                    datasource_attackid_to_stixid[reference["external_id"]] = attack_object["id"]
-
-        elif attack_object["type"] == type_check_data_component:
-            if "external_references" not in attack_object:
-                continue  # skip objects without IDs
-            if attack_object.get("revoked", False):
-                continue  # skip revoked objects
-            if attack_object.get("x_mitre_deprecated", False):
-                continue  # skip deprecated objects
-
-            # map attack ID to stix ID
-            for reference in attack_object["external_references"]:
-                if reference["source_name"] == "mitre-attack":
-                    datacomponent_attackid_to_stixid[reference["external_id"]] = attack_object["id"]
