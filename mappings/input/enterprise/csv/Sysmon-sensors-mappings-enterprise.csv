@@ -1,0 +1,26 @@
+EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
+,A new process has been created,DS0009,process,process_creation,process/user,created,process
+,A new process has been created,DS0009,process,process_creation,process/user,executed,process
+,A process changed a file creation time,DS0022,file,file_modification,process/user/file,modified,file
+,Network connection,DS0029,network_traffic,network_connection_creation,process/user,connected_to/from,ip/port/device
+,Sysmon service state changed.,DS0019,service,service_metadata,service,stopped/started,service
+,Process terminated,DS0009,process,process_termination,process/user,terminated,process
+,Driver loaded,DS0027,driver,driver_load,driver,loaded,
+,Image Loaded,DS0011,module,module_load,process/user,loaded,module
+,The CreateRemoteThread event detects when a process creates a thread in another process.,DS0009,process,process_modification,process,modified,process
+,ProcessAccess,DS0009,process,process_access,process,accessed,process
+,FileCreate,DS0022,file,file_creation,process/user,created,file
+,RegistryEvent (Object create and delete),DS0024,windows_registry,windows_registry_key_creation,process/user,created,registry
+,RegistryEvent (Object create and delete),DS0024,windows_registry,windows_registry_key_deletion,process/user,deleted,registry
+,RegistryEvent (Value Set),DS0024,windows_registry,windows_registry_key_modification,process/user,modified,registry
+,RegistryEvent (Key and Value Rename),DS0024,windows_registry,windows_registry_key_modification,process/user,modified,registry
+,PipeEvent (Pipe Created),DS0023,named_pipe,named_pipe_metadata,process/user,created,pipe
+,PipeEvent (Pipe Created),DS0023,named_pipe,named_pipe_metadata,process/user,connected_to,pipe
+,PipeEvent (Pipe Connected),DS0023,named_pipe,named_pipe_metadata,process/user,connected_to,pipe
+,WmiEvent (WmiEventFilter activity detected).,DS0005,wmi,wmi_creation,user,created,wmi_object
+,WmiEvent (WmiEventFilter activity detected).,DS0005,wmi,wmi_deletion,user,deleted,wmi_object
+,WmiEvent (WmiEventConsumer activity detected).,DS0005,wmi,wmi_creation,user,created,wmi_object
+,WmiEvent (WmiEventConsumer activity detected).,DS0005,wmi,wmi_deletion,user,deleted,wmi_object
+,FileDelete,DS0022,file,file_deletion,process/user,deleted,file
+,File Delete logged.,DS0022,file,file_deletion,process/user,deleted,file
+,EventID(30),DS0009,process,process_metadata,process,searched,ldap
