@@ -1,120 +1,123 @@
 EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
-add_group,Triggered when a user-space group is added,DS0036,group,group_creation,process/user,created,group
-add_user,Triggered when a user-space user account is created,DS0002,user_account,user_account_creation,process/user,created,user
-anom_abend,"Triggered when a processes ends abnormally (with core dump, if enabled)",DS0009,process,process_termination,process/user,deleted,process
-anom_add_account,Triggered when a user-space account addition ends abnormally,DS0002,user_account,user_account_creation,process/user,created,user
-anom_del_account,Triggered when a user-space account deletion ends abnormally,DS0002,user_account,user_account_deletion,process/user,deleted,user
-anom_link,Triggered when suspicious use of file links is detected,DS0022,file,file_access,process/user,created,file
-anom_login_failures,Triggered when the limit of failed login attempts is reached,DS0002,user_account,user_account_authentication,service,accessed,user
-anom_login_location,Triggered when a login atempt is made from forbidden location,DS0002,user_account,user_account_authentication,service,closed,user
-anom_login_sessions,Triggered when a login attempt reaches max amount of sessions,DS0002,user_account,user_account_authentication,service,closed,user
-anom_login_time,Triggered when a login attempt is made at a time when prevented,DS0002,user_account,user_account_authentication,service,closed,user
-anom_promiscuous,Triggered when a device enables or disables promiscuous mode,DS0019,service,service_modification,process/user,modified,service
-avc,Triggered to record an SELinux permission check,DS0019,service,service_access,service,modified,service
-config_change,audit_enabled record field contains 1 or 2,DS0019,service,service_modification,process/user,modified,service
-config_change,audit_enabled record field contains 0,DS0019,service,service_modification,process/user,modified,service
-config_change,op record field contains add rule,DS0019,service,service_modification,process/user,modified,service
-config_change,op record field contains remove rule,DS0019,service,service_modification,process/user,modified,service
-config_change,audit_failure record field contains value 0,DS0019,service,service_modification,service,modified,service
-config_change,audit_failure record field contains value 1,DS0019,service,service_modification,service,modified,service
-config_change,audit_failure record field contains value 2,DS0019,service,service_modification,service,modified,service
-config_change,any other CONFIG_CHANGE cases not specified above,DS0019,service,service_modification,process/user,modified,service
-cred_acq,Triggered when a user acquires user-space credentials,DS0002,user_account,user_account_metadata,service,accessed,user_account
-cred_disp,Triggered when a user disposes of user-space credentials,DS0002,user_account,user_account_metadata,service,deleted,user_account
-cred_refr,Triggered when a user refreshes their user-space credentials,DS0002,user_account,user_account_access,process/user,accessed,user_account
-crypto_key_user,Triggered to record crypto key identifier used for crypto purposes,DS0028,logon_session,logon_session_metadata,service,accessed,logon_session
-crypto_session,Triggered to record parameters set during a TLS session establishment,DS0028,logon_session,logon_session_creation,service,created,logon
-daemon_abort,Triggered when a daemon is stopped due to an error,DS0019,service,service_metadata,process/user,terminated,service
-daemon_config,Triggered when a daemon configuration change is detected,DS0019,service,service_modification,process/user,modified,service
-daemon_end,Triggered when a daemon is successfully stopped,DS0019,service,service_metadata,process/user,terminated,service
-daemon_resume,Triggered when the auditd daemon resumes logging,DS0019,service,service_metadata,service,resumed,service
-daemon_rotate,Triggered when the auditd daemon rotates the Audit log files,DS0019,service,service_metadata,service,modified,service
-daemon_start,Triggered when the auditd daemon is started,DS0019,service,service_creation,process/user,created,service
-del_group,Triggered when a user-space group is deleted,DS0036,group,group_deletion,process/user,deleted,group
-del_user,Triggered when a user-space user is deleted,DS0002,user_account,user_account_deletion,process/user,deleted,user
-fs_relabel,Triggered when a file system relabel operation is detected,DS0016,drive,drive_modification,process/user,modified,drive
-label_level_change,Triggered when an object's level label is modified,DS0022,file,file_modification,process/user,modified,file
-label_override,Triggered when administrator overrides object's level label,DS0022,file,file_modification,user,modified,file
-login,Triggered to record relevant login information when user logs into system,DS0028,logon_session,logon_session_metadata,service,modified,logon_session
-mac_cipsov4_add,Triggered when Commercial Internet Protocol Security Option user adds a new Domain of Interpretation (DOI) via NetLabel,DS0019,service,service_modification,user,modified,service
-mac_cipsov4_del,Triggered when a CIPSO user deletes an existing DOI. Adding DOIs is a part of the packet labeling capabilities of the kernel provided by NetLabel.,DS0019,service,service_modification,user,modified,service
-mac_config_change,Triggered when an SELinux Boolean value is changed,DS0019,service,service_modification,process/user,modified,service
-mac_map_add,Triggered when a new Linux Security Module (LSM) domain mapping is added. LSM domain mapping is a part of the packet labeling capabilities of the kernel provided by NetLabel.,DS0019,service,service_modification,user,modified,service
-mac_map_del,Triggered when existing LSM domain mapping is deleted,DS0019,service,service_modification,user,modified,service
-mac_policy_load,Triggered when a SELinux Policy file is loaded,DS0019,service,service_creation,service,created,service
-mac_status,"Triggered when the SELinux mode is changed (enforcing, permissive, etc)",DS0019,service,service_modification,process/user,modified,service
-mac_unlbl_allow,Triggered when unlabeled traffic is allowed when using packet labeling,DS0029,network_traffic,network_traffic_content,process/user,accessed,network
-netfilter_cfg,Triggered when Netfilter chain modifications are detected,DS0018,firewall,firewall_rule_modification,process/user,modified,firewall
-resp_acct_lock,Triggered when a user account is locked,DS0002,user_account,user_account_authentication,process/user,locked,user_account
-resp_acct_unlock_timed,Triggered when user account is unlocked after configured time,DS0002,user_account,user_account_authentication,service,unlocked,user_account
-role_assign,Triggered when an administrator user assigns user to SELinux role,DS0019,service,service_modification,process/user,modified,service
-role_remove,Triggered when an administrator removes a user from an SELinux role,DS0019,service,service_modification,process/user,modified,service
-system_runlevel,Triggered when the system run level is changed,DS0013,sensor_health,host_status,process/user,modified,host_status
-system_shutdown,Triggered when the system is shut down,DS0013,sensor_health,host_status,process/user,modified,host_status
-tty,Triggered when TTY input was sent to an administrative process,DS0009,process,process_access,process/user,accessed,process
-user_acct,Triggered when a user-space user authorization attempt is detected,DS0002,user_account,user_account_authentication,service,authorized,user
-user_auth,Triggered when a user-space user authentication attempt is detected,DS0002,user_account,user_account_authentication,service,authenticates,user
-user_avc,Triggered when a user-space AVC message is generated,DS0022,file,file_access,process/user,accessed,file
-user_chauthtok,op record field contains value change password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change expired password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change age,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change max age,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change min age,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change passwd warning,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change inactive days,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change passwd expiration,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change last change date,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value change all aging information,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value password attribute change,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value password aging data updated,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value display aging info,DS0002,user_account,user_account_modification,process/user,accessed,user_account
-user_chauthtok,op record field contains value password status display,DS0002,user_account,user_account_modification,process/user,accessed,user_account
-user_chauthtok,op record field contains value password status displayed for user,DS0002,user_account,user_account_modification,process/user,accessed,user_account
-user_chauthtok,op record field contains value adding to group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value adding group member,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value adding user to group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value adding user to shadow group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing primary group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing group member,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing admin name in shadow group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing member in shadow group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value deleting group password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value deleting member,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value deleting user from group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value deleting user from shadow group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value removing group member,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value removing user from shadow group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value user lookup,DS0002,user_account,user_account_accessed,process/user,accessed,user_account
-user_chauthtok,op record field contains value adding group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value deleting group,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value adding user,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value adding home directory,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value deleting user entries,DS0002,user_account,user_account_deletion,process/user,deleted,user_account
-user_chauthtok,op record field contains value deleting user not found,DS0002,user_account,user_account_deletion,process/user,errored,user_account
-user_chauthtok,op record field contains value deleting user,DS0002,user_account,user_account_deletion,process/user,deleted,user_account
-user_chauthtok,op record field contains value deleting user logged in,DS0002,user_account,user_account_deletion,process/user,deleted,user_account
-user_chauthtok,op record field contains value deleting mail file,DS0022,file,file_deletion,process/user,deleted,file
-user_chauthtok,op record field contains value deleting home directory,DS0002,user_account,user_account_deletion,process/user,modified,user_account
-user_chauthtok,op record field contains value lock password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value delete password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value updating password,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value unlock password,DS0002,user_account,user_account_metadata,process/user,unlocked,user_account
-user_chauthtok,op record field contains value changing name,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing uid,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing home directory,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value moving home directory,DS0002,user_account,user_account_access,process/user,modified,user_account
-user_chauthtok,op record field contains value changing mail file name,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,op record field contains value changing mail file owner,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_chauthtok,Triggered when a user account password or PIN is modified,DS0002,user_account,user_account_modification,process/user,modified,user_account
-user_cmd,Triggered when a user-space shell command is executed,DS0009,process,process_creation,user,created,process
-user_end,Triggered when a user-space session is terminated,DS0028,logon_session,logon_session_metadata,service,terminated,logon_session
-user_labeled_export,Triggered when an object is exported with an SELinux label,DS0022,file,file_metadata,service,modified,file
-user_login,Triggered when a user logs in,DS0028,logon_session,logon_session_creation,service,created,logon
-user_logout,Triggered when a user logs out,DS0028,logon_session,logon_session_metadata,service,terminated,logon
-user_role_change,op record field contains add SELinux user record,DS0002,user_account,user_account_creation,process/suer,created,user
-user_role_change,op record field contains delete SELinux user record,DS0002,user_account,user_account_deletion,process/user,deleted,user
-user_role_change,any other USER_ROLE_CHANGE cases not specified above,DS0002,user_account,user_account_modification,process/user,modified,user
-user_start,Triggered when a user-space session is started,DS0028,logon_session,logon_session_creation,service,created,logon_session
-user_unlabeled_export,Triggered when an object is exported without an SELinux label,DS0022,file,file_metadata,process/user,modified,file
-usys_config,Triggered when a user-space system configuration change is detected,DS0017,command,command_execution,process/user,modified,configuration
+ADD_GROUP,Triggered when a user-space group is added,DS0036,Group,Group Creation,Process/User,Created,Group
+ADD_USER,Triggered when a user-space user account is created,DS0002,User Account,User Account Creation,Process/User,Created,User Account
+ANOM_ABEND,"Triggered when a processes ends abnormally (with core dump, if enabled)",DS0009,Process,Process Termination,Process/User,Deleted,Process
+ANOM_ADD_ACCOUNT,Triggered when a user-space account addition ends abnormally,DS0002,User Account,User Account Creation,Process/User,Created,User Account
+ANOM_DEL_ACCOUNT,Triggered when a user-space account deletion ends abnormally,DS0002,User Account,User Account Deletion,Process/User,Deleted,User Account
+ANOM_LINK,Triggered when suspicious use of file links is detected,DS0022,File,File Access,Process/User,Created,File
+ANOM_LOGIN_FAILURES,Triggered when the limit of failed login attempts is reached,DS0002,User Account,User Account Authentication,Service,Accessed,User Account
+ANOM_LOGIN_LOCATION,Triggered when a login atempt is made from forbidden location,DS0002,User Account,User Account Authentication,Service,Closed,User Account
+ANOM_LOGIN_SESSIONS,Triggered when a login attempt reaches max amount of sessions,DS0002,User Account,User Account Authentication,Service,Closed,User Account
+ANOM_LOGIN_TIME,Triggered when a login attempt is made at a time when prevented,DS0002,User Account,User Account Authentication,Service,Closed,User Account
+ANOM_PROMISCUOUS,Triggered when a device enables or disables promiscuous mode,DS0019,Service,Service Modification,Process/User,Modified,Service
+AVC,Triggered to record an SELinux permission check,DS0019,Service,Service Access,Service,Modified,Service
+CONFIG_CHANGE,audit_enabled record field contains 1 or 2,DS0019,Service,Service Modification,Process/User,Modified,Service
+CONFIG_CHANGE,audit_enabled record field contains 0,DS0019,Service,Service Modification,Process/User,Modified,Service
+CONFIG_CHANGE,op record field contains add rule,DS0019,Service,Service Modification,Process/User,Modified,Service
+CONFIG_CHANGE,op record field contains remove rule,DS0019,Service,Service Modification,Process/User,Modified,Service
+CONFIG_CHANGE,audit_failure record field contains value 0,DS0019,Service,Service Modification,Service,Modified,Service
+CONFIG_CHANGE,audit_failure record field contains value 1,DS0019,Service,Service Modification,Service,Modified,Service
+CONFIG_CHANGE,audit_failure record field contains value 2,DS0019,Service,Service Modification,Service,Modified,Service
+CONFIG_CHANGE,any other CONFIG_CHANGE cases not specified above,DS0019,Service,Service Modification,Process/User,Modified,Service
+CRED_ACQ,Triggered when a user acquires user-space credentials,DS0002,User Account,User Account Metadata,Service,Accessed,User Account
+CRED_DISP,Triggered when a user disposes of user-space credentials,DS0002,User Account,User Account Metadata,Service,Deleted,User Account
+CRED_REFR,Triggered when a user refreshes their user-space credentials,DS0002,User Account,User Account Access,Process/User,Accessed,User Account
+CRYPTO_KEY_USER,Triggered to record crypto key identifier used for crypto purposes,DS0028,Logon Session,Logon Session Metadata,Service,Accessed,Logon Session
+CRYPTO_SESSION,Triggered to record parameters set during a TLS session establishment,DS0028,Logon Session,Logon Session Creation,Service,Created,Logon
+DAEMON_ABORT,Triggered when a daemon is stopped due to an error,DS0019,Service,Service Metadata,Process/User,Terminated,Service
+DAEMON_CONFIG,Triggered when a daemon configuration change is detected,DS0019,Service,Service Modification,Process/User,Modified,Service
+DAEMON_END,Triggered when a daemon is successfully stopped,DS0019,Service,Service Metadata,Process/User,Terminated,Service
+DAEMON_RESUME,Triggered when the auditd daemon resumes logging,DS0019,Service,Service Metadata,Service,Resumed,Service
+DAEMON_ROTATE,Triggered when the auditd daemon rotates the Audit log files,DS0019,Service,Service Metadata,Service,Modified,Service
+DAEMON_START,Triggered when the auditd daemon is started,DS0019,Service,Service Creation,Process/User,Created,Service
+DEL_GROUP,Triggered when a user-space group is deleted,DS0036,Group,Group Deletion,Process/User,Deleted,Group
+DEL_USER,Triggered when a user-space user is deleted,DS0002,User Account,User Account Deletion,Process/User,Deleted,User Account
+FS_RELABEL,Triggered when a file system relabel operation is detected,DS0016,Drive,Drive Modification,Process/User,Modified,Drive
+LABEL_LEVEL_CHANGE,Triggered when an object's level label is modified,DS0022,File,File Modification,Process/User,Modified,File
+LABEL_OVERRIDE,Triggered when administrator overrides object's level label,DS0022,File,File Modification,User,Modified,File
+LOGIN,Triggered to record relevant login information when user logs into system,DS0028,Logon Session,Logon Session Metadata,Service,Modified,Logon Session
+MAC_CIPSOV4_ADD,Triggered when Commercial Internet Protocol Security Option user adds a new Domain of Interpretation (DOI) via NetLabel,DS0019,Service,Service Modification,User,Modified,Service
+MAC_CIPSOV4_DEL,Triggered when a CIPSO user deletes an existing DOI. Adding DOIs is a part of the packet labeling capabilities of the kernel provided by NetLabel.,DS0019,Service,Service Modification,User,Modified,Service
+MAC_CONFIG_CHANGE,Triggered when an SELinux Boolean value is changed,DS0019,Service,Service Modification,Process/User,Modified,Service
+MAC_MAP_ADD,Triggered when a new Linux Security Module (LSM) domain mapping is added. LSM domain mapping is a part of the packet labeling capabilities of the kernel provided by NetLabel.,DS0019,Service,Service Modification,User,Modified,Service
+MAC_MAP_DEL,Triggered when existing LSM domain mapping is deleted,DS0019,Service,Service Modification,User,Modified,Service
+MAC_POLICY_LOAD,Triggered when a SELinux Policy file is loaded,DS0019,Service,Service Creation,Service,Created,Service
+MAC_STATUS,"Triggered when the SELinux mode is changed (enforcing, permissive, etc)",DS0019,Service,Service Modification,Process/User,Modified,Service
+MAC_UNLBL_ALLOW,Triggered when unlabeled traffic is allowed when using packet labeling,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Network
+NETFILTER_CFG,Triggered when Netfilter chain modifications are detected,DS0018,Firewall,Firewall Rule Modification,Process/User,Modified,Firewall
+RESP_ACCT_LOCK,Triggered when a user account is locked,DS0002,User Account,User Account Authentication,Process/User,Locked,User Account
+RESP_ACCT_UNLOCK_TIMED,Triggered when user account is unlocked after configured time,DS0002,User Account,User Account Authentication,Service,Unlocked,User Account
+ROLE_ASSIGN,Triggered when an administrator user assigns user to SELinux role,DS0019,Service,Service Modification,Process/User,Modified,Service
+ROLE_REMOVE,Triggered when an administrator removes a user from an SELinux role,DS0019,Service,Service Modification,Process/User,Modified,Service
+SELINUX_ERR,Triggered when an internal SELinux error is detected,DS0019,Service,Service Metadata,Process/User,Accessed,Service
+SYSTEM_RUNLEVEL,Triggered when the system run level is changed,DS0013,Sensor Health,Host Status,Process/User,Modified,Host Status
+SYSTEM_SHUTDOWN,Triggered when the system is shut down,DS0013,Sensor Health,Host Status,Process/User,Modified,Host Status
+TTY,Triggered when TTY input was sent to an administrative process,DS0009,Process,Process Access,Process/User,Accessed,Process
+USER_ACCT,Triggered when a user-space user authorization attempt is detected,DS0002,User Account,User Account Authentication,Service,Authorized,User Account
+USER_AUTH,Triggered when a user-space user authentication attempt is detected,DS0002,User Account,User Account Authentication,Service,Authenticates,User Account
+USER_AVC,Triggered when a user-space AVC message is generated,DS0022,File,File Access,Process/User,Accessed,File
+USER_CHAUTHTOK,op record field contains value change password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change expired password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change age,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change max age,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change min age,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change passwd warning,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change inactive days,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change passwd expiration,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change last change date,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value change all aging information,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value password attribute change,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value password aging data updated,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value display aging info,DS0002,User Account,User Account Modification,Process/User,Accessed,User Account
+USER_CHAUTHTOK,op record field contains value password status display,DS0002,User Account,User Account Modification,Process/User,Accessed,User Account
+USER_CHAUTHTOK,op record field contains value password status displayed for user,DS0002,User Account,User Account Modification,Process/User,Accessed,User Account
+USER_CHAUTHTOK,op record field contains value adding to group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value adding group member,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value adding user to group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value adding user to shadow group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing primary group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing group member,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing admin name in shadow group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing member in shadow group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value deleting group password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value deleting member,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value deleting user from group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value deleting user from shadow group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value removing group member,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value removing user from shadow group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value user lookup,DS0002,User Account,User Account Accessed,Process/User,Accessed,User Account
+USER_CHAUTHTOK,op record field contains value adding group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value deleting group,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value adding user,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value adding home directory,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value deleting user entries,DS0002,User Account,User Account Deletion,Process/User,Deleted,User Account
+USER_CHAUTHTOK,op record field contains value deleting user not found,DS0002,User Account,User Account Deletion,Process/User,Errored,User Account
+USER_CHAUTHTOK,op record field contains value deleting user,DS0002,User Account,User Account Deletion,Process/User,Deleted,User Account
+USER_CHAUTHTOK,op record field contains value deleting user logged in,DS0002,User Account,User Account Deletion,Process/User,Deleted,User Account
+USER_CHAUTHTOK,op record field contains value deleting mail file,DS0022,File,File Deletion,Process/User,Deleted,File
+USER_CHAUTHTOK,op record field contains value deleting home directory,DS0002,User Account,User Account Deletion,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value lock password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value delete password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value updating password,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value unlock password,DS0002,User Account,User Account Metadata,Process/User,Unlocked,User Account
+USER_CHAUTHTOK,op record field contains value changing name,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing uid,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing home directory,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value moving home directory,DS0002,User Account,User Account Access,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing mail file name,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,op record field contains value changing mail file owner,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CHAUTHTOK,Triggered when a user account password or PIN is modified,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_CMD,Triggered when a user-space shell command is executed,DS0009,Process,Process Creation,User,Created,Process
+USER_END,Triggered when a user-space session is terminated,DS0028,Logon Session,Logon Session Metadata,Service,Terminated,Logon Session
+USER_ERR,Triggered when a user account state error is detected,DS0002,User Account,User Account Metadata,Process/User,Accessed,User Account
+USER_LABELED_EXPORT,Triggered when an object is exported with an SELinux label,DS0022,File,File Metadata,Service,Modified,File
+USER_LOGIN,Triggered when a user logs in,DS0028,Logon Session,Logon Session Creation,Service,Created,Logon
+USER_LOGOUT,Triggered when a user logs out,DS0028,Logon Session,Logon Session Metadata,Service,Terminated,Logon
+USER_ROLE_CHANGE,op record field contains add SELinux user record,DS0002,User Account,User Account Creation,Process/Suer,Created,User Account
+USER_ROLE_CHANGE,op record field contains delete SELinux user record,DS0002,User Account,User Account Deletion,Process/User,Deleted,User Account
+USER_ROLE_CHANGE,any other USER_ROLE_CHANGE cases not specified above,DS0002,User Account,User Account Modification,Process/User,Modified,User Account
+USER_START,Triggered when a user-space session is started,DS0028,Logon Session,Logon Session Creation,Service,Created,Logon Session
+USER_TTY,Triggered when an explanatory msg about TTY input to admin proc is sent,DS0019,Service,Service Metadata,Service,Accessed,Service
+USER_UNLABELED_EXPORT,Triggered when an object is exported without an SELinux label,DS0022,File,File Metadata,Process/User,Modified,File
+USYS_CONFIG,Triggered when a user-space system configuration change is detected,DS0017,Command,Command Execution,Process/User,Modified,Configuration

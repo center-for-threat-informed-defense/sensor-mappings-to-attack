@@ -6,32 +6,44 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-def standardize(sheet):
-        """Helper method to standardize columns used for STIX data."""
-        for col in sheet.columns:
-            # Remove whitespace
-            for idx, row in sheet.iterrows():
-                # Pandas does not have a good way to select only string values in a column, so we iterate by row to do our replacements.
-                if isinstance(row[col], str):
-                    sheet.loc[:, col] = sheet.loc[:, col].str.strip()
-                    if col in ["Worksheet Name", "Event Description", "ID"]:
-                        # Avoid modifying these columns
-                        continue
-                    # Match case
-                    sheet.loc[:, col] = sheet.loc[:, col].str.replace(" ", "_")
-                    sheet.loc[:, col] = sheet.loc[:, col].str.lower()
-        sheet.drop_duplicates(inplace=True, ignore_index=True)
+def standardize(sheet, *columns_to_exclude):
+    """Helper method to standardize columns used for STIX data."""
+    skip = ["Worksheet Name", "Event Description", "Event ID"] + list(*columns_to_exclude)
+    for col in sheet.columns:
+        # Remove whitespace
+        for idx, row in sheet.iterrows():
+            # Pandas does not have a good way to select only string values in a column, so we iterate by row to do our replacements.
+            if isinstance(row[col], str):
+                sheet.loc[:, col] = sheet.loc[:, col].str.strip()
+                if col in skip:
+                    # Avoid modifying these columns
+                    continue
+                # Match case
+                sheet.loc[:, col] = sheet.loc[:, col].str.replace(" ", "_")
+                sheet.loc[:, col] = sheet.loc[:, col].str.lower()
+    sheet.drop_duplicates(inplace=True, ignore_index=True)
+    # After dropping duplicates, revert changes.
+    for col in sheet.columns:
+        for idx, row in sheet.iterrows():
+            if isinstance(row[col], str):
+                if col in skip:
+                    continue
+                sheet.loc[:, col] = sheet.loc[:, col].str.replace("_", " ")
+                sheet.loc[:, col] = sheet.loc[:, col].str.title()
 
 
-def get_sheets(spreadsheet_location):
+def get_sheets(spreadsheet_location, config_location):
     """Helper method to separate combined Excel sheet into individual Dataframes"""
+    with config_location.open("r", encoding="utf-8") as f:
+        config = json.load(f)
+        version = config["attack_version"]
+
     df = pd.read_excel(spreadsheet_location, header=1, sheet_name="Combined Events", usecols="A,C:I")
     standardize(df)
 
     # Merge in the Data Source ID's from the ATT&CK Data Source CSV
     datasource_csv_location = spreadsheet_location.parent.parent.parent
-    data_source_ids = pd.read_csv(Path(datasource_csv_location, "enterprise-attack-v13.1-datasources.csv"), usecols=[0, 1])
-    standardize(data_source_ids)
+    data_source_ids = pd.read_csv(Path(datasource_csv_location, f"enterprise-attack-v{version}-datasources.csv"), usecols=[0, 1])
     
     df = df.merge(data_source_ids, how="left", left_on="Data Source", right_on="name")
     df.drop(columns=["name"], inplace=True)
@@ -39,7 +51,7 @@ def get_sheets(spreadsheet_location):
     df = df[['Worksheet Name', 'Data Source', 'Data Source ID', 'Data Component', 'Event Description',
         'Event ID', 'Source', 'Relationship', 'Target']]
     df["Data Source ID"] = df["Data Source ID"].apply(lambda n: -1 if pd.isna(n) else n)
-    # Where a value of `-1` indicates that there is no Data Source
+    # Where a value of `-1` indicates that this is a new ATT&CK Data Source
 
     worksheet_names = df["Worksheet Name"].unique()
     sheets = []
@@ -76,6 +88,10 @@ def generate_csv_spreadsheet(sheets, mappings_location):
 
 def generate_supporting_csv(spreadsheet_location):
     """This is a helper script to intake the ATT&CK framework relating to Data Sources."""
+    def strip_source(data_component: str):
+        # Splits 'Data Source: Data Component' into just the Data Component.
+        replace_at = data_component.index(": ")
+        return data_component[replace_at + 2:]
     
     output_folder = spreadsheet_location.parent.parent.parent
     _input = Path(spreadsheet_location.parent, f"enterprise-attack-v13.1-datasources.xlsx")
@@ -85,6 +101,11 @@ def generate_supporting_csv(spreadsheet_location):
     # Split the dataframes
     data_components_df = all_data_sources.loc[all_data_sources["type"] == "datacomponent"].reset_index(drop=True)
     data_sources_df = all_data_sources.loc[all_data_sources["type"] == "datasource"].reset_index(drop=True)
+
+    # Standardize dataframes
+    data_components_df["name"] = data_components_df["name"].apply(strip_source)
+    standardize(data_components_df, set(data_components_df.columns)-{"name"})
+    standardize(data_sources_df,  set(data_sources_df.columns)-{"name"})
 
     # Save to `output_folder`
     data_sources_df.to_csv(Path(output_folder, f"enterprise-attack-v13.1-datasources.csv"), index=False)
@@ -118,7 +139,7 @@ def _parse_args():
 def main():
     args = _parse_args()
     generate_supporting_csv(args.spreadsheet_location)
-    sheets = get_sheets(args.spreadsheet_location)
+    sheets = get_sheets(args.spreadsheet_location, args.config_location)
     generate_csv_spreadsheet(sheets, args.mappings_location)
 
 

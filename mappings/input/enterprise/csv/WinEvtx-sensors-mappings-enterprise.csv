@@ -1,146 +1,146 @@
 EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
-,The event logging service has shut down.,DS0013,sensor_health,host_status,sensor_health,changed,
-,Audit events have been dropped by the transport.,DS0013,sensor_health,host_status,sensor_health,changed,
-,The audit log was cleared.,DS0013,sensor_health,host_status,sensor_health,changed,
-,The security Log is now full.,DS0013,sensor_health,host_status,sensor_health,changed,
-,A Windows Defender Firewall setting has changed.,DS0018,firewall,firewall_metadata,process/user,modified,firewall
-,A Windows Defender Firewall setting in the Private profile has changed.,DS0018,firewall,firewall_metadata,process/user,modified,firewall
-,A rule has been added to the Windows Defender Firewall exception list,DS0018,firewall,firewall_rule_modification,process/user,add,firewall_rule
-,A rule has been modified in the Windows Defender Firewall exception list.,DS0018,firewall,firewall_rule_modification,process/user,modified,firewall_rule
-,A rule has been deleted in the Windows Defender Firewall exception list,DS0018,firewall,firewall_rule_modification,process/user,removed,firewall_rule
-,The Windows Firewall service failed to load Group Policy.,DS0018,firewall,firewall_metadata,firewall,attempted_to_load,configuration
-,All rules have been deleted from the Windows Firewall configuration on this computer.,DS0018,firewall,firewall_rule_modification,user,removed,firewall_rule
-,Module logging.,DS0017,command,command_execution,user,executed,command
-,Module logging.,DS0012,script,script_execution,process,executed,script
-,Script Block Logging.,DS0012,script,script_execution,process,executed,script
-,An authentication package has been loaded by the Local Security Authority.,DS0028,logon_session,logon_session_metadata,logon,metadata,
-,A trusted logon process has been registered with the Local Security Authority.,DS0028,logon_session,logon_session_metadata,logon,metadata,
-,A notification package has been loaded by the Security Account Manager.,DS0028,logon_session,logon_session_metadata,logon,metadata,
-,The system time was changed.,DS0013,sensor_health,host_status,sensor_health,changed,
-,A security package has been loaded by the Local Security Authority.,DS0028,logon_session,logon_session_metadata,logon,metadata,
-,An account was successfully logged on,DS0028,logon_session,logon_session_creation,user,created_logon_from,ip/port/logon
-,An account failed to log on,DS0002,user_account,user_account_authentication,user,attempted_to_authenticate_from,ip/port
-,An account was logged off,DS0028,logon_session,logon_session_metadata,user,terminated,logon
-,User initiated logoff.,DS0028,logon_session,logon_session_metadata,user,terminated,logon
-,A logon was attempted using explicit credentials.,DS0002,user_account,user_account_authentication,user,attempted_to_authenticate_from,ip/port
-,A handle to an object was requested.,DS0022,file,file_access,process/user,requested_access_to,file
-,A handle to an object was requested.,DS0023,named_pipe,named_pipe_metadata,process,created,pipe
-,A handle to an object was requested,DS0009,process,process_access,process,requested_access_to,process
-,A handle to an object was requested.,DS0019,service,service_access,user,requested_access_to,service
-,A registry value was modified.,DS0024,windows_registry,windows_registry_key_creation,process/user,created,registry
-,A registry value was modified.,DS0024,windows_registry,windows_registry_key_deletion,process/user,deleted,registry
-,A registry value was modified.,DS0024,windows_registry,windows_registry_key_modification,process/user,modified,registry
-,An object was deleted.,DS0022,file,file_deletion,process/user,deleted,registry
-,An object was deleted.,DS0024,windows_registry,windows_registry_key_deletion,process/user,deleted,registry
-,A handle to an object was requested.,DS0026,active_directory,active_directory_object_access,user,requested_access_to,ad_object
-,A handle to an object was requested.,DS0022,file,file_access,user,requested_access_to,file
-,An operation was performed on an object.,DS0026,active_directory,active_directory_object_access,user,accessed,ad_object
-,An attempt was made to access an object,DS0022,file,file_access,process/user,accessed,file
-,An attempt was made to access an object.,DS0022,file,file_creation,process/user,created,file
-,An attempt was made to access an object.,DS0022,file,file_deletion,process/user,deleted,file
-,An attempt was made to access an object,DS0009,process,process_access,process/user,accessed,process
-,An attempt was made to access an object,DS0024,windows_registry,windows_registry_key_access,process/user,accessed,registry
-,Permissions on an object were changed.,DS0022,file,file_modification,process/user,modified,file
-,Permissions on an object were changed.,DS0024,windows_registry,windows_registry_key_modification,process/user,modified,file
-,Special privileges assigned to new logon.,DS0028,logon_session,logon_session_modification,logon,modified,
-,A privileged service was called.,DS0028,logon_session,logon_session_metadata,logon,metadata,
-,An operation was attempted on a privileged object.,DS0028,logon_session,logon_session_metadata,logon,metadata,
-,Program execution. When you start a program you are creating a process that stays open until the program ends,DS0009,process,process_creation,process/user,created,process
-,A process has exited.,DS0009,process,process_termination,user,terminated,process
-,A primary token was assigned to process. The assigning process fields identifies the process that started the child (new) process,DS0009,process,process_creation,process/user,created,process
-,A service was installed in the system.,DS0019,service,service_creation,user,created,service
-,A scheduled task was created.,DS0003,scheduled_job,scheduled_job_creation,user,created,scheduled_job
-,A scheduled task was deleted.,DS0003,scheduled_job,scheduled_job_deletion,user,deleted,scheduled_job
-,A scheduled task was enabled.,DS0003,scheduled_job,scheduled_job_modification,user,enabled,scheduled_job
-,A scheduled task was disabled.,DS0003,scheduled_job,scheduled_job_modification,user,disabled,scheduled_job
-,A scheduled task was updated.,DS0003,scheduled_job,scheduled_job_modification,user,modified,scheduled_job
-,A user right was adjusted.,DS0002,user_account,user_account_modification,logon,metadata,
-,System security access was granted to an account.,DS0002,user_account,user_account_modification,user,granted_access_to,user
-,System security access was removed from an account.,DS0002,user_account,user_account_modification,user,removed_access_to,user
-,System audit policy was changed.,DS0026,active_directory,active_directory_object_modification,user,modified,ad_object
-,A user account was created,DS0002,user_account,user_account_creation,user,created,user
-,A user account was enabled.,DS0002,user_account,user_account_modification,user,enabled,user
-,An attempt was made to change an account's password.,DS0002,user_account,user_account_modification,user,attempted_to_modify,user
-,An attempt was made to reset an account's password,DS0002,user_account,user_account_modification,user,attempted_to_modify,user
-,A user account was disabled.,DS0002,user_account,user_account_modification,user,disabled,user
-,A user account was deleted,DS0002,user_account,user_account_deletion,user,deleted,user
-,A security-enabled global group was created.,DS0036,group,group_creation,user,created,group
-,A member was removed from a security-enabled global group.,DS0036,group,group_modification,user,modified,group
-,A security-enabled global group was deleted.,DS0036,group,group_deletion,user,deleted,group
-,A security-enabled local group was created.,DS0036,group,group_creation,user,created,group
-,A member was added to a security-enabled local group.,DS0036,group,group_modification,user,modified,group
-,A member was removed from a security-enabled local group.,DS0036,group,group_modification,user,modified,group
-,A security-enabled local group was deleted.,DS0036,group,group_deletion,user,deleted,group
-,A security-enabled local group was changed.,DS0036,group,group_modification,user,modified,group
-,A security-enabled global group was changed.,DS0026,active_directory,active_directory_object_modification,user,modified,group
-,A user account was changed.,DS0002,user_account,user_account_modification,user,modified,user
-,A user account was locked out.,DS0002,user_account,user_account_modification,user,locked,user
-,A computer account was created.,DS0002,user_account,user_account_creation,user,created,user
-,A computer account was changed.,DS0002,user_account,user_account_modification,user,modified,user
-,A computer account was deleted.,DS0002,user_account,user_account_deletion,user,deleted,user
-,A security-enabled universal group was created.,DS0036,group,group_creation,user,created,group
-,A security-enabled universal group was changed.,DS0036,group,group_modification,user,modified,group
-,A member was added to a security-enabled universal group.,DS0036,group,group_modification,user,modified,group
-,A member was removed from a security-enabled universal group.,DS0036,group,group_modification,user,modified,group
-,A security-enabled universal group was deleted.,DS0036,group,group_deletion,user,deleted,group
-,A groups type was changed.,DS0036,group,group_modification,user,modified,group
-,A user account was unlocked.,DS0002,user_account,user_account_modification,user,unlocked,user
-,A Kerberos authentication ticket (TGT) was requested.,DS0026,active_directory,active_directory_credential_request,user,requested,ad_credential
-,A Kerberos service ticket was requested.,DS0026,active_directory,active_directory_credential_request,user,requested,ad_credential
-,A Kerberos service ticket was renewed,DS0026,active_directory,active_directory_object_modification,user,modified,ad_credential
-,Kerberos pre-authentication failed,DS0026,active_directory,active_directory_credential_request,user,requested,ad_credential
-,A Kerberos service ticket request failed,DS0026,active_directory,active_directory_object_access,user,requested,service_ticket
-,The computer attempted to validate the credentials for an account,DS0002,user_account,user_account_authentication,user,authenticated_from,device
-,A session was reconnected to a Window Station.,DS0028,logon_session,logon_session_creation,user,created_logon_from,ip
-,A session was disconnected from a Window Station,DS0028,logon_session,logon_session_terminated,user,disconnected_fom,host
-,The name of an account was changed.,DS0002,user_account,user_account_modification,user,modified,user
-,A user's local group membership was enumerated.,DS0036,group,group_enumeration,user,enumerated,group
-,A security-enabled local group membership was enumerated.,DS0036,group,group_enumeration,group,enumerated,group
-,Synchronization of a replica of an Active Directory naming context has begun.,DS0026,active_directory,active_directory_object_access,user,accessed,ad_object
-,A change has been made to Windows Firewall exception list. A rule was added.,DS0018,firewall,firewall_rule_modification,,added,firewall_rule
-,A change has been made to Windows Firewall exception list. A rule was modified.,DS0018,firewall,firewall_rule_modification,,modified,firewall_rule
-,A change has been made to Windows Firewall exception list. A rule was deleted.,DS0018,firewall,firewall_rule_modification,,removed,firewall_rule
-,A windows firewall setting has changed,DS0018,firewall,firewall_metadata,,modified,firewall_setting
-,Windows firewall group policy settings has changed,DS0018,firewall,firewall_metadata,,modified,firewall_group_policy
-,Special groups have been assigned to a new logon.,DS0028,logon_session,logon_session_creation,user,created,logon
-,The Windows Firewall Service has started successfully.,DS0018,firewall,firewall_enabled,firewall,enabled,
-,The Windows Firewall Service has been stopped.,DS0018,firewall,firewall_disable,firewall,disabled,
-,The Windows Firewall Service blocked an application from accepting incoming connections on the network.,DS0029,network_traffic,network_connection_creation,device,blocked_connection_to,process
-,The Windows Firewall Driver was stopped.,DS0018,firewall,firewall_disable,process/user,disabled,firewall
-,A directory service object was modified.,DS0026,active_directory,active_directory_object_modification,user,modified,ad_object
-,A directory service object was created.,DS0026,active_directory,active_directory_object_creation,user,created,ad_object
-,A directory service object was undeleted,DS0026,active_directory,active_directory_object_creation,user,restored,ad_object
-,A directory service object was moved.,DS0026,active_directory,active_directory_object_modification,user,created,ad_object
-,A network share object was accessed.,DS0033,network_share,network_share_access,user,attempted_to_access,network_share
-,A directory service object was deleted.,DS0026,active_directory,active_directory_object_deletion,user,deleted,ad_object
-,A network share object was added.,DS0033,network_share,network_share_creation,user,created,network_share
-,A network share object was modified.,DS0033,network_share,network_share_modification,user,modified,network_share
-,A network share object was deleted.,DS0033,network_share,network_share_deletion,user,deleted,network_share
-,A network share object was checked to see whether client can be granted desired access.,DS0023,named_pipe,named_pipe_metadata,user,created,pipe
-,A network share object was checked to see whether client can be granted desired access.,DS0033,network_share,network_share_access,user,attempted_to_access,network_share
-,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,DS0029,network_traffic,network_connection_creation,device,permitted_listener_on,ip/port/process
-,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,DS0029,network_traffic,network_connection_creation,process,listened_on,port
-,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,DS0029,network_traffic,network_connection_creation,device,blocked_listener_to,ip/port/process
-,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,DS0029,network_traffic,network_connection_creation,process,attempted_to_listen_on,port
-,The Windows Filtering Platform has permitted a connection.,DS0029,network_traffic,network_connection_creation,process,connected_to,ip/port
-,The Windows Filtering Platform has blocked a connection.,DS0029,network_traffic,network_connection_creation,process,attempted_connection_to/from,ip/port
-,The Windows Filtering Platform has blocked a connection.,DS0029,network_traffic,network_connection_creation,device,blocked_connection_to,process/port
-,The Windows Filtering Platform has permitted a bind to a local port.,DS0029,network_traffic,network_connection_creation,process,bound_to,port
-,The Windows Filtering Platform has blocked a bind to a local port.,DS0029,network_traffic,network_connection_creation,device,blocked_port_bind_on,ip/port/process
-,The Windows Filtering Platform has blocked a bind to a local port.,DS0029,network_traffic,network_connection_creation,process,attempted_to_bind_on,port
-,WMIProv provider started.,DS0005,wmi,wmi_creation,user,created,wmi_object
-,WMI Query Error.,DS0005,wmi,wmi_creation,user,created,wmi_object
-,WMI Event.,DS0005,wmi,wmi_creation,user,created,wmi_object
-,WMI temporary event created.,DS0005,wmi,wmi_creation,user,created,wmi_object
-,WMI permanent event created.,DS0005,wmi,wmi_creation,user,created,wmi_object
-,The Event log service was started.,DS0013,sensor_health,host_status,sensor_health,changed,
-,The Event log service was started.,DS0019,service,service_metadata,service,started,
-,The Event log service was stopped.,DS0013,sensor_health,host_status,sensor_health,changed,
-,The Event log service was stopped.,DS0019,service,service_metadata,service,stopped,
-,A new external device was recognized by the system.,DS0016,drive,drive_creation,user,installed,drive
-,A request was made to disable a device.,DS0016,drive,drive_modification,user,attempted_to_disable,drive
-,A device was disabled.,DS0016,drive,drive_modification,user,disabled,drive
-,A request was made to enable a device.,DS0016,drive,drive_modification,user,attempted_to_enable,drive
-,A device was enabled.,DS0016,drive,drive_modification,user,enabled,drive
-,The installation of this device is forbidden by system policy.,DS0016,drive,drive_creation,user,attempted_to_install,drive
-,"The installation of this device was allowed, after having previously been forbidden by policy.",DS0016,drive,drive_creation,user,installed,drive
+,The event logging service has shut down.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,Audit events have been dropped by the transport.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,The audit log was cleared.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,The security Log is now full.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,A Windows Defender Firewall setting has changed.,DS0018,Firewall,Firewall Metadata,Process/User,Modified,Firewall
+,A Windows Defender Firewall setting in the Private profile has changed.,DS0018,Firewall,Firewall Metadata,Process/User,Modified,Firewall
+,A rule has been added to the Windows Defender Firewall exception list,DS0018,Firewall,Firewall Rule Modification,Process/User,Add,Firewall Rule
+,A rule has been modified in the Windows Defender Firewall exception list.,DS0018,Firewall,Firewall Rule Modification,Process/User,Modified,Firewall Rule
+,A rule has been deleted in the Windows Defender Firewall exception list,DS0018,Firewall,Firewall Rule Modification,Process/User,Removed,Firewall Rule
+,The Windows Firewall service failed to load Group Policy.,DS0018,Firewall,Firewall Metadata,Firewall,Attempted To Load,Configuration
+,All rules have been deleted from the Windows Firewall configuration on this computer.,DS0018,Firewall,Firewall Rule Modification,User,Removed,Firewall Rule
+,Module logging.,DS0017,Command,Command Execution,User,Executed,Command
+,Module logging.,DS0012,Script,Script Execution,Process,Executed,Script
+,Script Block Logging.,DS0012,Script,Script Execution,Process,Executed,Script
+,An authentication package has been loaded by the Local Security Authority.,DS0028,Logon Session,Logon Session Metadata,Logon,Metadata,
+,A trusted logon process has been registered with the Local Security Authority.,DS0028,Logon Session,Logon Session Metadata,Logon,Metadata,
+,A notification package has been loaded by the Security Account Manager.,DS0028,Logon Session,Logon Session Metadata,Logon,Metadata,
+,The system time was changed.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,A security package has been loaded by the Local Security Authority.,DS0028,Logon Session,Logon Session Metadata,Logon,Metadata,
+,An account was successfully logged on,DS0028,Logon Session,Logon Session Creation,User,Created Logon From,Ip/Port/Logon Session
+,An account failed to log on,DS0002,User Account,User Account Authentication,User,Attempted To Authenticate From,Ip/Port
+,An account was logged off,DS0028,Logon Session,Logon Session Metadata,User,Terminated,Logon Session
+,User initiated logoff.,DS0028,Logon Session,Logon Session Metadata,User,Terminated,Logon Session
+,A logon was attempted using explicit credentials.,DS0002,User Account,User Account Authentication,User,Attempted To Authenticate From,Ip/Port
+,A handle to an object was requested.,DS0022,File,File Access,Process/User,Requested Access To,File
+,A handle to an object was requested.,DS0023,Named Pipe,Named Pipe Metadata,Process,Created,Pipe
+,A handle to an object was requested,DS0009,Process,Process Access,Process,Requested Access To,Process
+,A handle to an object was requested.,DS0019,Service,Service Access,User,Requested Access To,Service
+,A registry value was modified.,DS0024,Windows Registry,Windows Registry Key Creation,Process/User,Created,Registry
+,A registry value was modified.,DS0024,Windows Registry,Windows Registry Key Deletion,Process/User,Deleted,Registry
+,A registry value was modified.,DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
+,An object was deleted.,DS0022,File,File Deletion,Process/User,Deleted,Registry
+,An object was deleted.,DS0024,Windows Registry,Windows Registry Key Deletion,Process/User,Deleted,Registry
+,A handle to an object was requested.,DS0026,Active Directory,Active Directory Object Access,User,Requested Access To,Ad Object
+,A handle to an object was requested.,DS0022,File,File Access,User,Requested Access To,File
+,An operation was performed on an object.,DS0026,Active Directory,Active Directory Object Access,User,Accessed,Ad Object
+,An attempt was made to access an object,DS0022,File,File Access,Process/User,Accessed,File
+,An attempt was made to access an object.,DS0022,File,File Creation,Process/User,Created,File
+,An attempt was made to access an object.,DS0022,File,File Deletion,Process/User,Deleted,File
+,An attempt was made to access an object,DS0009,Process,Process Access,Process/User,Accessed,Process
+,An attempt was made to access an object,DS0024,Windows Registry,Windows Registry Key Access,Process/User,Accessed,Registry
+,Permissions on an object were changed.,DS0022,File,File Modification,Process/User,Modified,File
+,Permissions on an object were changed.,DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,File
+,Special privileges assigned to new logon.,DS0028,Logon Session,Logon Session Modification,Logon,Modified,
+,A privileged service was called.,DS0028,Logon Session,Logon Session Metadata,Logon,Metadata,
+,An operation was attempted on a privileged object.,DS0028,Logon Session,Logon Session Metadata,Logon,Metadata,
+,Program execution. When you start a program you are creating a process that stays open until the program ends,DS0009,Process,Process Creation,Process/User,Created,Process
+,A process has exited.,DS0009,Process,Process Termination,User,Terminated,Process
+,A primary token was assigned to process. The assigning process fields identifies the process that started the child (new) process,DS0009,Process,Process Creation,Process/User,Created,Process
+,A service was installed in the system.,DS0019,Service,Service Creation,User,Created,Service
+,A scheduled task was created.,DS0003,Scheduled Job,Scheduled Job Creation,User,Created,Scheduled Job
+,A scheduled task was deleted.,DS0003,Scheduled Job,Scheduled Job Deletion,User,Deleted,Scheduled Job
+,A scheduled task was enabled.,DS0003,Scheduled Job,Scheduled Job Modification,User,Enabled,Scheduled Job
+,A scheduled task was disabled.,DS0003,Scheduled Job,Scheduled Job Modification,User,Disabled,Scheduled Job
+,A scheduled task was updated.,DS0003,Scheduled Job,Scheduled Job Modification,User,Modified,Scheduled Job
+,A user right was adjusted.,DS0002,User Account,User Account Modification,Logon,Metadata,
+,System security access was granted to an account.,DS0002,User Account,User Account Modification,User,Granted Access To,User Account
+,System security access was removed from an account.,DS0002,User Account,User Account Modification,User,Removed Access To,User Account
+,System audit policy was changed.,DS0026,Active Directory,Active Directory Object Modification,User,Modified,Ad Object
+,A user account was created,DS0002,User Account,User Account Creation,User,Created,User Account
+,A user account was enabled.,DS0002,User Account,User Account Modification,User,Enabled,User Account
+,An attempt was made to change an account's password.,DS0002,User Account,User Account Modification,User,Attempted To Modify,User Account
+,An attempt was made to reset an account's password,DS0002,User Account,User Account Modification,User,Attempted To Modify,User Account
+,A user account was disabled.,DS0002,User Account,User Account Modification,User,Disabled,User Account
+,A user account was deleted,DS0002,User Account,User Account Deletion,User,Deleted,User Account
+,A security-enabled global group was created.,DS0036,Group,Group Creation,User,Created,Group
+,A member was removed from a security-enabled global group.,DS0036,Group,Group Modification,User,Modified,Group
+,A security-enabled global group was deleted.,DS0036,Group,Group Deletion,User,Deleted,Group
+,A security-enabled local group was created.,DS0036,Group,Group Creation,User,Created,Group
+,A member was added to a security-enabled local group.,DS0036,Group,Group Modification,User,Modified,Group
+,A member was removed from a security-enabled local group.,DS0036,Group,Group Modification,User,Modified,Group
+,A security-enabled local group was deleted.,DS0036,Group,Group Deletion,User,Deleted,Group
+,A security-enabled local group was changed.,DS0036,Group,Group Modification,User,Modified,Group
+,A security-enabled global group was changed.,DS0026,Active Directory,Active Directory Object Modification,User,Modified,Group
+,A user account was changed.,DS0002,User Account,User Account Modification,User,Modified,User Account
+,A user account was locked out.,DS0002,User Account,User Account Modification,User,Locked,User Account
+,A computer account was created.,DS0002,User Account,User Account Creation,User,Created,User Account
+,A computer account was changed.,DS0002,User Account,User Account Modification,User,Modified,User Account
+,A computer account was deleted.,DS0002,User Account,User Account Deletion,User,Deleted,User Account
+,A security-enabled universal group was created.,DS0036,Group,Group Creation,User,Created,Group
+,A security-enabled universal group was changed.,DS0036,Group,Group Modification,User,Modified,Group
+,A member was added to a security-enabled universal group.,DS0036,Group,Group Modification,User,Modified,Group
+,A member was removed from a security-enabled universal group.,DS0036,Group,Group Modification,User,Modified,Group
+,A security-enabled universal group was deleted.,DS0036,Group,Group Deletion,User,Deleted,Group
+,A groups type was changed.,DS0036,Group,Group Modification,User,Modified,Group
+,A user account was unlocked.,DS0002,User Account,User Account Modification,User,Unlocked,User Account
+,A Kerberos authentication ticket (TGT) was requested.,DS0026,Active Directory,Active Directory Credential Request,User,Requested,Ad Credential
+,A Kerberos service ticket was requested.,DS0026,Active Directory,Active Directory Credential Request,User,Requested,Ad Credential
+,A Kerberos service ticket was renewed,DS0026,Active Directory,Active Directory Object Modification,User,Modified,Ad Credential
+,Kerberos pre-authentication failed,DS0026,Active Directory,Active Directory Credential Request,User,Requested,Ad Credential
+,A Kerberos service ticket request failed,DS0026,Active Directory,Active Directory Object Access,User,Requested,Service Ticket
+,The computer attempted to validate the credentials for an account,DS0002,User Account,User Account Authentication,User,Authenticated From,Device
+,A session was reconnected to a Window Station.,DS0028,Logon Session,Logon Session Creation,User,Created Logon From,Ip
+,A session was disconnected from a Window Station,DS0028,Logon Session,Logon Session Terminated,User,Disconnected Fom,Host
+,The name of an account was changed.,DS0002,User Account,User Account Modification,User,Modified,User Account
+,A user's local group membership was enumerated.,DS0036,Group,Group Enumeration,User,Enumerated,Group
+,A security-enabled local group membership was enumerated.,DS0036,Group,Group Enumeration,Group,Enumerated,Group
+,Synchronization of a replica of an Active Directory naming context has begun.,DS0026,Active Directory,Active Directory Object Access,User,Accessed,Ad Object
+,A change has been made to Windows Firewall exception list. A rule was added.,DS0018,Firewall,Firewall Rule Modification,,Added,Firewall Rule
+,A change has been made to Windows Firewall exception list. A rule was modified.,DS0018,Firewall,Firewall Rule Modification,,Modified,Firewall Rule
+,A change has been made to Windows Firewall exception list. A rule was deleted.,DS0018,Firewall,Firewall Rule Modification,,Removed,Firewall Rule
+,A windows firewall setting has changed,DS0018,Firewall,Firewall Metadata,,Modified,Firewall Setting
+,Windows firewall group policy settings has changed,DS0018,Firewall,Firewall Metadata,,Modified,Firewall Group Policy
+,Special groups have been assigned to a new logon.,DS0028,Logon Session,Logon Session Creation,User,Created,Logon Session
+,The Windows Firewall Service has started successfully.,DS0018,Firewall,Firewall Enabled,Firewall,Enabled,
+,The Windows Firewall Service has been stopped.,DS0018,Firewall,Firewall Disable,Firewall,Disabled,
+,The Windows Firewall Service blocked an application from accepting incoming connections on the network.,DS0029,Network Traffic,Network Connection Creation,Device,Blocked Connection To,Process
+,The Windows Firewall Driver was stopped.,DS0018,Firewall,Firewall Disable,Process/User,Disabled,Firewall
+,A directory service object was modified.,DS0026,Active Directory,Active Directory Object Modification,User,Modified,Ad Object
+,A directory service object was created.,DS0026,Active Directory,Active Directory Object Creation,User,Created,Ad Object
+,A directory service object was undeleted,DS0026,Active Directory,Active Directory Object Creation,User,Restored,Ad Object
+,A directory service object was moved.,DS0026,Active Directory,Active Directory Object Modification,User,Created,Ad Object
+,A network share object was accessed.,DS0033,Network Share,Network Share Access,User,Attempted To Access,Network Share
+,A directory service object was deleted.,DS0026,Active Directory,Active Directory Object Deletion,User,Deleted,Ad Object
+,A network share object was added.,DS0033,Network Share,Network Share Creation,User,Created,Network Share
+,A network share object was modified.,DS0033,Network Share,Network Share Modification,User,Modified,Network Share
+,A network share object was deleted.,DS0033,Network Share,Network Share Deletion,User,Deleted,Network Share
+,A network share object was checked to see whether client can be granted desired access.,DS0023,Named Pipe,Named Pipe Metadata,User,Created,Pipe
+,A network share object was checked to see whether client can be granted desired access.,DS0033,Network Share,Network Share Access,User,Attempted To Access,Network Share
+,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,DS0029,Network Traffic,Network Connection Creation,Device,Permitted Listener On,Ip/Port/Process
+,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,DS0029,Network Traffic,Network Connection Creation,Process,Listened On,Port
+,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,DS0029,Network Traffic,Network Connection Creation,Device,Blocked Listener To,Ip/Port/Process
+,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,DS0029,Network Traffic,Network Connection Creation,Process,Attempted To Listen On,Port
+,The Windows Filtering Platform has permitted a connection.,DS0029,Network Traffic,Network Connection Creation,Process,Connected To,Ip/Port
+,The Windows Filtering Platform has blocked a connection.,DS0029,Network Traffic,Network Connection Creation,Process,Attempted Connection To/From,Ip/Port
+,The Windows Filtering Platform has blocked a connection.,DS0029,Network Traffic,Network Connection Creation,Device,Blocked Connection To,Process/Port
+,The Windows Filtering Platform has permitted a bind to a local port.,DS0029,Network Traffic,Network Connection Creation,Process,Bound To,Port
+,The Windows Filtering Platform has blocked a bind to a local port.,DS0029,Network Traffic,Network Connection Creation,Device,Blocked Port Bind On,Ip/Port/Process
+,The Windows Filtering Platform has blocked a bind to a local port.,DS0029,Network Traffic,Network Connection Creation,Process,Attempted To Bind On,Port
+,WMIProv provider started.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
+,WMI Query Error.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
+,WMI Event.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
+,WMI temporary event created.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
+,WMI permanent event created.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
+,The Event log service was started.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,The Event log service was started.,DS0019,Service,Service Metadata,Service,Started,
+,The Event log service was stopped.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
+,The Event log service was stopped.,DS0019,Service,Service Metadata,Service,Stopped,
+,A new external device was recognized by the system.,DS0016,Drive,Drive Creation,User,Installed,Drive
+,A request was made to disable a device.,DS0016,Drive,Drive Modification,User,Attempted To Disable,Drive
+,A device was disabled.,DS0016,Drive,Drive Modification,User,Disabled,Drive
+,A request was made to enable a device.,DS0016,Drive,Drive Modification,User,Attempted To Enable,Drive
+,A device was enabled.,DS0016,Drive,Drive Modification,User,Enabled,Drive
+,The installation of this device is forbidden by system policy.,DS0016,Drive,Drive Creation,User,Attempted To Install,Drive
+,"The installation of this device was allowed, after having previously been forbidden by policy.",DS0016,Drive,Drive Creation,User,Installed,Drive
