@@ -30,6 +30,7 @@ def standardize(sheet, *columns_to_exclude):
                     continue
                 sheet.loc[:, col] = sheet.loc[:, col].str.replace("_", " ")
                 sheet.loc[:, col] = sheet.loc[:, col].str.title()
+                sheet.loc[:, col] = sheet.loc[:, col].str.replace("Wmi", "WMI")
 
 
 def get_sheets(spreadsheet_location, config_location):
@@ -53,7 +54,7 @@ def get_sheets(spreadsheet_location, config_location):
     df["Data Source ID"] = df["Data Source ID"].apply(lambda n: -1 if pd.isna(n) else n)
     # Where a value of `-1` indicates that this is a new ATT&CK Data Source
 
-    worksheet_names = df["Worksheet Name"].unique()
+    worksheet_names = df["Worksheet Name"].dropna().unique()
     sheets = []
     for _worksheet in worksheet_names:
         _df = df[df["Worksheet Name"] == _worksheet].reset_index(drop=True)

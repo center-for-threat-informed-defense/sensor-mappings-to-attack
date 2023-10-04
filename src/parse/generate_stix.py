@@ -12,6 +12,30 @@ from stix2.v21 import Bundle, CustomObject, ExternalReference, Relationship
 
 
 @CustomObject(
+    'x-mitre-data-source', [
+        ("name", StringProperty()),
+        ("description", StringProperty()),
+        ("x_mitre_platforms", ListProperty(StringProperty())),
+        ("x_mitre_domains", ListProperty(EnumProperty(allowed=['enterprise-attack', 'mobile-attack', 'ics-attack']))),
+        ("x_mitre_contributors", ListProperty(StringProperty())),
+        ("x_mitre_collection_layers", ListProperty(StringProperty())),
+        ("object_marking_refs", ListProperty(ReferenceProperty(valid_types=['marking-definition']))),
+        ("created_by_ref", ReferenceProperty(valid_types=['identity'])),
+        ("external_references", ListProperty(ExternalReference)),
+        ("x_mitre_version", StringProperty()),
+        ("x_mitre_attack_spec_version", StringProperty()),
+        ("x_mitre_modified_by_ref", ReferenceProperty(valid_types=['identity']))
+    ]
+)
+
+
+class DataSource():
+    """Custom MITRE Data Source STIX object."""
+    def __init__(self, **kwargs):
+        pass
+
+
+@CustomObject(
     'x-mitre-data-component', [
         ('name', StringProperty()),
         ('description', StringProperty()),
@@ -71,10 +95,6 @@ def load_attack_data(version, attack_domain="enterprise-attack"):
     component_ids = {}
     tqdm_format = tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
 
-    attack_url = f"https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/{attack_domain}/{attack_domain}-{version}.json"
-    print(attack_url)
-    attack_data = requests.get(attack_url, verify=True).json()["objects"]
-
     # Find the already-existing SDO's to avoid duplication
     for attack_object in tqdm(attack_data, desc=f"parsing v{version} {attack_domain} data", bar_format=tqdm_format):
         type_data_source = "x-mitre-data-source"
@@ -122,24 +142,63 @@ def parse_mappings(mappings_location, config_location, relationship_ids={}, atta
     tqdm_format = tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
 
     # build STIX objects
-    stix_new_data_components = {}
+    stix_new_objects = {}
     bundle_tuples = []
 
     attack_type = attack_domain.split('-')[0]
     mapping_data = [f for f in mappings_location.glob('*.csv') if f.is_file() and attack_type in f.name]
 
+    sources_reference = pd.read_csv(Path(mappings_location.parent.parent, f'{attack_domain}-v{version}-datasources.csv'))
 
     for _csv in mapping_data:
         stix_relationships = {}
         stix_objects = []  # Holds all new data component SDOs, mappings SDOs and new data source SDOs.
         mappings_df = pd.read_csv(_csv, keep_default_na=False, header=0)
         for idx, row in tqdm(list(mappings_df.iterrows()), desc="parsing mappings", bar_format=tqdm_format):
+            # Check if the data source is already defined in STIX
+            # If not, create a new SDO
+            data_source_name = row["ATT&CK DATA SOURCE"]
             data_source_id = row["ATT&CK DATA SOURCE ID"]
-            data_source_stix_ID, data_source_ext_refs = data_source_info[data_source_id]
+            if data_source_id == "-1":
+                # Check if it has already been created
+                if data_source_name in stix_new_objects:
+                    data_source_stix_ID = stix_new_objects[data_source_name].id
+                    data_source_ext_refs = []
+                else:
+                    data_source_sdo = DataSource(
+                        name=data_source_name,
+                        x_mitre_contributors=["Center for Threat-Informed Defense (CTID)"],
+                        object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
+                        x_mitre_version="1.0",
+                        x_mitre_attack_spec_version="2.1.0",
+                        x_mitre_domains=attack_domain,
+                        created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+                        x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+                        )
+                    stix_objects.append(data_source_sdo)
+                    # This SDO will not have all of its fields filled out. They may be added in the next version.
+                    # Update the SDO with the missing properties using the following command:
+                        # data_source_sdo.new_version(x_mitre_platforms=[""])
+                    
+                    # Create a new Data Source ID
+                    highest_ds_id = sources_reference["ID"].apply(lambda id: int(id[-2:]) if pd.notna(id) else id).max()
+                    new_ds_id = f"DS{highest_ds_id+1:04}"
+                    # Add it to sources_reference as a new row to avoid duplication as we continue to parse mappings.
+                    sources_reference.loc[len(sources_reference)] = {
+                        "name": data_source_name,
+                        "ID": new_ds_id,
+                        "type": "datasource"
+                    }
+                    data_source_stix_ID = data_source_sdo.id
+                    data_source_ext_refs = []
+                    stix_new_objects[data_source_name] = data_source_sdo
+            else:
+                data_source_stix_ID, data_source_ext_refs = data_source_info[data_source_id]
+
             # Check if the data component is already defined in STIX
             # If not, create a new SDO
             data_component = row["ATT&CK DATA COMPONENT"]
-            if data_component not in data_component_info and data_component not in stix_new_data_components:
+            if data_component not in data_component_info and data_component not in stix_new_objects:
                 data_component_sdo = DataComponent(
                     name=data_component,
                     # This SDO will not have a description available. One may be added in the next version.
@@ -152,13 +211,13 @@ def parse_mappings(mappings_location, config_location, relationship_ids={}, atta
                     object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
                     allow_custom=True
                 )
-                stix_new_data_components[data_component] = data_component_sdo
+                stix_new_objects[data_component] = data_component_sdo
                 stix_objects.append(data_component_sdo)
 
                 data_component_stix_ID = data_component_sdo.id
-            elif data_component not in data_component_info and data_component in stix_new_data_components:
-                stix_objects.append(stix_new_data_components[data_component])
-                data_component_stix_ID = stix_new_data_components[data_component].id
+            elif data_component not in data_component_info and data_component in stix_new_objects:
+                stix_objects.append(stix_new_objects[data_component])
+                data_component_stix_ID = stix_new_objects[data_component].id
             else:
                 data_component_stix_ID = data_component_info[data_component]
 
@@ -205,9 +264,9 @@ def parse_mappings(mappings_location, config_location, relationship_ids={}, atta
         )
         bundle_tuples.append((source, bundle))
     # Report on new SDOs created
-    print("New STIX Objects created for the following Data Components:")
-    for component in stix_new_data_components:
-        print(f"\t{component}\t-- {stix_new_data_components[component].id}")
+    print("New STIX Objects:")
+    for object in stix_new_objects:
+        print(f"\t{object}\t-- {stix_new_objects[object].id}")
     return bundle_tuples
 
 

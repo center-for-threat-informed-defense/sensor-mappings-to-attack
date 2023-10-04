@@ -128,11 +128,11 @@ EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA 
 ,The Windows Filtering Platform has permitted a bind to a local port.,DS0029,Network Traffic,Network Connection Creation,Process,Bound To,Port
 ,The Windows Filtering Platform has blocked a bind to a local port.,DS0029,Network Traffic,Network Connection Creation,Device,Blocked Port Bind On,Ip/Port/Process
 ,The Windows Filtering Platform has blocked a bind to a local port.,DS0029,Network Traffic,Network Connection Creation,Process,Attempted To Bind On,Port
-,WMIProv provider started.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
-,WMI Query Error.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
-,WMI Event.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
-,WMI temporary event created.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
-,WMI permanent event created.,DS0005,Wmi,Wmi Creation,User,Created,Wmi Object
+,WMIProv provider started.,DS0005,WMI,WMI Creation,User,Created,WMI Object
+,WMI Query Error.,DS0005,WMI,WMI Creation,User,Created,WMI Object
+,WMI Event.,DS0005,WMI,WMI Creation,User,Created,WMI Object
+,WMI temporary event created.,DS0005,WMI,WMI Creation,User,Created,WMI Object
+,WMI permanent event created.,DS0005,WMI,WMI Creation,User,Created,WMI Object
 ,The Event log service was started.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
 ,The Event log service was started.,DS0019,Service,Service Metadata,Service,Started,
 ,The Event log service was stopped.,DS0013,Sensor Health,Host Status,Sensor Health,Changed,
