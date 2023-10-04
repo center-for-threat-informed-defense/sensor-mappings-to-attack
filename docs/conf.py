@@ -12,8 +12,8 @@
 #
 # import os
 # import sys
-# sys.path.insert(0, os.path.abspath('.'))
-
+#sys.path.append("/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sphinxcontrib/exceltable")
+# sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
@@ -33,6 +33,7 @@ release = version
 # ones.
 extensions = [
     "sphinx_rtd_theme",
+    "sphinxcontrib.excel_table",
 ]
 
 # Add any paths that contain templates here, relative to this directory.

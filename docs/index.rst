@@ -22,6 +22,12 @@ threat-informed decisions.
     overview
     use_cases
     mapping_methodology
+    mapping-Auditd
+    mapping-Sysmon
+    mapping-WinEvtx
+    mapping-Zeek
+    mapping-OSQuery
+    mapping-CloudTrail
 
 Notice
 ------

@@ -58,7 +58,6 @@ The methodology consists of the following steps:
 - **Identify Platform Events/Telemetry** - Identify the *native* event logs available on the platform.
 - **Description Correlation** - For each identified event, understand the security capabilities it provides.
 - **Relationship Correlation** - Identify the ATT&CK Data Sources mappable to event IDs.
-- **Telemetry Source Correlation** - Creating a mapping based on the information gathered from the previous steps. 
 
 Adversary behaviors can be described by mapping them to the appropriate tactics, techniques, and sub-techniques in ATT&CK. To detect these behaviors, ATT&CK has a detection section that maps directly to the collection source (data sources). 
 
@@ -195,14 +194,3 @@ Note: Pay attention to the differences between similar data sources and events. 
 .. image:: _static/T1134EX.png
    :width: 600
    
-
-
-Step 4: Telemetry Source Correlation 
----------------------------------------------
-
-This is by far the hardest level to find for correlation because at times it requires some reverse engineering. `OSSEM <https://github.com/OTRF/OSSEM>`_, `Telemetry Source <https://github.com/jsecurity101/TelemetrySource>`_, and other open source research projects do a good job of explaining how they approach this process. 
-
-..
-   Fill in the rest for this correlation piece : Identifying Telemetry Source (ETW/Kernal Callbacks/APIs/etc.)
- 
-
