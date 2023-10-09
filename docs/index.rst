@@ -20,14 +20,11 @@ threat-informed decisions.
     :caption: Contents
 
     overview
+    definitions
+    methodology/index
+    levels/index
     use_cases
-    mapping_methodology
-    mapping-Auditd
-    mapping-Sysmon
-    mapping-WinEvtx
-    mapping-Zeek
-    mapping-OSQuery
-    mapping-CloudTrail
+    Future-Work
 
 Notice
 ------

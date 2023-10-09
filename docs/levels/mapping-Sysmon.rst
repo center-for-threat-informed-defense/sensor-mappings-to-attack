@@ -1,5 +1,5 @@
-Sysmon Mappings
-===============
+Sysmon
+======
 .. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
 
 .. list-table::
