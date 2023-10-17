@@ -39,7 +39,7 @@ def get_sheets(spreadsheet_location, config_location):
         config = json.load(f)
         version = config["attack_version"]
 
-    df = pd.read_excel(spreadsheet_location, header=1, sheet_name="Combined Events", usecols="A,C:I")
+    df = pd.read_excel(spreadsheet_location, sheet_name="Combined Events", usecols="A,C:I")
     standardize(df)
 
     # Merge in the Data Source ID's from the ATT&CK Data Source CSV
@@ -87,36 +87,10 @@ def generate_csv_spreadsheet(sheets, mappings_location):
                 # Skip any rows without mappable fields
 
 
-def generate_supporting_csv(spreadsheet_location):
-    """This is a helper script to intake the ATT&CK framework relating to Data Sources."""
-    def strip_source(data_component: str):
-        # Splits 'Data Source: Data Component' into just the Data Component.
-        replace_at = data_component.index(": ")
-        return data_component[replace_at + 2:]
-    
-    output_folder = spreadsheet_location.parent.parent.parent
-    _input = Path(spreadsheet_location.parent, f"enterprise-attack-v13.1-datasources.xlsx")
-
-    all_data_sources = pd.read_excel(_input, sheet_name="datasources", usecols="A:J")
-
-    # Split the dataframes
-    data_components_df = all_data_sources.loc[all_data_sources["type"] == "datacomponent"].reset_index(drop=True)
-    data_sources_df = all_data_sources.loc[all_data_sources["type"] == "datasource"].reset_index(drop=True)
-
-    # Standardize dataframes
-    data_components_df["name"] = data_components_df["name"].apply(strip_source)
-    standardize(data_components_df, set(data_components_df.columns)-{"name"})
-    standardize(data_sources_df,  set(data_sources_df.columns)-{"name"})
-
-    # Save to `output_folder`
-    data_sources_df.to_csv(Path(output_folder, f"enterprise-attack-v13.1-datasources.csv"), index=False)
-    data_components_df.to_csv(Path(output_folder, f"enterprise-attack-v13.1-datacomponents.csv"), index=False)
-
-
 def _parse_args():
     ROOT_DIR = Path(__file__).parent.parent.parent
 
-    parser = argparse.ArgumentParser(description="Create useful info from sensors mappings")
+    parser = argparse.ArgumentParser(description="Create mappings from sensors data")
     parser.add_argument("-config-location",
                         dest="config_location",
                         help="filepath to the configuration for the framework",
@@ -139,7 +113,6 @@ def _parse_args():
 
 def main():
     args = _parse_args()
-    generate_supporting_csv(args.spreadsheet_location)
     sheets = get_sheets(args.spreadsheet_location, args.config_location)
     generate_csv_spreadsheet(sheets, args.mappings_location)
 
