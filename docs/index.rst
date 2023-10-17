@@ -23,8 +23,11 @@ threat-informed decisions.
     definitions
     methodology/index
     levels/index
+    Example-Technique-Mappings
     use_cases
     Future-Work
+    Changelog
+    Acknowledgements
 
 Notice
 ------

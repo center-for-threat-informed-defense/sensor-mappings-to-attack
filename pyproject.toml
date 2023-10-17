@@ -11,6 +11,8 @@ packages = []
 python = "^3.8"
 pytz = "^2023.3"
 sphinxcontrib-excel-table = "^1.0.8"
+sphinx-panels = "^0.6.0"
+sphinxawesome-theme = "^4.1.0"
 
 
 [tool.poetry.group.dev.dependencies]

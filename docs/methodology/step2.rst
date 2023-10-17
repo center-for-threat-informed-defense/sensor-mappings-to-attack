@@ -17,7 +17,7 @@ Think about the questions below for additional context on potential source of th
 
 Let's take a look at Windows `Event ID 4688 <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4688>`_. Because this is a Microsoft tool, we can go straight to their website to get addition context on what this event does. By the event description, 4688 is generated every time a new process starts. We can also see within the information provided by this event the user account that requested the creation of the process, and information of a process that executed a new process. This event also provides metadata that can help us to describe the data elements needed in Step 3 later on in the methodology process.
 
-.. image:: ../_static/WELEX2.png
+.. image:: ../_static/MSDN_4688_Ex.png
    :width: 600
 
 - The action that triggered the generation of this event was the creation of a new process (Activity). 
@@ -27,12 +27,12 @@ Correlate to ATT&CK Data Component Defintion
 --------------------------------------------
 In correlation to ATT&CK, when you go to the `Data Source <https://attack.mitre.org/datasources/>`_ pages you can see definitions for a given one. 
 
-.. image:: ../_static/PCEX.png
+.. image:: ../_static/ATTACK_Ex_PC.png
    :width: 600
 
 ATT&CK's definition of process creation is : **..the initial construction of an executable..** through keyword analysis, this turns out to be the same as **..a process is created..** Therefore we can comfortably link event ID 4688 with ATT&CK Data Component. 
 
 Lets look at Sysmon EID 1, Sysmon EID 8, WinEvtx 4688, and WinEvtx 4696. The image below shows that the definition all have some correlation with either starting or executing a process. 
 
-.. image:: ../_static/DEF3.png
+.. image:: ../_static/DefinitionCorrelation_Ex.png
    :width: 700
