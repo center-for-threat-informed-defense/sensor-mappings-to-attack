@@ -1,27 +1,29 @@
 EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
+,Driver loaded,DS0027,Driver,Driver Load,Driver,Loaded,
+,The RawAccessRead event detects when a process conducts reading operations from the drive using the \.\ denotation,DS0022,File,File Access,Process,Accessed,File
+,FileCreate,DS0022,File,File Creation,Process/User,Created,File
+,FileCreateStreamHash,DS0022,File,File Creation,File,Created,File Stream Hash
+,FileDelete,DS0022,File,File Deletion,Process/User,Deleted,File
+,File Delete logged.,DS0022,File,File Deletion,Process/User,Deleted,File
+,A process changed a file creation time,DS0022,File,File Modification,Process/User/File,Modified,File
+,Image Loaded,DS0011,Module,Module Load,Process/User,Loaded,Module
+,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Connection,Process,Created,Named Pipe
+,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Created,Pipe
+,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
+,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
+,Network connection,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To/From,Ip/Port/Device
+,ProcessAccess,DS0009,Process,Process Access,Process,Accessed,Process
 ,A new process has been created,DS0009,Process,Process Creation,Process/User,Created,Process
 ,A new process has been created,DS0009,Process,Process Creation,Process/User,Executed,Process
-,A process changed a file creation time,DS0022,File,File Modification,Process/User/File,Modified,File
-,Network connection,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To/From,Ip/Port/Device
-,Sysmon service state changed.,DS0019,Service,Service Metadata,Service,Stopped/Started,Service
-,Process terminated,DS0009,Process,Process Termination,Process/User,Terminated,Process
-,Driver loaded,DS0027,Driver,Driver Load,Driver,Loaded,
-,Image Loaded,DS0011,Module,Module Load,Process/User,Loaded,Module
+,EventID(30),DS0009,Process,Process Metadata,Process,Searched,Ldap
 ,The CreateRemoteThread event detects when a process creates a thread in another process.,DS0009,Process,Process Modification,Process,Modified,Process
-,The RawAccessRead event detects when a process conducts reading operations from the drive using the \.\ denotation,DS0022,File,File Access,Process,Accessed,File
-,ProcessAccess,DS0009,Process,Process Access,Process,Accessed,Process
-,FileCreate,DS0022,File,File Creation,Process/User,Created,File
+,Process terminated,DS0009,Process,Process Termination,Process/User,Terminated,Process
+,Sysmon service state changed.,DS0019,Service,Service Metadata,Service,Stopped/Started,Service
 ,RegistryEvent (Object create and delete),DS0024,Windows Registry,Windows Registry Key Creation,Process/User,Created,Registry
 ,RegistryEvent (Object create and delete),DS0024,Windows Registry,Windows Registry Key Deletion,Process/User,Deleted,Registry
 ,RegistryEvent (Value Set),DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
 ,RegistryEvent (Key and Value Rename),DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
-,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Created,Pipe
-,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
-,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
 ,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Creation,User,Created,WMI Object
-,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
 ,WmiEvent (WmiEventConsumer activity detected).,DS0005,WMI,WMI Creation,User,Created,WMI Object
+,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
 ,WmiEvent (WmiEventConsumer activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
-,FileDelete,DS0022,File,File Deletion,Process/User,Deleted,File
-,File Delete logged.,DS0022,File,File Deletion,Process/User,Deleted,File
-,EventID(30),DS0009,Process,Process Metadata,Process,Searched,Ldap
