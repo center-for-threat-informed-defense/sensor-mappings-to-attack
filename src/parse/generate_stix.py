@@ -149,7 +149,7 @@ def check_mapping_sdo(search_target, obj_list):
         "SOURCE": "source", 
         "RELATIONSHIP": "relationship",
         "TARGET": "target"
-    }
+    }  # Keys are for DataFrame keys. Values are for the corresponding STIX keys.
 
     objects_to_consider = [sdo for sdo in obj_list if isinstance(sdo, SensorMapping)]
 
@@ -188,14 +188,16 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
             # Search the list of mapped sensor objects to find the correct one
             id_to_reuse =  check_mapping_sdo(object_details, potential_matches)
         # Extract the SDO ID
-        id_to_reuse = reference_dict[object_details["name"]]
+        else:
+            id_to_reuse = reference_dict[object_details["name"]]
     # Check created_objects next
     elif object_details["name"] in created_objects:
         if object_type == "Sensor Mapping":
             potential_matches = created_objects[object_details["name"]]
             # Search the list of mapped sensor objects to find the correct one
             id_to_reuse = check_mapping_sdo(object_details, potential_matches)
-        id_to_reuse = created_objects[object_details["name"]].id
+        else:
+            id_to_reuse = created_objects[object_details["name"]].get("id")
     
     # If neither contain new object, create a new STIX object according to the object_type
     
@@ -339,7 +341,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
                 reference_dict=mapped_sensor_sdos,
                 created_objects=stix_new_sdo,
                 object_type="Sensor Mapping",
-                object_details=row.to_dict() | {"name": row["event_id"]}
+                object_details=row.to_dict() | {"name": row["EVENT ID"]}
             )
             if isinstance(sdo_details, SensorMapping) and sdo_details not in curr_bundle_objects:
                 curr_bundle_objects.append(sdo_details)
@@ -446,10 +448,12 @@ def use_reference_file(reference_file):
             to_id = sdo["id"]
             relationship_ids[from_id] = to_id
         elif sdo["type"] == "x-mitre-sensor-mapping":
+            # Sensor Mapping objects can share the 'event_id' field. 
+            # Need to store the entire SDO in order to validate all properties (to reuse the ID)
             if sdo["event_id"] not in mapping_objects:
-                mapping_objects[sdo["event_id"]] = [sdo["id"]]
+                mapping_objects[sdo["event_id"]] = [sdo]
             else:
-                mapping_objects[sdo["event_id"]].append(sdo["id"])
+                mapping_objects[sdo["event_id"]].append(sdo)
 
     return data_sdo_ids, relationship_ids, mapping_objects
 
