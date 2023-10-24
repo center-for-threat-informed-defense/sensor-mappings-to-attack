@@ -76,13 +76,22 @@ class SensorMapping():
 
 
     def equals(self, properties):
-        """Returns if a SensorMapping is equivalent to the given `properties` dictionary."""
+        """Returns if a SensorMapping is equivalent to the given `properties` dictionary or SensorMapping."""
+        prop_map = {
+            "EVENT ID": "event_id", 
+            "EVENT DESCRIPTION": "description", 
+            "ATT&CK DATA SOURCE ID": "x_mitre_data_source_id", 
+            "ATT&CK DATA SOURCE": "data_source", 
+            "ATT&CK DATA COMPONENT": "data_component", 
+            "SOURCE": "source", 
+            "RELATIONSHIP": "relationship",
+            "TARGET": "target"
+        }  # Keys are for DataFrame keys. Values are for the corresponding STIX keys.
         for key in properties:
-            if self.key != properties[key]:
+            if self[prop_map[key]] != properties[key]:
                 return False
             
         return True
-
 
 
 def load_attack_data(version, attack_domain, groups):
@@ -157,14 +166,18 @@ def check_mapping_sdo(search_target, obj_list):
         "TARGET": "target"
     }  # Keys are for DataFrame keys. Values are for the corresponding STIX keys.
 
+    # for sdo in obj_list:
+    #     similar = 0
+    #     for prop in prop_map:
+    #         if search_target[prop] != sdo[prop_map[prop]]:
+    #             break
+    #         similar += 1
+    #     if similar == len(prop_map):
+    #         return sdo["id"]
     for sdo in obj_list:
-        similar = 0
-        for prop in prop_map:
-            if search_target[prop] != sdo[prop_map[prop]]:
-                break
-            similar += 1
-        if similar == len(prop_map):
+        if sdo.equals(search_target):
             return sdo["id"]
+        
     return None
 
 
@@ -188,12 +201,12 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
 
     if object_type == "Sensor Mapping":  # It's more complicated since these custom objects are stored as lists
         # Check reference_dict first
-        if object_details["name"] in reference_dict:
-            potential_matches = reference_dict[object_details["name"]]
+        if object_details["EVENT ID"] in reference_dict:
+            potential_matches = reference_dict[object_details["EVENT ID"]]
             id_to_reuse =  check_mapping_sdo(object_details, potential_matches)
         # Check created_objects next
-        elif object_details["name"] in created_objects:
-            potential_matches = created_objects[object_details["name"]]
+        elif object_details["EVENT ID"] in created_objects:
+            potential_matches = created_objects[object_details["EVENT ID"]]
             id_to_reuse = check_mapping_sdo(object_details, potential_matches)
 
         if not id_to_reuse:  # If there are no matches, create a new ID for the custom object.
@@ -211,10 +224,10 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
             x_mitre_data_source_id=object_details["ATT&CK DATA SOURCE ID"]
         )
         # Keep a reference for the new object
-        if object_details["name"] not in created_objects:
-            created_objects[object_details["name"]] = [new_sdo]
+        if object_details["EVENT ID"] not in created_objects:
+            created_objects[object_details["EVENT ID"]] = [new_sdo]
         else:
-            created_objects[object_details["name"]].append(new_sdo)
+            created_objects[object_details["EVENT ID"]].append(new_sdo)
 
     else:
         # Check reference_dict first
@@ -358,7 +371,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
                 reference_dict=mapped_sensor_sdos,
                 created_objects=stix_new_sdo,
                 object_type="Sensor Mapping",
-                object_details=row.to_dict() | {"name": row["EVENT ID"]}
+                object_details=row.to_dict()
             )
             if isinstance(sdo_details, SensorMapping) and sdo_details not in curr_bundle_objects:
                 curr_bundle_objects.append(sdo_details)
@@ -393,11 +406,20 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
     # Report on new SDOs created
     print("\nNew STIX Objects:")
     for object in dict(sorted(stix_new_sdo.items())):
-        if isinstance(stix_new_sdo[object], SensorMapping):
+        if isinstance(stix_new_sdo[object], list):
+            # Indicates a SensorMapping
             continue
-        print(f"\t{object}\t\t\t {stix_new_sdo[object].id : >100}")
+        print(f"\t{object}\t\t\t {stix_new_sdo[object]['id'] : >100}")
+    # Some minor processing to separate SensorMapping.
+    data_sdos = {_tuple_: stix_new_sdo[_tuple_] for _tuple_ in stix_new_sdo if not isinstance(stix_new_sdo[_tuple_], list)}
+    sensor_sdos = {_tuple_: stix_new_sdo[_tuple_] for _tuple_ in stix_new_sdo if isinstance(stix_new_sdo[_tuple_], list)}
+    # Flatten these dictionaries of lists for bundling
+    mappings = []
+    for k,v in sensor_sdos.items():
+        mappings.extend(v)
+    
     bundle_tuples.append(("Reference-for", Bundle(
-            objects = list(stix_new_sdo.values()) + list(stix_relationships.values()),
+            objects = list(data_sdos.values()) + list(stix_relationships.values()) + mappings,
             allow_custom = True
         )))
     return bundle_tuples
@@ -481,6 +503,7 @@ def use_reference_file(reference_file):
                 data_component=sdo_dict["data_component"],
                 relationship=sdo_dict["relationship"],
                 target=sdo_dict["target"],
+                source=sdo_dict["source"],
                 x_mitre_data_source_id=sdo_dict["x_mitre_data_source_id"]
             )
 
@@ -501,7 +524,7 @@ if __name__ == "__main__":
     if reference_file:
         mapping_data_sdo_ids, relationship_ids, mapped_sensor_sdos = use_reference_file(*reference_file)
     else:
-        mapping_data_sdo_ids, relationship_ids, mapped_sensor_sdos = ([] for i in range(3))
+        mapping_data_sdo_ids, relationship_ids, mapped_sensor_sdos = ([] for _ in range(3))
     
 
     bundles = parse_mappings(
