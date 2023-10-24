@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+
 def standardize(sheet, *columns_to_exclude):
     """Helper method to standardize columns used for STIX data."""
     skip = ["Worksheet Name", "Event Description", "Event ID"] + list(*columns_to_exclude)
@@ -91,20 +92,20 @@ def _parse_args():
     ROOT_DIR = Path(__file__).parent.parent.parent
 
     parser = argparse.ArgumentParser(description="Create mappings from sensors data")
-    parser.add_argument("-config-location",
+    parser.add_argument("-config_location",
                         dest="config_location",
                         help="filepath to the configuration for the framework",
                         type=Path,
                         default=Path(ROOT_DIR, "mappings", "input", "config.json"))
-    parser.add_argument("-spreadsheet-location",
+    parser.add_argument("-spreadsheet_location",
                         dest="spreadsheet_location",
                         help="filepath to the Excel spreadsheet for the mappings",
                         type=Path,
                         default=Path(ROOT_DIR, "mappings", "input", 
-                            "enterprise", f"xlsx", f"Sensor ID to Data Source to API v2.xlsx"))
-    parser.add_argument("-mappings-location",
+                            "enterprise", "xlsx", "Sensor ID to Data Source to API v2.xlsx"))
+    parser.add_argument("-mappings_location",
                         dest="mappings_location",
-                        help="filepath to the CSV spreadsheet to write the mappings",
+                        help="filepath to the folder to write CSV spreadsheets",
                         type=Path,
                         default=Path(ROOT_DIR, "mappings", "input",
                             "enterprise", "csv"))

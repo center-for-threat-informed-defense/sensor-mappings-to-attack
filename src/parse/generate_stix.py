@@ -390,17 +390,18 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
         if isinstance(stix_new_sdo[object], list):
             # Indicates a SensorMapping
             continue
-        print(f"\t{object}\t\t\t {stix_new_sdo[object]['id'] : >100}")
-    # Some minor processing to separate SensorMapping.
+        print(f"\t{object}\t\t {stix_new_sdo[object]['id'] : >100}")
+        
+    # Split the objects that will be written to the reference file.
     data_sdos = {_tuple_: stix_new_sdo[_tuple_] for _tuple_ in stix_new_sdo if not isinstance(stix_new_sdo[_tuple_], list)}
-    sensor_sdos = {_tuple_: stix_new_sdo[_tuple_] for _tuple_ in stix_new_sdo if isinstance(stix_new_sdo[_tuple_], list)}
+    _sensor_sdos = {_tuple_: stix_new_sdo[_tuple_] for _tuple_ in stix_new_sdo if isinstance(stix_new_sdo[_tuple_], list)}
     # Flatten these dictionaries of lists for bundling
     mappings = []
-    for k,v in sensor_sdos.items():
-        mappings.extend(v)
+    for _, sdo_list in _sensor_sdos.items():
+        mappings.extend(sdo_list)
     
     bundle_tuples.append(("Reference-for", Bundle(
-            objects = list(data_sdos.values()) + list(stix_relationships.values()) + mappings,
+            objects = list(stix_relationships.values()) + list(data_sdos.values()) + mappings,
             allow_custom = True
         )))
     return bundle_tuples
@@ -425,7 +426,7 @@ def _parse_args():
     parser = argparse.ArgumentParser(description="Create STIX files from sensor mapping data")
     parser.add_argument("-attack_domain",
                         dest="attack_domain",
-                        help="Attack domain we are mapping. i.e. 'enterprise-attack', 'mobile-attack', 'ics-atack'",
+                        help="Attack domain we are mapping. i.e. 'enterprise-attack', 'mobile-attack', 'ics-attack'",
                         type=str,
                         choices=["enterprise-attack", "ics-attack", "mobile-attack"],
                         default="enterprise-attack")
@@ -434,7 +435,7 @@ def _parse_args():
                         help="The folder where STIX bundle file will be saved.",
                         type=Path,
                         default=Path(ROOT_DIR, "mappings", "stix", "enterprise"))
-    parser.add_argument("-config-location",
+    parser.add_argument("-config_location",
                         dest="config_location",
                         help="filepath to the configuration for the framework",
                         type=Path,
@@ -442,9 +443,9 @@ def _parse_args():
     parser.add_argument("-groups",
                         action="store_true",
                         help="If specified, create mappings for group objects")
-    parser.add_argument("-mappings-location",
+    parser.add_argument("-mappings_location",
                         dest="mappings_location",
-                        help="filepath to the CSV spreadsheet to write the mappings",
+                        help="The folder to the CSV spreadsheets to write the mappings",
                         type=Path,
                         default=Path(ROOT_DIR, "mappings", "input",
                             "enterprise", "csv"))

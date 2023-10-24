@@ -155,7 +155,7 @@ def _parse_args():
     ROOT_DIR = Path(__file__).parent.parent.parent
 
     parser = argparse.ArgumentParser(description="Create ATT&CK Navigator layers from sensor data mappings")
-    parser.add_argument("-mappings-location",
+    parser.add_argument("-mappings_location",
                         dest="mappings_location",
                         help="filepath to the STIX Bundle mappings",
                         type=Path,
