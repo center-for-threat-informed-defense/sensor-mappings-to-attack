@@ -155,25 +155,6 @@ def check_mapping_sdo(search_target, obj_list):
     `obj_list` (List): List of created SDOs.
     """
 
-    prop_map = {
-        "EVENT ID": "event_id", 
-        "EVENT DESCRIPTION": "description", 
-        "ATT&CK DATA SOURCE ID": "x_mitre_data_source_id", 
-        "ATT&CK DATA SOURCE": "data_source", 
-        "ATT&CK DATA COMPONENT": "data_component", 
-        "SOURCE": "source", 
-        "RELATIONSHIP": "relationship",
-        "TARGET": "target"
-    }  # Keys are for DataFrame keys. Values are for the corresponding STIX keys.
-
-    # for sdo in obj_list:
-    #     similar = 0
-    #     for prop in prop_map:
-    #         if search_target[prop] != sdo[prop_map[prop]]:
-    #             break
-    #         similar += 1
-    #     if similar == len(prop_map):
-    #         return sdo["id"]
     for sdo in obj_list:
         if sdo.equals(search_target):
             return sdo["id"]
@@ -497,6 +478,7 @@ def use_reference_file(reference_file):
     for event_key in mapping_objects:
         for index, sdo_dict in enumerate(mapping_objects[event_key]):
             mapping_objects[event_key][index] = SensorMapping(
+                id=sdo_dict["id"],
                 event_id=sdo_dict["event_id"],
                 description=sdo_dict["description"],
                 data_source=sdo_dict["data_source"],
@@ -506,8 +488,6 @@ def use_reference_file(reference_file):
                 source=sdo_dict["source"],
                 x_mitre_data_source_id=sdo_dict["x_mitre_data_source_id"]
             )
-
-    # TODO: Remove this. Re-implement as a method in SensorMapping...
     return data_sdo_ids, relationship_ids, mapping_objects
 
 
