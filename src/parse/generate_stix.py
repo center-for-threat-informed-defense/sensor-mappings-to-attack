@@ -75,6 +75,15 @@ class SensorMapping():
         pass
 
 
+    def equals(self, properties):
+        """Returns if a SensorMapping is equivalent to the given `properties` dictionary."""
+        for key in properties:
+            if self.key != properties[key]:
+                return False
+            
+        return True
+
+
 
 def load_attack_data(version, attack_domain, groups):
     """Load ATT&CK STIX data to create reference dictionaries to use when building STIX Bundles."""
@@ -83,9 +92,6 @@ def load_attack_data(version, attack_domain, groups):
             if item not in l1:
                 l1.append(item)
         return l1
-    
-
-    tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
 
     # load ATT&CK STIX data
     print("downloading ATT&CK data... ", end="", flush=True)
@@ -105,7 +111,7 @@ def load_attack_data(version, attack_domain, groups):
     # Now filter attack_data to only have the information we require
     source_ids_references = {}
     component_ids = {}
-    tqdm_format = tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
+    tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
 
     # Find the already-existing SDO's to avoid duplication
     for attack_object in tqdm(attack_data, desc=f"parsing v{version} {attack_domain} data", bar_format=tqdm_format):
@@ -151,9 +157,7 @@ def check_mapping_sdo(search_target, obj_list):
         "TARGET": "target"
     }  # Keys are for DataFrame keys. Values are for the corresponding STIX keys.
 
-    objects_to_consider = [sdo for sdo in obj_list if isinstance(sdo, SensorMapping)]
-
-    for sdo in objects_to_consider:
+    for sdo in obj_list:
         similar = 0
         for prop in prop_map:
             if search_target[prop] != sdo[prop_map[prop]]:
@@ -181,73 +185,86 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
     Custom STIX Object
     """
     id_to_reuse = None
-    # Check reference_dict first
-    if object_details["name"] in reference_dict:
-        if object_type == "Sensor Mapping":
-            potential_matches = reference_dict[object_details["name"]]
-            # Search the list of mapped sensor objects to find the correct one
-            id_to_reuse =  check_mapping_sdo(object_details, potential_matches)
-        # Extract the SDO ID
-        else:
-            id_to_reuse = reference_dict[object_details["name"]]
-    # Check created_objects next
-    elif object_details["name"] in created_objects:
-        if object_type == "Sensor Mapping":
-            potential_matches = created_objects[object_details["name"]]
-            # Search the list of mapped sensor objects to find the correct one
-            id_to_reuse = check_mapping_sdo(object_details, potential_matches)
-        else:
-            id_to_reuse = created_objects[object_details["name"]].get("id")
-    
-    # If neither contain new object, create a new STIX object according to the object_type
-    
-    if not id_to_reuse:
-        id_to_reuse = uuid.uuid4()
 
-    match object_type:
-        case "Data Source":
-            new_sdo = DataSource(
-                id=id_to_reuse,
-                name=object_details["name"],
-                x_mitre_contributors=["Center for Threat-Informed Defense (CTID)"],
-                object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
-                x_mitre_version="1.0",
-                x_mitre_attack_spec_version="2.1.0",
-                x_mitre_domains=object_details["domain"],
-                created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-                x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-                external_references = []
-            )
-        case "Data Component":
-            new_sdo = DataComponent(
-                id=id_to_reuse,
-                name=object_details["name"],
-                x_mitre_data_source_ref=object_details["source ref"],
-                x_mitre_version="1.0",
-                x_mitre_attack_spec_version="2.1.0",
-                x_mitre_domains=object_details["domain"],
-                x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-                created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-                object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
-                allow_custom=True
-            )
-        case "Sensor Mapping":
-            new_sdo = SensorMapping(
-                id=id_to_reuse,
-                event_id=object_details["EVENT ID"],
-                description=object_details["EVENT DESCRIPTION"],
-                data_source=object_details["ATT&CK DATA SOURCE"],
-                data_component=object_details["ATT&CK DATA COMPONENT"],
-                source=object_details["SOURCE"],
-                relationship=object_details["RELATIONSHIP"],
-                target=object_details["TARGET"],
-                x_mitre_data_source_id=object_details["ATT&CK DATA SOURCE ID"]
-            )
-            object_details["name"] = new_sdo.event_id
-        case default:
-            raise NotImplementedError("Unexpected object type.")
-    # Update input parameters
-    created_objects[object_details["name"]] = new_sdo
+    if object_type == "Sensor Mapping":  # It's more complicated since these custom objects are stored as lists
+        # Check reference_dict first
+        if object_details["name"] in reference_dict:
+            potential_matches = reference_dict[object_details["name"]]
+            id_to_reuse =  check_mapping_sdo(object_details, potential_matches)
+        # Check created_objects next
+        elif object_details["name"] in created_objects:
+            potential_matches = created_objects[object_details["name"]]
+            id_to_reuse = check_mapping_sdo(object_details, potential_matches)
+
+        if not id_to_reuse:  # If there are no matches, create a new ID for the custom object.
+            id_to_reuse = f"x-mitre-sensor-mapping--{uuid.uuid4()}"
+
+        new_sdo = SensorMapping(
+            id=id_to_reuse,
+            event_id=object_details["EVENT ID"],
+            description=object_details["EVENT DESCRIPTION"],
+            data_source=object_details["ATT&CK DATA SOURCE"],
+            data_component=object_details["ATT&CK DATA COMPONENT"],
+            source=object_details["SOURCE"],
+            relationship=object_details["RELATIONSHIP"],
+            target=object_details["TARGET"],
+            x_mitre_data_source_id=object_details["ATT&CK DATA SOURCE ID"]
+        )
+        # Keep a reference for the new object
+        if object_details["name"] not in created_objects:
+            created_objects[object_details["name"]] = [new_sdo]
+        else:
+            created_objects[object_details["name"]].append(new_sdo)
+
+    else:
+        # Check reference_dict first
+        if object_details["name"] in reference_dict:
+            # Extract the SDO ID
+            id_to_reuse = reference_dict[object_details["name"]]
+        # Check created_objects next
+        elif object_details["name"] in created_objects:
+            id_to_reuse = created_objects[object_details["name"]].get("id")
+        
+        # If neither contain new object, create a new STIX object according to the object_type
+        
+        if not id_to_reuse:
+            ref = {
+                "Data Source": "x-mitre-data-source",
+                "Data Component": "x-mitre-data-component"
+            }
+            id_to_reuse = f"{ref[object_type]}--{uuid.uuid4()}"
+
+        match object_type:
+            case "Data Source":
+                new_sdo = DataSource(
+                    id=id_to_reuse,
+                    name=object_details["name"],
+                    x_mitre_contributors=["Center for Threat-Informed Defense (CTID)"],
+                    object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
+                    x_mitre_version="1.0",
+                    x_mitre_attack_spec_version="2.1.0",
+                    x_mitre_domains=object_details["domain"],
+                    created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+                    x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+                    external_references = []
+                )
+            case "Data Component":
+                new_sdo = DataComponent(
+                    id=id_to_reuse,
+                    name=object_details["name"],
+                    x_mitre_data_source_ref=object_details["source ref"],
+                    x_mitre_version="1.0",
+                    x_mitre_attack_spec_version="2.1.0",
+                    x_mitre_domains=object_details["domain"],
+                    x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+                    created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+                    object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
+                    allow_custom=True
+                )
+            case _:
+                raise NotImplementedError("Unexpected object type.")
+        # Update input parameters
+        created_objects[object_details["name"]] = new_sdo
     return new_sdo
 
 
@@ -395,7 +412,7 @@ def to_stix_json(bundle_list, output_path):
         output_fname = Path(f"{source}-mappings-enterprise.json")
         path = output_path.joinpath(output_fname)
         with path.open('w', encoding="utf-8") as outfile:
-            bundle.fp_serialize(outfile, pretty=False, ensure_ascii=False, sort_keys=True, indent=4)
+            bundle.fp_serialize(outfile, pretty=False, ensure_ascii=False, sort_keys=True, indent=4, include_optional_defaults=True)
     print(f'\nDone! See {output_path}\n')
 
 
@@ -454,7 +471,20 @@ def use_reference_file(reference_file):
                 mapping_objects[sdo["event_id"]] = [sdo]
             else:
                 mapping_objects[sdo["event_id"]].append(sdo)
+    # For every Sensor Mapping SDO stored, it should be converted to a SensorMapping custom object for comparison.
+    for event_key in mapping_objects:
+        for index, sdo_dict in enumerate(mapping_objects[event_key]):
+            mapping_objects[event_key][index] = SensorMapping(
+                event_id=sdo_dict["event_id"],
+                description=sdo_dict["description"],
+                data_source=sdo_dict["data_source"],
+                data_component=sdo_dict["data_component"],
+                relationship=sdo_dict["relationship"],
+                target=sdo_dict["target"],
+                x_mitre_data_source_id=sdo_dict["x_mitre_data_source_id"]
+            )
 
+    # TODO: Remove this. Re-implement as a method in SensorMapping...
     return data_sdo_ids, relationship_ids, mapping_objects
 
 
