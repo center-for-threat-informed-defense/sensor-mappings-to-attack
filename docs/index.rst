@@ -19,10 +19,15 @@ threat-informed decisions.
     :maxdepth: 2
     :caption: Contents
 
-    introduction
     overview
+    definitions
+    methodology/index
+    levels/index
+    Example-Technique-Mappings
     use_cases
-    mapping_methodology
+    Future-Work
+    Changelog
+    Acknowledgements
 
 Notice
 ------
