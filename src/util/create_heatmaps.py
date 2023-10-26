@@ -4,7 +4,6 @@ import argparse
 import shutil
 
 import requests
-import urllib.parse
 from stix2 import Filter, MemoryStore
 
 
@@ -128,7 +127,7 @@ def create_mappings_heatmap(files_to_visualize, out_dir, attack_data, domain, ve
     for current_file in files_to_visualize:
         sensor_name = current_file.name[:current_file.name.find("-mappings")]
         print(f"loading mappings from {current_file} ... ", end="", flush=True)
-        with open(current_file, "r") as f:
+        with current_file.open("r", encoding="utf-8") as f:
             mappings = MemoryStore(stix_data=json.load(f)["objects"])
         print("done")
 

@@ -1,10 +1,12 @@
 # Utility Scripts
-Contains scripts used to create auxiliary data for mappings
+Contains scripts used to create auxiliary data for mappings and validating mappings.
 
 | Script                                   | Purpose                                                                                                                                                                                                       |
 | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [create_mappings.py](#create_mappingspy) | From the master excel spreadsheet, generate CSVs for sensor data mappings to be used with the parsing tool.                                  |
 | [create_heatmaps.py](#create_heatmapspy) | Enables visualization of the sensor mappings in the ATT&CK Matrix. Builds ATT&CK Navigator heatmap layers from mappings_location. These layers can also be found in the `layers` folder of the attack type in the stix output folder. |                                                                                                                                              |
+| [stix_schemas.py](#stix_schemaspy)       | Schema definition file. |                                                                                                                                              |
+| [cli_validator.py](#cli_validatorpy)     | Validates mappings to ensure bundles are packaged properly with all necessary objects |                                   |
 
 ## create_mappings.py
 ### Description
@@ -40,3 +42,19 @@ To build layers from project root:
 $ python src/util/create_heatmaps.py -clear -domain enterprise-attack \
     -mappings_location mappings/stix/enterprise
 ```
+
+## stix_schemas.py
+### Description
+Defines schemas for the cli_validator tool using the [schema library](https://github.com/keleshev/schema).
+
+
+## cli_validator.py
+### Description
+The mapping CLI tool provides functionality to validate mapping files using schemas from stix_schemas.py.
+### Use
+| Argument             | Description                                              | Default Value                                                         |
+| :------------------- | :------------------------------------------------------- | :-------------------------------------------------------------------- |
+| attack_domain        | attack domain of the mappings (options: enterprise-attack, ics-attack, mobile-attack) | enterprise-attack                        |
+| config_location      | filepath to the configuration for the framework                                       | `../../mappings/input/config.json`       |
+| mappings_location    | filepath to folder of STIX bundle mappings                                            | `../../mappings/input/enterprise/csv`    |
+| groups               | flag for if mappings to group objects                                                 | N/A                                      |
