@@ -146,6 +146,14 @@ def load_attack_data(version, attack_domain, groups):
     return (source_ids_references, component_ids)
 
 
+def bundle_append(bundle, object_to_add):
+    """Checks to see if `object_to_add` has already been added to `bundle`. If it has not,
+    it is added."""
+    simple_bundle = [item["id"] for item in bundle]
+    if object_to_add["id"] not in simple_bundle:
+        bundle.append(object_to_add)
+
+
 def check_mapping_sdo(search_target, obj_list):
     """
     Check if `search_target` is in `obj_list`. Return a SensorMapping STIX ID iff all properties of `search_target` are identical to the SensorMapping object's properties from `obj_list.
@@ -157,7 +165,7 @@ def check_mapping_sdo(search_target, obj_list):
 
     for sdo in obj_list:
         if sdo.equals(search_target):
-            return sdo["id"]
+            return sdo
         
     return None
 
@@ -185,10 +193,16 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
         if object_details["EVENT ID"] in reference_dict:
             potential_matches = reference_dict[object_details["EVENT ID"]]
             id_to_reuse =  check_mapping_sdo(object_details, potential_matches)
+            if id_to_reuse:
+                # There is no need to continue, the object has already been created.
+                return id_to_reuse
         # Check created_objects next
         elif object_details["EVENT ID"] in created_objects:
             potential_matches = created_objects[object_details["EVENT ID"]]
             id_to_reuse = check_mapping_sdo(object_details, potential_matches)
+            if id_to_reuse:
+                # There is no need to continue, the object has already been created.
+                return id_to_reuse
 
         if not id_to_reuse:  # If there are no matches, create a new ID for the custom object.
             id_to_reuse = f"x-mitre-sensor-mapping--{uuid.uuid4()}"
@@ -217,8 +231,8 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
             id_to_reuse = reference_dict[object_details["name"]]
         # Check created_objects next
         elif object_details["name"] in created_objects:
-            id_to_reuse = created_objects[object_details["name"]].get("id")
-        
+            # There is no need to continue, the object has already been created.
+            return created_objects[object_details["name"]]
         # If neither contain new object, create a new STIX object according to the object_type
         
         if not id_to_reuse:
@@ -282,7 +296,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
     # Match case of attack_data for Data Components to the mappings
     attack_data_components = {k.replace(" ", "_").lower(): v for k,v in attack_data_components.items()}
-    tqdm_format = tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
+    tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
 
     # build STIX objects
     stix_new_sdo = {}  # Holds all new SDO items
@@ -318,8 +332,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
                 # Update the SDO with the missing properties using the following command:
                     # NEW_SDO.new_version(PROPERTY=PROPERTY_VALUE)
                 data_source_stix_ID = sdo_details.id
-                if sdo_details not in curr_bundle_objects:
-                    curr_bundle_objects.append(sdo_details)
+                bundle_append(curr_bundle_objects, sdo_details)
             else:
                 data_source_stix_ID = attack_data_sources[data_source_id]
 
@@ -344,8 +357,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
                     # Update the SDO with the missing properties using the following command:
                         # NEW_SDO.new_version(PROPERTY=PROPERTY_VALUE)
                     data_component_stix_ID = sdo_details.id
-                    if sdo_details not in curr_bundle_objects:
-                        curr_bundle_objects.append(sdo_details)
+                    bundle_append(curr_bundle_objects, sdo_details)
                 
             # Make the mappings SDO
             sdo_details = create_stix_object(
@@ -354,8 +366,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
                 object_type="Sensor Mapping",
                 object_details=row.to_dict()
             )
-            if isinstance(sdo_details, SensorMapping) and sdo_details not in curr_bundle_objects:
-                curr_bundle_objects.append(sdo_details)
+            bundle_append(curr_bundle_objects, sdo_details)
 
             # Create a STIX SRO between the Data Source and Data Component
             relation = row["RELATIONSHIP"]
@@ -373,8 +384,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
                 relationship_type = relation,
                 allow_custom=True
             )
-            if relationship not in curr_bundle_objects:
-                curr_bundle_objects.append(relationship)
+            bundle_append(curr_bundle_objects, relationship)
             if joined_id not in stix_relationships:
                 stix_relationships[joined_id] = relationship
 
@@ -384,6 +394,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
             allow_custom = True  # Needed since ATT&CK data has custom objects
         )
         bundle_tuples.append((source, bundle))
+
     # Report on new SDOs created
     print("\nNew STIX Objects:")
     for object in dict(sorted(stix_new_sdo.items())):
