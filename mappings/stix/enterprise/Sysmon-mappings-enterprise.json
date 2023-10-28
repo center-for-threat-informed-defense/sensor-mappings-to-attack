@@ -1,0 +1,1162 @@
+{
+    "id": "bundle--fe128ad6-523e-4528-9b65-daf63bd09264",
+    "objects": [
+        {
+            "created": "2023-10-27T20:54:34.461525Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--0f563052-0cbb-4d8e-a260-ea15a5553dd5",
+            "modified": "2023-10-27T20:54:34.461525Z",
+            "name": "Driver Load",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--9ec8c0d7-6137-456f-b829-c5f8b96ba054",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.463112Z",
+            "data_component": "Driver Load",
+            "data_source": "Driver",
+            "description": "Driver loaded",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--56912b21-b291-4496-ac50-6072bca43e7a",
+            "modified": "2023-10-27T20:54:34.463112Z",
+            "relationship": "Loaded",
+            "revoked": false,
+            "source": "Driver",
+            "spec_version": "2.1",
+            "target": "",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0027"
+        },
+        {
+            "created": "2023-10-27T20:54:34.463633Z",
+            "id": "relationship--44b556e3-bc8a-4120-9767-0f50e1771e61",
+            "modified": "2023-10-27T20:54:34.463633Z",
+            "relationship_type": "Loaded",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--9ec8c0d7-6137-456f-b829-c5f8b96ba054",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--0f563052-0cbb-4d8e-a260-ea15a5553dd5",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.648869Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--88f2f2b0-1559-4650-9b84-74bdfdbf855b",
+            "modified": "2023-10-27T20:54:33.648869Z",
+            "name": "File Access",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.464157Z",
+            "data_component": "File Access",
+            "data_source": "File",
+            "description": "The RawAccessRead event detects when a process conducts reading operations from the drive using the \\.\\ denotation",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--b31163b5-8f84-4e3f-a230-295d340ce037",
+            "modified": "2023-10-27T20:54:34.464157Z",
+            "relationship": "Accessed",
+            "revoked": false,
+            "source": "Process",
+            "spec_version": "2.1",
+            "target": "File",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0022"
+        },
+        {
+            "created": "2023-10-27T20:54:34.464676Z",
+            "id": "relationship--e8726869-feea-4fa5-b272-0705d3ffb7fe",
+            "modified": "2023-10-27T20:54:34.464676Z",
+            "relationship_type": "Accessed",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--88f2f2b0-1559-4650-9b84-74bdfdbf855b",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.208309Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--c0c6bb35-9e38-47d5-be54-c33c1bcdd9f4",
+            "modified": "2023-10-27T20:54:34.208309Z",
+            "name": "File Creation",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.464676Z",
+            "data_component": "File Creation",
+            "data_source": "File",
+            "description": "FileCreate",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--6d66f790-b3f9-49d8-b7c9-9bba9b36af89",
+            "modified": "2023-10-27T20:54:34.464676Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "File",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0022"
+        },
+        {
+            "created": "2023-10-27T20:54:34.465669Z",
+            "id": "relationship--9b6ee13a-bb23-46bb-8e36-00e5370f718e",
+            "modified": "2023-10-27T20:54:34.465669Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--c0c6bb35-9e38-47d5-be54-c33c1bcdd9f4",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.465669Z",
+            "data_component": "File Creation",
+            "data_source": "File",
+            "description": "FileCreateStreamHash",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--be1cc0f0-fe29-4c5e-abf0-5f4c6f2ac682",
+            "modified": "2023-10-27T20:54:34.465669Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "File",
+            "spec_version": "2.1",
+            "target": "File Stream Hash",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0022"
+        },
+        {
+            "created": "2023-10-27T20:54:34.466791Z",
+            "id": "relationship--55960015-9a60-45d4-861d-e29f5d9c451d",
+            "modified": "2023-10-27T20:54:34.466791Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--c0c6bb35-9e38-47d5-be54-c33c1bcdd9f4",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.65187Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--e962d8f9-180d-4760-89f6-56a0a9a39c91",
+            "modified": "2023-10-27T20:54:33.65187Z",
+            "name": "File Deletion",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.466791Z",
+            "data_component": "File Deletion",
+            "data_source": "File",
+            "description": "FileDelete",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--041d1d45-751b-4875-9fc8-d4ce85275926",
+            "modified": "2023-10-27T20:54:34.466791Z",
+            "relationship": "Deleted",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "File",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0022"
+        },
+        {
+            "created": "2023-10-27T20:54:34.467865Z",
+            "id": "relationship--8ccbc919-af8e-4ac2-8130-07c69a90abde",
+            "modified": "2023-10-27T20:54:34.467865Z",
+            "relationship_type": "Deleted",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--e962d8f9-180d-4760-89f6-56a0a9a39c91",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.467865Z",
+            "data_component": "File Deletion",
+            "data_source": "File",
+            "description": "File Delete logged.",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--84dccb9a-da5f-4b73-a84a-5811c429bd88",
+            "modified": "2023-10-27T20:54:34.467865Z",
+            "relationship": "Deleted",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "File",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0022"
+        },
+        {
+            "created": "2023-10-27T20:54:34.468886Z",
+            "id": "relationship--816cebaf-37a7-4af1-ac96-ecd7da04f790",
+            "modified": "2023-10-27T20:54:34.468886Z",
+            "relationship_type": "Deleted",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--e962d8f9-180d-4760-89f6-56a0a9a39c91",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.655922Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--de72f4a3-cc85-4603-b783-685e80ad91c6",
+            "modified": "2023-10-27T20:54:33.655922Z",
+            "name": "File Modification",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.468886Z",
+            "data_component": "File Modification",
+            "data_source": "File",
+            "description": "A process changed a file creation time",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--b1dc8eae-ddb1-4dfe-a96f-057680c89e7c",
+            "modified": "2023-10-27T20:54:34.468886Z",
+            "relationship": "Modified",
+            "revoked": false,
+            "source": "Process/User/File",
+            "spec_version": "2.1",
+            "target": "File",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0022"
+        },
+        {
+            "created": "2023-10-27T20:54:34.469961Z",
+            "id": "relationship--29b19852-c767-490e-950c-2c95e78a7b81",
+            "modified": "2023-10-27T20:54:34.469961Z",
+            "relationship_type": "Modified",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--509ed41e-ca42-461e-9058-24602256daf9",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--de72f4a3-cc85-4603-b783-685e80ad91c6",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.469961Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--bc66dfbd-3982-4bea-81f8-015503e08c50",
+            "modified": "2023-10-27T20:54:34.469961Z",
+            "name": "Module Load",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--f424e4b4-a8a4-4c58-a4ae-4f53bfd08563",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.471077Z",
+            "data_component": "Module Load",
+            "data_source": "Module",
+            "description": "Image Loaded",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--5cb091c8-c4fa-40b5-a387-d0efd6d072be",
+            "modified": "2023-10-27T20:54:34.471077Z",
+            "relationship": "Loaded",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Module",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0011"
+        },
+        {
+            "created": "2023-10-27T20:54:34.471995Z",
+            "id": "relationship--546c2799-d97c-44f9-8621-d746cb87ba23",
+            "modified": "2023-10-27T20:54:34.471995Z",
+            "relationship_type": "Loaded",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--f424e4b4-a8a4-4c58-a4ae-4f53bfd08563",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--bc66dfbd-3982-4bea-81f8-015503e08c50",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.472998Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--38ebff0a-95bb-4c81-8c69-006e185123f2",
+            "modified": "2023-10-27T20:54:34.472998Z",
+            "name": "Named Pipe Connection",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--221adcd5-cccf-44df-9be6-ef607a6e1c3c",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.472998Z",
+            "data_component": "Named Pipe Connection",
+            "data_source": "Named Pipe",
+            "description": "PipeEvent (Pipe Connected)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--0490edcc-7da6-42f4-9943-1cba0ab5ddbb",
+            "modified": "2023-10-27T20:54:34.472998Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "Process",
+            "spec_version": "2.1",
+            "target": "Named Pipe",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0023"
+        },
+        {
+            "created": "2023-10-27T20:54:34.472998Z",
+            "id": "relationship--bb2dd6a5-ac57-46b4-91ca-0a6755555406",
+            "modified": "2023-10-27T20:54:34.472998Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--221adcd5-cccf-44df-9be6-ef607a6e1c3c",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--38ebff0a-95bb-4c81-8c69-006e185123f2",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.474126Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--a1eae790-0019-48b4-ac25-a7d75544909f",
+            "modified": "2023-10-27T20:54:34.474126Z",
+            "name": "Named Pipe Metadata",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--221adcd5-cccf-44df-9be6-ef607a6e1c3c",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.475103Z",
+            "data_component": "Named Pipe Metadata",
+            "data_source": "Named Pipe",
+            "description": "PipeEvent (Pipe Created)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--5b910e45-1686-4938-91a8-6c437d3827e9",
+            "modified": "2023-10-27T20:54:34.475103Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Pipe",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0023"
+        },
+        {
+            "created": "2023-10-27T20:54:34.475103Z",
+            "id": "relationship--dacb4f81-5178-4ce9-85ca-1a8304a9354c",
+            "modified": "2023-10-27T20:54:34.475103Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--221adcd5-cccf-44df-9be6-ef607a6e1c3c",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--a1eae790-0019-48b4-ac25-a7d75544909f",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.476102Z",
+            "data_component": "Named Pipe Metadata",
+            "data_source": "Named Pipe",
+            "description": "PipeEvent (Pipe Created)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--f1b20673-8b34-47cf-8ccd-8324ee2cdaae",
+            "modified": "2023-10-27T20:54:34.476102Z",
+            "relationship": "Connected To",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Pipe",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0023"
+        },
+        {
+            "created": "2023-10-27T20:54:34.477215Z",
+            "id": "relationship--24cfb1bb-5ac0-429b-b71c-49f9e3c1b00a",
+            "modified": "2023-10-27T20:54:34.477215Z",
+            "relationship_type": "Connected To",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--221adcd5-cccf-44df-9be6-ef607a6e1c3c",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--a1eae790-0019-48b4-ac25-a7d75544909f",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.477215Z",
+            "data_component": "Named Pipe Metadata",
+            "data_source": "Named Pipe",
+            "description": "PipeEvent (Pipe Connected)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--528e5198-fe7e-4e2e-9426-08139cad9918",
+            "modified": "2023-10-27T20:54:34.477215Z",
+            "relationship": "Connected To",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Pipe",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0023"
+        },
+        {
+            "created": "2023-10-27T20:54:34.478308Z",
+            "id": "relationship--b3955b92-9e64-4f3c-a529-6ba1aa17093e",
+            "modified": "2023-10-27T20:54:34.478308Z",
+            "relationship_type": "Connected To",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--221adcd5-cccf-44df-9be6-ef607a6e1c3c",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--a1eae790-0019-48b4-ac25-a7d75544909f",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.478308Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--e383303b-98ab-4d43-9dac-908d37baef34",
+            "modified": "2023-10-27T20:54:34.478308Z",
+            "name": "Network Connection Creation",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--c000cd5c-bbb3-4606-af6f-6c6d9de0bbe3",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.479323Z",
+            "data_component": "Network Connection Creation",
+            "data_source": "Network Traffic",
+            "description": "Network connection",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--710fa8f2-41af-491d-86ab-a75c350e8bc9",
+            "modified": "2023-10-27T20:54:34.479323Z",
+            "relationship": "Connected To/From",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Ip/Port/Device",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0029"
+        },
+        {
+            "created": "2023-10-27T20:54:34.479323Z",
+            "id": "relationship--6279c1cf-ceca-4849-9bbc-2c4f2b1388aa",
+            "modified": "2023-10-27T20:54:34.479323Z",
+            "relationship_type": "Connected To/From",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--c000cd5c-bbb3-4606-af6f-6c6d9de0bbe3",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--e383303b-98ab-4d43-9dac-908d37baef34",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.681873Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--12fb7e95-8224-492c-b5e7-80903a6c8bfa",
+            "modified": "2023-10-27T20:54:33.681873Z",
+            "name": "Process Access",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.480406Z",
+            "data_component": "Process Access",
+            "data_source": "Process",
+            "description": "ProcessAccess",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--d2474944-bdcf-49b6-994c-683627126c66",
+            "modified": "2023-10-27T20:54:34.480406Z",
+            "relationship": "Accessed",
+            "revoked": false,
+            "source": "Process",
+            "spec_version": "2.1",
+            "target": "Process",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0009"
+        },
+        {
+            "created": "2023-10-27T20:54:34.480406Z",
+            "id": "relationship--49faef60-9d58-4ed7-9756-f16a2b2b1ccf",
+            "modified": "2023-10-27T20:54:34.480406Z",
+            "relationship_type": "Accessed",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--12fb7e95-8224-492c-b5e7-80903a6c8bfa",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.684869Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--3f2b47dd-48ea-4d68-9521-a8f7f56a4180",
+            "modified": "2023-10-27T20:54:33.684869Z",
+            "name": "Process Creation",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.481431Z",
+            "data_component": "Process Creation",
+            "data_source": "Process",
+            "description": "A new process has been created",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--323a48e7-e750-45d3-a7b1-4458f0486c16",
+            "modified": "2023-10-27T20:54:34.481431Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Process",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0009"
+        },
+        {
+            "created": "2023-10-27T20:54:34.481431Z",
+            "id": "relationship--2e97b576-3df2-44f1-ab67-4371a44704dc",
+            "modified": "2023-10-27T20:54:34.481431Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--3f2b47dd-48ea-4d68-9521-a8f7f56a4180",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.482522Z",
+            "data_component": "Process Creation",
+            "data_source": "Process",
+            "description": "A new process has been created",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--f7db2eaa-a537-4213-8e04-b51958118dfb",
+            "modified": "2023-10-27T20:54:34.482522Z",
+            "relationship": "Executed",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Process",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0009"
+        },
+        {
+            "created": "2023-10-27T20:54:34.483626Z",
+            "id": "relationship--4e1088bf-50d5-4d49-a802-8744ce5e0ec6",
+            "modified": "2023-10-27T20:54:34.483626Z",
+            "relationship_type": "Executed",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--3f2b47dd-48ea-4d68-9521-a8f7f56a4180",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.387867Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--781acdbc-a4fd-43d9-9f6f-80eb8b53bf94",
+            "modified": "2023-10-27T20:54:34.387867Z",
+            "name": "Process Metadata",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.48425Z",
+            "data_component": "Process Metadata",
+            "data_source": "Process",
+            "description": "EventID(30)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--0be20a9a-f266-4edc-b626-bd45288c61b4",
+            "modified": "2023-10-27T20:54:34.48425Z",
+            "relationship": "Searched",
+            "revoked": false,
+            "source": "Process",
+            "spec_version": "2.1",
+            "target": "Ldap",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0009"
+        },
+        {
+            "created": "2023-10-27T20:54:34.484878Z",
+            "id": "relationship--bda270c9-f441-4bfa-99d2-b1245e1163ea",
+            "modified": "2023-10-27T20:54:34.484878Z",
+            "relationship_type": "Searched",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--781acdbc-a4fd-43d9-9f6f-80eb8b53bf94",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.484878Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--62941e03-da2b-467b-96b7-b8ef6d6c8fbc",
+            "modified": "2023-10-27T20:54:34.484878Z",
+            "name": "Process Modification",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.485962Z",
+            "data_component": "Process Modification",
+            "data_source": "Process",
+            "description": "The CreateRemoteThread event detects when a process creates a thread in another process.",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--35cc55db-fa79-429c-9a14-740cd80f14db",
+            "modified": "2023-10-27T20:54:34.485962Z",
+            "relationship": "Modified",
+            "revoked": false,
+            "source": "Process",
+            "spec_version": "2.1",
+            "target": "Process",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0009"
+        },
+        {
+            "created": "2023-10-27T20:54:34.485962Z",
+            "id": "relationship--d87bbb9f-1b8f-4d2c-bd5d-cc0d86ccaed0",
+            "modified": "2023-10-27T20:54:34.485962Z",
+            "relationship_type": "Modified",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--62941e03-da2b-467b-96b7-b8ef6d6c8fbc",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.687867Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--52a9b19a-9dcc-4eef-aff3-58d3e4523ceb",
+            "modified": "2023-10-27T20:54:33.687867Z",
+            "name": "Process Termination",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.487065Z",
+            "data_component": "Process Termination",
+            "data_source": "Process",
+            "description": "Process terminated",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--693e9680-a3cd-441c-b2a5-01ae27d7802e",
+            "modified": "2023-10-27T20:54:34.487065Z",
+            "relationship": "Terminated",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Process",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0009"
+        },
+        {
+            "created": "2023-10-27T20:54:34.487968Z",
+            "id": "relationship--c70f5aae-510e-4f58-99c8-c8e67971e6fc",
+            "modified": "2023-10-27T20:54:34.487968Z",
+            "relationship_type": "Terminated",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--e8b8ede7-337b-4c0c-8c32-5c7872c1ee22",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--52a9b19a-9dcc-4eef-aff3-58d3e4523ceb",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:33.69607Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--ba1aab5b-4d7e-4ab1-be22-02829cb50b02",
+            "modified": "2023-10-27T20:54:33.69607Z",
+            "name": "Service Metadata",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--d710099e-df94-4be4-bf85-cabd30e912bb",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.487968Z",
+            "data_component": "Service Metadata",
+            "data_source": "Service",
+            "description": "Sysmon service state changed.",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--a0a20744-a7b0-4c76-924b-e4ef1105bd27",
+            "modified": "2023-10-27T20:54:34.487968Z",
+            "relationship": "Stopped/Started",
+            "revoked": false,
+            "source": "Service",
+            "spec_version": "2.1",
+            "target": "Service",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0019"
+        },
+        {
+            "created": "2023-10-27T20:54:34.489047Z",
+            "id": "relationship--c4fc6272-48ba-428c-945c-270b9bacd650",
+            "modified": "2023-10-27T20:54:34.489047Z",
+            "relationship_type": "Stopped/Started",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--d710099e-df94-4be4-bf85-cabd30e912bb",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--ba1aab5b-4d7e-4ab1-be22-02829cb50b02",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.489047Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--7fa1ea2a-ef03-4797-b4da-ded7431b03a6",
+            "modified": "2023-10-27T20:54:34.489047Z",
+            "name": "Windows Registry Key Creation",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.490097Z",
+            "data_component": "Windows Registry Key Creation",
+            "data_source": "Windows Registry",
+            "description": "RegistryEvent (Object create and delete)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--da9593be-d9c9-4abb-95c3-8815b264dd6b",
+            "modified": "2023-10-27T20:54:34.490097Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Registry",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0024"
+        },
+        {
+            "created": "2023-10-27T20:54:34.491088Z",
+            "id": "relationship--56d1864d-eb29-4b62-bc6f-6708324f3f15",
+            "modified": "2023-10-27T20:54:34.491088Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--7fa1ea2a-ef03-4797-b4da-ded7431b03a6",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.491088Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--bd62e695-7bf5-4d81-880b-c63f30635156",
+            "modified": "2023-10-27T20:54:34.491088Z",
+            "name": "Windows Registry Key Deletion",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.492083Z",
+            "data_component": "Windows Registry Key Deletion",
+            "data_source": "Windows Registry",
+            "description": "RegistryEvent (Object create and delete)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--d934a866-0c14-476d-b279-568f3af4893a",
+            "modified": "2023-10-27T20:54:34.492083Z",
+            "relationship": "Deleted",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Registry",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0024"
+        },
+        {
+            "created": "2023-10-27T20:54:34.492083Z",
+            "id": "relationship--f2ca22e3-84eb-4475-ab31-ca12fc47ebd0",
+            "modified": "2023-10-27T20:54:34.492083Z",
+            "relationship_type": "Deleted",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--bd62e695-7bf5-4d81-880b-c63f30635156",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.493081Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--f23ad5d9-1cb0-41a0-bfb8-fcda53887dfc",
+            "modified": "2023-10-27T20:54:34.493081Z",
+            "name": "Windows Registry Key Modification",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.493081Z",
+            "data_component": "Windows Registry Key Modification",
+            "data_source": "Windows Registry",
+            "description": "RegistryEvent (Value Set)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--b628ff3c-913a-4132-92eb-18ff758999d0",
+            "modified": "2023-10-27T20:54:34.493081Z",
+            "relationship": "Modified",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Registry",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0024"
+        },
+        {
+            "created": "2023-10-27T20:54:34.494082Z",
+            "id": "relationship--0025910a-1011-4759-82e2-113fc221ca37",
+            "modified": "2023-10-27T20:54:34.494082Z",
+            "relationship_type": "Modified",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--f23ad5d9-1cb0-41a0-bfb8-fcda53887dfc",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.495088Z",
+            "data_component": "Windows Registry Key Modification",
+            "data_source": "Windows Registry",
+            "description": "RegistryEvent (Key and Value Rename)",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--957f5f16-7f49-41ae-8342-67e7f8cb2bf3",
+            "modified": "2023-10-27T20:54:34.495088Z",
+            "relationship": "Modified",
+            "revoked": false,
+            "source": "Process/User",
+            "spec_version": "2.1",
+            "target": "Registry",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0024"
+        },
+        {
+            "created": "2023-10-27T20:54:34.495088Z",
+            "id": "relationship--d78a7ae0-dab2-472b-bf5d-d186a006a588",
+            "modified": "2023-10-27T20:54:34.495088Z",
+            "relationship_type": "Modified",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--0f42a24c-e035-4f93-a91c-5f7076bd8da0",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--f23ad5d9-1cb0-41a0-bfb8-fcda53887dfc",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.437411Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--b4d4ef94-4140-4a7d-9e25-4e60a278104d",
+            "modified": "2023-10-27T20:54:34.437411Z",
+            "name": "WMI Creation",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--2cd6cc81-d86e-4595-a4f0-43f5519f14e6",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.496083Z",
+            "data_component": "WMI Creation",
+            "data_source": "WMI",
+            "description": "WmiEvent (WmiEventFilter activity detected).",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--780ab1bc-6049-4beb-96d3-a45ff5bfc56b",
+            "modified": "2023-10-27T20:54:34.496083Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "User",
+            "spec_version": "2.1",
+            "target": "WMI Object",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0005"
+        },
+        {
+            "created": "2023-10-27T20:54:34.496083Z",
+            "id": "relationship--2e440251-dd8f-43bd-a851-e00232ce4e0f",
+            "modified": "2023-10-27T20:54:34.496083Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--2cd6cc81-d86e-4595-a4f0-43f5519f14e6",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--b4d4ef94-4140-4a7d-9e25-4e60a278104d",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.497149Z",
+            "data_component": "WMI Creation",
+            "data_source": "WMI",
+            "description": "WmiEvent (WmiEventConsumer activity detected).",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--3f3d36d6-a81d-42ef-a7de-37fbda3d5ab4",
+            "modified": "2023-10-27T20:54:34.497149Z",
+            "relationship": "Created",
+            "revoked": false,
+            "source": "User",
+            "spec_version": "2.1",
+            "target": "WMI Object",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0005"
+        },
+        {
+            "created": "2023-10-27T20:54:34.497149Z",
+            "id": "relationship--ce557ce6-2130-4294-ac78-bdddad38fcdf",
+            "modified": "2023-10-27T20:54:34.497149Z",
+            "relationship_type": "Created",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--2cd6cc81-d86e-4595-a4f0-43f5519f14e6",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--b4d4ef94-4140-4a7d-9e25-4e60a278104d",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.498234Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "id": "x-mitre-data-component--0e70fe01-fbc7-4e0a-b9ca-0204cb085952",
+            "modified": "2023-10-27T20:54:34.498234Z",
+            "name": "WMI Deletion",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "revoked": false,
+            "spec_version": "2.1",
+            "type": "x-mitre-data-component",
+            "x_mitre_attack_spec_version": "2.1.0",
+            "x_mitre_data_source_ref": "x-mitre-data-source--2cd6cc81-d86e-4595-a4f0-43f5519f14e6",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        },
+        {
+            "created": "2023-10-27T20:54:34.498234Z",
+            "data_component": "WMI Deletion",
+            "data_source": "WMI",
+            "description": "WmiEvent (WmiEventFilter activity detected).",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--738767bb-d93e-4aef-bf94-29e53f87255e",
+            "modified": "2023-10-27T20:54:34.498234Z",
+            "relationship": "Deleted",
+            "revoked": false,
+            "source": "User",
+            "spec_version": "2.1",
+            "target": "WMI Object",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0005"
+        },
+        {
+            "created": "2023-10-27T20:54:34.499491Z",
+            "id": "relationship--bfa6b0c0-45d5-4f91-b2a5-5c9fda9eb75f",
+            "modified": "2023-10-27T20:54:34.499491Z",
+            "relationship_type": "Deleted",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--2cd6cc81-d86e-4595-a4f0-43f5519f14e6",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--0e70fe01-fbc7-4e0a-b9ca-0204cb085952",
+            "type": "relationship"
+        },
+        {
+            "created": "2023-10-27T20:54:34.499491Z",
+            "data_component": "WMI Deletion",
+            "data_source": "WMI",
+            "description": "WmiEvent (WmiEventConsumer activity detected).",
+            "event_id": "",
+            "id": "x-mitre-sensor-mapping--560ed321-e8b2-4454-b684-5e07256782b6",
+            "modified": "2023-10-27T20:54:34.499491Z",
+            "relationship": "Deleted",
+            "revoked": false,
+            "source": "User",
+            "spec_version": "2.1",
+            "target": "WMI Object",
+            "type": "x-mitre-sensor-mapping",
+            "x_mitre_data_source_id": "DS0005"
+        },
+        {
+            "created": "2023-10-27T20:54:34.500583Z",
+            "id": "relationship--41dcb1bf-19e6-45a7-b28d-5138a5989310",
+            "modified": "2023-10-27T20:54:34.500583Z",
+            "relationship_type": "Deleted",
+            "revoked": false,
+            "source_ref": "x-mitre-data-source--2cd6cc81-d86e-4595-a4f0-43f5519f14e6",
+            "spec_version": "2.1",
+            "target_ref": "x-mitre-data-component--0e70fe01-fbc7-4e0a-b9ca-0204cb085952",
+            "type": "relationship"
+        }
+    ],
+    "type": "bundle"
+}

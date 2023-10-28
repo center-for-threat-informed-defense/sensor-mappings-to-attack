@@ -1,0 +1,687 @@
+{
+    "name": "Sysmon",
+    "versions": {
+        "navigator": "4.8.2",
+        "layer": "4.4",
+        "attack": "13"
+    },
+    "sorting": 0,
+    "description": "",
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1543",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1561",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1547",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1562",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1068",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1056",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1111",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1033",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1003",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1539",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1114",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1025",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1119",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1091",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1558",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1555",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1567",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1552",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1011",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1217",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1087",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1020",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1074",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1649",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1041",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1048",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1039",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1187",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1018",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1052",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1037",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1564",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1080",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1137",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1053",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1176",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1218",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1560",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1491",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1204",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1554",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1566",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1565",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1574",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1027",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1546",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1486",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1570",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1496",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1505",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1189",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1556",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1070",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1485",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1490",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1014",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1600",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1489",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1140",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1036",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1055",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1548",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1647",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1098",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1601",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1553",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1569",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1129",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1106",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1620",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1021",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1059",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1559",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1220",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1047",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1602",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1133",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1219",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1205",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1029",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1572",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1090",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1568",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1542",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1612",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1102",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1104",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1030",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1197",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1221",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1008",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1185",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1069",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1615",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1652",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1007",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1040",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1135",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1120",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1202",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1611",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1010",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1112",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1563",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1222",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1016",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1482",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1609",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1083",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1049",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1497",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1480",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1057",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1072",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1212",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1201",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1203",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1012",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1614",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1651",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1134",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1136",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1518",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1622",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1124",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1216",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1211",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1127",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1529",
+            "score": 1,
+            "comment": "Sysmon: "
+        },
+        {
+            "techniqueID": "T1557",
+            "score": 1,
+            "comment": "Sysmon: "
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766ff",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    }
+}

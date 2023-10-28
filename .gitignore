@@ -9,3 +9,5 @@ docs/_build/
 *.tmp
 TODO*
 .DS_Store
+.vscode/
+mappings/input/enterprise/csv/*.csv
