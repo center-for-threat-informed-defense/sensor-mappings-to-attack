@@ -1,0 +1,204 @@
+EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
+ad_config,OS X Active Directory configuration.,DS0026,Active Directory,Active Directory Metadata,User,Accessed,Active Directory
+managed_policies,"The managed configuration policies from AD, MDM, MCX, etc.",DS0026,Active Directory,Active Directory Object Access,Service,Accessed,Active Directory
+chrome_extension_content_scripts,Content scripts associated with Chrome extensions,DS0015,Application Log,Application Log Content,User/Process,Accessed,Application
+chrome_extensions,Chrome browser extensions,DS0015,Application Log,Application Log Content,User/Process,Accessed,Log
+firefox_addons,"Firefox browser extensions, webapps, and addons.",DS0015,Application Log,Application Log Content,User/Process,Accessed,Application Log
+ie_extensions,Internet Explorer browser extensions.,DS0015,Application Log,Application Log Content,User/Process,Accessed,Application Log
+opera_extensions,Opera browser extensions.,DS0015,Application Log,Application Log Content,User/Process/Service,Accessed,Application Log
+safari_extensions,Safari browser extension details for all users.,DS0015,Application Log,Application Log Content,User/Process,Accessed,Application Log
+browser_plugins,All C/NPAPI browser plugin details for all users.,DS0015,Application Log,Application Log Content,User/Process,Accessed,Log
+homebrew_packages,The installed homebrew package database.,DS0015,Application Log,Application Log Content,User/Process/Service,Accessed,Application Log
+certificates,Certificate Authorities installed in Keychains/ca-bundles.,DS0037,Certificate,Certificate Registration,User/Process,Accessed,Registry
+shell_history,A line-delimited (command) table of per-user .*_history data.,DS0017,Command,Command Metadata,User,Accessed,Command History
+disk_info,Retrieve basic information about the physical disks of a system.,DS0016,Drive,Drive Access,User/Process/Service,Accessed,Disk
+disk_encryption,Disk encryption status and information.,DS0016,Drive,Drive Access,User/Process/Service,Accessed,Disk
+logical_drives,Details for logical drives on the system. A logical drive generally represents a single partition.,DS0016,Drive,Drive Access,User/Process/Service,Accessed,Disk
+disk_events,Track DMG disk image events (appearance/disappearance) when opened,DS0016,Drive,Drive Access,User/Process,Accessed,Disk
+device_partitions,Use TSK to enumerate details about partitions on a disk device.,DS0016,Drive,Drive Access,User/Process,Accessed,Disk
+device_file,"Similar to the file table, but use TSK and allow block address access",DS0016,Drive,Drive Access,User/Process/Service,Accessed,Disk
+usb_devices,USB devices that are actively plugged into the host system.,DS0016,Drive,Drive Creation,Service,Created,Drive
+hash,Filesystem hash data.,DS0027,Driver,Drive Metadata,User/Process,Accessed,Drive
+time_machine_destinations,Locations backed up to using Time Machine.,DS0016,Drive,Drive Metadata,Service,Accessed,Drive
+time_machine_backups,Backups to drives using TimeMachine.,DS0016,Drive,Drive Modification,Service,Modified,Drive
+drivers,Details for in-use Windows device drivers. This does not display installed but unused drivers.,DS0027,Driver,Driver Metadata,User/Process/Service,Accessed,Driver
+bitlocker_info,Retrieve bitlocker status of the machine.,DS0027,Driver,Driver Metadata,User/Process,Accessed,Driver
+iokit_devicetree,The IOKit registry matching the DeviceTree plane.,DS0027,Driver,Driver Metadata,User/Process/Service,Accessed,Driver
+iokit_registry,The full IOKit registry without selecting a plane.,DS0027,Driver,Driver Metadata,User/Process/Service,Accessed,Driver
+augeas,Configuration files parsed by augeas,DS0022,File,File Access,User,Accessed,File
+office_mru,View recently opened Office documents.,DS0022,File,File Access,User/Process/Service,Accessed,File
+plist,Read and parse a plist file.,DS0022,File,File Access,User/Process/Service,Accessed,File
+file_events,Track time/action changes to files specified in configuration data.,DS0022,File,File Creation,User/Process,Created,File
+file_events,Track time/action changes to files specified in configuration data.,DS0022,File,File Deletion,User/Process,Deleted,File
+authenticode,"File (executable, bundle, installer, disk) code signing status.",DS0022,File,File Metadata,Service,Validated,Signature
+ntfs_journal_events,Track time/action changes to files specified in configuration data.,DS0022,File,File Metadata,User/Process/Service,Deleted,File Metadata
+elf_dynamic,ELF dynamic section information.,DS0022,File,File Metadata,User/Process/Service,Accessed,File
+elf_info,ELF file information.,DS0022,File,File Metadata,User/Process/Service,Accessed,File
+elf_sections,ELF section information.,DS0022,File,File Metadata,User/Process/Service,Accessed,File
+elf_segments,ELF segments information.,DS0022,File,File Metadata,User/Process/Service,Accessed,File
+elf_symbols,ELF symbol list.,DS0022,File,File Metadata,User/Process/Service,Accessed,File
+extended_attributes,Returns the extended attributes for files (similar to Windows ADS).,DS0022,File,File Metadata,User/Process,Accessed,File
+file,Interactive filesystem attributes and metadata.,DS0022,File,File Metadata,User/Process,Accessed,File
+magic,Magic number recognition library table.,DS0022,File,File Metadata,User/Process/Service,Accessed,File Metadata
+ntfs_acl_permissions,Retrieve NTFS ACL permission information for files and directories.,DS0022,File,File Metadata,User/Process/Service,Accessed,File Metadata
+signature,"File (executable, bundle, installer, disk) code signing status.",DS0022,File,File Metadata,User/Process/Service,Created,File Signature
+ntfs_journal_events,Track time/action changes to files specified in configuration data.,DS0022,File,File Metadata,User/Process/Service,Modified,File Metadata
+process_file_events,A File Integrity Monitor implementation using the audit service.,DS0022,File,File Metadata,Service,Accessed,File Metadata
+device_hash,"Similar to the hash table, but use TSK and allow block address access",DS0022,File,File Metadata,User/Process,Accessed,File
+package_bom,OS X package bill of materials (BOM) file list.,DS0022,File,File Metadata,User/Process/Service,Accessed,File Metadata
+quicklook_cache,Files and thumbnails within OS X's Quicklook Cache.,DS0022,File,File Metadata,User/Process,Accessed,File Metadata
+shimcache,"Application Compatibility Cache, contains artifacts of execution.",DS0022,File,File Metadata,User/Process/Service,Accessed,File Metadata
+mdfind,Run searches against the spotlight database.,DS0022,File,File Metadata,User,Accessed,File Metadata
+mdls,Query file metadata in the Spotlight database.,DS0022,File,File Metadata,User,Accessed,File Metadata
+suid_bin,suid binaries in common locations.,DS0022,File,File Metadata,User/Process/Service,Accessed,File
+file_events,Track time/action changes to files specified in configuration data.,DS0022,File,File Modification,User/Process,Modified,File
+alf_explicit_auths,ALF services explicitly allowed to perform networking.,DS0018,Firewall,Firewall Enumeration,Service,Accessed,Metadata
+iptables,Linux IP packet filtering and NAT tool.,DS0018,Firewall,Firewall Enumeration,User/Process/Service,Accessed,Firewall Rules
+alf,OS X application layer firewall (ALF) service details.,DS0018,Firewall,Firewall Metadata,Service,Accessed,Metadata
+alf_exceptions,OS X application layer firewall (ALF) service exceptions,DS0018,Firewall,Firewall Rule Modification,User,Modified,Firewall
+smbios_tables,BIOS (DMI) structure common details and content.,DS0001,Firmware,Firmware Metadata,User/Process/Service,Accessed,Bios (Dmi) Structure
+wmi_bios_info,Lists important information from the system bios.,DS0001,Firmware,Firmware Metadata,Process/Service,Accessed,Firmware
+oem_strings,OEM defined strings retrieved from SMBIOS.,DS0001,Firmware,Firmware Metadata,User/Process/Service,Accessed,Firmware
+platform_info,Information about EFI/UEFI/ROM and platform/boot.,DS0001,Firmware,Firmware Metadata,User/Process/Service,Accessed,Firmware
+pci_devices,PCI devices active on the host system.,DS0001,Firmware,Firmware Metadata,User/Process/Service,Accessed,Firmware
+acpi_tables,Firmware ACPI functional table common metadata and content.,DS0001,Firmware,Firmware Metadata,User/Process/Service,Accessed,Acpi Tables
+groups,Local system groups.,DS0036,Group,Group Metadata,User/Process/Service,Accessed,Groups
+user_groups,Local system user group relationships.,DS0036,Group,Group Metadata,User/Process/Service,Accessed,Group
+hardware_events,Hardware (PCI/USB/HID) events from UDEV or IOKit.,DS0013,Sensor Health,Host Status,User,Inserted,Device
+hardware_events,Hardware (PCI/USB/HID) events from UDEV or IOKit.,DS0013,Sensor Health,Host Status,User,Modified,Device
+hardware_events,Hardware (PCI/USB/HID) events from UDEV or IOKit.,DS0013,Sensor Health,Host Status,User,Removed,Device
+memory_error_info,Data associated with errors of a physical memory array.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+portage_keywords,"A summary about portage configurations like keywords, mask and unmask.",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+portage_use,List of enabled portage USE values for specific package.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+deb_packages,The installed DEB package database.,DS0013,Sensor Health,Host Status,Service,Read,Host Status
+npm_packages,Lists all npm packages in a directory or globally installed in a system.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+portage_packages,List of currently installed packages.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+programs,Represents products as they are installed by Windows Installer. A product generally correlates to one installation package on Windows. Some fields may be blank as Windows installation details are left to the discretion of the product author.,DS0013,Sensor Health,Host Status,Service,Accessed,Registry Key
+python_packages,Python packages installed in a system.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Script Installer
+rpm_package_files,RPM packages that are currently installed on the host system.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+rpm_packages,RPM packages that are currently installed on the host system.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+apt_sources,Current list of APT repositories or software channels.,DS0013,Sensor Health,Host Status,Service,Read,Host Status
+selinux_events,Track SELinux events.,DS0013,Sensor Health,Host Status,Service,Modified,Host Status
+selinux_settings,Track active SELinux settings.,DS0013,Sensor Health,Host Status,User/Process/Service,Read,Host Status
+app_schemes,"OS X application schemes and handlers (e.g., http, file, mailto).",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status (Configuration)
+patches,Lists all the patches applied. Note: This does not include patches applied via MSI or downloaded from Windows Update (e.g. Service Packs).,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+winbaseobj,"Lists named Windows objects in the default object directories, across all terminal services sessions. Example Windows ojbect types include Mutexes, Events, Jobs and Semaphors.",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+system_info,System information for identification.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+battery,Provides information about the internal battery of a Macbook.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+block_devices,"Block (buffered access) device file nodes: disks, ramdisks, and DMG containers.",DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+chassis_info,Display information pertaining to the chassis and its security status.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+cpuid,Useful CPU features from the cpuid ASM call.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+cpu_info,Info about the CPU running on the machine.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+cpu_time,Displays information from /proc/stat file about the time the cpu cores spent in different parts of the system.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+windows_crashes,Extracted information from Windows crash logs (Minidumps).,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+crashes,"Application, System, and Mobile App crash logs.",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+default_environment,Default environment variables and values.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+preferences,OS X defaults and managed preferences.,DS0013,Sensor Health,Host Status,Service,Accessed,Osx Preferences
+device_firmware,A best-effort list of discovered firmware versions.,DS0013,Sensor Health,Host Status,User/Process,Read,Host Status
+asl,Queries the Apple System Log data structure for system events,DS0013,Sensor Health,Host Status,Service,Modified,Log
+event_taps,Returns information about installed event taps.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+fan_speed_sensors,Fan speeds.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+video_info,Retrieve video card information of the machine.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+hvci_status,Retrieve HVCI info of the machine.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status (Configuration)
+ibridge_info,Information about the Apple iBridge hardware controller.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+windows_optional_features,Lists names and installation states of windows features. Maps to Win32_OptionalFeature WMI class.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Windows Features
+apps,"OS X applications installed in known search paths (e.g., /Applications)",DS0013,Sensor Health,Host Status,User,Accessed,Osx Applications
+sip_config,Apple's System Integrity Protection (rootless) status.,DS0013,Sensor Health,Host Status,Service,Accessed,System Integrity Protection
+intel_me_info,Intel ME/CSE Info.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+kernel_panics,System kernel panic logs.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status (System Crash Data)
+system_controls,"sysctl names, values, and settings information.",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+keychain_acls,Applications that have ACL entries in the keychain.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+keychain_items,Generic details about keychain items.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+memory_info,Main memory information in bytes.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+memory_map,OS memory region map.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+connectivity,Booleans about Windows network connectivity.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+ntdomains,Display basic NT domain information of a Windows machine.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+os_version,A single row containing the operating system name and version.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+cups_jobs,Returns all completed print jobs from cups.,DS0013,Sensor Health,Host Status,Service,Accessed,Printer Jobs
+cups_destinations,Returns all configured printers.,DS0013,Sensor Health,Host Status,Service,Accessed,Printer Info
+windows_security_products,Enumeration of registered Windows security products.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Windows Security Products
+ulimit_info,System resource usage limits.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+apparmor_events,Track AppArmor (security auditing) events.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+apparmor_profiles,Track active AppArmor profiles.,DS0013,Sensor Health,Host Status,User/Process,Accessed,Host Status
+windows_security_center,"The health status of Window Security features. Health values can be ""Good"", ""Poor"". ""Snoozed"", ""Not Monitored"", and ""Error"".",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+shared_resources,"Displays shared resources on a computer system running Windows. This may be a disk drive, printer, interprocess communication, or other sharable device.",DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Shared Resources
+sudoers,Rules for running commands as other users via sudo.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+syslog_events,Linux syslog events.,DS0013,Sensor Health,Host Status,Service,Updated,Host Status
+xprotect_meta,Database of the machine's XProtect browser-related signatures.,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+xprotect_entries,Database of the machine's XProtect signatures.,DS0013,Sensor Health,Host Status,Service,Accessed,Host Status
+xprotect_reports,Database of XProtect matches (if user generated/sent an XProtect report).,DS0013,Sensor Health,Host Status,User/Process/Service,Accessed,Host Status
+sandboxes,OS X application sandboxes container details.,DS0007,Image,Image Metadata,User/Process,Accessed,Image
+memory_array_mapped_addresses,Data associated for address mapping of physical memory arrays.,DS0008,Kernel,Kernel Metadata,User/Process/Service,Accessed,Kernel
+memory_device_mapped_addresses,Data associated for address mapping of physical memory devices.,DS0008,Kernel,Kernel Metadata,User/Process/Service,Accessed,Kernel
+memory_arrays,Data associated with collection of memory devices that operate to form a memory address.,DS0008,Kernel,Kernel Metadata,User/Process/Service,Accessed,Kernel
+memory_devices,Physical memory device (type 17) information retrieved from SMBIOS.,DS0008,Kernel,Kernel Metadata,User/Process/Service,Accessed,Kernel
+shared_memory,OS shared memory regions.,DS0008,Kernel,Kernel Metadata,Process/Service,Accessed,Kernel
+virtual_memory_info,Darwin Virtual Memory statistics.,DS0008,Kernel,Kernel Metadata,User/Process/Service,Accessed,Kernel
+kernel_extensions,"OS X's kernel extensions, both loaded and within the load search path.",DS0008,Kernel,Kernel Metadata,Service,Accessed,Kernel Module
+kernel_info,Basic active kernel information.,DS0008,Kernel,Kernel Metadata,Service,Accessed,Kernel
+kva_speculative_info,Display kernel virtual address and speculative execution information for the system.,DS0008,Kernel,Kernel Metadata,Process,Accessed,Kernel Virtual Address
+authorization_mechanisms,OS X Authorization mechanisms database.,DS0008,Kernel,Kernel Module Load,Service,Loaded,Kernel Module
+fbsd_kmods,Loaded FreeBSD kernel modules.,DS0008,Kernel,Kernel Module Load,User,Loaded,Kernel Module
+kernel_modules,Linux kernel modules both loaded and within the load search path.,DS0008,Kernel,Kernel Module Load,User/Process/Service,Loaded,Kernel Modules
+logged_in_users,Users with an active shell on the system.,DS0028,Logon Session,Logon Session Metadata,User/Process/Service,Accessed,Logon Session Metadata
+last,System logins and logouts.,DS0028,Logon Session,Logon Session Metadata,User/Process/Service,Accessed,Logon Session Metadata
+logon_sessions,Windows Logon Session.,DS0028,Logon Session,Logon Session Metadata,User/Process/Service,Accessed,Logon Session Metadata
+pipes,Named and Anonymous pipes.,DS0023,Named Pipe,Named Pipe Enumeration,User/Process/Service,Enumerated,Named Pipe
+mounts,System mounted devices and filesystems (not process specific).,DS0033,Network Share,Network Share Access,User/Process/Service,Accessed,Network Share
+shared_folders,Folders available to others via SMB or AFP.,DS0033,Network Share,Network Share Access,Service,Accessed,Network Share
+nfs_shares,NFS shares exported by the host.,DS0033,Network Share,Network Share Access,User/Process/Service,Accessed,Network Share
+sharing_preferences,OS X Sharing preferences.,DS0033,Network Share,Network Share Access,User/Process/Service,Accessed,Network Share
+arp_cache,"Address resolution cache, both static and dynamic (from ARP, NDP)",DS0013,Sensor Health,Network Status,Service,Accessed,Arp Cache
+dns_cache,Enumerate the DNS cache using the undocumented DnsGetCacheDataTable function in dnsapi.dll.,DS0013,Sensor Health,Network Status,User/Process,Accessed,Dns Cache
+dns_resolvers,Resolvers used by this host.,DS0013,Sensor Health,Network Status,Service,Accessed,Dns Resolvers
+lldp_neighbors,LLDP neighbors of interfaces.,DS0013,Sensor Health,Network Status,Service,Accessed,Lldp Neighbor
+etc_protocols,Line-parsed /etc/protocols.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Protocols
+etc_hosts,Line-parsed /etc/hosts.,DS0013,Sensor Health,Network Status,Service,Accessed,Hosts
+etc_services,Line-parsed /etc/services.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Services
+routes,The active route table for the host system.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Routes
+interface_details,Detailed information and stats of network interfaces.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Network Interfaces
+interfaces,Network interfaces and relevant metadata.,DS0013,Sensor Health,Network Status,Service,Accessed,Network Interfaces
+interface_ipv6,IPv6 configuration and stats of network interfaces.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Ipv6 Configuration
+wifi_status,OS X current WiFi status.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Wifi Status
+listening_ports,Processes with listening (bound) network sockets/ports.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Listening Ports
+ssh_configs,A table of parsed ssh_configs.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Ssh Configs
+known_hosts,A line-delimited known_hosts table.,DS0013,Sensor Health,Network Status,User/Process/Service,Accessed,Hosts
+socket_events,Track network socket opens and closes.,DS0029,Network Traffic,Network Traffic Content,Service,Created,Socket
+socket_events,Track network socket opens and closes.,DS0029,Network Traffic,Network Traffic Content,Service,Deleted,Socket
+socket_events,Track network socket opens and closes.,DS0029,Network Traffic,Network Traffic Content,Service,Accessed,Socket
+running_apps,macOS applications currently running on the host system.,DS0009,Process,Process Creation,User/Process/Service,Executed,Process
+processes,All running processes on the host system.,DS0009,Process,Process Enumeration,Service,Enumerated,Process
+process_events,Track time/action process executions.,DS0009,Process,Process Metadata,User/Process/Service,Accessed,Process Metadata
+process_envs,A key/value table of environment variables for each process.,DS0009,Process,Process Metadata,User/Process/Service,Accessed,Process
+process_memory_map,Process memory mapped files and pseudo device/regions.,DS0009,Process,Process Metadata,User/Process,Accessed,Process
+process_namespaces,Linux namespaces for processes running on the host system.,DS0009,Process,Process Metadata,Service,Accessed,Process
+process_open_files,File descriptors for each process.,DS0009,Process,Process Metadata,User/Process/Service,Accessed,Process Metadata
+process_open_pipes,Pipes and partner processes for each process.,DS0009,Process,Process Metadata,User/Process/Service,Accessed,Process Metadata
+process_open_sockets,Processes which have open network sockets on the system.,DS0009,Process,Process Metadata,User/Process/Service,Accessed,Process Metadata
+background_activities_moderator,Background Activities Moderator (BAM) tracks application execution.,DS0009,Process,Process Metadata,Service,Accessed,Process
+package_receipts,OS X package receipt details.,DS0009,Process,Process Metadata,User/Process/Service,Accessed,Process
+crontab,Line parsed values from system and user cron/tab.,DS0003,Scheduled Job,Scheduled Job Metadata,User/Process,Accessed,Cron/Tab
+launchd,LaunchAgents and LaunchDaemons from default search paths.,DS0003,Scheduled Job,Scheduled Job Metadata,User/Process,Accessed,Launchd
+launchd_overrides,"Override keys, per user, for LaunchDaemons and Agents.",DS0003,Scheduled Job,Scheduled Job Metadata,Service,Accessed,Launchd
+scheduled_tasks,Lists all of the tasks in the Windows task scheduler.,-1,Scheduled Task,Scheduled Task Enumeration,User/Process,Enumerated,Scheduled Tasks
+powershell_events,"Powershell script blocks reconstructed to their full script content, this table requires script block logging to be enabled.",DS0012,Script,Script Execution,Service,Recorded,Script Execution
+services,Lists all installed Windows services and their relevant data.,DS0019,Service,Service Enumeration,User/Process,Read,Services
+gatekeeper_apps,Gatekeeper apps a user has allowed to run.,DS0019,Service,Service Metadata,Service,Accessed,Gatekeeper
+gatekeeper,OS X Gatekeeper Details.,DS0019,Service,Service Metadata,Service,Accessed,Gatekeeper
+screenlock,macOS screenlock status for the current logged in user context.,-1,User Interface,System Settings,Service,Accessed,System Settings
+users,Local user accounts (including domain accounts that have logged on locally (Windows)).,DS0002,User Account,User Account Access,User/Process/Service,Accessed,Users
+user_events,Track user events from the audit framework.,DS0002,User Account,User Account Authentication,Service,Accessed,User Authentication
+authorized_keys,A line-delimited authorized_keys table,DS0002,User Account,User Account Metadata,Service,Accessed,User Account Keys
+authorizations,OS X Authorization rights database.,DS0002,User Account,User Account Metadata,Service,Authorizes,User
+account_policy_data,Additional OS X user account data from the AccountPolicy section of OpenDirectory.,DS0002,User Account,User Account Metadata,User/Process/Service,Accessed,User Account Policy
+shadow,"Local system users encrypted passwords and related information. Please note, that you usually need superuser rights to access `/etc/shadow`.",DS0002,User Account,User Account Metadata,Service,Accessed,User Account Password
+user_ssh_keys,Returns the private keys in the users ~/.ssh directory and whether or not they are encrypted.,DS0002,User Account,User Account Metadata,User/Process/Service,Accessed,User Account Private Keys
+appcompat_shims,Application Compatibility shims are a way to persist malware. This table presents the AppCompat Shim information from the registry in a nice format. See http://files.brucon.org/2015/Tomczak_and_Ballenthin_Shims_for_the_Win.pdf for more details.,DS0024,Windows Registry,Windows Registry Key Access,Service,Accessed,Registry
+registry,All of the Windows registry hives.,DS0024,Windows Registry,Windows Registry Key Access,User/Process,Accessed,Registry Key
+userassist,UserAssist Registry Key tracks when a user executes an application from Windows Explorer.,DS0024,Windows Registry,Windows Registry Key Access,User/Process/Service,Accessed,User Assist
+autoexec,"Aggregate of executables that will automatically execute on the target machine. This is an amalgamation of other tables like services, scheduled_tasks, startup_items and more.",DS0024,Windows Registry,Windows Registry Key Access,Service,Accessed,Registry
+startup_items,Applications and binaries set as user/login startup items.,DS0024,Windows Registry,Windows Registry Key Access,Service,Accessed,Registry Keys
+wmi_cli_event_consumers,"WMI CommandLineEventConsumer, which can be used for persistence on Windows. See https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor-wp.pdf for more details.",DS0005,WMI,WMI Creation,User/Process/Service,Accessed,WMI
+wmi_script_event_consumers,"WMI ActiveScriptEventConsumer, which can be used for persistence on Windows. See https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor-wp.pdf for more details.",DS0005,WMI,WMI Creation,User/Process/Service,Modified,WMI
+wmi_filter_consumer_binding,Lists the relationship between event consumers and filters.,DS0005,WMI,WMI Enumeration,User/Process/Service,Enumerated,WMI
+wmi_event_filters,Lists WMI event filters.,DS0005,WMI,WMI Enumeration,User/Process/Service,Enumerated,WMI Event Filter
