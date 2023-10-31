@@ -155,6 +155,7 @@ def bundle_append(bundle, object_to_add):
     """Checks to see if `object_to_add` has already been added to `bundle`. If it has not,
     it is added."""
     simple_bundle = [item["id"] for item in bundle]
+    
     if object_to_add["id"] not in simple_bundle:
         bundle.append(object_to_add)
 
@@ -289,7 +290,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
     :param mappings_location the filepath to the mappings CSV file
     :param config_location: the filepath to the JSON configuration file.
-    :param relationship_ids is a dict of format {relationship-source-id---relationship-target-id -> relationship-id} which maps relationships to desired STIX IDs
+    :param relationship_ids is a dict of format {relationship-source-id---relationship-target-id -> (relationship-id, relationship-type)} which maps relationships to desired STIX IDs
     :return List of tuples: (Source Mappings, stix2 Bundle)
     """
     print("reading framework config... ", end="", flush=True)
@@ -375,8 +376,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
             # Create a STIX SRO between the Data Source and Data Component
             relation = row["RELATIONSHIP"]
-
-            joined_id = f"{data_source_stix_ID}---{data_component_stix_ID}"
+            joined_id = f"{data_source_stix_ID}---{data_component_stix_ID}-{relation}"
             if joined_id in relationship_ids:
                 relationship_id = relationship_ids[joined_id]
             else:
@@ -481,7 +481,7 @@ def use_reference_file(reference_file):
         if sdo["type"] in ["x-mitre-data-component", "x-mitre-data-source"]:
             data_sdo_ids[sdo["name"]] = sdo["id"]
         elif sdo["type"] == "relationship":
-            from_id = f"{sdo['source_ref']}---{sdo['target_ref']}"
+            from_id = f"{sdo['source_ref']}---{sdo['target_ref']}-{sdo['relationship_type']}"
             to_id = sdo["id"]
             relationship_ids[from_id] = to_id
         elif sdo["type"] == "x-mitre-sensor-mapping":
@@ -534,3 +534,4 @@ if __name__ == "__main__":
         groups= True if args.groups else False)
 
     to_stix_json(bundles, output_location)
+    
