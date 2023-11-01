@@ -347,11 +347,11 @@
     ],
     "gradient": {
         "colors": [
-            "#ff6666",
-            "#ffe766ff",
-            "#8ec843"
+            "#b7ffbf",
+            "#063b00"
         ],
         "minValue": 0,
         "maxValue": 1
-    }
+    },
+    "legendItems": []
 }

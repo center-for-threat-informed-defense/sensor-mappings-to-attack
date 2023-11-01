@@ -827,22 +827,26 @@
         {
             "techniqueID": "T1578",
             "score": 1,
-            "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, CreateSnapshot, CreateVolume, DeleteInstanceProfile, DeleteSnapshot, DetachVolume, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, ModifySnapshotAttribute, ModifyVolume, RemoveRoleFromInstanceProfile, RunInstances, StartInstances, StopInstances, TagInstanceProfile, UntagInstanceProfile"
+            "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, CreateSnapshot, CreateVolume, DeleteInstanceProfile, DeleteSnapshot, DetachVolume, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, ModifySnapshotAttribute, ModifyVolume, RemoveRoleFromInstanceProfile, RunInstances, StartInstances, StopInstances, TagInstanceProfile, UntagInstanceProfile",
+            "color": "#da41a6"
         },
         {
             "techniqueID": "T1535",
             "score": 1,
-            "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, DeleteInstanceProfile, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, RemoveRoleFromInstanceProfile, TagInstanceProfile, UntagInstanceProfile"
+            "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, DeleteInstanceProfile, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, RemoveRoleFromInstanceProfile, TagInstanceProfile, UntagInstanceProfile",
+            "color": "#da41a6"
         },
         {
             "techniqueID": "T1594",
             "score": 1,
-            "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions"
+            "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions",
+            "color": "#9f7627"
         },
         {
             "techniqueID": "T1610",
             "score": 1,
-            "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions"
+            "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions",
+            "color": "#9f7627"
         },
         {
             "techniqueID": "T1200",
@@ -852,12 +856,14 @@
         {
             "techniqueID": "T1648",
             "score": 1,
-            "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions"
+            "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions",
+            "color": "#9f7627"
         },
         {
             "techniqueID": "T1588",
             "score": 1,
-            "comment": "OSQuery: certificates"
+            "comment": "OSQuery: certificates",
+            "color": "#9f7627"
         },
         {
             "techniqueID": "T1092",
@@ -877,12 +883,14 @@
         {
             "techniqueID": "T1129",
             "score": 1,
-            "comment": "Sysmon: "
+            "comment": "Sysmon: ",
+            "color": "#665887"
         },
         {
             "techniqueID": "T1106",
             "score": 1,
-            "comment": "Sysmon: "
+            "comment": "Sysmon: ",
+            "color": "#665887"
         },
         {
             "techniqueID": "T1029",
@@ -907,11 +915,36 @@
     ],
     "gradient": {
         "colors": [
-            "#ff6666",
-            "#ffe766ff",
-            "#8ec843"
+            "#b7ffbf",
+            "#063b00"
         ],
         "minValue": 1,
         "maxValue": 6
-    }
+    },
+    "legendItems": [
+        {
+            "label": "Auditd",
+            "color": "#302e58"
+        },
+        {
+            "label": "CloudTrail",
+            "color": "#da41a6"
+        },
+        {
+            "label": "OSQuery",
+            "color": "#9f7627"
+        },
+        {
+            "label": "Sysmon",
+            "color": "#665887"
+        },
+        {
+            "label": "WinEvtx",
+            "color": "#1b37c4"
+        },
+        {
+            "label": "Zeek",
+            "color": "#bb04a1"
+        }
+    ]
 }
