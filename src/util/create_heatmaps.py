@@ -86,7 +86,7 @@ def create_layer(name, domain, techniques, version, description="", color_legend
     """create a Layer"""
     min_mappings = min(map(lambda t: t["score"], techniques)) if len(techniques) > 0 else 0
     max_mappings = max(map(lambda t: t["score"], techniques)) if len(techniques) > 0 else 100
-    gradient = ["#b7ffbf", "#00ab08"]
+    gradient = ["#b7ffbf", "#063b00"]
     # check if all the same count of mappings
     if max_mappings - min_mappings == 0:
         min_mappings = 0  # set low end of gradient to 0
