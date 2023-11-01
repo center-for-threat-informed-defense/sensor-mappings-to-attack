@@ -33,6 +33,7 @@ Enables visualization of the sensor mappings in the ATT&CK Matrix. The script bu
 | output            | folder to write output layers to                                                                        | `../../mappings/stix/layers`                                                            |
 | version           | which ATT&CK version to use                                                                             | 13.1                                                                                    |
 | clear             | if flag is specified, will remove the contents of the output folder before writing layers               | N/A                                                                                     |
+| map_subtechniques | if flag is specified, will map down to sub-techniques                                                   | N/A                                                                                     |
 
 
 To build layers from project root:

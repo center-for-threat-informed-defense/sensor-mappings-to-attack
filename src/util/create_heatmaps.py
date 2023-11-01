@@ -130,7 +130,7 @@ def layer_technique_field(attack_id, event_ids, sensor_name, color=None):
     return default_return
 
 
-def to_technique_list(mappings, attack_data):
+def to_technique_list(mappings, attack_data, map_subtechniques):
     """
     Take `mappings` MemoryStore object and `attack_data` MemoryStore object. Query the x_mitre_data_source field and return found techniques as a dictionary(attack id -> set of event IDs).
     """
@@ -141,7 +141,11 @@ def to_technique_list(mappings, attack_data):
         if not atk_patterns:
             continue  # Skip new data source & data component combinations
         event_id = mapping["event_id"]
-        _techniques = [attack_id["external_references"][0]["external_id"] for attack_id in atk_patterns if not attack_id["x_mitre_is_subtechnique"]]
+        if map_subtechniques:
+            _techniques = [attack_id["external_references"][0]["external_id"] for attack_id in atk_patterns]
+        else:
+            _techniques = [attack_id["external_references"][0]["external_id"] for attack_id in atk_patterns if not attack_id["x_mitre_is_subtechnique"]]
+
         for attack_id in _techniques:
             if attack_id in techniques:
                 techniques[attack_id].add(event_id)
@@ -150,7 +154,7 @@ def to_technique_list(mappings, attack_data):
     return techniques
 
 
-def create_mappings_heatmap(files_to_visualize, out_dir, domain, version, clear):
+def create_mappings_heatmap(files_to_visualize, out_dir, domain, version, clear, map_subtechniques):
     url = f"https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v{version}/{domain}/{domain}.json"
     print(f"downloading ATT&CK data from {url} ... ", end="", flush=True)
     attack_data = MemoryStore(stix_data=requests.get(url, verify=True).json()["objects"])
@@ -164,9 +168,9 @@ def create_mappings_heatmap(files_to_visualize, out_dir, domain, version, clear)
         print("done")
 
         print(f"generating layer for {sensor_name}... ", end="", flush=True)
-        tech_dict = to_technique_list(mappings, attack_data)
-        techs = [layer_technique_field(attack_id, tech_dict[attack_id], sensor_name, color_list[index]) for attack_id in tech_dict]
-        layer = create_layer(name=sensor_name, domain=domain, techniques=techs, version=version, color_legend=[color_list[index]])
+        tech_dict = to_technique_list(mappings, attack_data, map_subtechniques)
+        techs = [layer_technique_field(attack_id, tech_dict[attack_id], sensor_name) for attack_id in tech_dict]
+        layer = create_layer(name=sensor_name, domain=domain, techniques=techs, version=version)
         
         if clear:
             print("clearing layers directory...", end="", flush=True)
@@ -210,6 +214,10 @@ def _parse_args():
     parser.add_argument("-clear",
                         action="store_true",
                         help="if flag specified, will remove the contents the output folder before writing layers")
+    parser.add_argument("-map_subtechniques",
+                         dest="map_subtechniques",
+                         action="store_true",
+                         help="if flag is specified, will map down to sub-techniques")
 
     return parser.parse_args()
 
@@ -225,7 +233,7 @@ def main():
 
     files_to_visualize = [file for file in args.mappings_location.glob('*mappings*.json') if file.is_file() and domain_dirs[args.domain] in file.name and 'reference' not in file.name.lower()]
 
-    create_mappings_heatmap(files_to_visualize, out_dir, args.domain, args.version, args.clear)
+    create_mappings_heatmap(files_to_visualize, out_dir, args.domain, args.version, args.clear, args.map_subtechniques)
     create_comparison_layer(out_dir, args.domain, args.version)
 
 
