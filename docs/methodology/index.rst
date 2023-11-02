@@ -1,4 +1,4 @@
-.. _Methodology Pages: 
+.. _Methodology Pages:
 
 =========================
 Mapping Methodology
@@ -17,9 +17,9 @@ The methodology consists of the following steps:
 - **Definition Correlation** - For each identified event, understand the security capabilities it provides.
 - **Relationship Correlation** - Identify the ATT&CK Data Sources mappable to event IDs.
 
-An important goal of ATT&CK was to bridge offensive actions with potential defensive countermeasures starting in the v9 release. They achieved this by tagging each (sub-)technique with defensive-focused fields/properties, such as what data to collect (data sources) and how to analyze that data in order to potentially identify specific behaviors (detections). 
+An important goal of ATT&CK was to bridge offensive actions with potential defensive countermeasures starting in the v9 release. They achieved this by tagging each (sub-)technique with defensive-focused fields/properties, such as what data to collect (data sources) and how to analyze that data in order to potentially identify specific behaviors (detections).
 
-`ATT&CK's Data Sources <http://attack.mitre.org/datasources/>`_ usually fall into one of the following buckets: 
+`ATT&CK's Data Sources <http://attack.mitre.org/datasources/>`_ usually fall into one of the following buckets:
 
 - Granular basic system artifacts (e.g., process, file, registry)
 - Granular basic user activities (e.g., logon session)
@@ -30,7 +30,6 @@ An important goal of ATT&CK was to bridge offensive actions with potential defen
 Process
 -------
 .. toctree::
-	:maxdepth: 1
 
     step1
     step2
