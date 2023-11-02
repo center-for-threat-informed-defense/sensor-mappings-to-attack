@@ -8,18 +8,18 @@ import requests
 from stix2 import Filter, MemoryStore
 
 
+def rand_color(label):
+    """Generate a random color, while attempting to avoid the color green."""
+    rgb = [random.randint(0, 0xff) for _ in range(3)]
+    if rgb[1] > 128:  # Attempt to keep Green values below a threshold
+        rgb[1] = random.randint(0, 127)
+    rand_color = "#{:02x}{:02x}{:02x}".format(*rgb)
+    return {label: rand_color}
+
+
 def create_comparison_layer(input_dir, domain, version):
     """Take all created layers and create a single sheet that combines comments."""
     files_to_combine = [file for file in input_dir.glob("*heatmap.json") if file.is_file() and "comparison" not in file.name.lower()]
-    
-    # Form a color legend
-    color_legend = {}
-    for file in files_to_combine:
-        rgb = [random.randint(0, 0xff) for _ in range(3)]
-        if rgb[1] > 128:  # Attempt to keep Green values below a threshold
-            rgb[1] = random.randint(0, 127)
-        rand_color = "#{:02x}{:02x}{:02x}".format(*rgb)
-        color_legend[file.name[:file.name.index('-')]] = rand_color
     
     # Combine all the technique dictionaries
     layers = []
@@ -31,8 +31,12 @@ def create_comparison_layer(input_dir, domain, version):
     all_techniques = {}
     
     sensor_names = [layer["name"] for layer in layers]
+    color_legend = {}
+    
     # Merge all comments
     for layer in layers:
+        if layer["name"] not in color_legend:
+            color_legend[layer["name"]] = layer["techniques"][0]["color"]  # Take the first value
         technique_dicts = layer["techniques"]
         for technique in technique_dicts:
             attack_id = technique["techniqueID"]
@@ -41,6 +45,7 @@ def create_comparison_layer(input_dir, domain, version):
                 all_techniques[attack_id] = {
                     "score": 1,
                     "comment": comment,
+                    "color": technique["color"]
                 }
             else:
                 all_techniques[attack_id]["comment"] += f"\n\n{comment}"
@@ -56,11 +61,8 @@ def create_comparison_layer(input_dir, domain, version):
         if score_value == 1:
             label_name = comment[:comment.index(":")]
             all_techniques[technique]["color"] = color_legend[label_name]
-
-    legend = [{
-        "label": _sensor_name,
-        "color": color_legend[_sensor_name]
-               } for _sensor_name in color_legend]
+        else:
+            all_techniques[technique].pop("color")  # Allow gradient to color this technique
 
     # Convert all_techniques to a list of technique dictionaries
     techniques = []
@@ -75,7 +77,7 @@ def create_comparison_layer(input_dir, domain, version):
         } | _color_
         )
 
-    comparison_layer = create_layer("Sensor Comparisons", domain, techniques, version, color_legend=legend)
+    comparison_layer = create_layer("Sensor Comparisons", domain, techniques, version, color_legend)
         
     output_path = Path(input_dir, "sensor-comparison-heatmap.json")
     with output_path.open("w", encoding="utf-8") as f:
@@ -96,6 +98,13 @@ def create_layer(name, domain, techniques, version, description="", color_legend
         version = version[1:]
     version = version.split(".")[0]
 
+    if color_legend:
+        # Put in proper format
+        color_legend = [{
+                        "label": label,
+                        "color": color_legend[label]
+                        }
+                        for label in color_legend]
     layer_details = {
         "name": name,
         "versions": {
@@ -125,7 +134,7 @@ def layer_technique_field(attack_id, event_ids, sensor_name, color=None):
         "comment": f"{sensor_name}: {', '.join(sorted(event_ids))}",  # list of mapped event IDs
     }
     if color:
-        default_return["color"] = color
+        default_return["color"] = color[sensor_name]
 
     return default_return
 
@@ -155,6 +164,7 @@ def to_technique_list(mappings, attack_data, map_subtechniques):
 
 
 def create_mappings_heatmap(files_to_visualize, out_dir, domain, version, clear, map_subtechniques):
+    """Create a Navigator layer for each mapping file (STIX Bundle)"""
     url = f"https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v{version}/{domain}/{domain}.json"
     print(f"downloading ATT&CK data from {url} ... ", end="", flush=True)
     attack_data = MemoryStore(stix_data=requests.get(url, verify=True).json()["objects"])
@@ -169,8 +179,9 @@ def create_mappings_heatmap(files_to_visualize, out_dir, domain, version, clear,
 
         print(f"generating layer for {sensor_name}... ", end="", flush=True)
         tech_dict = to_technique_list(mappings, attack_data, map_subtechniques)
-        techs = [layer_technique_field(attack_id, tech_dict[attack_id], sensor_name) for attack_id in tech_dict]
-        layer = create_layer(name=sensor_name, domain=domain, techniques=techs, version=version)
+        layer_color = rand_color(sensor_name)
+        techs = [layer_technique_field(attack_id, tech_dict[attack_id], sensor_name, color=layer_color) for attack_id in tech_dict]
+        layer = create_layer(name=sensor_name, domain=domain, techniques=techs, version=version, color_legend=layer_color)
         
         if clear:
             print("clearing layers directory...", end="", flush=True)
@@ -233,7 +244,7 @@ def main():
 
     files_to_visualize = [file for file in args.mappings_location.glob('*mappings*.json') if file.is_file() and domain_dirs[args.domain] in file.name and 'reference' not in file.name.lower()]
 
-    create_mappings_heatmap(files_to_visualize, out_dir, args.domain, args.version, args.clear, args.map_subtechniques)
+    # create_mappings_heatmap(files_to_visualize, out_dir, args.domain, args.version, args.clear, args.map_subtechniques)
     create_comparison_layer(out_dir, args.domain, args.version)
 
 
