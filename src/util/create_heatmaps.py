@@ -206,7 +206,7 @@ def _parse_args():
                         dest="output_location",
                         help="The folder where layers will be saved to.",
                         type=Path,
-                        default=Path(ROOT_DIR, "mappings", "stix", "layers"))
+                        default=Path(ROOT_DIR, "mappings", "layers"))
     parser.add_argument("-version",
                         dest="version",
                         help="which ATT&CK version to use",
