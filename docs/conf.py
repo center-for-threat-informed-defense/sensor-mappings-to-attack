@@ -33,9 +33,6 @@ release = version
 # ones.
 extensions = [
     "sphinx_rtd_theme",
-    "sphinxcontrib.excel_table",
-    # "sphinxawesome_theme",
-    # "sphinx-design",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
