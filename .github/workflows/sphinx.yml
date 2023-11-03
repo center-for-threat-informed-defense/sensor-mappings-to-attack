@@ -25,10 +25,10 @@ jobs:
       run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
     - name: Install dependencies
       run: poetry install
-    - name: Build HTML docs
-      run: poetry run make docs-ci
     - name: Validate STIX bundles
       run: python src/util/cli_validator.py
+    - name: Build HTML docs
+      run: poetry run make docs-ci
     - name: Upload HTML docs
       uses: actions/upload-artifact@v3
       with:
