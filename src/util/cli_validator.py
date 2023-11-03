@@ -4,7 +4,9 @@ import json
 from pathlib import Path
 import re
 import requests
+import sys
 
+import schema
 from stix2 import Filter, MemoryStore
 from tqdm import tqdm
 
@@ -61,16 +63,27 @@ def validate_timestamp(instance):
     ts_re = re.compile(r"^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9]|60)(\.[0-9]+)?Z$")
     timestamp_props = ['created', 'modified']
     for tprop in timestamp_props:
-        if tprop in instance and ts_re.match(instance[tprop]):
-            # Don't raise an error if schemas will catch it
+        if tprop in instance:
             try:
                 dateutil.parser.parse(instance[tprop])
             except ValueError as e:
-                raise SyntaxError("'%s': '%s' is not a valid timestamp: %s"
-                                % (tprop, instance[tprop], str(e)), instance['id'])
-            
+                print(f"\nInvalid timestamp in STIX object id={instance['id']}: {str(e)}\n\
+                      '{tprop}': '{instance[tprop]}'")
+                sys.exit(1)
+            # If parsing is successful, check against the regex.
+            if not ts_re.match(instance[tprop]):
+                print(f"\nInvalid timestamp in STIX object id={instance['id']}:\n\
+                      '{tprop}': '{instance[tprop]}'")
+                sys.exit(1)
+
 
 def validate_bundle_completeness(bundle, attack_objects):
+    """
+    Checks for completeness of `bundle`, e.g., not missing any newly created objects. Completeness is defined as:
+    - If a sensor mapping entry references a newly created Data Source, include the entry for it
+    - If a sensor mapping entry references a newly created Data Component, check in the `bundle` and the ATT&CK dataset to make sure it should be included in the `bundle`
+    - Check that the SRO between these two STIX objects exists. If not in `bundle`, check if it has already been defined in the ATT&CK dataset and should not be included
+    """
     # Load STIX data into MemoryStore for faster searching
     bundle_objects = MemoryStore(stix_data=bundle["objects"])
     
@@ -130,19 +143,22 @@ def validate_bundle_completeness(bundle, attack_objects):
 
 
 def validate_schemas(bundle, bundle_name):
+    """Validate objects in the bundle by checking it against a schema if that type is defined in the `stix_schemas.py` file."""
     for stix_obj in tqdm(bundle["objects"], desc=f"validating {bundle_name} schemas..."):
         stix_type = stix_obj.get("type")
         if stix_type == 'relationship':
             continue
         schema_ = TYPES.get(stix_type)
-        if not schema_:
-            raise ValueError(f"This type is not supported for object {stix_type}")
-        
-        # Verify that it contains necessary properties
-        schema_.validate(stix_obj)
-        
-        # Verify dates
-        validate_timestamp(stix_obj)
+        if schema_:
+            # Verify that it contains necessary properties
+            try:
+                schema_.validate(stix_obj)
+            except schema.SchemaError as se:
+                print(f"\nFailed to validate STIX object id={stix_obj.get('id')}: {se}")
+                sys.exit(1)
+            
+            # Verify dates
+            validate_timestamp(stix_obj)
 
 
 def validate(bundle, bundle_name, attack_objects):
