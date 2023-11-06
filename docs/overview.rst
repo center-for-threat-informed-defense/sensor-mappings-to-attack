@@ -2,7 +2,11 @@ Overview
 ========
 
 Cyber threat detection starts with understanding the data sources and sensors that can
-be used to detect a given adversary TTP.
+be used to detect a given adversary tactic, technique, or procedure (TTP). Extending 
+ATT&CK Data Sources to link adversary behaviors to tools, capabilities, and sensors that 
+provide visibility can help cyber defenders understand how specific tools and capabilities 
+provide visibility into specific adversary TTPs.
+
 
 Background
 ----------
@@ -17,7 +21,13 @@ can do to change that. This information can be used to answer questions such as:
 - I'm concerned about a particular technique in a recent threat report. Can I see it if
   it were to happen in my environment and, if so, where do I look?
 
-ATT&CK Data Sources do not describe fully the specific events or sensors that can provide visibility into each individiual data source. This leaves the users with significant work to understand how their tools map to the generic data sources and inhibits automated analysis to easily answer the questions SOCs need to ask. This project is intended to build on ATT&CK Data Sources, extending them to connect conceptual data sources to concrete sensors, logs, tools, and other security capabilities, allowing the users of ATT&CK to easily go from a technique they're concerned about to capabilities they might have or could acquire to detect it.
+ATT&CK Data Sources do not describe fully the specific events or sensors that can provide 
+visibility into each individiual data source. This leaves the users with significant work to 
+understand how their tools map to the generic data sources and inhibits automated analysis to 
+easily answer the questions SOCs need to ask. This project is intended to build on ATT&CK 
+Data Sources, extending them to connect conceptual data sources to concrete sensors, logs, 
+tools, and other security capabilities, allowing the users of ATT&CK to easily go from a 
+technique they're concerned about to capabilities they might have or could acquire to detect it.
 
 STIX Representation and Mapping Tools
 -------------------------------------
@@ -40,10 +50,10 @@ full set of supporting artifacts using the scripts in this repository.
 Get Involved
 ------------
 
-The resulting mapping between Events and ATT&CK allow cyber defenders to create a fuller
-and more deteailed picture of cyber incidents, including the threat actor, technical
-bahvior, telemetry collection, and impact. These improvements can be used to develop
-better predictions and insights into how we might be attacked in the future by better
+The resulting mapping between Events and ATT&CK allow cyber defenders to create a more 
+detailed picture of cyber incidents, including the threat actor, technical behavior, 
+telemetry collection, and impact. These improvements can be used to develop better 
+predictions and insights into how we might be attacked in the future by better
 understanding how and why were attacked in the past.
 
 We encourage you to review the mappings, use them, and tell us what you think. Please

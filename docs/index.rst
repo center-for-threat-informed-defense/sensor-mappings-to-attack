@@ -1,11 +1,11 @@
 Sensor Mappings to ATT&CK
 =========================
 
-Sensor Mappings to ATT&CK (SMTA) is a collection of resources to assist security operations teams
-and security leaders understand which tools, capabilities, and events can help detect real-world
-adversary TTPs in their environments. SMTA builds on `MITRE ATT&CK® <https://attack.mitre.org/>`_ Data Sources
-by connecting the conceptual data source representions of information that can be collected to concrete
-logs, sensors, and other security capabilities that provide that type of data.
+Sensor Mappings to ATT&CK (SMAP) is a collection of resources to assist security operations teams 
+and security leaders understand which tools, capabilities, and events can help detect real-world 
+adversary behaviors in their environments. SMAP builds on `MITRE ATT&CK® <https://attack.mitre.org/>`_ Data Sources 
+by connecting the conceptual data source representions of information that can be collected to concrete 
+logs, sensors, and other security capabilities that provide that type of data.   
 
 
 This project is created and maintained by `MITRE Engenuity Center for Threat-Informed Defense
@@ -25,9 +25,8 @@ threat-informed decisions.
     levels/index
     example_technique_mappings
     use_cases
-    future_work
-    changelog
-    acknowledgements
+    Future-Work
+    Changelog
 
 Notice
 ------
