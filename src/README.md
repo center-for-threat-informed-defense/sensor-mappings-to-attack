@@ -30,6 +30,14 @@ The tools are organized into the following subdirectories. Click the link to vie
 | [`parse/`](./parse)           | Script for parsing sensor data and mappings spreadsheets.                           |
 | [`util/`](./util)             | Utility scripts to process mappings data, such as Navigator layers, CSV files, etc. |
 
+## Creating mappings
+To use the tool suite, execution the files in the following order:
+1. Create the auxilary files by running `util/create_mappings.py`
+2. Create mappings by running `parse/generate_stix.py`
+3. (Optional) Validate bundles by running `util/cli_validator.py`
+4. Create ATT&CK Navigation layers by running `util/create_heatmaps.py`
+
+
 ## Customization
 
 To create customized mappings, edit the input data in the [`inputs/`](../mappings/input) directory and then use the tools above to regenerate the outputs.
