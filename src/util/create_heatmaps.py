@@ -19,6 +19,7 @@ def rand_color(label):
 
 def create_comparison_layer(input_dir, domain, version):
     """Take all created layers and create a single sheet that combines comments."""
+    print("generating layer for sensor comparison... ", end="", flush=True)
     files_to_combine = [file for file in input_dir.glob("*heatmap.json") if file.is_file() and "comparison" not in file.name.lower()]
     
     # Combine all the technique dictionaries
@@ -77,11 +78,12 @@ def create_comparison_layer(input_dir, domain, version):
         } | _color_
         )
 
-    comparison_layer = create_layer("Sensor Comparisons", domain, techniques, version, color_legend)
+    comparison_layer = create_layer("Sensor Comparisons", domain, techniques, version, color_legend=color_legend)
         
     output_path = Path(input_dir, "sensor-comparison-heatmap.json")
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(comparison_layer, f, indent=4)
+    print("done")
 
 
 def create_layer(name, domain, techniques, version, description="", color_legend=[]):
@@ -244,7 +246,7 @@ def main():
 
     files_to_visualize = [file for file in args.mappings_location.glob('*mappings*.json') if file.is_file() and domain_dirs[args.domain] in file.name and 'reference' not in file.name.lower()]
 
-    # create_mappings_heatmap(files_to_visualize, out_dir, args.domain, args.version, args.clear, args.map_subtechniques)
+    create_mappings_heatmap(files_to_visualize, out_dir, args.domain, args.version, args.clear, args.map_subtechniques)
     create_comparison_layer(out_dir, args.domain, args.version)
 
 
