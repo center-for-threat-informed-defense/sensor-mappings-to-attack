@@ -1,5 +1,5 @@
 import argparse
-import dateutil.parser
+from dateutil import parser
 import json
 from pathlib import Path
 import re
@@ -65,7 +65,7 @@ def validate_timestamp(instance):
     for tprop in timestamp_props:
         if tprop in instance:
             try:
-                dateutil.parser.parse(instance[tprop])
+                parser.parse(instance[tprop])
             except ValueError as e:
                 print(f"\nInvalid timestamp in STIX object id={instance['id']}: {str(e)}\n\
                       '{tprop}': '{instance[tprop]}'")
@@ -100,12 +100,14 @@ def validate_bundle_completeness(bundle, attack_objects):
         if not local_query_results:
             # Check if the data source is newly created
             if sro.get("x_mitre_data_source_id") == -1:
-                raise LookupError(f"Bundle is missing an entry for {data_source_name}, which should be present for validation of object {sro['id']}")
+                print(f"Bundle is missing an entry for {data_source_name}, which should be present for validation of object {sro['id']}")
+                sys.exit(1)
             else:
                 # Check in ATT&CK MemoryStore
                 query_results = attack_objects.query(filters)
                 if not query_results:
-                    raise LookupError(f"Bundle is missing an entry for {data_source_name}, which should be bundled with object {sro['id']}")
+                    print(f"Bundle is missing an entry for {data_source_name}, which should be bundled with object {sro['id']}")
+                    sys.exit(1)
                 else:
                     ds_id = query_results[0]["id"]
         else:
@@ -123,7 +125,8 @@ def validate_bundle_completeness(bundle, attack_objects):
             if query_results:
                 dc_id = query_results[0]["id"]
             else:
-                raise LookupError(f"Bundle is missing an entry for {data_component_name}, which should be bundled with object {sro['id']}")
+                print(f"Bundle is missing an entry for {data_component_name}, which should be bundled with object {sro['id']}")
+                sys.exit(1)
         else:
             dc_id = local_query_results[0]["id"]
 
@@ -137,8 +140,8 @@ def validate_bundle_completeness(bundle, attack_objects):
             # Check if it is present in ATT&CK data
             query_results = attack_objects.query(filters)
             if not query_results:
-                print(data_source_name, ds_id, data_component_name, dc_id, relationship_type)
-                raise LookupError(f"Bundle is missing relationship entry for object {sro['id']}")
+                print(f"Bundle is missing relationship entry for object {sro['id']}")
+                sys.exit(0)
         # Else - valid bundle
 
 
