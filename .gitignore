@@ -10,4 +10,3 @@ docs/_build/
 TODO*
 .DS_Store
 .vscode/
-mappings/input/enterprise/csv/*.csv

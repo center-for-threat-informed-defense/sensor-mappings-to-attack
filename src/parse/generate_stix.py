@@ -6,7 +6,7 @@ import argparse
 import requests
 from tqdm import tqdm
 import pandas as pd
-from stix2.properties import StringProperty, ReferenceProperty, EnumProperty, ListProperty
+from stix2.properties import StringProperty, ReferenceProperty, EnumProperty, ListProperty, BooleanProperty
 from stix2.v21 import Bundle, CustomObject, ExternalReference, Relationship
 
 
@@ -23,7 +23,8 @@ from stix2.v21 import Bundle, CustomObject, ExternalReference, Relationship
         ("external_references", ListProperty(ExternalReference)),
         ("x_mitre_version", StringProperty()),
         ("x_mitre_attack_spec_version", StringProperty()),
-        ("x_mitre_modified_by_ref", ReferenceProperty(valid_types=['identity']))
+        ("x_mitre_modified_by_ref", ReferenceProperty(valid_types=['identity'])),
+        ("x_mitre_deprecated", BooleanProperty())
     ]
 )
 
@@ -31,6 +32,7 @@ from stix2.v21 import Bundle, CustomObject, ExternalReference, Relationship
 class DataSource():
     """Custom MITRE Data Source STIX object."""
     def __init__(self, **kwargs):
+        # Intentionally left blank.
         pass
 
 
@@ -44,7 +46,8 @@ class DataSource():
         ("x_mitre_domains", ListProperty(EnumProperty(allowed=['enterprise-attack', 'mobile-attack', 'ics-attack']))),
         ("x_mitre_modified_by_ref", ReferenceProperty(valid_types=['identity'])),
         ("created_by_ref", ReferenceProperty(valid_types=['identity'])),
-        ("object_marking_refs", ListProperty(ReferenceProperty(valid_types=['marking-definition'])))
+        ("object_marking_refs", ListProperty(ReferenceProperty(valid_types=['marking-definition']))),
+        ("x_mitre_deprecated", BooleanProperty())
     ]
 )
 
@@ -52,6 +55,7 @@ class DataSource():
 class DataComponent():
     """Custom MITRE Data Component STIX object."""
     def __init__(self, **kwargs):
+        # Intentionally left blank.
         pass
 
 
@@ -72,6 +76,7 @@ class DataComponent():
 class SensorMapping():
     """Custom MITRE sensor data mapping STIX object."""
     def __init__(self, **kwargs):
+        # Intentionally left blank.
         pass
 
 
@@ -150,6 +155,7 @@ def bundle_append(bundle, object_to_add):
     """Checks to see if `object_to_add` has already been added to `bundle`. If it has not,
     it is added."""
     simple_bundle = [item["id"] for item in bundle]
+    
     if object_to_add["id"] not in simple_bundle:
         bundle.append(object_to_add)
 
@@ -254,7 +260,8 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
                     x_mitre_domains=object_details["domain"],
                     created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
                     x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
-                    external_references = []
+                    external_references = [],
+                    x_mitre_deprecated=False
                 )
             case "Data Component":
                 new_sdo = DataComponent(
@@ -267,7 +274,8 @@ def create_stix_object(reference_dict, created_objects, object_type, object_deta
                     x_mitre_modified_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
                     created_by_ref="identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
                     object_marking_refs=["marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"],
-                    allow_custom=True
+                    allow_custom=True,
+                    x_mitre_deprecated=False
                 )
             case _:
                 raise NotImplementedError("Unexpected object type.")
@@ -282,7 +290,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
     :param mappings_location the filepath to the mappings CSV file
     :param config_location: the filepath to the JSON configuration file.
-    :param relationship_ids is a dict of format {relationship-source-id---relationship-target-id -> relationship-id} which maps relationships to desired STIX IDs
+    :param relationship_ids is a dict of format {relationship-source-id---relationship-target-id -> (relationship-id, relationship-type)} which maps relationships to desired STIX IDs
     :return List of tuples: (Source Mappings, stix2 Bundle)
     """
     print("reading framework config... ", end="", flush=True)
@@ -294,8 +302,6 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
     attack_data_sources, attack_data_components = load_attack_data(version, attack_domain, groups)
 
-    # Match case of attack_data for Data Components to the mappings
-    attack_data_components = {k.replace(" ", "_").lower(): v for k,v in attack_data_components.items()}
     tqdm_format = "{desc}: {percentage:3.0f}% |{bar}| {elapsed}<{remaining}{postfix}"
 
     # build STIX objects
@@ -370,8 +376,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
             # Create a STIX SRO between the Data Source and Data Component
             relation = row["RELATIONSHIP"]
-
-            joined_id = f"{data_source_stix_ID}---{data_component_stix_ID}"
+            joined_id = f"{data_source_stix_ID}---{data_component_stix_ID}-{relation}"
             if joined_id in relationship_ids:
                 relationship_id = relationship_ids[joined_id]
             else:
@@ -476,7 +481,7 @@ def use_reference_file(reference_file):
         if sdo["type"] in ["x-mitre-data-component", "x-mitre-data-source"]:
             data_sdo_ids[sdo["name"]] = sdo["id"]
         elif sdo["type"] == "relationship":
-            from_id = f"{sdo['source_ref']}---{sdo['target_ref']}"
+            from_id = f"{sdo['source_ref']}---{sdo['target_ref']}-{sdo['relationship_type']}"
             to_id = sdo["id"]
             relationship_ids[from_id] = to_id
         elif sdo["type"] == "x-mitre-sensor-mapping":
@@ -529,3 +534,4 @@ if __name__ == "__main__":
         groups= True if args.groups else False)
 
     to_stix_json(bundles, output_location)
+    

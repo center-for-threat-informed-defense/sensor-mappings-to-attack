@@ -1,0 +1,227 @@
+EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
+ntlm_authenticate,Generated for NTLM messages of type authenticate.,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected Through,Ntlm
+ntlm_challenge,Generated for NTLM messages of type challenge.,DS0029,Network Traffic,Network Connection Creation,Service,Connected Through,Ntlm
+pop3_login_success,Generated for successful authentications on POP3 connections.,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected Through,Pop3
+rdpeudp_established,Generated when RDPEUDP connections are established (both sides SYN),DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To,Rdp
+rdpeudp_syn,Generated for RDPEUDP SYN UDP Datagram,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To,Rdp
+rdpeudp_synack,Generated for RDPEUDP SYNACK UDP Datagram,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To,Rdp
+socks_login_userpass_reply,Generated when a SOCKS server replies to a username/password login attempt.,DS0029,Network Traffic,Network Connection Creation,Host,Connected Through,Socks
+socks_login_userpass_request,Generated when a SOCKS client performs username and password based login.,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected Through,Socks
+ssh2_dh_server_params,Generated if the connection uses a Diffie-Hellman Group Exchange key exchange method.,DS0029,Network Traffic,Network Connection Creation,,Connected Through,Ssh
+ssl_client_hello,Generated for an SSL/TLS client’s initial hello message.,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected Through,Ssl
+ssl_established,Generated at the end of an SSL/TLS handshake.,DS0029,Network Traffic,Network Connection Creation,Host,Connected Through,Ssl
+ssl_rsa_client_pms,Generated if a client uses RSA key exchange.,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected Through,Ssl
+ssl_server_hello,Generated for an SSL/TLS server’s initial hello message.,DS0029,Network Traffic,Network Connection Creation,Host,Connected Through,Ssl
+ssl_session_ticket_handshake,Generated for SSL/TLS handshake messages that are a part of the stateless-server session resumption mechanism.,DS0029,Network Traffic,Network Connection Creation,Host,Connected Through,Ssl
+connection_established,Generated when seeing a SYN-ACK packet from the responder in a TCP handshake.,DS0029,Network Traffic,Network Connection Creation,Host,Connected Through,Tcp
+connection_first_ack,Generated for the first ACK packet seen for a TCP connection from its originator.,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected Through,Tcp
+connection_SYN_packet,Generated for a SYN packet.,DS0029,Network Traffic,Network Connection Creation,"Process/User, Host",Connected Through,Tcp
+ssh_auth_successful,This event is generated when an SSH connection was determined to have had a successful authentication.,DS0029,Network Traffic,Network Connection Creation,Host,Connected Through,Ssh
+mime_all_data,Generated for passing on all data decoded from a single email MIME message.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Mime
+mime_entity_data,Generated for data decoded from an email MIME entity.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Mime
+mime_content_hash,"Generated for decoded MIME entities extracted from email messages, passing on their MD5 checksums.",DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Mime
+http_content_type,Generated for reporting an HTTP body’s content type.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Http
+http_entity_data,"Generated when parsing an HTTP body entity, passing on the data.",DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Http
+http_all_headers,"Generated for HTTP headers, passing on all headers of an HTTP message at once.",DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicates With,Http
+icmp_unreachable,Generated for ICMP destination unreachable messages.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Icmp
+icmp_neighbor_advertisement,Generated for ICMP neighbor advertisement messages.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Icmp
+icmp_neighbor_solicitation,Generated for ICMP neighbor solicitation messages.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Icmp
+icmp_neighbor_advertisement,Generated for ICMP router advertisement messages.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Icmp
+icmp_neighbor_solicitation,Generated for ICMP router solicitation messages.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Icmp
+netbios_session_raw_message,Generated for NetBIOS messages of type session message that are not carrying an SMB payload.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Netbios
+rdp_client_cluster_data,Generated for client cluster data packets.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Rdp
+rdp_client_core_data,Generated for MCS client requests.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Rdp
+rdp_client_network_data,Generated for Client Network Data (TS_UD_CS_NET) packets.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Rdp
+rdp_client_security_data,Generated for client security data packets.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Rdp
+rdp_server_certificate,Generated for a server certificate section.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicates With,Rdp
+mount_reply_status,"Generated for each MOUNT3 reply message received, reporting just the status included.",DS0029,Network Traffic,Network Traffic Content,Process/User,Replied To,Rpc
+pm_request_callit,Generated for Portmapper request/reply dialogues of type callit.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Rpc
+pm_request_dump,Generated for Portmapper request/reply dialogues of type dump.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Rpc
+pm_request_getport,Generated for Portmapper request/reply dialogues of type getport.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Rpc
+pm_request_null,Generated for Portmapper request/reply dialogues of type null.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Rpc
+pm_request_set,Generated for Portmapper request/reply dialogues of type set.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Rpc
+pm_request_unset,Generated for Portmapper request/reply dialogues of type unset.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Rpc
+sip_all_headers,Generated once for all SIP headers from the originator or responder.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Sip
+smb2_negotiate_request,Generated for SMB/CIFS version 2 requests of type negotiate.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_negotiate_response,Generated for SMB/CIFS version 2 responses of type negotiate.,DS0029,Network Traffic,Network Traffic Content,Service,Communicated With,Smb2
+smb2_read_request,Generated for SMB/CIFS version 2 requests of type read.,DS0029,Network Traffic,Network Traffic Content,Process/User,Accessed,Smb2
+smb2_session_setup_request,Generated for SMB/CIFS version 2 requests of type session_setup.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_session_setup_response,Generated for SMB/CIFS version 2 responses of type session_setup.,DS0029,Network Traffic,Network Traffic Content,Service,Communicated With,Smb2
+smb2_file_allocation,Generated for SMB/CIFS version 2 requests of type set_info of the allocation subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_allocation,Generated for SMB/CIFS version 2 requests of type set_info of the delete subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_endoffile,Generated for SMB/CIFS version 2 requests of type set_info of the end_of_file subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_fscontrol,Generated for SMB/CIFS version 2 requests of type set_info of the fs_control subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_fsobjectid,Generated for SMB/CIFS version 2 requests of type set_info of the fs_object_id subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_fullea,Generated for SMB/CIFS version 2 requests of type set_info of the full_EA subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_link,Generated for SMB/CIFS version 2 requests of type set_info of the link subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_mode,Generated for SMB/CIFS version 2 requests of type set_info of the mode subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_pipe,Generated for SMB/CIFS version 2 requests of type set_info of the pipe subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_position,Generated for SMB/CIFS version 2 requests of type set_info of the position subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_rename,Generated for SMB/CIFS version 2 requests of type set_info of the rename subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_sattr,Generated for SMB/CIFS version 2 requests of type set_info of the sattr subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_shortname,Generated for SMB/CIFS version 2 requests of type set_info of the short_name subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_file_validdatalength,Generated for SMB/CIFS version 2 requests of type set_info of the valid_data_length subtype,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Smb2
+smb2_transform_header,Generated for SMB/CIFS version 3.x transform_header.,DS0029,Network Traffic,Network Traffic Content,"Process/User, Service",Communicated With,Smb2
+smb2_tree_connect_request,Generated for SMB/CIFS version 2 requests of type tree_connect.,DS0029,Network Traffic,Network Traffic Content,Process/User,Read,Smb2
+smb2_tree_connect_response,Generated for SMB/CIFS version 2 responses of type tree_connect.,DS0029,Network Traffic,Network Traffic Content,Service,Communicated With,Smb2
+smb2_tree_disconnect_request,Generated for SMB/CIFS version 2 requests of type tree disconnect.,DS0029,Network Traffic,Network Traffic Content,Process/User,Disconnected,Smb2
+smb2_tree_disconnect_response,Generated for SMB/CIFS version 2 responses of type tree disconnect.,DS0029,Network Traffic,Network Traffic Content,Service,Communicated With,Smb2
+smb2_write_request,Generated for SMB/CIFS version 2 requests of type write.,DS0029,Network Traffic,Network Traffic Content,Process/User,Write,Smb2
+smb2_write_response,Generated for SMB/CIFS version 2 responses of type write.,DS0029,Network Traffic,Network Traffic Content,Service,Communicated With,Smb2
+snmp_encrypted_pdu,An SNMPv3 encrypted PDU message.,DS0029,Network Traffic,Network Traffic Content,"Host, Process/User",Communicated With,Snmp
+snmp_get_request,An SNMP GetRequest-PDU message from either RFC 1157 or RFC 3416.,DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Snmp
+snmp_report,An SNMP Report-PDU message from RFC 3416.,DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Snmp
+snmp_set_request,An SNMP SetRequest-PDU message from either RFC 1157 or RFC 3416.,DS0029,Network Traffic,Network Traffic Content,Host,Modified,Snmp
+snmp_trap,An SNMP Trap-PDU message from RFC 1157.,DS0029,Network Traffic,Network Traffic Content,Process,Communicated With,Snmp
+snmp_trapv2,An SNMP SNMPv2-Trap-PDU message from RFC 1157.,DS0029,Network Traffic,Network Traffic Content,Process,Communicated With,Snmp
+ssh_capabilities,"During the initial SSH key exchange, each endpoint lists the algorithms that it supports, in order of preference.",DS0029,Network Traffic,Network Traffic Content,"Process/User, Service",Communicated With,Ssh
+ssh_encrypted_packet,This event is generated when an SSH encrypted packet is seen.,DS0029,Network Traffic,Network Traffic Content,"Process/User, Service",Communicated With,Ssh
+ssh1_server_host_key,"During the SSH key exchange, the server supplies its public host key.",DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Ssh
+ssh2_ecc_key,The ECDH and ECMQV key exchange algorithms use two ephemeral key pairs to generate a shared secret.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Ssh
+ssh2_server_host_key,"During the SSH key exchange, the server supplies its public host key.",DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Ssh
+ssl_alert,Generated for SSL/TLS alert records.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Ssl
+ssl_dh_client_params,Generated if a client uses a DH-anon or DHE cipher suite.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Ssl
+ssl_dh_server_params,Generated if a server uses a DH-anon or DHE cipher suite.,DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Ssl
+ssl_ecdh_client_params,Generated if a client uses an ECDH-anon or ECDHE cipher suite.,DS0029,Network Traffic,Network Traffic Content,Process/User,Communicated With,Ssl
+ssl_ecdh_server_params,Generated if a server uses an ECDH-anon or ECDHE cipher suite using a named curve This event contains the named curve name and the server ECDH parameters contained in the ServerKeyExchange message as defined in RFC 4492.,DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Ssl
+ssl_encrypted_data,Generated for SSL/TLS messages that are sent after session encryption started.,DS0029,Network Traffic,Network Traffic Content,"Process/User, Host",Communicated With,Ssl
+ssl_server_signature,Generated if a server uses a non-anonymous DHE or ECDHE cipher suite.,DS0029,Network Traffic,Network Traffic Content,Host,Communicated With,Ssl
+tcp_contents,Generated for each chunk of reassembled TCP payload.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Tcp
+tcp_options,Generated for each TCP header that contains TCP options.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Tcp
+tcp_packet,Generated for every TCP packet.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Tcp
+smb2_close_request,Generated for SMB/CIFS version 2 requests of type close.,DS0029,Network Traffic,Network Traffic Content,Process/User,Initiated?,Smb2
+smb2_create_request,Generated for SMB/CIFS version 2 requests of type create.,DS0029,Network Traffic,Network Traffic Content,Process/User,Initiated?,Smb2
+udp_contents,Generated for UDP packets to pass on their payload.,DS0029,Network Traffic,Network Traffic Content,Service,Communicates With,Udp
+dce_rpc_alter_context_resp,Generated for every DCE-RPC alter context response message.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Rpc
+dce_rpc_alter_context,Generated for every DCE-RPC alter context request message.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Rpc
+dce_rpc_bind,Generated for every DCE-RPC bind request message.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Rpc
+dce_rpc_bind_ack,Generated for every DCE-RPC bind request ack message.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Rpc
+mime_all_headers,"Generated for MIME headers extracted from email MIME entities, passing all headers at once.",DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Mime
+imap_capabilities,"Generated when a server sends a capability list to the client, after being queried using the CAPABILITY command.",DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Imap
+imap_start_tls,Generated when a IMAP connection goes encrypted after a successful StartTLS exchange between the client and the server.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Imap
+krb_ap_request,A Kerberos 5 Authentication Header (AP) Request as defined in RFC 4120.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Kerberos
+krb_ap_response,A Kerberos 5 Authentication Header (AP) Response as defined in RFC 4120.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Kerberos
+krb_as_request,A Kerberos 5 Authentication Server (AS) Request as defined in RFC 4120.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Kerberos
+krb_as_response,A Kerberos 5 Authentication Server (AS) Response as defined in RFC 4120.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Kerberos
+krb_tgs_request,A Kerberos 5 Ticket Granting Service (TGS) Request as defined in RFC 4120.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Kerberos
+krb_tgs_response,A Kerberos 5 Ticket Granting Service (TGS) Response as defined in RFC 4120.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Kerberos
+netbios_session_accepted,Generated for NetBIOS messages of type positive session response.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Netbios
+netbios_session_keepalive,Generated for NetBIOS messages of type keep-alive.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Netbios
+netbios_session_message,Generated for all NetBIOS SSN and DGM messages.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Netbios
+netbios_session_rejected,Generated for NetBIOS messages of type negative session response.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Netbios
+netbios_session_request,Generated for NetBIOS messages of type session request.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Netbios
+netbios_session_ret_arg_resp,Generated for NetBIOS messages of type retarget response.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Netbios
+ntlm_negotiate,Generated for NTLM messages of type negotiate.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Ntlm
+ntp_message,Generated for all NTP messages.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Ntp
+pop3_data,Generated for server-side multi-line responses on POP3 connections.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Pop3
+pop3_login_failure,Generated for unsuccessful authentications on POP3 connections.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Pop3
+pop3_starttls,Generated when a POP3 connection goes encrypted.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Pop3
+rdp_begin_encryption,Generated when an RDP session becomes encrypted.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdp_connect_request,Generated for X.224 client requests.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdp_gcc_server_create_response,Generated for MCS server responses.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdp_native_encrypted_data,Generated for each packet after RDP native encryption begins.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdp_negotiation_failure,Generated for RDP Negotiation Failure messages.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdp_negotiation_response,Generated for RDP Negotiation Response messages.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdp_server_security,Generated for MCS server responses.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rdpeudp_data,Generated when for data messages exchanged after a RDPEUDP connection establishes,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rdp
+rpc_call,Generated for RPC call messages.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+rpc_reply,Generated for RPC reply messages.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+rpc_dialogue,Generated for RPC request/reply pairs.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+mount_proc_mnt,Generated for MOUNT3 request/reply dialogues of type mnt.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+mount_proc_not_implemented,Generated for MOUNT3 request/reply dialogues of a type that Zeek’s MOUNTv3 analyzer does not implement.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+mount_proc_null,Generated for MOUNT3 request/reply dialogues of type null.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+mount_proc_umnt,Generated for MOUNT3 request/reply dialogues of type umnt.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+mount_proc_umnt_all,Generated for MOUNT3 request/reply dialogues of type umnt_all.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_create,Generated for NFSv3 request/reply dialogues of type create.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_getattr,Generated for NFSv3 request/reply dialogues of type getattr.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_link,Generated for NFSv3 request/reply dialogues of type link.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_lookup,Generated for NFSv3 request/reply dialogues of type lookup.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_mkdir,Generated for NFSv3 request/reply dialogues of type mkdir.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_mkdir,Generated for NFSv3 request/reply dialogues of type null.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_read,Generated for NFSv3 request/reply dialogues of type read.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_readdir,Generated for NFSv3 request/reply dialogues of type readdir.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_readlink,Generated for NFSv3 request/reply dialogues of type readlink.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_remove,Generated for NFSv3 request/reply dialogues of type remove.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_rename,Generated for NFSv3 request/reply dialogues of type rename.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_rmdir,Generated for NFSv3 request/reply dialogues of type rmdir.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_sattr,Generated for NFSv3 request/reply dialogues of type sattr.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_symlink,Generated for NFSv3 request/reply dialogues of type symlink.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_proc_write,Generated for NFSv3 request/reply dialogues of type write.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+nfs_reply_status,"Generated for each NFSv3 reply message received, reporting just the status included.",DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_attempt_callit,Generated for failed Portmapper requests of type callit.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_attempt_dump,Generated for failed Portmapper requests of type dump.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_attempt_getport,Generated for failed Portmapper requests of type getport.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_attempt_null,Generated for failed Portmapper requests of type null.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_attempt_set,Generated for failed Portmapper requests of type set.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_attempt_unset,Generated for failed Portmapper requests of type unset.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+pm_bad_port,Generated for Portmapper requests or replies that include an invalid port number.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Rpc
+sip_reply,"Generated for SIP replies, used in Voice over IP (VoIP).",DS0029,Network Traffic,Network Traffic Flow,Cloud,Communicate Through,Sip
+sip_request,"Generated for SIP requests, used in Voice over IP (VoIP).",DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Sip
+smtp_data,Generated for DATA transmitted on SMTP sessions.,DS0029,Network Traffic,Network Traffic Flow,"Host, Process/User",Communicate Through,Smtp
+smtp_starttls,Generated if a connection switched to using TLS using STARTTLS or X-ANONYMOUSTLS.,DS0029,Network Traffic,Network Traffic Flow,"Host, Process/User",Communicate Through,Smtp
+snmp_get_bulk_request,An SNMP GetBulkRequest-PDU message from RFC 3416.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Snmp
+snmp_get_next_request,An SNMP GetNextRequest-PDU message from either RFC 1157 or RFC 3416.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Snmp
+snmp_inform_request,An SNMP InformRequest-PDU message from RFC 3416.,DS0029,Network Traffic,Network Traffic Flow,"Host, Process",Communicate Through,Snmp
+snmp_response,An SNMP GetResponse-PDU message from RFC 1157 or a Response-PDU from RFC 3416.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Snmp
+socks_reply,Generated when a SOCKS reply is analyzed.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Socks
+socks_request,Generated when a SOCKS request is analyzed.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Socks
+ssh_client_version,An SSH Protocol Version Exchange message from the client.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Ssh
+ssh_server_version,An SSH Protocol Version Exchange message from the server.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Ssh
+ssl_change_cipher_spec,This event is raised when a SSL/TLS ChangeCipherSpec message is encountered before encryption begins.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Ssl
+ssl_extension,Generated for SSL/TLS extensions seen in an initial handshake.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Service",Communicate Through,Ssl
+ssl_handshake_message,This event is raised for each unencrypted SSL/TLS handshake message.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Service",Communicate Through,Ssl
+ssl_heartbeat,Generated for SSL/TLS heartbeat messages that are sent before session encryption starts.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Service",Communicate Through,Ssl
+connection_attempt,Generated for an unsuccessful connection attempt.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Tcp
+connection_eof,Generated at the end of reassembled TCP connections.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Host",Communicate Through,Tcp
+connection_finished,Generated for a TCP connection that finished normally.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Service",Communicate Through,Tcp
+connection_half_finished,"Generated when one endpoint of a TCP connection attempted to gracefully close the connection, but the other endpoint is in the TCP_INACTIVE state.",DS0029,Network Traffic,Network Traffic Flow,"Process/User, Host",Communicate Through,Tcp
+connection_partial_close,Generated when a previously inactive endpoint attempts to close a TCP connection via a normal FIN handshake or an abort RST sequence.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Host",Communicate Through,Tcp
+connection_pending,Generated for each still-open TCP connection when Zeek terminates.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Service",Communicate Through,Tcp
+connection_rejected,Generated for a rejected TCP connection.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Host",Communicate Through,Tcp
+connection_reset,Generated when an endpoint aborted a TCP connection.,DS0029,Network Traffic,Network Traffic Flow,"Process/User, Host",Communicate Through,Tcp
+partial_connection,Generated for a new active TCP connection if Zeek did not see the initial handshake.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Tcp
+tcp_rexmit,Generated for each detected TCP segment retransmission.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Tcp
+ssh_auth_attempted,This event is generated when an SSH connection was determined to have had an authentication attempt.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Ssh
+arp_request,Generated for ARP requests.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Arp
+arp_reply,Generated for ARP replies.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Arp
+dns_request,Generated for DNS requests.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Dns
+dns_unknown_reply,Generated on DNS reply resource records when the type of record is not one that Zeek knows how to parse and generate another more specific event.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_a6_reply,Generated for DNS replies of type A6.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_AAAA_reply,Generated for DNS replies of type AAAA.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_A_reply,Generated for DNS replies of type A.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_CAA_reply,Generated for DNS replies of type CAA (Certification Authority Authorization).,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_CNAME_reply,Generated for DNS replies of type CNAME.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_DNSKEY_reply,Generated for DNS replies of type DNSKEY.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_DS_reply,Generated for DNS replies of type DS.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_EDNS_addl_reply,Generated for DNS replies of type EDNS.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_EDNS_ecs_reply,Generated for DNS replies of type EDNS.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_HINFO_reply,Generated for DNS replies of type HINFO.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_MX_reply,Generated for DNS replies of type MX.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_NSEC_reply,Generated for DNS replies of type NSEC.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_NSEC_reply,Generated for DNS replies of type NSEC3.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_NS_reply,Generated for DNS replies of type NS.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_PTR_reply,Generated for DNS replies of type PTR.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_RRSIG_reply,Generated for DNS replies of type RRSIG.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_SOA_reply,Generated for DNS replies of type SOA.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_SPF_reply,Generated for DNS replies of type SPF.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_SRV_reply,Generated for DNS replies of type SRV.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_TSIG_reply,Generated for DNS replies of type TSIG.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_TXT_reply,Generated for DNS replies of type TXT.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+dns_WKS_reply,Generated for DNS replies of type WKS.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dns
+ftp_request,Generated for client-side FTP commands.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Ftp
+ftp_reply,Generated for server-side FTP replies.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Ftp
+smb2_close_response,Generated for SMB/CIFS version 2 responses of type close.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Smb2
+smb2_create_response,Generated for SMB/CIFS version 2 responses of type create.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Smb2
+pop3_request,Generated for client-side commands on POP3 connections.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Pop3
+pop3_reply,Generated for server-side replies to commands on POP3 connections.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Pop3
+smtp_request,Generated for client-side SMTP commands.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Smtp
+smtp_reply,Generated for server-side SMTP commands.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Smtp
+dhcp_message,Generated for all DHCP messages.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Dhcp
+icmp_echo_request,Generated for ICMP echo request messages.,DS0029,Network Traffic,Network Traffic Flow,Command Execution,Communicate Through,Icmp
+icmp_echo_reply,Generated for ICMP echo reply messages.,DS0029,Network Traffic,Network Traffic Flow,Command Execution,Communicate Through,Icmp
+dce_rpc_request,Generated for every DCE-RPC request message.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Rpc
+dce_rpc_reply,Generated for every DCE-RPC reply message.,DS0029,Network Traffic,Network Traffic Flow,Process,Communicate Through,Rpc
+http_request,Generated for HTTP requests.,DS0029,Network Traffic,Network Traffic Flow,Process/User,Communicate Through,Http
+http_reply,Generated for HTTP replies.,DS0029,Network Traffic,Network Traffic Flow,Host,Communicate Through,Http
+udp_reply,Generated for each packet sent by a UDP flow’s responder.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Udp
+udp_request,Generated for each packet sent by a UDP flow’s originator.,DS0029,Network Traffic,Network Traffic Flow,Service,Communicate Through,Udp
