@@ -4,7 +4,9 @@ Use Cases
 Target Audience
 ---------------
 
-The existing communities of Sensors and ATT&CK users include many roles and responsibilities associated with organizational detection processes and procedures. These roles and responsibilities include: 
+The existing communities of Sensors and ATT&CK users include many roles and responsibilities 
+associated with organizational detection processes and procedures. These roles and responsibilities 
+include: 
 
 Incident Response (IR) Professional
     Responsibilities include response,
@@ -38,14 +40,29 @@ Usage
 Understanding Current Visibility
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *What is my coverage for known adversary TTPs given my current tools?*
+
 - Understand which techniques you have visibility into given current set of tools and capabilities.
 
 Filling Defensive Gaps
 ^^^^^^^^^^^^^^^^^^^^^^
 *If I were to add Tool X, how does that coverage change?*
+
 - Identify tools and capabilities to acquire or enable in order to fill gaps.
 
 Find Potential Threats
 ^^^^^^^^^^^^^^^^^^^^^^
 *I'm concerned about a recent threat report. Can I see it if it were to happen in my environment and where do I look?*
+
 - Determine which tools and capabilities to use to find adversary behaviors.
+
+User Stories
+------------
+
+This section describes user stories associated with organizational detection processes and 
+procedures, based on the roles and usage identified above.
+
+<img src="./docs/_static/visibility.png" width="900px">
+
+<img src="./docs/_static/gaps.png" width="900px">
+
+<img src="./docs/_static/threats.png" width="900px">
