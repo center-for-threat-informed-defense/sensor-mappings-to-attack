@@ -30,8 +30,7 @@ Step 3 of this methodology.
    :width: 600
 
 - The action that triggered the generation of this event was the creation of a new process (Activity). 
-- This security event can be collected by using the built-in event logging application for devices that work with the Windows 
-operating system (Platform). Within a Windows environment, it is typically known to have a "process" as a source of data. 
+- This security event can be collected by using the built-in event logging application for devices that work with the Windows operating system (Platform). Within a Windows environment, it is typically known to have a "process" as a source of data. 
 
 Correlate to ATT&CK Data Component Definition
 ---------------------------------------------
