@@ -21,6 +21,21 @@ can do to change that. This information can be used to answer questions such as:
 - I'm concerned about a particular technique in a recent threat report. Can I see it if
   it were to happen in my environment and, if so, where do I look?
 
+ATT&CK began bridging offensive actions with potential defensive countermeasures in the v9 release. This 
+goal was achieved by tagging each (sub-)technique with defensive-focused fields/properties, such as what 
+data to collect (data sources) and how to analyze that data in order to potentially identify 
+specific behaviors (detections).
+
+`ATT&CK's Data Sources <http://attack.mitre.org/datasources/>`_ usually fall into one of the following buckets:
+
+- Granular basic system artifacts (e.g., process, file, registry)
+- Granular basic user activities (e.g., logon session)
+- Abstract types of system artifacts, with children as sub-types (e.g., scheduled jobs)
+- Associated network traffic (e.g., wmi and registry), in such cases, it's important to capture the set of 
+  protocols that encompasses this traffic, so that users may understand where they need to look in their 
+  logs/PCAPs/DPI appliances/etc.
+- Associated cloud (e.g. Instance, Container, Cloud Storage, Cloud Service)
+
 ATT&CK Data Sources do not describe fully the specific events or sensors that can provide 
 visibility into each individiual data source. This leaves the users with significant work to 
 understand how their tools map to the generic data sources and inhibits automated analysis to 
@@ -28,6 +43,13 @@ easily answer the questions SOCs need to ask. This project is intended to build 
 Data Sources, extending them to connect conceptual data sources to concrete sensors, logs, 
 tools, and other security capabilities, allowing the users of ATT&CK to easily go from a 
 technique they're concerned about to capabilities they might have or could acquire to detect it.
+
+Prior research into building on ATT&CK Data Objects has been undertaken by The Open Source Security 
+Events Metadata (OSSEM) (https://github.com/OTRF/OSSEM) project and the Center's Atomic Data Sources project (https://github.com/mitre-attack/attack-datasources). OSSEM is a 
+community-led project created by Roberto and Jose Rodriguez that provides security context telemetry of 
+behaviors occurring in an environment and metadata describing relationships between security events and 
+ATT&CK TTPs. Atomic Data Sources developed data source objects and context to help describe activity 
+within a network and provided a proof-of-concept approach to mapping ATT&CK Data Sources to sensors.
 
 STIX Representation and Mapping Tools
 -------------------------------------

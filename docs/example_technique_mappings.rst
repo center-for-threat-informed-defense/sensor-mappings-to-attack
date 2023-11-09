@@ -1,12 +1,19 @@
 Example Scenarios
-==========================
+=================
 
-As we worked through some of the event IDs to ATT&CK data source mappings, we found that not all events are created equal in regards to detecting ATT&CK techniques. Two events with the same field names can represent different data.  
+<!-- Under construction -->
 
-For example, both T1134: Access Token Manipulation and T1543: Create or Modify System Process include Process Creation. However, through our list of mappings, process creation includes Sysmon 1, WinEvtx 4688, and WinEvtx 4696. As we moved through research, our first assumption was that Sysmon 1 and WinEvtx 4688 will potentially detect T1543 but WinEvtx 4696 can be an additional detection for T1134. 
+The examples below depict how these mappings can be used to get from Sensor Events to Data Sources to Techniques. 
+It should be stated up fron that there is no easy, one-to-one mapping from data source to technique. In addition, 
+not all events are created equal in regard to visibility of specific techniques, and two events with the same field 
+names can in fact represent different data. Some amount of analyst judgement is required and, whenever judgement is 
+involved, there can be differences in opinion. The mapping methodology and these examples are provided to demonstrate 
+the judgement and rationale to apply when identifying specific event visibility into techniques. 
 
-So below we go through some examples of why certain Events work to detect certain ATT&CK techniques.
-
+For example, both Access Token Manipulation (T1134) and Create or Modify System Process (T1543) include Process Creation. 
+However, as identified in the SMAP mappings, process creation includes Sysmon 1, WinEvtx 4688, and WinEvtx 4696. The first 
+assumption may be that Sysmon 1 and WinEvtx 4688 will potentially provide visbility of T1543 occurring in an environment, 
+but WinEvtx 4696 can be an additional detection for T1134. The full example walkthrough is provided below.
 
 Windows
 -------

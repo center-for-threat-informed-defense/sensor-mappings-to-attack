@@ -6,7 +6,10 @@ Sensor Mapping
 
 **Sensor Scope**
 
-Our project goes through 6 sensors and maps to ATT&CK Data Sources.
+The scope of this project includes mappings to ATT&CK Data Sources from Host Sensors, which 
+gather data from endpoints in the environment (e.g., Windows, Linux)​, and Network Sensors, 
+which gather data gather from network communications, typically outbound connections​. 
+The specific sensors mapped are:
 
 .. toctree::
 
@@ -16,3 +19,5 @@ Our project goes through 6 sensors and maps to ATT&CK Data Sources.
     mapping_sysmon
     mapping_winevtx
     mapping_zeek
+
+<img src="./docs/_static/sensors.png" width="900px">
