@@ -26,8 +26,8 @@ threat-informed decisions.
     levels/index
     use_cases
     example_technique_mappings
-    Future-Work
-    Changelog
+    future_work
+    changelog
 
 Notice
 ------
