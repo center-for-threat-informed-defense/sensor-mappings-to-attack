@@ -16,7 +16,7 @@ the first location to look for further evidence. Typically, sensors can be broke
       - Files, Registry
       - Scheduled Tasks, Cron Jobs, Launch Agents
       - User Account, Hardware Info
-      - Memory Data 
+      - Memory Data
 
 **Network:** data gathered from network communications, typically outbound connections
 
@@ -49,11 +49,7 @@ including:
 - `Zeek Reference Documentation <https://docs.zeek.org/en/master/script-reference/proto-analyzers.html#>`_
 - `CloudTrail Documentation <https://docs.aws.amazon.com/cloudtrail/>`_ 
 
-When selecting events to map, the following coniderations were used:
+When selecting events to map, the following considerations were used:
 
-- The scope of the events consists of telemetry that can be collected by a sensor or logging system which may collect 
-information relevant to identifying the action being performed by an adversary, sequence of actions, or the results 
-of those actions. 
-- The events are considered as native to the sensor and made available on the platform. The intent is not to provide 
-a mapping for all settings/features of individual platform services. This is a non-trivial undertaking that may be 
-explored at a later time.
+- The scope of the events consists of telemetry that can be collected by a sensor or logging system which may collect information relevant to identifying the action being performed by an adversary, sequence of actions, or the results of those actions.
+- The events are considered as native to the sensor and made available on the platform. The intent is not to provide a mapping for all settings/features of individual platform services. This is a non-trivial undertaking that may be explored at a later time.
