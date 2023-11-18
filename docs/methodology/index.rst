@@ -30,4 +30,5 @@ The Sensor Mappings to ATT&CK mapping methodology consists of the following step
     step2
     step3
 
-    
+.. image:: _static/BuildSensorMappings.png
+   :width: 700    

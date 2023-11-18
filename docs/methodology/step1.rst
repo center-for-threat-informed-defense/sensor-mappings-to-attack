@@ -48,6 +48,7 @@ including:
 - `OSQuery Schema <https://www.osquery.io/schema/5.9.1/>`_
 - `Zeek Reference Documentation <https://docs.zeek.org/en/master/script-reference/proto-analyzers.html#>`_
 - `CloudTrail Documentation <https://docs.aws.amazon.com/cloudtrail/>`_ 
+- `Auditd Linux man page <https://www.man7.org/linux/man-pages/man8/auditd.8.html>`_
 
 When selecting events to map, the following considerations were used:
 

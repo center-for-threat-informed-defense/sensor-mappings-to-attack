@@ -1,5 +1,10 @@
 Sysmon
 ======
+
+`Sysmon mappings STIX JSON <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/stix/enterprise/Sysmon-mappings-enterprise.json>`_: STIX bundle file output of Sysmon sensor mappings.
+
+`Sysmon ATT&CK Navigator Layer <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/layers/enterprise/Sysmon-heatmap.json>`_: Navigator layer of Sysmon events mapped to data objects associated with specific (sub-)techniques.
+
 .. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
 
 .. list-table::

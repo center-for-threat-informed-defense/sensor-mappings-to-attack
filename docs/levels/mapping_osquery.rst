@@ -1,5 +1,10 @@
 OSQuery
 =======
+
+`OSQuery mappings STIX JSON <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/stix/enterprise/OSQuery-mappings-enterprise.json>`_: STIX bundle file output of OSQuery sensor mappings.
+
+`OSQuery ATT&CK Navigator Layer <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/layers/enterprise/OSQuery-heatmap.json>`_: Navigator layer of OSQuery events mapped to data objects associated with specific (sub-)techniques.
+
 .. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
 
 .. list-table::
