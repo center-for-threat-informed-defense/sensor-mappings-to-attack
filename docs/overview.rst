@@ -12,14 +12,13 @@ Background
 ----------
 
 Sensor Mappings to ATT&CK helps security operations centers (SOCs) and security leaders
-understand whether specific ATT&CK techniques can be detected given the sensors, logs,
-tools, and other security capabilities available to them or, if they can't, what they
-can do to change that. This information can be used to answer questions such as:
+understand whether the sensors, logs, tools, and other security capabilities available to 
+them provide visibility into specific ATT&CK behaviors they care about; and , if they can't, 
+what theycan do to change that. This information can be used to answer questions such as:
 
-- What's my coverage for ATT&CK techniques given my current tools?
+- What's my coverage for ATT&CK TTPs given my current tools?
 - If I were to add Tool X, how does that coverage change?
-- I'm concerned about a particular technique in a recent threat report. Can I see it if
-  it were to happen in my environment and, if so, where do I look?
+- I'm concerned about a particular recent threat report. Can I see it if it were to happen in my environment and, if so, where do I look?
 
 ATT&CK began bridging offensive actions with potential defensive countermeasures in the v9 release. This 
 goal was achieved by tagging each (sub-)technique with defensive-focused fields/properties, such as what 
