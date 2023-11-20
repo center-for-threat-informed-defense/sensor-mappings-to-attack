@@ -17,8 +17,8 @@ additonal customized considerations must also be given when looking to provide i
 
 .. toctree::
 
-    Windows
-    Linux
-    CloudTrail
-    Network
-    
+    windows
+    linux
+    cloudtrail
+    network
+

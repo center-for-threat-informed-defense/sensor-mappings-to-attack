@@ -12,7 +12,7 @@ As mentioned in Step 2, `Event ID 4688: A new process has been created <https://
 that can help to describe the data elements needed. For instance, regarding the user account data element, 
 information on the logon ID and the domain it belongs to is collected. 
 
-.. image:: ../_static/MSDN_4688_Ex_Attributes.png
+.. image:: ../_static/msdn_4688_ex_attributes.png
    :width: 600
 
 The use of Data Elements helps to understand key attributes that are related to the adversary behavior. 
@@ -25,7 +25,7 @@ Additional context on how to establish data elements can be gained by considerin
 - *What are all the data objects that define the context of the data source?*
 - *What are some attributes from the event log that contributes to the activity of the adversary behavior?*
 
-.. image:: ../_static/DataElement_Ex.png
+.. image:: ../_static/dataelement_ex.png
    :width: 700
 
 This method can also be used to provide a general idea of what information needs to be collected. 
@@ -44,7 +44,7 @@ relationships are the ones that make references to the action that triggered the
 Informational relationships are the ones defined based on the metadata provided by the event. Therefore, 
 please be aware of alternative data elements (i.e., a thread can create a process).
 
-.. image:: ../_static/Relationship_Ex.png
+.. image:: ../_static/relationship_ex.png
    :width: 700
 
 As discussed by `OSSEM <https://github.com/OTRF/OSSEM>`_ at their ATT&CKcon 2018 and 2019 presentation, the activity of the 

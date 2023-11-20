@@ -2,7 +2,7 @@ CloudTrail Example Scenarios
 ============================
 
 Both CloudTrail examples involve User Account data components. The first review the use of
-User Account Modification to provide visbility into Account Manipulation (T1098), while the 
+User Account Modification to provide visibility into Account Manipulation (T1098), while the 
 second considers User Account Metadata for detection of Password Policy Discovery (T1201)
 behavior. 
 
@@ -12,7 +12,7 @@ Account Manipulation (T1098)
 The following are the criteria considered for Account Manipulation (T1098). These were 
 directly taken by reviewing the definition of the technique. 
 
-.. image:: _static/CldTrlEx1.png
+.. image:: ../_static/cldtrlex1.png
    :width: 700
 
 1. Looking at the event logs themselves, is this enough proof or evidence to determine 
@@ -70,7 +70,7 @@ Password Policy Discovery (T1201)
 The following are the criteria considered for Password Policy Discovery (T1201). These 
 were directly taken by reviewing the definition of the technique. 
 
-.. image:: _static/CldTrlEx2.png
+.. image:: ../_static/cldtrlex2.png
    :width: 700
 
 1. Looking at the event logs themselves, is this enough proof or evidence to determine 

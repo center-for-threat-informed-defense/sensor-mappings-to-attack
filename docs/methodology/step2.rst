@@ -26,7 +26,7 @@ provided by this event includes the user account that requested the creation of 
 executed a new process. This event also provides metadata that can help us to describe the data elements needed later on in 
 Step 3 of this methodology.
 
-.. image:: ../_static/MSDN_4688_Ex.png
+.. image:: ../_static/msdn_4688_ex.png
    :width: 600
 
 - The action that triggered the generation of this event was the creation of a new process (Activity). 
@@ -38,7 +38,7 @@ Correlate to ATT&CK Data Component Definition
 To correlate with ATT&CK, the `Data Source <https://attack.mitre.org/datasources/>`_ pages provide definitions for each 
 individual Data Source. 
 
-.. image:: ../_static/ATTACK_Ex_PC.png
+.. image:: ../_static/attack_ex_pc.png
    :width: 600
 
 For Process Creation, ATT&CK's definition is : **..the initial construction of an executable..**. Through key word review, it 
@@ -48,5 +48,5 @@ ATT&CK Data Component.
 A similar process can be used to examine Sysmon EID 1, Sysmon EID 8, WinEvtx 4688, and WinEvtx 4696. The image below shows that 
 the definitions all have some correlation with either starting or executing a process. 
 
-.. image:: ../_static/DefinitionCorrelation_Ex.png
+.. image:: ../_static/definitioncorrelation_Ex.png
    :width: 700

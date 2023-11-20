@@ -22,13 +22,11 @@ The Sensor Mappings to ATT&CK mapping methodology consists of the following step
 - **Definition Correlation** - For each identified event, understand the security capabilities it provides.
 - **Relationship Correlation** - Identify the ATT&CK Data Sources mappable to event IDs.
 
-<img src="./docs/_static/methodology.png" width="900px">
-
 .. toctree::
 
     step1
     step2
     step3
 
-.. image:: _static/BuildSensorMappings.png
+.. image:: ../_static/build_sensor_mappings.png
    :width: 700    

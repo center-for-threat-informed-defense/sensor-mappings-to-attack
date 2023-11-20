@@ -11,7 +11,7 @@ This example explores Auditd events mapped to the User Account Creation data com
 their potential visibility into detecting activity associated with Create Local Account 
 (T1136.001). 
 
-.. image:: _static/LinuxEx1.png
+.. image:: ../_static/linuxex1.png
    :width: 700
 
 1. Looking at the event logs, is this enough proof or evidence to determine that "a local 

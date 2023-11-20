@@ -8,7 +8,6 @@ into real-world adversary behaviors potentially occurring in their environments.
 representions of information that can be collected to concrete logs, sensors, and other security 
 capabilities that provide that type of data.   
 
-
 This project is created and maintained by `MITRE Engenuity Center for Threat-Informed Defense
 (Center) <https://ctid.mitre-engenuity.org/>`_ and is funded by our `research participants <https://ctid.mitre-engenuity.org/our-work/>`_, in futherance of our mission to
 advance the start of the art and the state of the practice in threat-informed defense globally.
@@ -25,7 +24,7 @@ threat-informed decisions.
     methodology/index
     levels/index
     use_cases
-    example_technique_mappings
+    example_technique_mappings/index
     future_work
     changelog
 

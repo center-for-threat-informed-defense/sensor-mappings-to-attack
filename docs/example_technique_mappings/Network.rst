@@ -14,7 +14,7 @@ and/or mining of information in a network managed Data from Configuration Reposi
 of Snmp_report, Ssl_plaintext_data, http_entity_data have been mapped to this data component 
 under this project.
 
-.. image:: _static/NetworkEx1.png
+.. image:: ../_static/networkex1.png
    :width: 700
 
 1. Looking at the events themselves, is this enough proof or evidence to determine "data is 

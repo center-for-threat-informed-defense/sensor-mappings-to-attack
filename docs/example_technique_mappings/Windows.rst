@@ -11,7 +11,7 @@ As identified in the SMAP mappings, process creation information can be collecte
 Sysmon 1, WinEvtx 4688, WinEvtx 4696. This first example walks through why WinEvtx 4696 
 may not be a feasible detection for Create or Modify System Process (T1543).
 
-.. image:: _static/WinEx1.png
+.. image:: ../_static/winex1.png
    :width: 700
 
 1. Looking at the event logs themselves, is this enough proof or evidence to determine 
@@ -109,7 +109,7 @@ As identified in the SMAP mappings, Windows Registry key creation can be collect
 Sysmon 12 and WinEvtx 4657. This example walks through using these events to potentially 
 provide detection for Create or Modify System Process (T1543).
 
-.. image:: _static/WinEx2.png
+.. image:: ../_static/winex2.png
    :width: 700
 
 1. Looking at what the event logs themselves, is this enough proof or evidence to say 
