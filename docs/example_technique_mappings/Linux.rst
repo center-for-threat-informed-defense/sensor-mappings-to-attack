@@ -22,7 +22,7 @@ their potential visibility into detecting activity associated with Create Local 
    Further context is needed, though to see if these events can be directly associated with 
    the technique.
 
-   Auditd event information: `Linux man page <https://www.man7.org/linux/man-pages/man8/auditd.8.html>`_
+   Auditd event information: `Linux man page - auditd(8) <https://www.man7.org/linux/man-pages/man8/auditd.8.html>`_
 
    Use /var/log/audit/audit.log to search on event names.    
    

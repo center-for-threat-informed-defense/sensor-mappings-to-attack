@@ -31,7 +31,7 @@ directly taken by reviewing the definition of the technique.
 
  * TagUser
 
-   Event information: `AWS Documentation <https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AddTags.html>`_
+   Event information: `AWS Documentation - AddTags <https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AddTags.html>`_
 
    Yes. Careful attention was given to CloudTrail Roles, and related information. For 
    example, the “TagUser/UntagUser” API entry was examined to determine that the act of 
@@ -45,7 +45,7 @@ directly taken by reviewing the definition of the technique.
 
  * UpdateUser
 
-   Event information: `AWS Documentation <https://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateUser.html>`_
+   Event information: `AWS Documentation - UpdateUser <https://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateUser.html>`_
 
    Yes. Another interesting event is UpdateUser. As an API call, it does not perform a 
    technical action that results in literal modification of concern (i.e., no access or 
@@ -56,13 +56,13 @@ directly taken by reviewing the definition of the technique.
 
  * UploadSigningCertificate
 
-   Event information: `AWS Documentation <https://docs.aws.amazon.com/IAM/latest/APIReference/API_UploadSigningCertificate.html>`_
+   Event information: `AWS Documentation- UploadSigningCertificate <https://docs.aws.amazon.com/IAM/latest/APIReference/API_UploadSigningCertificate.html>`_
 
    Yes. This provides the name of the IAM user the signing certificate is for and the 
    contents of the signing certificate. The elements provide information that can be used 
    to look for changes to account objects.
 
- Additional information: `AWS Documentation <https://docs.aws.amazon.com/IAM/latest/APIReference/API_SetSecurityTokenServicePreferences.html>`_
+ Additional information: `AWS Documentation - SetSecurityTokenServicePreferences <https://docs.aws.amazon.com/IAM/latest/APIReference/API_SetSecurityTokenServicePreferences.html>`_
 
 Password Policy Discovery (T1201)
 ----------------------------------
@@ -83,14 +83,14 @@ were directly taken by reviewing the definition of the technique.
 
  * CreatePolicyVersion
 
-   Event information: `AWS Documentation <https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicyVersion.html>`_
+   Event information: `AWS Documentation - CreatePolicyVersion <https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicyVersion.html>`_
 
    No. This contains details about IAM policy versions, but does not provide information about 
    attempts to access policy documents.
 
  * GetAccountPasswordPolicy
 
-   Event information: `AWS Documentation <https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccountPasswordPolicy.html>`_
+   Event information: `AWS Documentation - GetAccountPasswordPolicy <https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccountPasswordPolicy.html>`_
 
    Yes. The description of T1201 references that “password policies can be discovered in cloud 
    environments using available APIs such as GetAccountPasswordPolicy in AWS.”
@@ -119,7 +119,7 @@ were directly taken by reviewing the definition of the technique.
 
  * GetLoginProfile
 
-   Event information: `AWS Documentation <https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetLoginProfile.html>`_
+   Event information: `AWS Documentation - GetLoginProfile <https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetLoginProfile.html>`_
 
    No. This contains information about IAM usernames and password creation dates, not 
    actual passwords or password policy constructs.

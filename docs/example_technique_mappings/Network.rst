@@ -23,24 +23,24 @@ under this project.
    To find evidence of an adversary gathering data using SNMP, network traffic content and 
    patterns can be monitored and analyzed.  
    
- * Snmp_report
+ * snmp_report
 
-   Event information: `Book of Zeek <https://docs.zeek.org/en/current/script-reference/proto-analyzers.html#id-snmp_report>`_
+   Event information: `Book of Zeek - snmp_report <https://docs.zeek.org/en/current/script-reference/proto-analyzers.html#id-snmp_report>`_
 
    Yes. Monitor and analyze unusual SNMP reply packet content and inspect information associated 
    with the host that sent it (e.g. snmp traffic originating from unauthorized or untrusted hosts, 
    signature detection for strings mapped to device configurations, anomolies in snmp requests).
 
- * Ssl_plaintext_data
+ * ssl_plaintext_data
 
-   Event information: `Book of Zeek <https://docs.zeek.org/en/current/script-reference/proto-analyzers.html#id-ssl_plaintext_data>`_
+   Event information: `Book of Zeek - ssl_plaintext_data <https://docs.zeek.org/en/current/script-reference/proto-analyzers.html#id-ssl_plaintext_data>`_
 
    Yes. Inspect SSL/TLS messages sent before full session encryption starts for specific data 
    being collected.
 
  * http_entity_data
 
-   Event information: `Book of Zeek <https://docs.zeek.org/en/current/script-reference/proto-analyzers.html#id-http_entity_data>`_
+   Event information: `Book of Zeek - http_entity_data <https://docs.zeek.org/en/current/script-reference/proto-analyzers.html#id-http_entity_data>`_
 
    Not likely. This is useful for Hypertext Transfer Protocol (HTTP) traffic content, which is 
    also a TCP/IP protocol. SNMP communication through applets is possible using HTTP protocol, but

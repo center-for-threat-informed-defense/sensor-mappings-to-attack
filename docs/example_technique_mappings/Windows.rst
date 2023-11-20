@@ -22,7 +22,7 @@ may not be a feasible detection for Create or Modify System Process (T1543).
 
  * Sysmon EID 1
 
-   Event information: `Ultimate Windows Security <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90001>`_
+   Event information: `Ultimate Windows Security - Sysmon Event ID 1 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90001>`_
 
    Yes. Sysmon EID 1 simply triggers when a new process is created, which (in this context) may 
    be created during installation of new software or as part of automated, repeated execution of 
@@ -32,7 +32,7 @@ may not be a feasible detection for Create or Modify System Process (T1543).
 
 * WinEvtxEID 4688
   
-   Event information: `Ultimate Windows Security <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4688>`_, `Microsoft Learn <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4688>`_
+   Event information: `Ultimate Windows Security - Windows Security Log Event ID 4688 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4688>`_, `Microsoft Learn - 4688(S) <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4688>`_
 
    Yes. When a system process or a user opens an executable, Windows creates a process in which 
    that executable runs. Hence, this event is generated every time a program is started or executed. 
@@ -42,7 +42,7 @@ may not be a feasible detection for Create or Modify System Process (T1543).
 
 * WinEvtx EID 4696
 
-   Event information: `Ultimate Windows Security #1 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4696>`_, `Ultimate Windows Security #2 <https://www.ultimatewindowssecurity.com/securitylog/book/page.aspx?spid=chapter6#ProCre>`_, `Ultimate Windows Security #3 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4688>`_, `Microsoft Learn #1 <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4696>`_, `Microsoft Learn #2 <https://learn.microsoft.com/en-us/windows/win32/secauthz/access-tokens>`_
+   Event information: `Ultimate Windows Security - Windows Security Log Event ID 4696 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4696>`_, `Ultimate Windows Security - Detailed Tracking Events <https://www.ultimatewindowssecurity.com/securitylog/book/page.aspx?spid=chapter6#ProCre>`_, `Microsoft Learn - 4696(S) <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4696>`_, `Microsoft Learn - Access Tokens <https://learn.microsoft.com/en-us/windows/win32/secauthz/access-tokens>`_
 
    Maybe. A primary token is an access token that is typically created only by the Windows kernel 
    and is assigned to a process to represent the default security information for that process. 
@@ -121,7 +121,7 @@ provide detection for Create or Modify System Process (T1543).
 
 * Sysmon EID 12
 
-   Event information: `Ultimate Windows Security <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90012,>`_ `Microsoft Learn <https://learn.microsoft.com/en-us/answers/questions/883005/sysmon-event-12-eventtype-createvalue-event-only-n>`_
+   Event information: `Ultimate Windows Security - Sysmon Event ID 12 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90012,>`_ `Microsoft Learn - Sysmon Event-12 <https://learn.microsoft.com/en-us/answers/questions/883005/sysmon-event-12-eventtype-createvalue-event-only-n>`_
 
    Yes. Sysmon EID 12 is triggered by CreateKey, DeleteKey, CreateValue, and DeleteValue events. 
    Newly created windows registry keys (i.e., CreateKey event) may create or modify system-level 
@@ -130,7 +130,7 @@ provide detection for Create or Modify System Process (T1543).
 
 * WinEvtx EID 4657
 
-   Event information: `Ultimate Windows Security #1 <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4657>`_, `Ultimate Windows Security #2 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4657>`_
+   Event information: `Microsoft Learn - 4657(S) <https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4657>`_, `Ultimate Windows Security - Windows Security Log Event ID 4657 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4657>`_
 
    Yes. This event is triggered when registry key values are created, modified, and deleted. 
    Accessing/opening and closing the registry key is determined by Windows EID 4656 and EID 4658, 
@@ -142,7 +142,7 @@ provide detection for Create or Modify System Process (T1543).
 
 * Sysmon EID 6
 
-   Event information: `Ultimate Windows Security <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90006>`_, `Microsoft Learn <https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon>`_, `Red Canary <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.md>`_, `TrustedSec <https://github.com/trustedsec/SysmonCommunityGuide/blob/master/chapters/driver-loading.md>`_
+   Event information: `Ultimate Windows Security - Sysmon Event ID 6 <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90006>`_, `Microsoft Learn - Sysmon v15.11 <https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon>`_, `Red Canary - T1543.003 <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.md>`_, `TrustedSec - Driver Loading <https://github.com/trustedsec/SysmonCommunityGuide/blob/master/chapters/driver-loading.md>`_
 
    Yes. Attaching a driver to the user or kernel-mode of a system, which triggers this event, 
    creates a new service driver installation and load. An adversary may use this service to 
