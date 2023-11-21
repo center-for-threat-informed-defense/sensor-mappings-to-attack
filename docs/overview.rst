@@ -7,18 +7,17 @@ ATT&CK Data Sources to link adversary behaviors to tools, capabilities, and sens
 provide visibility can help cyber defenders understand how specific tools and capabilities 
 provide visibility into specific adversary TTPs.
 
-
-Background
-----------
-
-Sensor Mappings to ATT&CK helps security operations centers (SOCs) and security leaders
-understand whether the sensors, logs, tools, and other security capabilities available to 
-them provide visibility into specific ATT&CK behaviors they care about; and , if they can't, 
-what theycan do to change that. This information can be used to answer questions such as:
+Sensor Mappings to ATT&CK helps cyber defenders understand whether the sensors, logs, tools, 
+and other security capabilities available to them provide visibility into specific ATT&CK 
+behaviors they care about; and, if they can't, what they can do to change that. This information 
+can be used to answer questions such as:
 
 - What's my coverage for ATT&CK TTPs given my current tools?
 - If I were to add Tool X, how does that coverage change?
 - I'm concerned about a particular recent threat report. Can I see it if it were to happen in my environment and, if so, where do I look?
+
+Background
+----------
 
 ATT&CK began bridging offensive actions with potential defensive countermeasures in the v9 release. This 
 goal was achieved by tagging each (sub-)technique with defensive-focused fields/properties, such as what 

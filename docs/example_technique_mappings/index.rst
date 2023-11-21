@@ -1,4 +1,4 @@
-.. _Mapping Pages:
+.. _Example Pages:
 
 ======================================
 Example Scenarios
@@ -21,4 +21,3 @@ additonal customized considerations must also be given when looking to provide i
     linux
     cloudtrail
     network
-

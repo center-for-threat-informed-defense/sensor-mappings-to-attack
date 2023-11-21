@@ -27,4 +27,5 @@ The specific sensors mapped are:
     mapping_winevtx
     mapping_zeek
 
-<img src="./docs/_static/sensors.png" width="900px">
+.. image:: ../_static/sensors.png
+   :width: 700
