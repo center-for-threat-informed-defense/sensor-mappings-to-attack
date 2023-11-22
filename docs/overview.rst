@@ -2,22 +2,52 @@ Overview
 ========
 
 Cyber threat detection starts with understanding the data sources and sensors that can
-be used to detect a given adversary TTP.
+be used to detect a given adversary tactic, technique, or procedure (TTP). Extending 
+ATT&CK Data Sources to link adversary behaviors to tools, capabilities, and sensors that 
+provide visibility can help cyber defenders understand how specific tools and capabilities 
+provide visibility into specific adversary TTPs.
+
+Sensor Mappings to ATT&CK helps cyber defenders understand whether the sensors, logs, tools, 
+and other security capabilities available to them provide visibility into specific ATT&CK 
+behaviors they care about; and, if they can't, what they can do to change that. This information 
+can be used to answer questions such as:
+
+- What's my coverage for ATT&CK TTPs given my current tools?
+- If I were to add Tool X, how does that coverage change?
+- I'm concerned about a particular recent threat report. Can I see it if it were to happen in my environment and, if so, where do I look?
 
 Background
 ----------
 
-Sensor Mappings to ATT&CK helps security operations centers (SOCs) and security leaders
-understand whether specific ATT&CK techniques can be detected given the sensors, logs,
-tools, and other security capabilities available to them or, if they can't, what they
-can do to change that. This information can be used to answer questions such as:
+ATT&CK began bridging offensive actions with potential defensive countermeasures in the v9 release. This 
+goal was achieved by tagging each (sub-)technique with defensive-focused fields/properties, such as what 
+data to collect (data sources) and how to analyze that data in order to potentially identify 
+specific behaviors (detections).
 
-- What's my coverage for ATT&CK techniques given my current tools?
-- If I were to add Tool X, how does that coverage change?
-- I'm concerned about a particular technique in a recent threat report. Can I see it if
-  it were to happen in my environment and, if so, where do I look?
+`ATT&CK's Data Sources <http://attack.mitre.org/datasources/>`_ usually fall into one of the following buckets:
 
-ATT&CK Data Sources do not describe fully the specific events or sensors that can provide visibility into each individiual data source. This leaves the users with significant work to understand how their tools map to the generic data sources and inhibits automated analysis to easily answer the questions SOCs need to ask. This project is intended to build on ATT&CK Data Sources, extending them to connect conceptual data sources to concrete sensors, logs, tools, and other security capabilities, allowing the users of ATT&CK to easily go from a technique they're concerned about to capabilities they might have or could acquire to detect it.
+- Granular basic system artifacts (e.g., process, file, registry)
+- Granular basic user activities (e.g., logon session)
+- Abstract types of system artifacts, with children as sub-types (e.g., scheduled jobs)
+- Associated network traffic (e.g., wmi and registry), in such cases, it's important to capture the set of 
+  protocols that encompasses this traffic, so that users may understand where they need to look in their 
+  logs/PCAPs/DPI appliances/etc.
+- Associated cloud (e.g. Instance, Container, Cloud Storage, Cloud Service)
+
+ATT&CK Data Sources do not describe fully the specific events or sensors that can provide 
+visibility into each individiual data source. This leaves the users with significant work to 
+understand how their tools map to the generic data sources and inhibits automated analysis to 
+easily answer the questions SOCs need to ask. This project is intended to build on ATT&CK 
+Data Sources, extending them to connect conceptual data sources to concrete sensors, logs, 
+tools, and other security capabilities, allowing the users of ATT&CK to easily go from a 
+technique they're concerned about to capabilities they might have or could acquire to detect it.
+
+Prior research into building on ATT&CK Data Objects has been undertaken by The Open Source Security 
+Events Metadata (OSSEM) (https://github.com/OTRF/OSSEM) project and the Center's Atomic Data Sources project (https://github.com/mitre-attack/attack-datasources). OSSEM is a 
+community-led project created by Roberto and Jose Rodriguez that provides security context telemetry of 
+behaviors occurring in an environment and metadata describing relationships between security events and 
+ATT&CK TTPs. Atomic Data Sources developed data source objects and context to help describe activity 
+within a network and provided a proof-of-concept approach to mapping ATT&CK Data Sources to sensors.
 
 STIX Representation and Mapping Tools
 -------------------------------------
@@ -40,10 +70,10 @@ full set of supporting artifacts using the scripts in this repository.
 Get Involved
 ------------
 
-The resulting mapping between Events and ATT&CK allow cyber defenders to create a fuller
-and more deteailed picture of cyber incidents, including the threat actor, technical
-bahvior, telemetry collection, and impact. These improvements can be used to develop
-better predictions and insights into how we might be attacked in the future by better
+The resulting mapping between Events and ATT&CK allow cyber defenders to create a more 
+detailed picture of cyber incidents, including the threat actor, technical behavior, 
+telemetry collection, and impact. These improvements can be used to develop better 
+predictions and insights into how we might be attacked in the future by better
 understanding how and why were attacked in the past.
 
 We encourage you to review the mappings, use them, and tell us what you think. Please

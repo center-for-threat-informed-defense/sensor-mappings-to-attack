@@ -1,5 +1,10 @@
 WinEvtx
 =======
+
+`Windows Event Log mappings STIX JSON <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/stix/enterprise/WinEvtx-mappings-enterprise.json>`_: STIX bundle file output of Windows Event Log sensor mappings.
+
+`Windows Event Log ATT&CK Navigator Layer <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/layers/enterprise/WinEvtx-heatmap.json>`_: Navigator layer of Windows Event Log events mapped to data objects associated with specific (sub-)techniques.
+
 .. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
 
 .. list-table::

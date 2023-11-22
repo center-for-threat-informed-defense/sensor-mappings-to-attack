@@ -1,7 +1,8 @@
 Future Work 
 ===========
 
-Sensor Mappings to ATT&CK project is planning to look at other areas of research: 
+Sensor Mappings to ATT&CK project can be used as the foundational basis for other areas of research, 
+such as: 
 
 - Event ID mappings to ATT&CK Techniques 
 - Event ID mappings to Vendor Sensors

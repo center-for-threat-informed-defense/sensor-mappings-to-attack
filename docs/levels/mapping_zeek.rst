@@ -1,5 +1,11 @@
 ZEEK
 ====
+
+
+`Zeek mappings STIX JSON <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/stix/enterprise/Zeek-mappings-enterprise.json>`_: STIX bundle file output of Zeek sensor mappings.
+
+`Zeek ATT&CK Navigator Layer <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/layers/enterprise/Zeek-heatmap.json>`_: Navigator layer of Zeek events mapped to data objects associated with specific (sub-)techniques.
+
 .. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
 
 .. list-table::
