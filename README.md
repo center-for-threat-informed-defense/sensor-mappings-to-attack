@@ -1,44 +1,34 @@
+[![MITRE ATT&CK® 13.1](https://img.shields.io/badge/MITRE%20ATT%26CK®-v13-red)](https://attack.mitre.org/versions/v13/)
+
 # Sensor Mappings to ATT&CK
 
 Sensor Mappings to ATT&CK (SMAP) is a Center for Threat-Informed Defense (Center) project that
 assists security operations teams and security leaders understand which tools, capabilities, and
 events can help detect real-world adversary TTPs in their environments. SMAP builds on [MITRE ATT&CK®](https://attack.mitre.org/)
-Data Sources by connecting the conceptual data source representions of information that can be collected 
+Data Sources by connecting the conceptual data source representions of information that can be collected
 to concrete logs, sensors, and other security capabilities that provide that type of data. This work complements
-the Center's [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) project by allowing defenders to use both resources to understand their overall defensive coverage and make threat-informed decisions.  
+the Center's [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) project by allowing defenders to use both resources to understand their overall defensive coverage and make threat-informed decisions.
 
-<img src="./docs/_static/BuildSensorMappings.png" width="900px">
 
 **Table Of Contents:**
 
 - [Getting Started](#getting-started)
 - [Getting Involved](#getting-involved)
 - [Questions and Feedback](#questions-and-feedback)
+- [How Do I Contribute?](#how-do-i-contribute)
 - [Notice](#notice)
 
 ## Getting Started
 
-<!-- TODO Write one paragraph about how users should get started,
-     and update the table of resources below. -->
+To get started, read the project website. It provides an overview of the goals and
+methodologies, defines all the key terms, and contains detailed examples.
 
-The scope of this project includes mappings to ATT&CK Data Sources from Host Sensors, which 
-gather data from endpoints in the environment (e.g., Windows, Linux)​, and Network Sensors, 
-which gather data gather from network communications, typically outbound connections​. 
-The specific sensors mapped are:
-- Sysmon (all events) 
-- Windows Event Log (security-relevant events) 
-- Auditd 
-- CloudTrail 
-- OSQuery
-- ZEEK
-
-The mapping structure, methodology, and usage are fully described in [the project website](https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/).
-
-| Resource                     | Description                                          |
-| ---------------------------- | ---------------------------------------------------- |
-| [Project Website](#)         | Documentation, methodology, use cases, examples.     |
-| [Mappings](#)                | In-scope sensors mapped to ATT&CK.                   |
-| [ATT&CK Navigator View](#)   | ATT&CK Navigator view of the SMAP mappings.          |
+| Resource                                                                                                                                                                          | Description                                      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [Project Website](https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/)                                                                                | Documentation, methodology, use cases, examples. |
+| [Mappings Spreadsheet](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/input/enterprise/xlsx/Sensor%20to%20Data%20Source.xlsx) | Complete list of Sensor Mappings.                |
+| [Navigator Layers](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main/mappings/layers/enterprise)                                          | ATT&CK Navigator views of the Sensor Mappings.   |
+| [STIX Bundles](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main/mappings/stix/enterprise)                                                | Machine-readable list of Sensor Mappings.        |
 
 ## Getting Involved
 
@@ -54,17 +44,20 @@ your ideas and we will consider them as we explore additional research projects.
 
 ## Questions and Feedback
 
-Please submit [issues](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/issues) for any technical questions/concerns
-or contact [ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=subject=Question%20about%20sensor-mappings-to-attack) directly for more general inquiries.
+Please submit
+[issues](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/issues)
+for any technical questions/concerns or contact
+[ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=subject=Question%20about%20sensor-mappings-to-attack)
+directly for more general inquiries.
 
-We welcome your feedback and contributions to help advance SMAP. Please see the guidance for 
-contributors if are you interested in [contributing or simply reporting issues.](/CONTRIBUTING.md)
+## How Do I Contribute?
+
+We welcome your feedback and contributions to help advance the Summiting project! Please
+see the [guidance for contributors](/CONTRIBUTING.md).
 
 ## Notice
 
-<!-- TODO Add PRS prior to publication. -->
-
-Copyright 2023 MITRE Engenuity. Approved for public release. Document number REPLACE_WITH_PRS_NUMBER
+Copyright 2023 MITRE Engenuity. Approved for public release. Document number CT0089.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the License at
