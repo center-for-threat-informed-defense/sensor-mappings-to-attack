@@ -46,7 +46,7 @@ def get_sheets(spreadsheet_location, config_location):
     # Merge in the Data Source ID's from the ATT&CK Data Source CSV
     datasource_csv_location = spreadsheet_location.parent.parent.parent
     data_source_ids = pd.read_csv(Path(datasource_csv_location, f"enterprise-attack-v{version}-datasources.csv"), usecols=[0, 1])
-    
+
     df = df.merge(data_source_ids, how="left", left_on="Data Source", right_on="name")
     df.drop(columns=["name"], inplace=True)
     df.rename(columns={"ID":"Data Source ID"}, inplace=True)
@@ -69,13 +69,13 @@ def generate_csv_spreadsheet(sheets, mappings_location):
         mappings_location.mkdir(parents=True)
 
     for sheet, name in sheets:
-        with mappings_location.joinpath(f"{name}-sensors-mappings-enterprise.csv").open('w', newline='\n', encoding='utf-8') as csvfile:
+        with mappings_location.joinpath(f"{name}-sensors-mappings-enterprise.csv").open('w', newline='', encoding='utf-8') as csvfile:
             fieldnames = ['EVENT ID', 'EVENT DESCRIPTION', 'ATT&CK DATA SOURCE ID', 'ATT&CK DATA SOURCE', 'ATT&CK DATA COMPONENT', 'SOURCE', 'RELATIONSHIP', 'TARGET']
             dataframe_fields = ['Event ID', 'Event Description', 'Data Source ID', 'Data Source', 'Data Component', 'Source', 'Relationship', 'Target']
 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
-            
+
             for idx, row in sheet.iterrows():
                 csv_row = {}
                 for i in range(len(fieldnames)):
@@ -101,7 +101,7 @@ def _parse_args():
                         dest="spreadsheet_location",
                         help="filepath to the Excel spreadsheet for the mappings",
                         type=Path,
-                        default=Path(ROOT_DIR, "mappings", "input", 
+                        default=Path(ROOT_DIR, "mappings", "input",
                             "enterprise", "xlsx", "Sensor ID to Data Source to API v2.xlsx"))
     parser.add_argument("-mappings_location",
                         dest="mappings_location",

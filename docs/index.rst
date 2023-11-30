@@ -1,19 +1,22 @@
 Sensor Mappings to ATT&CK
 =========================
 
-Sensor Mappings to ATT&CK (SMAP) is a collection of resources to assist security operations teams 
-and security leaders understand which tools, capabilities, and events can help provide visibility 
-into real-world adversary behaviors potentially occurring in their environments. SMAP builds on 
-`MITRE ATT&CK® <https://attack.mitre.org/>`_ Data Sources by connecting the conceptual data source 
-representions of information that can be collected to concrete logs, sensors, and other security 
-capabilities that provide that type of data.   
+The Sensor Mappings to ATT&CK Project (SMAP) is a collection of resources to assist
+security operations teams and security leaders with understanding which tools,
+capabilities, and events can help provide visibility into real-world adversary behaviors
+potentially occurring in their environments. SMAP builds on `MITRE ATT&CK®
+<https://attack.mitre.org/>`_ Data Sources by connecting the conceptual data source
+representions of information that can be collected to concrete logs, sensors, and other
+security capabilities that provide that type of data.
 
-This project is created and maintained by `MITRE Engenuity Center for Threat-Informed Defense
-(Center) <https://ctid.mitre-engenuity.org/>`_ and is funded by our `research participants <https://ctid.mitre-engenuity.org/our-work/>`_, in futherance of our mission to
-advance the start of the art and the state of the practice in threat-informed defense globally.
-This work complements the Center's `Security Stack Mappings <https://github.com/center-for-threat-informed-defense/security-stack-mappings>`_ project by
-allowing defenders to use both resources to understand their overall defensive coverage and make
-threat-informed decisions.
+This project is created and maintained by `MITRE Engenuity Center for Threat-Informed
+Defense (Center) <https://ctid.mitre-engenuity.org/>`_ and is funded by our `research
+participants <https://TODO>`_, in futherance of our mission to advance the start of the
+art and the state of the practice in threat-informed defense globally. This work
+complements the Center's `Security Stack Mappings
+<https://github.com/center-for-threat-informed-defense/security-stack-mappings>`_
+project by allowing defenders to use both resources to understand their overall
+defensive coverage and make threat-informed decisions.
 
 .. toctree::
     :maxdepth: 2
@@ -25,7 +28,6 @@ threat-informed decisions.
     levels/index
     use_cases
     example_technique_mappings/index
-    future_work
     changelog
 
 Notice
