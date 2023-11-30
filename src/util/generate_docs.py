@@ -32,15 +32,33 @@ def insert_docs(old_doc, doc_lines, tag):
 
     for line in old_doc:
         output.append(line.rstrip("\n"))
-    output.append("")
 
     return "\n".join(output)
 
 
 def write_doc_files(sensor_tables:dict, docs_location:Path):
+    old_doc_files = [i for i in docs_location.glob("mapping*.rst")]
+
     for sensor in sensor_tables:
         old_doc = Path(docs_location, f"mapping_{sensor.lower()}.rst")
         tables = sensor_tables[sensor]
+        if old_doc not in old_doc_files:
+            # Add header to file
+            if sensor.lower() == "zeek":
+                sensor = sensor.upper()
+            file_beginning = header_generator(sensor, "=")
+            file_beginning.append("")
+            file_beginning.append(f"`{sensor} mappings STIX JSON <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/stix/enterprise/{sensor}-mappings-enterprise.json>`_: STIX bundle file output of {sensor} sensor mappings.")
+            file_beginning.append("")
+            file_beginning.append(f"`{sensor} ATT&CK Navigator Layer <https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/layers/enterprise/{sensor}-heatmap.json>`_: Navigator layer of {sensor} events mapped to data objects associated with specific (sub-)techniques.")
+            file_beginning.append("")
+            file_beginning.append(".. MAPPINGS_TABLE")
+            tables.extend(file_beginning)
+            tables.append("")
+            tables.append(".. /MAPPINGS_TABLE")
+            with open(old_doc, "w") as _new_file:
+                _new_file.write("\n".join(tables))
+            tables = []
         with open(old_doc) as file:
             new_doc = insert_docs(file, tables, "MAPPINGS_TABLE")
         with open(old_doc, "w") as out:
@@ -88,7 +106,7 @@ def generate_mappings_table(sensor_table_lists):
     sensor_tables = {}
     for sensor in sensor_table_lists:
         attack_types: list = sensor_table_lists[sensor]
-        # attack_types is a List of Dictionaries. 
+        # attack_types is a List of Dictionaries.
         # Key is the attack_type, Value is a list of rows (dictionaries)
         obj_lines = []
         for attack_type_dict in attack_types:
