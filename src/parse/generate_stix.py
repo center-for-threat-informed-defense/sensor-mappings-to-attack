@@ -402,7 +402,7 @@ def parse_mappings(mappings_location, config_location, attack_domain, data_sdo_i
 
     # Report on new SDOs created
     print("\nNew STIX Objects:")
-    for object in dict(sorted(stix_new_sdo.items())):
+    for object in dict(sorted(stix_new_sdo.items(), key=str)):
         if isinstance(stix_new_sdo[object], list):
             # Indicates a SensorMapping
             continue
