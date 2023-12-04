@@ -17,7 +17,10 @@ visualize the sensor coverage in ATT&CK Navigator.
         <i class="fa fa-map-signs"></i> Open in ATT&CK Navigator</a>
     </p>
 
-.. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
+.. MAPPINGS_TABLE Generated at: 2023-12-04T02:57:27.877631Z
+
+Enterprise
+----------
 
 .. list-table::
   :widths: 10 30 20 25
@@ -30,761 +33,721 @@ visualize the sensor coverage in ATT&CK Navigator.
 
   * - 1100
     - The event logging service has shut down.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 1101
     - Audit events have been dropped by the transport.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 1102
     - The audit log was cleared.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 1104
     - The security Log is now full.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 2002
     - A Windows Defender Firewall setting has changed.
-    - firewall
-    - firewall metadata
+    - Firewall
+    - Firewall Metadata
 
   * - 2003
     - A Windows Defender Firewall setting in the Private profile has changed.
-    - firewall
-    - firewall metadata
+    - Firewall
+    - Firewall Metadata
 
   * - 2004
     - A rule has been added to the Windows Defender Firewall exception list
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 2005
     - A rule has been modified in the Windows Defender Firewall exception list.
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 2006
     - A rule has been deleted in the Windows Defender Firewall exception list
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 2009
     - The Windows Firewall service failed to load Group Policy.
-    - firewall
-    - firewall metadata
+    - Firewall
+    - Firewall Metadata
 
   * - 2033
     - All rules have been deleted from the Windows Firewall configuration on this computer.
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 4103
     - Module logging.
-    - command
-    - command execution
+    - Command
+    - Command Execution
 
   * - 4103
     - Module logging.
-    - script
-    - script execution
+    - Script
+    - Script Execution
 
   * - 4104
     - Script Block Logging.
-    - script
-    - script execution
+    - Script
+    - Script Execution
 
   * - 4610
     - An authentication package has been loaded by the Local Security Authority.
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4611
     - A trusted logon process has been registered with the Local Security Authority.
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4614
     - A notification package has been loaded by the Security Account Manager.
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4616
     - The system time was changed.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 4622
     - A security package has been loaded by the Local Security Authority.
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4624
     - An account was successfully logged on
-    - logon session
-    - logon session creation
+    - Logon Session
+    - Logon Session Creation
 
   * - 4625
     - An account failed to log on
-    - user account
-    - user account authentication
-
-  * - 4627
-    - Group membership information.
-    - Group
-    - Group Metdata
+    - User Account
+    - User Account Authentication
 
   * - 4634
     - An account was logged off
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4647
     - User initiated logoff.
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4648
     - A logon was attempted using explicit credentials.
-    - user account
-    - user account authentication
+    - User Account
+    - User Account Authentication
 
   * - 4656
     - A handle to an object was requested.
     - File
-    - file access
+    - File Access
 
   * - 4656
     - A handle to an object was requested.
-    - named pipe
-    - named pipe metadata
+    - Named Pipe
+    - Named Pipe Metadata
 
   * - 4656
     - A handle to an object was requested
     - Process
-    - process access
+    - Process Access
 
   * - 4656
     - A handle to an object was requested.
-    - service
-    - service access
-
-  * - 4656
-    - A handle to an object was requested
-    - windows registry
-    - Windows Registry Key Access
+    - Service
+    - Service Access
 
   * - 4657
     - A registry value was modified.
-    - windows registry
-    - windows registry key creation
+    - Windows Registry
+    - Windows Registry Key Creation
 
   * - 4657
     - A registry value was modified.
-    - windows registry
-    - windows registry key deletion
+    - Windows Registry
+    - Windows Registry Key Deletion
 
   * - 4657
     - A registry value was modified.
-    - windows registry
-    - windows registry key modification
+    - Windows Registry
+    - Windows Registry Key Modification
 
   * - 4660
     - An object was deleted.
     - File
-    - file deletion
+    - File Deletion
 
   * - 4660
     - An object was deleted.
-    - windows registry
-    - windows registry key deletion
+    - Windows Registry
+    - Windows Registry Key Deletion
 
   * - 4661
     - A handle to an object was requested.
-    - active directory
-    - active directory object access
+    - Active Directory
+    - Active Directory Object Access
 
   * - 4661
     - A handle to an object was requested.
     - File
-    - file access
+    - File Access
 
   * - 4662
     - An operation was performed on an object.
-    - active directory
-    - active directory object access
+    - Active Directory
+    - Active Directory Object Access
 
   * - 4663
     - An attempt was made to access an object
     - File
-    - file access
+    - File Access
 
   * - 4663
     - An attempt was made to access an object.
     - File
-    - file creation
+    - File Creation
 
   * - 4663
     - An attempt was made to access an object.
     - File
-    - file deletion
+    - File Deletion
 
   * - 4663
     - An attempt was made to access an object
     - Process
-    - process access
+    - Process Access
 
   * - 4663
     - An attempt was made to access an object
-    - windows registry
-    - windows registry key access
-
-  * - 4663
-    - An attempt was made to access an object
-    - windows registry
-    - windows registry key modification
+    - Windows Registry
+    - Windows Registry Key Access
 
   * - 4664
     - An attempt was made to create a hard link.
     - File
-    - file modification
+    - File Metadata
 
   * - 4670
     - Permissions on an object were changed.
     - File
-    - file modification
+    - File Modification
 
   * - 4670
     - Permissions on an object were changed.
-    - windows registry
-    - windows registry key modification
+    - Windows Registry
+    - Windows Registry Key Modification
 
   * - 4672
     - Special privileges assigned to new logon.
-    - logon session
-    - logon session modification
+    - Logon Session
+    - Logon Session Modification
 
   * - 4673
     - A privileged service was called.
-    - logon session
-    - logon session metadata
+    - Logon Session
+    - Logon Session Metadata
+
+  * - 4674
+    - An operation was attempted on a privileged object.
+    - Logon Session
+    - Logon Session Metadata
 
   * - 4674
     - An operation was attempted on a privileged object
     - User Account
     - User Account Metadata
 
-  * - 4674
-    - An operation was attempted on a privileged object.
-    - logon session
-    - logon session metadata
-
   * - 4688
     - Program execution. When you start a program you are creating a process that stays open until the program ends
     - Process
-    - process creation
+    - Process Creation
 
   * - 4689
     - A process has exited.
     - Process
-    - process termination
+    - Process Termination
 
   * - 4690
     - An attempt was made to duplicate a handle to an object.
     - File
-    - file access
+    - File Access
 
   * - 4696
     - A primary token was assigned to process. The assigning process fields identifies the process that started the child (new) process
     - Process
-    - process creation
+    - Process Creation
 
   * - 4697
     - A service was installed in the system.
-    - service
-    - service creation
+    - Service
+    - Service Creation
 
   * - 4698
     - A scheduled task was created.
-    - scheduled job
-    - scheduled job creation
+    - Scheduled Job
+    - Scheduled Job Creation
 
   * - 4699
     - A scheduled task was deleted.
-    - scheduled job
-    - scheduled job deletion
+    - Scheduled Job
+    - Scheduled Job Deletion
 
   * - 4700
     - A scheduled task was enabled.
-    - scheduled job
-    - scheduled job modification
+    - Scheduled Job
+    - Scheduled Job Modification
 
   * - 4701
     - A scheduled task was disabled.
-    - scheduled job
-    - scheduled job modification
+    - Scheduled Job
+    - Scheduled Job Modification
 
   * - 4702
     - A scheduled task was updated.
-    - scheduled job
-    - scheduled job modification
+    - Scheduled Job
+    - Scheduled Job Modification
 
   * - 4703
     - A user right was adjusted.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4717
     - System security access was granted to an account.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4718
     - System security access was removed from an account.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4719
     - System audit policy was changed.
-    - active directory
-    - active directory object modification
+    - Active Directory
+    - Active Directory Object Modification
 
   * - 4720
     - A user account was created
-    - user account
-    - user account creation
+    - User Account
+    - User Account Creation
 
   * - 4722
     - A user account was enabled.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4723
     - An attempt was made to change an account's password.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4724
     - An attempt was made to reset an account's password
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4725
     - A user account was disabled.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4726
     - A user account was deleted
-    - user account
-    - user account deletion
+    - User Account
+    - User Account Deletion
 
   * - 4727
     - A security-enabled global group was created.
-    - group
-    - group creation
-
-  * - 4728
-    - A member was added to a security-enabled global group.
-    - group
-    - group modification
+    - Group
+    - Group Creation
 
   * - 4729
     - A member was removed from a security-enabled global group.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4730
     - A security-enabled global group was deleted.
-    - group
-    - group deletion
+    - Group
+    - Group Deletion
 
   * - 4731
     - A security-enabled local group was created.
-    - group
-    - group creation
+    - Group
+    - Group Creation
 
   * - 4732
     - A member was added to a security-enabled local group.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4733
     - A member was removed from a security-enabled local group.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4734
     - A security-enabled local group was deleted.
-    - group
-    - group deletion
+    - Group
+    - Group Deletion
 
   * - 4735
     - A security-enabled local group was changed.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4737
     - A security-enabled global group was changed.
-    - active directory
-    - active directory object modification
+    - Active Directory
+    - Active Directory Object Modification
 
   * - 4738
     - A user account was changed.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4740
     - A user account was locked out.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4741
     - A computer account was created.
-    - user account
-    - user account creation
+    - User Account
+    - User Account Creation
 
   * - 4742
     - A computer account was changed.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4743
     - A computer account was deleted.
-    - user account
-    - user account deletion
+    - User Account
+    - User Account Deletion
 
   * - 4754
     - A security-enabled universal group was created.
-    - group
-    - group creation
+    - Group
+    - Group Creation
 
   * - 4755
     - A security-enabled universal group was changed.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4756
     - A member was added to a security-enabled universal group.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4757
     - A member was removed from a security-enabled universal group.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4758
     - A security-enabled universal group was deleted.
-    - group
-    - group deletion
+    - Group
+    - Group Deletion
 
   * - 4764
     - A groups type was changed.
-    - group
-    - group modification
+    - Group
+    - Group Modification
 
   * - 4767
     - A user account was unlocked.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4768
     - A Kerberos authentication ticket (TGT) was requested.
-    - active directory
-    - active directory credential request
+    - Active Directory
+    - Active Directory Credential Request
 
   * - 4769
     - A Kerberos service ticket was requested.
-    - active directory
-    - active directory credential request
+    - Active Directory
+    - Active Directory Credential Request
 
   * - 4770
     - A Kerberos service ticket was renewed
-    - active directory
-    - active directory object modification
+    - Active Directory
+    - Active Directory Object Modification
 
   * - 4771
     - Kerberos pre-authentication failed
-    - active directory
-    - active directory credential request
+    - Active Directory
+    - Active Directory Credential Request
 
   * - 4773
     - A Kerberos service ticket request failed
-    - active directory
-    - active directory object access
+    - Active Directory
+    - Active Directory Object Access
 
   * - 4776
     - The computer attempted to validate the credentials for an account
-    - user account
-    - user account authentication
+    - User Account
+    - User Account Authentication
 
   * - 4778
     - A session was reconnected to a Window Station.
-    - logon session
-    - logon session creation
+    - Logon Session
+    - Logon Session Creation
 
   * - 4779
     - A session was disconnected from a Window Station
-    - logon session
-    - logon session terminated
+    - Logon Session
+    - Logon Session Terminated
 
   * - 4781
     - The name of an account was changed.
-    - user account
-    - user account modification
+    - User Account
+    - User Account Modification
 
   * - 4798
     - A user's local group membership was enumerated.
-    - group
-    - group enumeration
+    - Group
+    - Group Enumeration
 
   * - 4799
     - A security-enabled local group membership was enumerated.
-    - group
-    - group enumeration
+    - Group
+    - Group Enumeration
 
   * - 4932
     - Synchronization of a replica of an Active Directory naming context has begun.
-    - active directory
-    - active directory object access
+    - Active Directory
+    - Active Directory Object Access
 
   * - 4946
     - A change has been made to Windows Firewall exception list. A rule was added.
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 4947
     - A change has been made to Windows Firewall exception list. A rule was modified.
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 4948
     - A change has been made to Windows Firewall exception list. A rule was deleted.
-    - firewall
-    - firewall rule modification
+    - Firewall
+    - Firewall Rule Modification
 
   * - 4950
     - A windows firewall setting has changed
-    - firewall
-    - firewall metadata
+    - Firewall
+    - Firewall Metadata
 
   * - 4954
     - Windows firewall group policy settings has changed
-    - firewall
-    - firewall metadata
+    - Firewall
+    - Firewall Metadata
 
   * - 4964
     - Special groups have been assigned to a new logon.
-    - logon session
-    - logon session creation
+    - Logon Session
+    - Logon Session Creation
 
   * - 5024
     - The Windows Firewall Service has started successfully.
-    - firewall
-    - firewall enabled
+    - Firewall
+    - Firewall Enabled
 
   * - 5025
     - The Windows Firewall Service has been stopped.
-    - firewall
-    - firewall disable
+    - Firewall
+    - Firewall Disable
 
   * - 5031
     - The Windows Firewall Service blocked an application from accepting incoming connections on the network.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5034
     - The Windows Firewall Driver was stopped.
-    - firewall
-    - firewall disable
+    - Firewall
+    - Firewall Disable
 
   * - 5136
     - A directory service object was modified.
-    - active directory
-    - active directory object modification
+    - Active Directory
+    - Active Directory Object Modification
 
   * - 5137
     - A directory service object was created.
-    - active directory
-    - active directory object creation
+    - Active Directory
+    - Active Directory Object Creation
 
   * - 5138
     - A directory service object was undeleted
-    - active directory
-    - active directory object creation
+    - Active Directory
+    - Active Directory Object Creation
 
   * - 5139
     - A directory service object was moved.
-    - active directory
-    - active directory object modification
+    - Active Directory
+    - Active Directory Object Modification
 
   * - 5140
     - A network share object was accessed.
-    - network share
-    - network share access
+    - Network Share
+    - Network Share Access
 
   * - 5141
     - A directory service object was deleted.
-    - active directory
-    - active directory object deletion
+    - Active Directory
+    - Active Directory Object Deletion
 
   * - 5142
     - A network share object was added.
-    - network share
-    - network share creation
+    - Network Share
+    - Network Share Creation
 
   * - 5143
     - A network share object was modified.
-    - network share
-    - network share modification
+    - Network Share
+    - Network Share Modification
 
   * - 5144
     - A network share object was deleted.
-    - network share
-    - network share deletion
+    - Network Share
+    - Network Share Deletion
 
   * - 5145
     - A network share object was checked to see whether client can be granted desired access.
-    - named pipe
-    - named pipe metadata
+    - Named Pipe
+    - Named Pipe Metadata
 
   * - 5145
     - A network share object was checked to see whether client can be granted desired access.
-    - network share
-    - network share access
+    - Network Share
+    - Network Share Access
 
   * - 5154
     - The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.
-    - network traffic
-    - network connection creation
-
-  * - 5154
-    - The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5155
     - The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.
-    - network traffic
-    - network connection creation
-
-  * - 5155
-    - The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5156
     - The Windows Filtering Platform has permitted a connection.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5157
     - The Windows Filtering Platform has blocked a connection.
-    - network traffic
-    - network connection creation
-
-  * - 5157
-    - The Windows Filtering Platform has blocked a connection.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5158
     - The Windows Filtering Platform has permitted a bind to a local port.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5159
     - The Windows Filtering Platform has blocked a bind to a local port.
-    - network traffic
-    - network connection creation
-
-  * - 5159
-    - The Windows Filtering Platform has blocked a bind to a local port.
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 5857
     - WMIProv provider started.
-    - wmi
-    - wmi creation
+    - WMI
+    - WMI Creation
 
   * - 5858
     - WMI Query Error.
-    - wmi
-    - wmi creation
+    - WMI
+    - WMI Creation
 
   * - 5859
     - WMI Event.
-    - wmi
-    - wmi creation
+    - WMI
+    - WMI Creation
 
   * - 5860
     - WMI temporary event created.
-    - wmi
-    - wmi creation
+    - WMI
+    - WMI Creation
 
   * - 5861
     - WMI permanent event created.
-    - wmi
-    - wmi creation
+    - WMI
+    - WMI Creation
 
   * - 6005
     - The Event log service was started.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 6005
     - The Event log service was started.
-    - service
-    - service metadata
+    - Service
+    - Service Metadata
 
   * - 6006
     - The Event log service was stopped.
-    - sensor health
-    - host status
+    - Sensor Health
+    - Host Status
 
   * - 6006
     - The Event log service was stopped.
-    - service
-    - service metadata
+    - Service
+    - Service Metadata
 
   * - 6416
     - A new external device was recognized by the system.
-    - drive
-    - drive creation
+    - Drive
+    - Drive Creation
 
   * - 6419
     - A request was made to disable a device.
-    - drive
-    - drive modification
+    - Drive
+    - Drive Modification
 
   * - 6420
     - A device was disabled.
-    - drive
-    - drive modification
+    - Drive
+    - Drive Modification
 
   * - 6421
     - A request was made to enable a device.
-    - drive
-    - drive modification
+    - Drive
+    - Drive Modification
 
   * - 6422
     - A device was enabled.
-    - drive
-    - drive modification
+    - Drive
+    - Drive Modification
 
   * - 6423
     - The installation of this device is forbidden by system policy.
-    - drive
-    - drive creation
+    - Drive
+    - Drive Creation
 
   * - 6424
     - The installation of this device was allowed, after having previously been forbidden by policy.
-    - drive
-    - drive creation
+    - Drive
+    - Drive Creation
 .. /MAPPINGS_TABLE

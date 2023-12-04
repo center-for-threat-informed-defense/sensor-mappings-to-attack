@@ -36,6 +36,7 @@ To use the tool suite, execution the files in the following order:
 2. Create mappings by running `parse/generate_stix.py`
 3. (Optional) Validate bundles by running `util/cli_validator.py`
 4. Create ATT&CK Navigation layers by running `util/create_heatmaps.py`
+5. Update Sphinx mapping tables by running `util/generate_docs.py`
 
 
 ## Customization

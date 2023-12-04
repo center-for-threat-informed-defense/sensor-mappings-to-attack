@@ -13,253 +13,253 @@
             "techniqueID": "T1033",
             "score": 1,
             "comment": "CloudTrail: GetOpenIDConnectProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1003",
             "score": 1,
             "comment": "CloudTrail: GetOpenIDConnectProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1615",
             "score": 1,
             "comment": "CloudTrail: GetOpenIDConnectProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1207",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, CreateOpenIDConnectProvider, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, RemoveClientIDFromOpenIDConnectProvider, ResyncMFADevice, TagMFADevice, TagOpenIDConnectProvider, TagSAMLProvider, UntagMFADevice, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1484",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, CreateOpenIDConnectProvider, DeleteOpenIDConnectProvider, DeleteSAMLProvider, RemoveClientIDFromOpenIDConnectProvider, TagOpenIDConnectProvider, TagSAMLProvider, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1037",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, RemoveClientIDFromOpenIDConnectProvider, TagOpenIDConnectProvider, TagSAMLProvider, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1222",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, RemoveClientIDFromOpenIDConnectProvider, TagOpenIDConnectProvider, TagSAMLProvider, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1649",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, ConsoleLogin, RemoveClientIDFromOpenIDConnectProvider, TagOpenIDConnectProvider, TagSAMLProvider, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1098",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, AddUserToGroup, AttachGroupPolicy, RemoveClientIDFromOpenIDConnectProvider, RemoveUserFromGroup, SetSecurityTokenPreferences, TagOpenIDConnectProvider, TagSAMLProvider, TagUser, UntagOpenIDConnectProvider, UntagSAMLProvider, UntagUser, UpdateAccessKey, UpdateGroup, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1531",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, DeleteUser, RemoveClientIDFromOpenIDConnectProvider, SetSecurityTokenPreferences, TagOpenIDConnectProvider, TagSAMLProvider, TagUser, UntagOpenIDConnectProvider, UntagSAMLProvider, UntagUser, UpdateAccessKey, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1134",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, AttachRolePolicy, AttachUserPolicy, ChangePassword, CreateAccessKey, CreateAccountAlias, CreateLoginProfile, CreatePolicy, CreatePolicyVersion, CreateRole, CreateServiceLinkedRole, CreateServiceSpecificCredential, DeleteAccessKey, DeleteAccountAlias, DeleteAccountPasswordPolicy, DeleteLoginProfile, DeletePolicyVersion, DeleteRole, DeleteRolePermissionsBoundary, DeleteRolePolicy, DeleteSSHPublicKey, DeleteServiceSpecificCredential, DeleteSigningCertificate, DeleteUserPermissionsBoundary, DeleteUserPolicy, DetachRolePolicy, DetachUserPolicy, GenerateCredentialReport, GetAccountAuthorizationDetails, GetAccountPasswordPolicy, GetContextKeysForCustomPolicy, GetContextKeysForPrincipalPolicy, GetCredentialReport, GetLoginprofile, GetPolicy, GetPolicyVersion, GetRole, GetRolePolicy, GetUserPolicy, ListAttachedRolePolicies, ListEntitiesForPolicy, ListPoliciesGrantingServiceAccess, ListPolicyTags, ListPolicyVersions, ListRolePolicies, ListRoleTags, ListRoles, PutRolePermissionsBoundary, PutRolePolicy, PutUserPermissionsBoundary, PutUserPolicy, RemoveClientIDFromOpenIDConnectProvider, SetDefaultPolicyVersion, SimulateCustomPolicy, SimulatePrincipalPolicy, TagOpenIDConnectProvider, TagPolicy, TagRole, TagSAMLProvider, Untag Policy, UntagOpenIDConnectProvider, UntagRole, UntagSAMLProvider, UpdateAccountPasswordPolicy, UpdateAssumeRolePolicy, UpdateLoginProfile, UpdateOpenIDConnectProviderThumbprint, UpdateRole, UpdateSAMLProvider",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1556",
             "score": 1,
             "comment": "CloudTrail: AddClientIDToOpenIDConnectProvider, ConsoleLogin, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, RemoveClientIDFromOpenIDConnectProvider, ResyncMFADevice, SetSecurityTokenPreferences, TagMFADevice, TagOpenIDConnectProvider, TagSAMLProvider, TagUser, UntagMFADevice, UntagOpenIDConnectProvider, UntagSAMLProvider, UntagUser, UpdateAccessKey, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1562",
             "score": 1,
             "comment": "CloudTrail: SetSecurityTokenPreferences, StopLogging, TagUser, UntagUser, UpdateAccessKey, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1069",
             "score": 1,
             "comment": "CloudTrail: DeleteGroupPolicy, DetachGroupPolicy, GetContextKeysForPrincipalPolicy, GetGroupPolicy, ListAttachedGroupPolicies, ListEntitiesForPolicy, ListGroupPolicies, ListGroups, ListGroupsForUser, ListPoliciesGrantingServiceAccess, PutGroupPolicy",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1525",
             "score": 1,
             "comment": "CloudTrail: CreateImage, ModifyImageAttribute",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1612",
             "score": 1,
             "comment": "CloudTrail: CreateImage",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1204",
             "score": 1,
             "comment": "CloudTrail: CreateImage, RunInstances, StartInstances",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1578",
             "score": 1,
             "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, CreateSnapshot, CreateVolume, DeleteInstanceProfile, DeleteSnapshot, DetachVolume, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, ModifySnapshotAttribute, ModifyVolume, RemoveRoleFromInstanceProfile, RunInstances, StartInstances, StopInstances, TagInstanceProfile, UntagInstanceProfile",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1535",
             "score": 1,
             "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, DeleteInstanceProfile, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, RemoveRoleFromInstanceProfile, TagInstanceProfile, UntagInstanceProfile",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1114",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1550",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1185",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1021",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1563",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1606",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1621",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1199",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1078",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1213",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1538",
             "score": 1,
             "comment": "CloudTrail: ConsoleLogin, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1537",
             "score": 1,
             "comment": "CloudTrail: CreateSnapshot, ModifySnapshotAttribute",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1485",
             "score": 1,
             "comment": "CloudTrail: DeleteSnapshot",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1490",
             "score": 1,
             "comment": "CloudTrail: DeleteSnapshot",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1552",
             "score": 1,
             "comment": "CloudTrail: CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1070",
             "score": 1,
             "comment": "CloudTrail: CreateVirtualMFADevice, DeactivateMFADevice, DeleteUser, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1212",
             "score": 1,
             "comment": "CloudTrail: CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1110",
             "score": 1,
             "comment": "CloudTrail: CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1564",
             "score": 1,
             "comment": "CloudTrail: AttachRolePolicy, AttachUserPolicy, ChangePassword, CreateAccessKey, CreateAccountAlias, CreateLoginProfile, CreatePolicy, CreatePolicyVersion, CreateRole, CreateServiceLinkedRole, CreateServiceSpecificCredential, CreateUser, DeleteAccessKey, DeleteAccountAlias, DeleteAccountPasswordPolicy, DeleteLoginProfile, DeletePolicyVersion, DeleteRole, DeleteRolePermissionsBoundary, DeleteRolePolicy, DeleteSSHPublicKey, DeleteServiceSpecificCredential, DeleteSigningCertificate, DeleteUserPermissionsBoundary, DeleteUserPolicy, DetachRolePolicy, DetachUserPolicy, GenerateCredentialReport, GetAccountAuthorizationDetails, GetAccountPasswordPolicy, GetContextKeysForCustomPolicy, GetContextKeysForPrincipalPolicy, GetCredentialReport, GetLoginprofile, GetPolicy, GetPolicyVersion, GetRole, GetRolePolicy, GetUserPolicy, ListAttachedRolePolicies, ListEntitiesForPolicy, ListPoliciesGrantingServiceAccess, ListPolicyTags, ListPolicyVersions, ListRolePolicies, ListRoleTags, ListRoles, PutRolePermissionsBoundary, PutRolePolicy, PutUserPermissionsBoundary, PutUserPolicy, SetDefaultPolicyVersion, SimulateCustomPolicy, SimulatePrincipalPolicy, TagPolicy, TagRole, Untag Policy, UntagRole, UpdateAccountPasswordPolicy, UpdateAssumeRolePolicy, UpdateLoginProfile, UpdateRole",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1136",
             "score": 1,
             "comment": "CloudTrail: CreateUser",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1201",
             "score": 1,
             "comment": "CloudTrail: AttachRolePolicy, AttachUserPolicy, ChangePassword, CreateAccessKey, CreateAccountAlias, CreateLoginProfile, CreatePolicy, CreatePolicyVersion, CreateRole, CreateServiceLinkedRole, CreateServiceSpecificCredential, DeleteAccessKey, DeleteAccountAlias, DeleteAccountPasswordPolicy, DeleteLoginProfile, DeletePolicyVersion, DeleteRole, DeleteRolePermissionsBoundary, DeleteRolePolicy, DeleteSSHPublicKey, DeleteServiceSpecificCredential, DeleteSigningCertificate, DeleteUserPermissionsBoundary, DeleteUserPolicy, DetachRolePolicy, DetachUserPolicy, GenerateCredentialReport, GetAccountAuthorizationDetails, GetAccountPasswordPolicy, GetContextKeysForCustomPolicy, GetContextKeysForPrincipalPolicy, GetCredentialReport, GetLoginprofile, GetPolicy, GetPolicyVersion, GetRole, GetRolePolicy, GetUserPolicy, ListAttachedRolePolicies, ListEntitiesForPolicy, ListPoliciesGrantingServiceAccess, ListPolicyTags, ListPolicyVersions, ListRolePolicies, ListRoleTags, ListRoles, PutRolePermissionsBoundary, PutRolePolicy, PutUserPermissionsBoundary, PutUserPolicy, SetDefaultPolicyVersion, SimulateCustomPolicy, SimulatePrincipalPolicy, TagPolicy, TagRole, Untag Policy, UntagRole, UpdateAccountPasswordPolicy, UpdateAssumeRolePolicy, UpdateLoginProfile, UpdateRole",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1528",
             "score": 1,
             "comment": "CloudTrail: SetSecurityTokenPreferences, TagUser, UntagUser, UpdateAccessKey, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate",
-            "color": "#5d053f"
+            "color": "#da471a"
         },
         {
             "techniqueID": "T1611",
             "score": 1,
             "comment": "CloudTrail: DetachVolume, ModifyVolume",
-            "color": "#5d053f"
+            "color": "#da471a"
         }
     ],
     "gradient": {
@@ -273,7 +273,7 @@
     "legendItems": [
         {
             "label": "CloudTrail",
-            "color": "#5d053f"
+            "color": "#da471a"
         }
     ]
 }

@@ -12,925 +12,925 @@
         {
             "techniqueID": "T1558",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4610, 4611, 4614, 4622, 4634, 4647, 4656, 4661, 4663, 4673, 4674, 4690, 4768, 4769, 4771",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1550",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4624, 4625, 4648, 4768, 4769, 4771, 4776, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1649",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4624, 4656, 4661, 4663, 4690, 4719, 4737, 4768, 4769, 4770, 4771, 4778, 4964, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1033",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4662, 4663, 4688, 4690, 4696, 4773, 4932",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1003",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4662, 4663, 4688, 4690, 4696, 4773, 4932",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1615",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4661, 4662, 4688, 4696, 4773, 4932",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1207",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4625, 4648, 4719, 4737, 4770, 4776, 5136, 5137, 5138, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1484",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4719, 4737, 4770, 5136, 5137, 5138, 5139, 5141",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1037",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4670, 4688, 4696, 4719, 4737, 4770, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1222",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4664, 4688, 4696, 4719, 4737, 4770, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1098",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4670, 4688, 4696, 4703, 4717, 4718, 4719, 4722, 4723, 4724, 4725, 4729, 4732, 4733, 4735, 4737, 4738, 4740, 4742, 4755, 4756, 4757, 4764, 4767, 4770, 4781, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1531",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4703, 4717, 4718, 4719, 4722, 4723, 4724, 4725, 4726, 4737, 4738, 4740, 4742, 4743, 4767, 4770, 4781, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1134",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4674, 4688, 4696, 4719, 4737, 4770, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1556",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4624, 4625, 4648, 4656, 4657, 4663, 4670, 4703, 4717, 4718, 4719, 4722, 4723, 4724, 4725, 4737, 4738, 4740, 4742, 4767, 4770, 4776, 4778, 4781, 4964, 5136, 5139",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1047",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1113",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1006",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1123",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1543",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4670, 4688, 4696, 4697",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1069",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696, 4798, 4799",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1114",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4624, 4656, 4661, 4663, 4690, 4778, 4964, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1561",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696, 6419, 6420, 6421, 6422",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1025",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4690",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1547",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1489",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4670, 4688, 4689, 4696, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1652",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4663, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1564",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4657, 4663, 4664, 4670, 4674, 4688, 4696, 4697, 4720, 4741",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1137",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1119",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4656, 4661, 4663, 4690",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1115",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1007",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1040",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1135",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1120",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1082",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1053",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4663, 4670, 4688, 4696, 4698",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1176",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1202",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1005",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4656, 4661, 4663, 4688, 4690, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1562",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 1100, 1101, 1102, 1104, 2004, 2005, 2006, 2033, 4103, 4104, 4616, 4657, 4660, 4670, 4688, 4689, 4696, 4703, 4717, 4718, 4722, 4723, 4724, 4725, 4738, 4740, 4742, 4767, 4781, 4946, 4947, 4948, 5025, 5034, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1555",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4688, 4690, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1567",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4690, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1036",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4664, 4670, 4697, 4700, 4701, 4702, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1552",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4625, 4648, 4656, 4661, 4663, 4688, 4690, 4696, 4776",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1218",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4670, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1010",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1011",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4690, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1560",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4663, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1021",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4624, 4688, 4696, 4778, 4964, 5031, 5140, 5145, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1112",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4660, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1563",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4624, 4688, 4696, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1217",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4688, 4690, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1548",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4664, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1125",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1016",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1087",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4688, 4690, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1059",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1482",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1020",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4656, 4661, 4663, 4690, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1070",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 2004, 2005, 2006, 2033, 4103, 4625, 4648, 4657, 4660, 4663, 4664, 4670, 4688, 4696, 4700, 4701, 4702, 4726, 4743, 4776, 4946, 4947, 4948",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1609",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1083",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1647",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1074",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4657, 4661, 4663, 4670, 4690",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1049",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1542",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 5031, 5154, 5155, 5156, 5157, 5158, 5159, 6419, 6420, 6421, 6422",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1497",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1480",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1204",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4663, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1057",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1041",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4690, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1048",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4690, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1110",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4625, 4648, 4776",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1039",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4690, 5031, 5140, 5145, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1574",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4670, 4688, 4696, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1027",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4657, 4663, 4664, 4688, 4696, 5857, 5858, 5859, 5860, 5861",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1201",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4674, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1546",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4663, 4664, 4670, 4688, 4696, 5857, 5858, 5859, 5860, 5861",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1486",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4663, 4670, 4688, 4696, 5140, 5145",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1553",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4664, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1570",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4663, 4664, 4688, 4696, 5140, 5145",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1012",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4663, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1614",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1197",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1496",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 1100, 1101, 1102, 1104, 4103, 4616, 4663, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1569",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4670, 4688, 4696, 4697",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1485",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4660, 4663, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1651",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1136",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696, 4720, 4741",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1018",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4688, 4690, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1046",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1518",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 2002, 2003, 2009, 4103, 4688, 4696, 4950, 4954",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1622",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1052",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4656, 4661, 4663, 4688, 4690, 4696, 6416, 6423, 6424",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1124",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1490",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4657, 4660, 4663, 4670, 4688, 4696, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1216",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1127",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1529",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 1100, 1101, 1102, 1104, 4103, 4616, 4688, 4696, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1091",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4656, 4661, 4663, 4688, 4690, 4696, 6416, 6423, 6424",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1092",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 6416, 6423, 6424",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1200",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 6416, 6423, 6424",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1014",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4670, 6419, 6420, 6421, 6422",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1539",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4656, 4661, 4663, 4690",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1187",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4656, 4661, 4663, 4670, 4690",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1080",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4663, 4670, 4688, 4696, 5140, 5145",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1491",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4663, 4670",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1554",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4660, 4663, 4664, 4670",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1566",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4663",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1565",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4660, 4663, 4664, 4670",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1505",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4663, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1189",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4663, 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1105",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4663, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1195",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 1100, 1101, 1102, 1104, 4616, 4664, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1055",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4656, 4663, 4664, 4670",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1600",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4670",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1140",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1601",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4670",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1056",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4657, 4670, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1499",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 1100, 1101, 1102, 1104, 4616, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1498",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 1100, 1101, 1102, 1104, 4616, 6005, 6006",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1185",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4624, 4656, 4663, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1606",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4624, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1621",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4610, 4611, 4614, 4622, 4624, 4625, 4634, 4647, 4648, 4673, 4674, 4776, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1199",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4610, 4611, 4614, 4622, 4624, 4634, 4647, 4673, 4674, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1078",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4610, 4611, 4614, 4622, 4624, 4625, 4634, 4647, 4648, 4673, 4674, 4776, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1213",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4624, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1538",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4624, 4625, 4648, 4776, 4778, 4964",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1133",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4610, 4611, 4614, 4622, 4634, 4647, 4673, 4674, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1602",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1219",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1205",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1029",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1572",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1090",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1568",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1612",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1102",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1104",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1030",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1221",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696, 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1008",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1559",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104, 4656, 4663, 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1611",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1072",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1212",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4625, 4648, 4688, 4696, 4776",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1068",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1203",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1220",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1211",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4688, 4696",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1620",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4103, 4104",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1557",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4657, 4670, 4697",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1528",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4703, 4717, 4718, 4722, 4723, 4724, 4725, 4738, 4740, 4742, 4767, 4781",
             "color": "#390e6e"
         },
         {
             "techniqueID": "T1111",
             "score": 1,
-            "comment": "WinEvtx: ",
+            "comment": "WinEvtx: 4657, 4670",
             "color": "#390e6e"
         }
     ],
@@ -945,7 +945,7 @@
     "legendItems": [
         {
             "label": "WinEvtx",
-            "color": "#390e6e"
+            "color": "#5c7691"
         }
     ]
 }

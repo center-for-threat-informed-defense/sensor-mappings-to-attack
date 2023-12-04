@@ -10,28 +10,36 @@ import pandas as pd
 def standardize(sheet, *columns_to_exclude):
     """Helper method to standardize columns used for STIX data."""
     skip = ["Worksheet Name", "Event Description", "Event ID"] + list(*columns_to_exclude)
-    for col in sheet.columns:
-        # Remove whitespace
-        for idx, row in sheet.iterrows():
-            # Pandas does not have a good way to select only string values in a column, so we iterate by row to do our replacements.
-            if isinstance(row[col], str):
-                sheet.loc[:, col] = sheet.loc[:, col].str.strip()
+
+    for idx, row in sheet.iterrows():
+        # Pandas does not have a good way to select only string values in a column, so we iterate by row to do our replacements.
+        for col in sheet.columns:
+            if pd.isna(row[col]):
+                continue
+            elif isinstance(row[col], str):
+                sheet.loc[idx, col] = sheet.loc[idx, col].strip()
                 if col in skip:
-                    # Avoid modifying these columns
+                    # Only strip out the whitespace from this column, iff row[col] is a string
                     continue
-                # Match case
-                sheet.loc[:, col] = sheet.loc[:, col].str.replace(" ", "_")
-                sheet.loc[:, col] = sheet.loc[:, col].str.lower()
+                else:
+                    # Match case
+                    sheet.loc[idx, col] = sheet.loc[idx, col].replace(" ", "_")
+                    sheet.loc[idx, col] = sheet.loc[idx, col].lower()
+            # Skip non-string rows
     sheet.drop_duplicates(inplace=True, ignore_index=True)
-    # After dropping duplicates, revert changes.
-    for col in sheet.columns:
-        for idx, row in sheet.iterrows():
-            if isinstance(row[col], str):
+    # After dropping duplicates, revert changes
+    for idx, row in sheet.iterrows():
+        for col in sheet.columns:
+            if pd.isna(row[col]):
+                continue
+            elif isinstance(row[col], str):
                 if col in skip:
                     continue
-                sheet.loc[:, col] = sheet.loc[:, col].str.replace("_", " ")
-                sheet.loc[:, col] = sheet.loc[:, col].str.title()
-                sheet.loc[:, col] = sheet.loc[:, col].str.replace("Wmi", "WMI")
+                else:
+                    sheet.loc[idx, col] = sheet.loc[idx, col].replace("_", " ")
+                    sheet.loc[idx, col] = sheet.loc[idx, col].title()
+                    sheet.loc[idx, col] = sheet.loc[idx, col].replace("Wmi", "WMI")
+            # Skip non-string rows
 
 
 def get_sheets(spreadsheet_location, config_location):
@@ -77,14 +85,17 @@ def generate_csv_spreadsheet(sheets, mappings_location):
             writer.writeheader()
 
             for idx, row in sheet.iterrows():
+                is_mapped = (pd.notna(row["Data Source"])) and (pd.notna(row["Data Component"])) and (pd.notna(row["Relationship"]))
+                if not is_mapped:
+                    # Skip this row
+                    continue
                 csv_row = {}
                 for i in range(len(fieldnames)):
                     if pd.isna(row[dataframe_fields[i]]):
-                           continue
-                    csv_row[fieldnames[i]] = row[dataframe_fields[i]]
-                is_mapped = (pd.notna(row["Data Source"])) and (pd.notna(row["Data Component"])) and (pd.notna(row["Relationship"]))
-                if is_mapped:
-                    writer.writerow(csv_row)
+                        csv_row[fieldnames[i]] = None
+                    else:
+                        csv_row[fieldnames[i]] = row[dataframe_fields[i]]
+                writer.writerow(csv_row)
                 # Skip any rows without mappable fields
 
 

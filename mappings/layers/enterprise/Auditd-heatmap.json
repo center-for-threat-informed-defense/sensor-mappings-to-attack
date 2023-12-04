@@ -13,973 +13,973 @@
             "techniqueID": "T1047",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1113",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1037",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1033",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, TTY, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1003",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, TTY, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1006",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1123",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1543",
             "score": 1,
             "comment": "Auditd: ANOM_PROMISCUOUS, CONFIG_CHANGE, DAEMON_CONFIG, DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_CIPSOV4_ADD, MAC_CIPSOV4_DEL, MAC_CONFIG_CHANGE, MAC_MAP_ADD, MAC_MAP_DEL, MAC_POLICY_LOAD, MAC_STATUS, ROLE_ASSIGN, ROLE_REMOVE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1069",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1114",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, CRYPTO_SESSION, USER_AVC, USER_LOGIN, USER_START, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1561",
             "score": 1,
             "comment": "Auditd: FS_RELABEL, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1615",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1025",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1547",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1489",
             "score": 1,
             "comment": "Auditd: ANOM_ABEND, DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, SELINUX_ERR, USER_CMD, USER_TTY, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1652",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1564",
             "score": 1,
             "comment": "Auditd: ADD_USER, ANOM_ADD_ACCOUNT, CRED_ACQ, CRED_DISP, DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_POLICY_LOAD, USER_CHAUTHTOK, USER_CMD, USER_ERR, USER_LABELED_EXPORT, USER_ROLE_CHANGE, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1137",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1119",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1115",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1007",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1040",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1135",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1120",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1082",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1053",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1176",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1202",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1005",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1562",
             "score": 1,
             "comment": "Auditd: ANOM_ABEND, DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, NETFILTER_CFG, SELINUX_ERR, SYSTEM_RUNLEVEL, SYSTEM_SHUTDOWN, USER_CHAUTHTOK, USER_CMD, USER_ROLE_CHANGE, USER_TTY, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1558",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, CRYPTO_KEY_USER, LOGIN, USER_AVC, USER_END, USER_LOGOUT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1555",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, TTY, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1567",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1036",
             "score": 1,
             "comment": "Auditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_POLICY_LOAD, SELINUX_ERR, USER_LABELED_EXPORT, USER_TTY, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1552",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1218",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1010",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1011",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1560",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1021",
             "score": 1,
             "comment": "Auditd: CRYPTO_SESSION, USER_CMD, USER_LOGIN, USER_START, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1112",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1563",
             "score": 1,
             "comment": "Auditd: CRYPTO_SESSION, MAC_UNLBL_ALLOW, USER_CMD, USER_LOGIN, USER_START, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1217",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1222",
             "score": 1,
             "comment": "Auditd: USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1548",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1125",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1016",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1087",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1059",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1482",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1020",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1070",
             "score": 1,
             "comment": "Auditd: ANOM_DEL_ACCOUNT, ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, DEL_USER, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_UNLBL_ALLOW, NETFILTER_CFG, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_CHAUTHTOK, USER_CMD, USER_LABELED_EXPORT, USER_ROLE_CHANGE, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1609",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1083",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1647",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1074",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1649",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, CRYPTO_SESSION, USER_AVC, USER_LOGIN, USER_START, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1049",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1542",
             "score": 1,
             "comment": "Auditd: FS_RELABEL, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1497",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1480",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1204",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1057",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1041",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1098",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CHAUTHTOK, USER_CMD, USER_ROLE_CHANGE, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1048",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1110",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1039",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1574",
             "score": 1,
             "comment": "Auditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, SELINUX_ERR, USER_CMD, USER_TTY, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1027",
             "score": 1,
             "comment": "Auditd: USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1201",
             "score": 1,
             "comment": "Auditd: CRED_ACQ, CRED_DISP, USER_CHAUTHTOK, USER_CMD, USER_ERR, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1546",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1486",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1553",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1570",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1012",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1614",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1197",
             "score": 1,
             "comment": "Auditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, SELINUX_ERR, USER_CMD, USER_TTY, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1496",
             "score": 1,
             "comment": "Auditd: SYSTEM_RUNLEVEL, SYSTEM_SHUTDOWN, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1569",
             "score": 1,
             "comment": "Auditd: DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_POLICY_LOAD, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1485",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CHAUTHTOK, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1651",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1134",
             "score": 1,
             "comment": "Auditd: CRED_ACQ, CRED_DISP, USER_CHAUTHTOK, USER_CMD, USER_ERR, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1136",
             "score": 1,
             "comment": "Auditd: ADD_USER, ANOM_ADD_ACCOUNT, USER_CMD, USER_ROLE_CHANGE, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1018",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1046",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1518",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1622",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1052",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1484",
             "score": 1,
             "comment": "Auditd: USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1124",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1490",
             "score": 1,
             "comment": "Auditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, SELINUX_ERR, USER_CHAUTHTOK, USER_CMD, USER_TTY, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1216",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1127",
             "score": 1,
             "comment": "Auditd: USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1529",
             "score": 1,
             "comment": "Auditd: SYSTEM_RUNLEVEL, SYSTEM_SHUTDOWN, USER_CMD, USYS_CONFIG",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1014",
             "score": 1,
             "comment": "Auditd: FS_RELABEL, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1539",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, TTY, USER_AVC",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1091",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, USER_AVC, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1187",
             "score": 1,
             "comment": "Auditd: ANOM_LINK, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_UNLBL_ALLOW, USER_AVC",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1554",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CHAUTHTOK, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1565",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_UNLBL_ALLOW, USER_CHAUTHTOK, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1195",
             "score": 1,
             "comment": "Auditd: SYSTEM_RUNLEVEL, SYSTEM_SHUTDOWN, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1055",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, TTY, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1600",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1080",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1140",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1491",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1601",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1056",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1505",
             "score": 1,
             "comment": "Auditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_UNLBL_ALLOW, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1556",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, CRYPTO_SESSION, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, TTY, USER_ACCT, USER_AUTH, USER_CHAUTHTOK, USER_LOGIN, USER_ROLE_CHANGE, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1499",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, SYSTEM_RUNLEVEL, SYSTEM_SHUTDOWN",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1498",
             "score": 1,
             "comment": "Auditd: SYSTEM_RUNLEVEL, SYSTEM_SHUTDOWN",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1550",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, CRYPTO_SESSION, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_LOGIN, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1185",
             "score": 1,
             "comment": "Auditd: CRYPTO_SESSION, TTY, USER_LOGIN, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1606",
             "score": 1,
             "comment": "Auditd: CRYPTO_SESSION, USER_LOGIN, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1621",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, CRYPTO_KEY_USER, CRYPTO_SESSION, LOGIN, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_END, USER_LOGIN, USER_LOGOUT, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1199",
             "score": 1,
             "comment": "Auditd: CRYPTO_KEY_USER, CRYPTO_SESSION, LOGIN, MAC_UNLBL_ALLOW, USER_END, USER_LOGIN, USER_LOGOUT, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1078",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, CRYPTO_KEY_USER, CRYPTO_SESSION, LOGIN, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_END, USER_LOGIN, USER_LOGOUT, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1213",
             "score": 1,
             "comment": "Auditd: CRYPTO_SESSION, USER_LOGIN, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1538",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, CRYPTO_SESSION, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_LOGIN, USER_START",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1133",
             "score": 1,
             "comment": "Auditd: CRYPTO_KEY_USER, LOGIN, MAC_UNLBL_ALLOW, USER_END, USER_LOGOUT",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1557",
             "score": 1,
             "comment": "Auditd: DAEMON_START, MAC_POLICY_LOAD, MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1602",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1071",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1190",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1219",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1205",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1572",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1589",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1207",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, MAC_UNLBL_ALLOW, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1595",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1090",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1568",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1612",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1586",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1102",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1210",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1534",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1566",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1001",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1571",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1599",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1573",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1095",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1132",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1598",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1585",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1537",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1189",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1221",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1105",
             "score": 1,
             "comment": "Auditd: MAC_UNLBL_ALLOW",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1559",
             "score": 1,
             "comment": "Auditd: TTY, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1611",
             "score": 1,
             "comment": "Auditd: USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1072",
             "score": 1,
             "comment": "Auditd: USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1212",
             "score": 1,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1068",
             "score": 1,
             "comment": "Auditd: USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1203",
             "score": 1,
             "comment": "Auditd: USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1220",
             "score": 1,
             "comment": "Auditd: USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1211",
             "score": 1,
             "comment": "Auditd: USER_CMD",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1531",
             "score": 1,
             "comment": "Auditd: ANOM_DEL_ACCOUNT, DEL_USER, USER_CHAUTHTOK, USER_ROLE_CHANGE",
-            "color": "#ed0858"
+            "color": "#c56383"
         },
         {
             "techniqueID": "T1528",
             "score": 1,
             "comment": "Auditd: USER_CHAUTHTOK, USER_ROLE_CHANGE",
-            "color": "#ed0858"
+            "color": "#c56383"
         }
     ],
     "gradient": {
@@ -993,7 +993,7 @@
     "legendItems": [
         {
             "label": "Auditd",
-            "color": "#ed0858"
+            "color": "#c56383"
         }
     ]
 }
