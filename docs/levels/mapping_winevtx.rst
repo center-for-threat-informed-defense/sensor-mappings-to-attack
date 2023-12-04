@@ -17,7 +17,7 @@ visualize the sensor coverage in ATT&CK Navigator.
         <i class="fa fa-map-signs"></i> Open in ATT&CK Navigator</a>
     </p>
 
-.. MAPPINGS_TABLE Generated at: 2023-12-04T02:13:58.209296Z
+.. MAPPINGS_TABLE Generated at: 2023-12-04T02:57:27.877631Z
 
 Enterprise
 ----------

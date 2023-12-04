@@ -20,7 +20,6 @@ def insert_docs(old_doc, doc_lines, tag):
 
     now = datetime.now().isoformat()
     output.append(f".. {tag} Generated at: {now}Z")
-    output.append("")
     output.extend(doc_lines)
     output.append(f".. /{tag}")
 
@@ -43,32 +42,29 @@ def write_doc_files(sensor_tables:dict, docs_location:Path):
         old_doc = Path(docs_location, f"mapping_{sensor.lower()}.rst")
         tables = sensor_tables[sensor]
         if old_doc not in old_doc_files:
+            # Create a new file with an empty table
             # Add header to file
             if sensor.lower() == "zeek":
                 sensor = sensor.upper()
             file_beginning = header_generator(sensor, "=")
-            
             file_beginning.append(".. raw:: html")
             file_beginning.append("")
             file_beginning.append("    <p>")
-            file_beginning.append(f"        <a class='btn btn-primary' target='_blank' href='../../csv/{sensor}-sensors-mappings-enterprise.csv'>")
-            file_beginning.append("        <i class='fa fa-table'></i> Download CSV</a>")
-            file.beginning.append("")
-            file_beginning.append(f"        <a class='btn btn-primary' target='_blank' href='../../stix/{sensor}-mappings-enterprise.json'>")
-            file_beginning.append("        <i class='fa fa-file-excel-o'></i> Download STIX</a>")
+            file_beginning.append(f'        <a class="btn btn-primary" target="_blank" href="../../csv/{sensor}-sensors-mappings-enterprise.csv">')
+            file_beginning.append('        <i class="fa fa-table"></i> Download CSV</a>')
             file_beginning.append("")
-            file_beginning.append(f"        <a class='btn btn-primary' target='_blank' href='https://mitre-attack.github.io/attack-navigator/#layerURL=https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/navigator/{sensor}-heatmap.json'>")
-            file_beginning.append("        <i class='fa fa-map-signs'></i> Open in ATT&CK Navigator</a>")
+            file_beginning.append(f'        <a class="btn btn-primary" target="_blank" href="../../stix/{sensor}-mappings-enterprise.json">')
+            file_beginning.append('        <i class="fa fa-file-excel-o"></i> Download STIX</a>')
+            file_beginning.append("")
+            file_beginning.append(f'        <a class="btn btn-primary" target="_blank" href="https://mitre-attack.github.io/attack-navigator/#layerURL=https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/navigator/{sensor}-heatmap.json">')
+            file_beginning.append('        <i class="fa fa-map-signs"></i> Open in ATT&CK Navigator</a>')
             file_beginning.append("    </p>")
-
             file_beginning.append("")
             file_beginning.append(".. MAPPINGS_TABLE")
-            # tables.extend(file_beginning)
-            tables.append(".. /MAPPINGS_TABLE")
-            tables.append("")
+            file_beginning.append(".. /MAPPINGS_TABLE")
             with open(old_doc, "w") as _new_file:
-                _new_file.write("\n".join(tables))
-            # tables = []
+                _new_file.write("\n".join(file_beginning))
+
         with open(old_doc) as file:
             new_doc = insert_docs(file, tables, "MAPPINGS_TABLE")
             if new_doc[-1] != "\n":
@@ -106,7 +102,7 @@ def csv_to_tables(attack_types, mappings_location):
 
         # Work on each CSV file
         for _csv in csv_files:
-            _sensor_ = _csv.name.split(f"-sensors-mappings-{attack_type}")[0]
+            _sensor_ = _csv.name.split("-sensors-mappings")[0]
             obj_lines = generate_table_from_csv(_csv)
             
             if _sensor_ in sensor_table_lists:
@@ -123,7 +119,7 @@ def generate_mappings_table(sensor_table_lists):
         attack_types: list = sensor_table_lists[sensor]
         # attack_types is a List of Dictionaries.
         # Key is the attack_type, Value is a list of rows (dictionaries)
-        obj_lines = []
+        obj_lines = [""]
         for attack_type_dict in attack_types:
             attack_type = list(attack_type_dict.keys())[0]
             if attack_type == "ics":
@@ -149,9 +145,9 @@ def generate_mappings_table(sensor_table_lists):
             for row in sorted(rows, key=lambda i: i["EVENT ID"]):
                 obj_lines.extend(extract_row_data(row))
                 obj_lines.append("")
-            if not obj_lines[-1]:
-                obj_lines.pop()
-                # Remove the last empty line
+        # Remove the last empty line
+        if not obj_lines[-1]:
+            obj_lines.pop()
         sensor_tables[sensor] = obj_lines
     return sensor_tables
 
