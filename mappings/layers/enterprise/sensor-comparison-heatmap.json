@@ -630,19 +630,14 @@
             "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: socket_events\n\nSysmon: 3\n\nWinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159\n\nZeek: connection_SYN_packet, connection_established, connection_first_ack, http_content_type, http_entity_data, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, mime_all_data, mime_content_hash, mime_entity_data, mount_reply_status, netbios_session_raw_message, ntlm_authenticate, ntlm_challenge, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, pop3_login_success, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_server_certificate, rdpeudp_established, rdpeudp_syn, rdpeudp_synack, sip_all_headers, smb2_close_request, smb2_create_request, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, snmp_encrypted_pdu, snmp_get_request, snmp_report, snmp_set_request, snmp_trap, snmp_trapv2, socks_login_userpass_reply, socks_login_userpass_request, ssh1_server_host_key, ssh2_dh_server_params, ssh2_ecc_key, ssh2_server_host_key, ssh_auth_successful, ssh_capabilities, ssh_encrypted_packet, ssl_alert, ssl_client_hello, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_established, ssl_rsa_client_pms, ssl_server_hello, ssl_server_signature, ssl_session_ticket_handshake, tcp_contents, tcp_options, tcp_packet, udp_contents"
         },
         {
-            "techniqueID": "T1114",
-            "score": 6,
-            "comment": "Zeek: connection_SYN_packet, connection_established, connection_first_ack, ntlm_authenticate, ntlm_challenge, pop3_login_success, rdpeudp_established, rdpeudp_syn, rdpeudp_synack, socks_login_userpass_reply, socks_login_userpass_request, ssh2_dh_server_params, ssh_auth_successful, ssl_client_hello, ssl_established, ssl_rsa_client_pms, ssl_server_hello, ssl_session_ticket_handshake\n\nSysmon: \n\nCloudTrail: ConsoleLogin\n\nWinEvtx: \n\nOSQuery: augeas, browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, office_mru, opera_extensions, plist, safari_extensions\n\nAuditd: ANOM_LINK, CRYPTO_SESSION, USER_AVC, USER_LOGIN, USER_START, USYS_CONFIG"
+            "techniqueID": "T1071",
+            "score": 3,
+            "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: socket_events\n\nZeek: arp_reply, arp_request, connection_attempt, connection_eof, connection_finished, connection_half_finished, connection_partial_close, connection_pending, connection_rejected, connection_reset, dce_rpc_alter_context, dce_rpc_alter_context_resp, dce_rpc_bind, dce_rpc_bind_ack, dce_rpc_reply, dce_rpc_request, dhcp_message, dns_AAAA_reply, dns_A_reply, dns_CAA_reply, dns_CNAME_reply, dns_DNSKEY_reply, dns_DS_reply, dns_EDNS_addl_reply, dns_EDNS_ecs_reply, dns_HINFO_reply, dns_MX_reply, dns_NSEC_reply, dns_NS_reply, dns_PTR_reply, dns_RRSIG_reply, dns_SOA_reply, dns_SPF_reply, dns_SRV_reply, dns_TSIG_reply, dns_TXT_reply, dns_WKS_reply, dns_a6_reply, dns_request, dns_unknown_reply, ftp_reply, ftp_request, http_all_headers, http_content_type, http_entity_data, http_reply, http_request, icmp_echo_reply, icmp_echo_request, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, imap_capabilities, imap_start_tls, krb_ap_request, krb_ap_response, krb_as_request, krb_as_response, krb_tgs_request, krb_tgs_response, mime_all_data, mime_all_headers, mime_content_hash, mime_entity_data, mount_proc_mnt, mount_proc_not_implemented, mount_proc_null, mount_proc_umnt, mount_proc_umnt_all, mount_reply_status, netbios_session_accepted, netbios_session_keepalive, netbios_session_message, netbios_session_raw_message, netbios_session_rejected, netbios_session_request, netbios_session_ret_arg_resp, nfs_proc_create, nfs_proc_getattr, nfs_proc_link, nfs_proc_lookup, nfs_proc_mkdir, nfs_proc_read, nfs_proc_readdir, nfs_proc_readlink, nfs_proc_remove, nfs_proc_rename, nfs_proc_rmdir, nfs_proc_sattr, nfs_proc_symlink, nfs_proc_write, nfs_reply_status, ntlm_negotiate, ntp_message, partial_connection, pm_attempt_callit, pm_attempt_dump, pm_attempt_getport, pm_attempt_null, pm_attempt_set, pm_attempt_unset, pm_bad_port, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, pop3_data, pop3_login_failure, pop3_reply, pop3_request, pop3_starttls, rdp_begin_encryption, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_connect_request, rdp_gcc_server_create_response, rdp_native_encrypted_data, rdp_negotiation_failure, rdp_negotiation_response, rdp_server_certificate, rdp_server_security, rdpeudp_data, rpc_call, rpc_dialogue, rpc_reply, sip_all_headers, sip_reply, sip_request, smb2_close_request, smb2_close_response, smb2_create_request, smb2_create_response, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, smtp_data, smtp_reply, smtp_request, smtp_starttls, snmp_encrypted_pdu, snmp_get_bulk_request, snmp_get_next_request, snmp_get_request, snmp_inform_request, snmp_report, snmp_response, snmp_set_request, snmp_trap, snmp_trapv2, socks_reply, socks_request, ssh1_server_host_key, ssh2_ecc_key, ssh2_server_host_key, ssh_auth_attempted, ssh_capabilities, ssh_client_version, ssh_encrypted_packet, ssh_server_version, ssl_alert, ssl_change_cipher_spec, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_extension, ssl_handshake_message, ssl_heartbeat, ssl_server_signature, tcp_contents, tcp_options, tcp_packet, tcp_rexmit, udp_contents, udp_reply, udp_request"
         },
         {
-            "techniqueID": "T1176",
-            "score": 5,
-            "comment": "Zeek: connection_SYN_packet, connection_established, connection_first_ack, ntlm_authenticate, ntlm_challenge, pop3_login_success, rdpeudp_established, rdpeudp_syn, rdpeudp_synack, socks_login_userpass_reply, socks_login_userpass_request, ssh2_dh_server_params, ssh_auth_successful, ssl_client_hello, ssl_established, ssl_rsa_client_pms, ssl_server_hello, ssl_session_ticket_handshake\n\nSysmon: \n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1567",
-            "score": 5,
-            "comment": "Zeek: arp_reply, arp_request, connection_SYN_packet, connection_attempt, connection_eof, connection_established, connection_finished, connection_first_ack, connection_half_finished, connection_partial_close, connection_pending, connection_rejected, connection_reset, dce_rpc_alter_context, dce_rpc_alter_context_resp, dce_rpc_bind, dce_rpc_bind_ack, dce_rpc_reply, dce_rpc_request, dhcp_message, dns_AAAA_reply, dns_A_reply, dns_CAA_reply, dns_CNAME_reply, dns_DNSKEY_reply, dns_DS_reply, dns_EDNS_addl_reply, dns_EDNS_ecs_reply, dns_HINFO_reply, dns_MX_reply, dns_NSEC_reply, dns_NS_reply, dns_PTR_reply, dns_RRSIG_reply, dns_SOA_reply, dns_SPF_reply, dns_SRV_reply, dns_TSIG_reply, dns_TXT_reply, dns_WKS_reply, dns_a6_reply, dns_request, dns_unknown_reply, ftp_reply, ftp_request, http_all_headers, http_content_type, http_entity_data, http_reply, http_request, icmp_echo_reply, icmp_echo_request, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, imap_capabilities, imap_start_tls, krb_ap_request, krb_ap_response, krb_as_request, krb_as_response, krb_tgs_request, krb_tgs_response, mime_all_data, mime_all_headers, mime_content_hash, mime_entity_data, mount_proc_mnt, mount_proc_not_implemented, mount_proc_null, mount_proc_umnt, mount_proc_umnt_all, mount_reply_status, netbios_session_accepted, netbios_session_keepalive, netbios_session_message, netbios_session_raw_message, netbios_session_rejected, netbios_session_request, netbios_session_ret_arg_resp, nfs_proc_create, nfs_proc_getattr, nfs_proc_link, nfs_proc_lookup, nfs_proc_mkdir, nfs_proc_read, nfs_proc_readdir, nfs_proc_readlink, nfs_proc_remove, nfs_proc_rename, nfs_proc_rmdir, nfs_proc_sattr, nfs_proc_symlink, nfs_proc_write, nfs_reply_status, ntlm_authenticate, ntlm_challenge, ntlm_negotiate, ntp_message, partial_connection, pm_attempt_callit, pm_attempt_dump, pm_attempt_getport, pm_attempt_null, pm_attempt_set, pm_attempt_unset, pm_bad_port, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, pop3_data, pop3_login_failure, pop3_login_success, pop3_reply, pop3_request, pop3_starttls, rdp_begin_encryption, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_connect_request, rdp_gcc_server_create_response, rdp_native_encrypted_data, rdp_negotiation_failure, rdp_negotiation_response, rdp_server_certificate, rdp_server_security, rdpeudp_data, rdpeudp_established, rdpeudp_syn, rdpeudp_synack, rpc_call, rpc_dialogue, rpc_reply, sip_all_headers, sip_reply, sip_request, smb2_close_request, smb2_close_response, smb2_create_request, smb2_create_response, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, smtp_data, smtp_reply, smtp_request, smtp_starttls, snmp_encrypted_pdu, snmp_get_bulk_request, snmp_get_next_request, snmp_get_request, snmp_inform_request, snmp_report, snmp_response, snmp_set_request, snmp_trap, snmp_trapv2, socks_login_userpass_reply, socks_login_userpass_request, socks_reply, socks_request, ssh1_server_host_key, ssh2_dh_server_params, ssh2_ecc_key, ssh2_server_host_key, ssh_auth_attempted, ssh_auth_successful, ssh_capabilities, ssh_client_version, ssh_encrypted_packet, ssh_server_version, ssl_alert, ssl_change_cipher_spec, ssl_client_hello, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_established, ssl_extension, ssl_handshake_message, ssl_heartbeat, ssl_rsa_client_pms, ssl_server_hello, ssl_server_signature, ssl_session_ticket_handshake, tcp_contents, tcp_options, tcp_packet, tcp_rexmit, udp_contents, udp_reply, udp_request\n\nSysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, socket_events\n\nAuditd: ANOM_LINK, MAC_UNLBL_ALLOW, USER_AVC, USYS_CONFIG"
+            "techniqueID": "T1190",
+            "score": 3,
+            "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions, socket_events\n\nZeek: http_content_type, http_entity_data, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, mime_all_data, mime_content_hash, mime_entity_data, mount_reply_status, netbios_session_raw_message, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_server_certificate, sip_all_headers, smb2_close_request, smb2_create_request, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, snmp_encrypted_pdu, snmp_get_request, snmp_report, snmp_set_request, snmp_trap, snmp_trapv2, ssh1_server_host_key, ssh2_ecc_key, ssh2_server_host_key, ssh_capabilities, ssh_encrypted_packet, ssl_alert, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_server_signature, tcp_contents, tcp_options, tcp_packet, udp_contents"
         },
         {
             "techniqueID": "T1219",
@@ -700,14 +695,24 @@
             "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: socket_events\n\nSysmon: 3\n\nWinEvtx: 5031, 5154, 5155, 5156, 5157, 5158, 5159\n\nZeek: arp_reply, arp_request, connection_SYN_packet, connection_attempt, connection_eof, connection_established, connection_finished, connection_first_ack, connection_half_finished, connection_partial_close, connection_pending, connection_rejected, connection_reset, dce_rpc_alter_context, dce_rpc_alter_context_resp, dce_rpc_bind, dce_rpc_bind_ack, dce_rpc_reply, dce_rpc_request, dhcp_message, dns_AAAA_reply, dns_A_reply, dns_CAA_reply, dns_CNAME_reply, dns_DNSKEY_reply, dns_DS_reply, dns_EDNS_addl_reply, dns_EDNS_ecs_reply, dns_HINFO_reply, dns_MX_reply, dns_NSEC_reply, dns_NS_reply, dns_PTR_reply, dns_RRSIG_reply, dns_SOA_reply, dns_SPF_reply, dns_SRV_reply, dns_TSIG_reply, dns_TXT_reply, dns_WKS_reply, dns_a6_reply, dns_request, dns_unknown_reply, ftp_reply, ftp_request, http_all_headers, http_content_type, http_entity_data, http_reply, http_request, icmp_echo_reply, icmp_echo_request, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, imap_capabilities, imap_start_tls, krb_ap_request, krb_ap_response, krb_as_request, krb_as_response, krb_tgs_request, krb_tgs_response, mime_all_data, mime_all_headers, mime_content_hash, mime_entity_data, mount_proc_mnt, mount_proc_not_implemented, mount_proc_null, mount_proc_umnt, mount_proc_umnt_all, mount_reply_status, netbios_session_accepted, netbios_session_keepalive, netbios_session_message, netbios_session_raw_message, netbios_session_rejected, netbios_session_request, netbios_session_ret_arg_resp, nfs_proc_create, nfs_proc_getattr, nfs_proc_link, nfs_proc_lookup, nfs_proc_mkdir, nfs_proc_read, nfs_proc_readdir, nfs_proc_readlink, nfs_proc_remove, nfs_proc_rename, nfs_proc_rmdir, nfs_proc_sattr, nfs_proc_symlink, nfs_proc_write, nfs_reply_status, ntlm_authenticate, ntlm_challenge, ntlm_negotiate, ntp_message, partial_connection, pm_attempt_callit, pm_attempt_dump, pm_attempt_getport, pm_attempt_null, pm_attempt_set, pm_attempt_unset, pm_bad_port, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, pop3_data, pop3_login_failure, pop3_login_success, pop3_reply, pop3_request, pop3_starttls, rdp_begin_encryption, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_connect_request, rdp_gcc_server_create_response, rdp_native_encrypted_data, rdp_negotiation_failure, rdp_negotiation_response, rdp_server_certificate, rdp_server_security, rdpeudp_data, rdpeudp_established, rdpeudp_syn, rdpeudp_synack, rpc_call, rpc_dialogue, rpc_reply, sip_all_headers, sip_reply, sip_request, smb2_close_request, smb2_close_response, smb2_create_request, smb2_create_response, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, smtp_data, smtp_reply, smtp_request, smtp_starttls, snmp_encrypted_pdu, snmp_get_bulk_request, snmp_get_next_request, snmp_get_request, snmp_inform_request, snmp_report, snmp_response, snmp_set_request, snmp_trap, snmp_trapv2, socks_login_userpass_reply, socks_login_userpass_request, socks_reply, socks_request, ssh1_server_host_key, ssh2_dh_server_params, ssh2_ecc_key, ssh2_server_host_key, ssh_auth_attempted, ssh_auth_successful, ssh_capabilities, ssh_client_version, ssh_encrypted_packet, ssh_server_version, ssl_alert, ssl_change_cipher_spec, ssl_client_hello, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_established, ssl_extension, ssl_handshake_message, ssl_heartbeat, ssl_rsa_client_pms, ssl_server_hello, ssl_server_signature, ssl_session_ticket_handshake, tcp_contents, tcp_options, tcp_packet, tcp_rexmit, udp_contents, udp_reply, udp_request"
         },
         {
-            "techniqueID": "T1048",
+            "techniqueID": "T1210",
+            "score": 3,
+            "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions, socket_events\n\nZeek: http_content_type, http_entity_data, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, mime_all_data, mime_content_hash, mime_entity_data, mount_reply_status, netbios_session_raw_message, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_server_certificate, sip_all_headers, smb2_close_request, smb2_create_request, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, snmp_encrypted_pdu, snmp_get_request, snmp_report, snmp_set_request, snmp_trap, snmp_trapv2, ssh1_server_host_key, ssh2_ecc_key, ssh2_server_host_key, ssh_capabilities, ssh_encrypted_packet, ssl_alert, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_server_signature, tcp_contents, tcp_options, tcp_packet, udp_contents"
+        },
+        {
+            "techniqueID": "T1534",
+            "score": 3,
+            "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions, socket_events\n\nZeek: arp_reply, arp_request, connection_attempt, connection_eof, connection_finished, connection_half_finished, connection_partial_close, connection_pending, connection_rejected, connection_reset, dce_rpc_alter_context, dce_rpc_alter_context_resp, dce_rpc_bind, dce_rpc_bind_ack, dce_rpc_reply, dce_rpc_request, dhcp_message, dns_AAAA_reply, dns_A_reply, dns_CAA_reply, dns_CNAME_reply, dns_DNSKEY_reply, dns_DS_reply, dns_EDNS_addl_reply, dns_EDNS_ecs_reply, dns_HINFO_reply, dns_MX_reply, dns_NSEC_reply, dns_NS_reply, dns_PTR_reply, dns_RRSIG_reply, dns_SOA_reply, dns_SPF_reply, dns_SRV_reply, dns_TSIG_reply, dns_TXT_reply, dns_WKS_reply, dns_a6_reply, dns_request, dns_unknown_reply, ftp_reply, ftp_request, http_all_headers, http_content_type, http_entity_data, http_reply, http_request, icmp_echo_reply, icmp_echo_request, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, imap_capabilities, imap_start_tls, krb_ap_request, krb_ap_response, krb_as_request, krb_as_response, krb_tgs_request, krb_tgs_response, mime_all_data, mime_all_headers, mime_content_hash, mime_entity_data, mount_proc_mnt, mount_proc_not_implemented, mount_proc_null, mount_proc_umnt, mount_proc_umnt_all, mount_reply_status, netbios_session_accepted, netbios_session_keepalive, netbios_session_message, netbios_session_raw_message, netbios_session_rejected, netbios_session_request, netbios_session_ret_arg_resp, nfs_proc_create, nfs_proc_getattr, nfs_proc_link, nfs_proc_lookup, nfs_proc_mkdir, nfs_proc_read, nfs_proc_readdir, nfs_proc_readlink, nfs_proc_remove, nfs_proc_rename, nfs_proc_rmdir, nfs_proc_sattr, nfs_proc_symlink, nfs_proc_write, nfs_reply_status, ntlm_negotiate, ntp_message, partial_connection, pm_attempt_callit, pm_attempt_dump, pm_attempt_getport, pm_attempt_null, pm_attempt_set, pm_attempt_unset, pm_bad_port, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, pop3_data, pop3_login_failure, pop3_reply, pop3_request, pop3_starttls, rdp_begin_encryption, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_connect_request, rdp_gcc_server_create_response, rdp_native_encrypted_data, rdp_negotiation_failure, rdp_negotiation_response, rdp_server_certificate, rdp_server_security, rdpeudp_data, rpc_call, rpc_dialogue, rpc_reply, sip_all_headers, sip_reply, sip_request, smb2_close_request, smb2_close_response, smb2_create_request, smb2_create_response, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, smtp_data, smtp_reply, smtp_request, smtp_starttls, snmp_encrypted_pdu, snmp_get_bulk_request, snmp_get_next_request, snmp_get_request, snmp_inform_request, snmp_report, snmp_response, snmp_set_request, snmp_trap, snmp_trapv2, socks_reply, socks_request, ssh1_server_host_key, ssh2_ecc_key, ssh2_server_host_key, ssh_auth_attempted, ssh_capabilities, ssh_client_version, ssh_encrypted_packet, ssh_server_version, ssl_alert, ssl_change_cipher_spec, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_extension, ssl_handshake_message, ssl_heartbeat, ssl_server_signature, tcp_contents, tcp_options, tcp_packet, tcp_rexmit, udp_contents, udp_reply, udp_request"
+        },
+        {
+            "techniqueID": "T1566",
             "score": 5,
             "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, file_events, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions, socket_events\n\nSysmon: 11, 15\n\nWinEvtx: 4663\n\nZeek: arp_reply, arp_request, connection_attempt, connection_eof, connection_finished, connection_half_finished, connection_partial_close, connection_pending, connection_rejected, connection_reset, dce_rpc_alter_context, dce_rpc_alter_context_resp, dce_rpc_bind, dce_rpc_bind_ack, dce_rpc_reply, dce_rpc_request, dhcp_message, dns_AAAA_reply, dns_A_reply, dns_CAA_reply, dns_CNAME_reply, dns_DNSKEY_reply, dns_DS_reply, dns_EDNS_addl_reply, dns_EDNS_ecs_reply, dns_HINFO_reply, dns_MX_reply, dns_NSEC_reply, dns_NS_reply, dns_PTR_reply, dns_RRSIG_reply, dns_SOA_reply, dns_SPF_reply, dns_SRV_reply, dns_TSIG_reply, dns_TXT_reply, dns_WKS_reply, dns_a6_reply, dns_request, dns_unknown_reply, ftp_reply, ftp_request, http_all_headers, http_content_type, http_entity_data, http_reply, http_request, icmp_echo_reply, icmp_echo_request, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, imap_capabilities, imap_start_tls, krb_ap_request, krb_ap_response, krb_as_request, krb_as_response, krb_tgs_request, krb_tgs_response, mime_all_data, mime_all_headers, mime_content_hash, mime_entity_data, mount_proc_mnt, mount_proc_not_implemented, mount_proc_null, mount_proc_umnt, mount_proc_umnt_all, mount_reply_status, netbios_session_accepted, netbios_session_keepalive, netbios_session_message, netbios_session_raw_message, netbios_session_rejected, netbios_session_request, netbios_session_ret_arg_resp, nfs_proc_create, nfs_proc_getattr, nfs_proc_link, nfs_proc_lookup, nfs_proc_mkdir, nfs_proc_read, nfs_proc_readdir, nfs_proc_readlink, nfs_proc_remove, nfs_proc_rename, nfs_proc_rmdir, nfs_proc_sattr, nfs_proc_symlink, nfs_proc_write, nfs_reply_status, ntlm_negotiate, ntp_message, partial_connection, pm_attempt_callit, pm_attempt_dump, pm_attempt_getport, pm_attempt_null, pm_attempt_set, pm_attempt_unset, pm_bad_port, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, pop3_data, pop3_login_failure, pop3_reply, pop3_request, pop3_starttls, rdp_begin_encryption, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_connect_request, rdp_gcc_server_create_response, rdp_native_encrypted_data, rdp_negotiation_failure, rdp_negotiation_response, rdp_server_certificate, rdp_server_security, rdpeudp_data, rpc_call, rpc_dialogue, rpc_reply, sip_all_headers, sip_reply, sip_request, smb2_close_request, smb2_close_response, smb2_create_request, smb2_create_response, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, smtp_data, smtp_reply, smtp_request, smtp_starttls, snmp_encrypted_pdu, snmp_get_bulk_request, snmp_get_next_request, snmp_get_request, snmp_inform_request, snmp_report, snmp_response, snmp_set_request, snmp_trap, snmp_trapv2, socks_reply, socks_request, ssh1_server_host_key, ssh2_ecc_key, ssh2_server_host_key, ssh_auth_attempted, ssh_capabilities, ssh_client_version, ssh_encrypted_packet, ssh_server_version, ssl_alert, ssl_change_cipher_spec, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_extension, ssl_handshake_message, ssl_heartbeat, ssl_server_signature, tcp_contents, tcp_options, tcp_packet, tcp_rexmit, udp_contents, udp_reply, udp_request"
         },
         {
-            "techniqueID": "T1030",
+            "techniqueID": "T1001",
             "score": 3,
-            "comment": "Zeek: arp_reply, arp_request, connection_SYN_packet, connection_attempt, connection_eof, connection_established, connection_finished, connection_first_ack, connection_half_finished, connection_partial_close, connection_pending, connection_rejected, connection_reset, dce_rpc_alter_context, dce_rpc_alter_context_resp, dce_rpc_bind, dce_rpc_bind_ack, dce_rpc_reply, dce_rpc_request, dhcp_message, dns_AAAA_reply, dns_A_reply, dns_CAA_reply, dns_CNAME_reply, dns_DNSKEY_reply, dns_DS_reply, dns_EDNS_addl_reply, dns_EDNS_ecs_reply, dns_HINFO_reply, dns_MX_reply, dns_NSEC_reply, dns_NS_reply, dns_PTR_reply, dns_RRSIG_reply, dns_SOA_reply, dns_SPF_reply, dns_SRV_reply, dns_TSIG_reply, dns_TXT_reply, dns_WKS_reply, dns_a6_reply, dns_request, dns_unknown_reply, ftp_reply, ftp_request, http_all_headers, http_reply, http_request, icmp_echo_reply, icmp_echo_request, imap_capabilities, imap_start_tls, krb_ap_request, krb_ap_response, krb_as_request, krb_as_response, krb_tgs_request, krb_tgs_response, mime_all_headers, mount_proc_mnt, mount_proc_not_implemented, mount_proc_null, mount_proc_umnt, mount_proc_umnt_all, netbios_session_accepted, netbios_session_keepalive, netbios_session_message, netbios_session_rejected, netbios_session_request, netbios_session_ret_arg_resp, nfs_proc_create, nfs_proc_getattr, nfs_proc_link, nfs_proc_lookup, nfs_proc_mkdir, nfs_proc_read, nfs_proc_readdir, nfs_proc_readlink, nfs_proc_remove, nfs_proc_rename, nfs_proc_rmdir, nfs_proc_sattr, nfs_proc_symlink, nfs_proc_write, nfs_reply_status, ntlm_authenticate, ntlm_challenge, ntlm_negotiate, ntp_message, partial_connection, pm_attempt_callit, pm_attempt_dump, pm_attempt_getport, pm_attempt_null, pm_attempt_set, pm_attempt_unset, pm_bad_port, pop3_data, pop3_login_failure, pop3_login_success, pop3_reply, pop3_request, pop3_starttls, rdp_begin_encryption, rdp_connect_request, rdp_gcc_server_create_response, rdp_native_encrypted_data, rdp_negotiation_failure, rdp_negotiation_response, rdp_server_security, rdpeudp_data, rdpeudp_established, rdpeudp_syn, rdpeudp_synack, rpc_call, rpc_dialogue, rpc_reply, sip_reply, sip_request, smb2_close_response, smb2_create_response, smtp_data, smtp_reply, smtp_request, smtp_starttls, snmp_get_bulk_request, snmp_get_next_request, snmp_inform_request, snmp_response, socks_login_userpass_reply, socks_login_userpass_request, socks_reply, socks_request, ssh2_dh_server_params, ssh_auth_attempted, ssh_auth_successful, ssh_client_version, ssh_server_version, ssl_change_cipher_spec, ssl_client_hello, ssl_established, ssl_extension, ssl_handshake_message, ssl_heartbeat, ssl_rsa_client_pms, ssl_server_hello, ssl_session_ticket_handshake, tcp_rexmit, udp_reply, udp_request\n\nSysmon: \n\nWinEvtx: "
+            "comment": "Auditd: MAC_UNLBL_ALLOW\n\nOSQuery: socket_events\n\nZeek: http_content_type, http_entity_data, icmp_neighbor_advertisement, icmp_neighbor_solicitation, icmp_unreachable, mime_all_data, mime_content_hash, mime_entity_data, mount_reply_status, netbios_session_raw_message, pm_request_callit, pm_request_dump, pm_request_getport, pm_request_null, pm_request_set, pm_request_unset, rdp_client_cluster_data, rdp_client_core_data, rdp_client_network_data, rdp_client_security_data, rdp_server_certificate, sip_all_headers, smb2_close_request, smb2_create_request, smb2_file_allocation, smb2_file_endoffile, smb2_file_fscontrol, smb2_file_fsobjectid, smb2_file_fullea, smb2_file_link, smb2_file_mode, smb2_file_pipe, smb2_file_position, smb2_file_rename, smb2_file_sattr, smb2_file_shortname, smb2_file_validdatalength, smb2_negotiate_request, smb2_negotiate_response, smb2_read_request, smb2_session_setup_request, smb2_session_setup_response, smb2_transform_header, smb2_tree_connect_request, smb2_tree_connect_response, smb2_tree_disconnect_request, smb2_tree_disconnect_response, smb2_write_request, smb2_write_response, snmp_encrypted_pdu, snmp_get_request, snmp_report, snmp_set_request, snmp_trap, snmp_trapv2, ssh1_server_host_key, ssh2_ecc_key, ssh2_server_host_key, ssh_capabilities, ssh_encrypted_packet, ssl_alert, ssl_dh_client_params, ssl_dh_server_params, ssl_ecdh_client_params, ssl_ecdh_server_params, ssl_encrypted_data, ssl_server_signature, tcp_contents, tcp_options, tcp_packet, udp_contents"
         },
         {
             "techniqueID": "T1571",
@@ -780,7 +785,7 @@
             "comment": "Auditd: USER_CMD\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, running_apps, safari_extensions\n\nSysmon: 1\n\nWinEvtx: 4688, 4696"
         },
         {
-            "techniqueID": "T1187",
+            "techniqueID": "T1212",
             "score": 5,
             "comment": "Auditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_CMD\n\nCloudTrail: CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, running_apps, safari_extensions, user_events\n\nSysmon: 1\n\nWinEvtx: 4625, 4648, 4688, 4696, 4776"
         },
@@ -805,7 +810,7 @@
             "comment": "Auditd: USER_CMD\n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, running_apps, safari_extensions\n\nSysmon: 1\n\nWinEvtx: 4688, 4696"
         },
         {
-            "techniqueID": "T1573",
+            "techniqueID": "T1030",
             "score": 3,
             "comment": "Auditd: ANOM_DEL_ACCOUNT, DEL_USER, USER_CHAUTHTOK, USER_ROLE_CHANGE\n\nCloudTrail: AddClientIDToOpenIDConnectProvider, DeleteUser, RemoveClientIDFromOpenIDConnectProvider, SetSecurityTokenPreferences, TagOpenIDConnectProvider, TagSAMLProvider, TagUser, UntagOpenIDConnectProvider, UntagSAMLProvider, UntagUser, UpdateAccessKey, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate\n\nWinEvtx: 4703, 4717, 4718, 4719, 4722, 4723, 4724, 4725, 4726, 4737, 4738, 4740, 4742, 4743, 4767, 4770, 4781, 5136, 5139"
         },
@@ -823,25 +828,25 @@
             "techniqueID": "T1578",
             "score": 1,
             "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, CreateSnapshot, CreateVolume, DeleteInstanceProfile, DeleteSnapshot, DetachVolume, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, ModifySnapshotAttribute, ModifyVolume, RemoveRoleFromInstanceProfile, RunInstances, StartInstances, StopInstances, TagInstanceProfile, UntagInstanceProfile",
-            "color": "#da471a"
+            "color": "#5d053f"
         },
         {
             "techniqueID": "T1535",
             "score": 1,
             "comment": "CloudTrail: AddRoleToInstanceProfile, CreateInstanceProfile, DeleteInstanceProfile, GetInstanceProfile, ListInstanceProfileTags, ListInstanceProfiles, ListInstanceProfilesForRole, RemoveRoleFromInstanceProfile, TagInstanceProfile, UntagInstanceProfile",
-            "color": "#da471a"
+            "color": "#5d053f"
         },
         {
             "techniqueID": "T1594",
             "score": 1,
             "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions",
-            "color": "#1b129d"
+            "color": "#be158b"
         },
         {
             "techniqueID": "T1610",
             "score": 1,
             "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions",
-            "color": "#1b129d"
+            "color": "#be158b"
         },
         {
             "techniqueID": "T1200",
@@ -852,13 +857,13 @@
             "techniqueID": "T1648",
             "score": 1,
             "comment": "OSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions",
-            "color": "#1b129d"
+            "color": "#be158b"
         },
         {
             "techniqueID": "T1588",
             "score": 1,
             "comment": "OSQuery: certificates",
-            "color": "#1b129d"
+            "color": "#be158b"
         },
         {
             "techniqueID": "T1092",
@@ -876,211 +881,16 @@
             "comment": "Sysmon: 13, 14, 6\n\nWinEvtx: 4657, 4670"
         },
         {
-            "techniqueID": "T1539",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist\n\nAuditd: ANOM_LINK, TTY, USER_AVC"
-        },
-        {
-            "techniqueID": "T1025",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist\n\nAuditd: ANOM_LINK, USER_AVC, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1119",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, powershell_events\n\nAuditd: ANOM_LINK, USER_AVC, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1091",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, file_events, office_mru, plist, running_apps, usb_devices\n\nAuditd: ANOM_LINK, USER_AVC, USER_CMD"
-        },
-        {
-            "techniqueID": "T1005",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, powershell_events, running_apps\n\nAuditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1558",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, last, logged_in_users, logon_sessions, office_mru, plist\n\nAuditd: ANOM_LINK, CRYPTO_KEY_USER, LOGIN, USER_AVC, USER_END, USER_LOGOUT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1555",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, running_apps\n\nAuditd: ANOM_LINK, TTY, USER_AVC, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1552",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, ResyncMFADevice, TagMFADevice, UntagMFADevice\n\nWinEvtx: \n\nOSQuery: appcompat_shims, augeas, autoexec, browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, office_mru, opera_extensions, plist, registry, running_apps, safari_extensions, startup_items, user_events, userassist\n\nAuditd: ANOM_LINK, ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, USER_ACCT, USER_AUTH, USER_AVC, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1217",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, running_apps\n\nAuditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1087",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, running_apps\n\nAuditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1074",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, file_events, office_mru, plist\n\nAuditd: ANOM_LINK, USER_AVC, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1649",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: AddClientIDToOpenIDConnectProvider, ConsoleLogin, RemoveClientIDFromOpenIDConnectProvider, TagOpenIDConnectProvider, TagSAMLProvider, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider\n\nWinEvtx: \n\nOSQuery: appcompat_shims, augeas, autoexec, browser_plugins, chrome_extension_content_scripts, chrome_extensions, firefox_addons, homebrew_packages, ie_extensions, office_mru, opera_extensions, plist, registry, safari_extensions, startup_items, userassist\n\nAuditd: ANOM_LINK, CRYPTO_SESSION, USER_AVC, USER_LOGIN, USER_START, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1052",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: augeas, office_mru, plist, running_apps, usb_devices\n\nAuditd: ANOM_LINK, USER_AVC, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1037",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: AddClientIDToOpenIDConnectProvider, RemoveClientIDFromOpenIDConnectProvider, TagOpenIDConnectProvider, TagSAMLProvider, UntagOpenIDConnectProvider, UntagSAMLProvider, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider\n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1564",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: AttachRolePolicy, AttachUserPolicy, ChangePassword, CreateAccessKey, CreateAccountAlias, CreateLoginProfile, CreatePolicy, CreatePolicyVersion, CreateRole, CreateServiceLinkedRole, CreateServiceSpecificCredential, CreateUser, DeleteAccessKey, DeleteAccountAlias, DeleteAccountPasswordPolicy, DeleteLoginProfile, DeletePolicyVersion, DeleteRole, DeleteRolePermissionsBoundary, DeleteRolePolicy, DeleteSSHPublicKey, DeleteServiceSpecificCredential, DeleteSigningCertificate, DeleteUserPermissionsBoundary, DeleteUserPolicy, DetachRolePolicy, DetachUserPolicy, GenerateCredentialReport, GetAccountAuthorizationDetails, GetAccountPasswordPolicy, GetContextKeysForCustomPolicy, GetContextKeysForPrincipalPolicy, GetCredentialReport, GetLoginprofile, GetPolicy, GetPolicyVersion, GetRole, GetRolePolicy, GetUserPolicy, ListAttachedRolePolicies, ListEntitiesForPolicy, ListPoliciesGrantingServiceAccess, ListPolicyTags, ListPolicyVersions, ListRolePolicies, ListRoleTags, ListRoles, PutRolePermissionsBoundary, PutRolePolicy, PutUserPermissionsBoundary, PutUserPolicy, SetDefaultPolicyVersion, SimulateCustomPolicy, SimulatePrincipalPolicy, TagPolicy, TagRole, Untag Policy, UntagRole, UpdateAccountPasswordPolicy, UpdateAssumeRolePolicy, UpdateLoginProfile, UpdateRole\n\nWinEvtx: \n\nOSQuery: account_policy_data, authenticode, authorizations, authorized_keys, browser_plugins, chrome_extension_content_scripts, chrome_extensions, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, firefox_addons, homebrew_packages, ie_extensions, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, opera_extensions, package_bom, powershell_events, process_file_events, quicklook_cache, running_apps, safari_extensions, shadow, shimcache, signature, suid_bin, user_ssh_keys\n\nAuditd: ADD_USER, ANOM_ADD_ACCOUNT, CRED_ACQ, CRED_DISP, DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_POLICY_LOAD, USER_CHAUTHTOK, USER_CMD, USER_ERR, USER_LABELED_EXPORT, USER_ROLE_CHANGE, USER_UNLABELED_EXPORT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1080",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, mounts, nfs_shares, running_apps, shared_folders, sharing_preferences\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD"
-        },
-        {
-            "techniqueID": "T1137",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, file_events, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, running_apps, safari_extensions\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1053",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1560",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, powershell_events, running_apps\n\nAuditd: USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1554",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, process_file_events, quicklook_cache, shimcache, signature, suid_bin\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CHAUTHTOK, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT"
-        },
-        {
-            "techniqueID": "T1574",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, gatekeeper, gatekeeper_apps, running_apps\n\nAuditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, SELINUX_ERR, USER_CMD, USER_TTY, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1027",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, powershell_events, process_file_events, quicklook_cache, running_apps, shimcache, signature, suid_bin, wmi_cli_event_consumers, wmi_script_event_consumers\n\nAuditd: USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1546",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, process_file_events, quicklook_cache, running_apps, shimcache, signature, suid_bin, wmi_cli_event_consumers, wmi_script_event_consumers\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1486",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, mounts, nfs_shares, running_apps, shared_folders, sharing_preferences\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1556",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: AddClientIDToOpenIDConnectProvider, ConsoleLogin, CreateVirtualMFADevice, DeactivateMFADevice, DeleteVirtualMFADevice, EnableMFADevice, GetMFADevice, ListMFADeviceTags, ListMFADevices, ListVirtualMFADevices, RemoveClientIDFromOpenIDConnectProvider, ResyncMFADevice, SetSecurityTokenPreferences, TagMFADevice, TagOpenIDConnectProvider, TagSAMLProvider, TagUser, UntagMFADevice, UntagOpenIDConnectProvider, UntagSAMLProvider, UntagUser, UpdateAccessKey, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate\n\nWinEvtx: \n\nOSQuery: browser_plugins, chrome_extension_content_scripts, chrome_extensions, file_events, firefox_addons, homebrew_packages, ie_extensions, opera_extensions, safari_extensions, user_events\n\nAuditd: ANOM_LOGIN_FAILURES, ANOM_LOGIN_LOCATION, ANOM_LOGIN_SESSIONS, ANOM_LOGIN_TIME, CRYPTO_SESSION, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, RESP_ACCT_LOCK, RESP_ACCT_UNLOCK_TIMED, TTY, USER_ACCT, USER_AUTH, USER_CHAUTHTOK, USER_LOGIN, USER_ROLE_CHANGE, USER_START"
-        },
-        {
-            "techniqueID": "T1485",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: DeleteSnapshot\n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CHAUTHTOK, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1490",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: DeleteSnapshot\n\nWinEvtx: \n\nOSQuery: file_events, gatekeeper, gatekeeper_apps, running_apps\n\nAuditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, SELINUX_ERR, USER_CHAUTHTOK, USER_CMD, USER_TTY, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1014",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, time_machine_backups\n\nAuditd: FS_RELABEL, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE"
-        },
-        {
-            "techniqueID": "T1600",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE"
-        },
-        {
-            "techniqueID": "T1489",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, gatekeeper, gatekeeper_apps, running_apps\n\nAuditd: ANOM_ABEND, DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, SELINUX_ERR, USER_CMD, USER_TTY, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1140",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, powershell_events, running_apps\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD"
-        },
-        {
-            "techniqueID": "T1036",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, background_activities_moderator, crontab, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, gatekeeper, gatekeeper_apps, launchd, launchd_overrides, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, package_receipts, process_envs, process_events, process_file_events, process_memory_map, process_namespaces, process_open_files, process_open_pipes, process_open_sockets, quicklook_cache, sandboxes, shimcache, signature, suid_bin\n\nAuditd: DAEMON_ABORT, DAEMON_END, DAEMON_RESUME, DAEMON_ROTATE, DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_POLICY_LOAD, SELINUX_ERR, USER_LABELED_EXPORT, USER_TTY, USER_UNLABELED_EXPORT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1055",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, background_activities_moderator, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, package_receipts, process_envs, process_events, process_file_events, process_memory_map, process_namespaces, process_open_files, process_open_pipes, process_open_sockets, quicklook_cache, shimcache, signature, suid_bin\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, TTY, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT"
-        },
-        {
-            "techniqueID": "T1548",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, background_activities_moderator, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, package_receipts, process_envs, process_events, process_file_events, process_memory_map, process_namespaces, process_open_files, process_open_pipes, process_open_sockets, quicklook_cache, running_apps, shimcache, signature, suid_bin\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1647",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1098",
-            "score": 5,
-            "comment": "Sysmon: \n\nCloudTrail: AddClientIDToOpenIDConnectProvider, AddUserToGroup, AttachGroupPolicy, RemoveClientIDFromOpenIDConnectProvider, RemoveUserFromGroup, SetSecurityTokenPreferences, TagOpenIDConnectProvider, TagSAMLProvider, TagUser, UntagOpenIDConnectProvider, UntagSAMLProvider, UntagUser, UpdateAccessKey, UpdateGroup, UpdateOpenIDConnectProviderThumbprint, UpdateSAMLProvider, UpdateSSHPublicKey, UpdateServiceSpecificCredential, UpdateSigningCertificate, UpdateUser, UploadSSHPublicKey, UploadServerCertificate, UploadSigningCertificate\n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CHAUTHTOK, USER_CMD, USER_ROLE_CHANGE, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1601",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE"
-        },
-        {
-            "techniqueID": "T1553",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: authenticode, device_hash, elf_dynamic, elf_info, elf_sections, elf_segments, elf_symbols, extended_attributes, file, file_events, magic, mdfind, mdls, ntfs_acl_permissions, ntfs_journal_events, package_bom, process_file_events, quicklook_cache, running_apps, shimcache, signature, suid_bin\n\nAuditd: LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, USER_CMD, USER_LABELED_EXPORT, USER_UNLABELED_EXPORT, USYS_CONFIG"
-        },
-        {
-            "techniqueID": "T1569",
-            "score": 4,
-            "comment": "Sysmon: \n\nWinEvtx: \n\nOSQuery: file_events, running_apps\n\nAuditd: DAEMON_START, LABEL_LEVEL_CHANGE, LABEL_OVERRIDE, MAC_POLICY_LOAD, USER_CMD, USYS_CONFIG"
-        },
-        {
             "techniqueID": "T1129",
             "score": 1,
             "comment": "Sysmon: 7",
-            "color": "#8784ba"
+            "color": "#ea31de"
         },
         {
             "techniqueID": "T1106",
             "score": 1,
             "comment": "Sysmon: 7",
-            "color": "#8784ba"
+            "color": "#ea31de"
         },
         {
             "techniqueID": "T1029",
@@ -1114,11 +924,11 @@
     "legendItems": [
         {
             "label": "Auditd",
-            "color": "#c56383"
+            "color": "#ed0858"
         },
         {
             "label": "CloudTrail",
-            "color": "#da471a"
+            "color": "#5d053f"
         },
         {
             "label": "OSQuery",
@@ -1126,15 +936,15 @@
         },
         {
             "label": "Sysmon",
-            "color": "#8784ba"
+            "color": "#ea31de"
         },
         {
             "label": "WinEvtx",
-            "color": "#5c7691"
+            "color": "#390e6e"
         },
         {
             "label": "Zeek",
-            "color": "#675855"
+            "color": "#954a47"
         }
     ]
 }

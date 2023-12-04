@@ -17,7 +17,10 @@ visualize the sensor coverage in ATT&CK Navigator.
         <i class="fa fa-map-signs"></i> Open in ATT&CK Navigator</a>
     </p>
 
-.. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
+.. MAPPINGS_TABLE Generated at: 2023-12-04T02:13:58.192819Z
+
+Enterprise
+----------
 
 .. list-table::
   :widths: 35 30 20 25
@@ -219,7 +222,7 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Service Modification
 
   * - MAC_CIPSOV4_DEL
-    - Triggered when a CIPSO user deletes an existing DOI. Adding DOIs is a part of the packet labeling capabilities of the kernel provided by NetLabel
+    - Triggered when a CIPSO user deletes an existing DOI. Adding DOIs is a part of the packet labeling capabilities of the kernel provided by NetLabel.
     - Service
     - Service Modification
 
@@ -312,6 +315,51 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Triggered when a user-space AVC message is generated
     - File
     - File Access
+
+  * - USER_CHAUTHTOK
+    - op record field contains value deleting mail file
+    - File
+    - File Deletion
+
+  * - USER_CHAUTHTOK
+    - op record field contains value moving home directory
+    - User Account
+    - User Account Access
+
+  * - USER_CHAUTHTOK
+    - op record field contains value user lookup
+    - User Account
+    - User Account Access
+
+  * - USER_CHAUTHTOK
+    - op record field contains value deleting user entries
+    - User Account
+    - User Account Deletion
+
+  * - USER_CHAUTHTOK
+    - op record field contains value deleting user not found
+    - User Account
+    - User Account Deletion
+
+  * - USER_CHAUTHTOK
+    - op record field contains value deleting user
+    - User Account
+    - User Account Deletion
+
+  * - USER_CHAUTHTOK
+    - op record field contains value deleting user logged in
+    - User Account
+    - User Account Deletion
+
+  * - USER_CHAUTHTOK
+    - op record field contains value deleting home directory
+    - User Account
+    - User Account Deletion
+
+  * - USER_CHAUTHTOK
+    - op record field contains value unlock password
+    - User Account
+    - User Account Metadata
 
   * - USER_CHAUTHTOK
     - op record field contains value change password
@@ -464,11 +512,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account Modification
 
   * - USER_CHAUTHTOK
-    - op record field contains value user lookup
-    - User Account
-    - User Account Accessed
-
-  * - USER_CHAUTHTOK
     - op record field contains value adding group
     - User Account
     - User Account Modification
@@ -489,36 +532,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account Modification
 
   * - USER_CHAUTHTOK
-    - op record field contains value deleting user entries
-    - User Account
-    - User Account Deletion
-
-  * - USER_CHAUTHTOK
-    - op record field contains value deleting user not found
-    - User Account
-    - User Account Deletion
-
-  * - USER_CHAUTHTOK
-    - op record field contains value deleting user
-    - User Account
-    - User Account Deletion
-
-  * - USER_CHAUTHTOK
-    - op record field contains value deleting user logged in
-    - User Account
-    - User Account Deletion
-
-  * - USER_CHAUTHTOK
-    - op record field contains value deleting mail file
-    - File
-    - File Deletion
-
-  * - USER_CHAUTHTOK
-    - op record field contains value deleting home directory
-    - User Account
-    - User Account Deletion
-
-  * - USER_CHAUTHTOK
     - op record field contains value lock password
     - User Account
     - User Account Modification
@@ -534,11 +547,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account Modification
 
   * - USER_CHAUTHTOK
-    - op record field contains value unlock password
-    - User Account
-    - User Account Metadata
-
-  * - USER_CHAUTHTOK
     - op record field contains value changing name
     - User Account
     - User Account Modification
@@ -552,11 +560,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - op record field contains value changing home directory
     - User Account
     - User Account Modification
-
-  * - USER_CHAUTHTOK
-    - op record field contains value moving home directory
-    - User Account
-    - User Account Access
 
   * - USER_CHAUTHTOK
     - op record field contains value changing mail file name
@@ -602,11 +605,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Triggered when a user logs out
     - Logon Session
     - Logon Session Metadata
-
-  * - USER_ROLE_CHANGE
-    - op record field is not present
-    - User Account
-    - User Account Modification
 
   * - USER_ROLE_CHANGE
     - op record field contains add SELinux user record

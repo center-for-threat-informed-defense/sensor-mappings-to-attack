@@ -17,7 +17,10 @@ visualize the sensor coverage in ATT&CK Navigator.
         <i class="fa fa-map-signs"></i> Open in ATT&CK Navigator</a>
     </p>
 
-.. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
+.. MAPPINGS_TABLE Generated at: 2023-12-04T02:13:58.197821Z
+
+Enterprise
+----------
 
 .. list-table::
   :widths: 40 30 20 25
@@ -223,6 +226,11 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Active Directory
     - Active Directory Object Deletion
 
+  * - DeleteSSHPublicKey
+    - An SSH public key has been deleted. The SSH public key deleted by this operation is used only for authenticating the associated IAM user to an CodeCommit repository.
+    - User Account
+    - User Account Metadata
+
   * - DeleteServerCertificate
     - A server certificate has been deleted.
     - Certificate
@@ -248,11 +256,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Snapshot
     - Snapshot Deletion
 
-  * - DeleteSSHPublicKey
-    - An SSH public key has been deleted. The SSH public key deleted by this operation is used only for authenticating the associated IAM user to an CodeCommit repository.
-    - User Account
-    - User Account Metadata
-
   * - DeleteUser
     - A user has been deleted.
     - User Account
@@ -274,7 +277,7 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account Authentication
 
   * - DetachGroupPolicy
-    - A managed policy has been removed from a role. Removes the specified managed policy from the specified IAM group.
+    - Removes the specified managed policy from the specified IAM group.
     - Group
     - Group Metadata
 
@@ -379,7 +382,7 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Active Directory Object Access
 
   * - GetOrganizationsAccessReport
-    - Retrieves the service last accessed data report for AWS Organizations that was previously generated using the GenerateOrganizationsAccessReport operation. This operation retrieves the status of your report job and the report contents. To call this operation, you must be signed in to the management account in your organization. SCPs must be enabled for your organization root. You must have permissions to perform this operation. For each service that principals in an account (root user, IAM users, or IAM roles) could access using SCPs, the operation returns details about the most recent access attempt.
+    - Retrieves the service last accessed data report for AWS Organizations that was previously generated using the GenerateOrganizationsAccessReport operation. This operation retrieves the status of your report job and the report contents. .. To call this operation, you must be signed in to the management account in your organization. SCPs must be enabled for your organization root. You must have permissions to perform this operation.  For each service that principals in an account (root user, IAM users, or IAM roles) could access using SCPs, the operation returns details about the most recent access attempt.
     - Cloud Service Account
     - Cloud Service Account Access
 
@@ -403,13 +406,18 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account
     - User Account Metadata
 
+  * - GetSSHPublicKey
+    - Retrieves the specified SSH public key, including metadata about the key. The SSH public key retrieved by this operation is used only for authenticating the associated IAM user to an CodeCommit repository.
+    - User Account
+    - User Account Access
+
   * - GetServerCertificate
     - Retrieves information about the specified server certificate stored in IAM.
     - Certificate
     - Certificate Access
 
   * - GetServiceLastAccessedDetails
-    - Retrieves a service last accessed report that was created using the GenerateServiceLastAccessedDetails operation. The report includes a list of AWS services that the resource (user, group, role, or managed policy) can access.
+    - Retrieves a service last accessed report that was created using the GenerateServiceLastAccessedDetails operation.   The report includes a list of AWS services that the resource (user, group, role, or managed policy) can access.
     - Cloud Service Account
     - Cloud Service Account Metadata
 
@@ -422,11 +430,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Retrieves the status of your service-linked role deletion.
     - Cloud Service Account
     - Cloud Service Account Access
-
-  * - GetSSHPublicKey
-    - Retrieves the specified SSH public key, including metadata about the key. The SSH public key retrieved by this operation is used only for authenticating the associated IAM user to an CodeCommit repository.
-    - User Account
-    - User Account Access
 
   * - GetUser
     - Retrieves information about the specified IAM user, including the user's creation date, path, unique ID, and ARN.
@@ -465,13 +468,13 @@ visualize the sensor coverage in ATT&CK Navigator.
 
   * - ListEntitiesForPolicy
     - Lists all IAM users, groups, and roles that the specified managed policy is attached to.
-    - User Account
-    - User Account Metadata
+    - Group
+    - Group Metadata
 
   * - ListEntitiesForPolicy
     - Lists all IAM users, groups, and roles that the specified managed policy is attached to.
-    - Group
-    - Group Metadata
+    - User Account
+    - User Account Metadata
 
   * - ListGroupPolicies
     - Lists the names of the inline policies that are embedded in the specified IAM group.
@@ -488,6 +491,11 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Group
     - Group Enumeration
 
+  * - ListInstanceProfileTags
+    - Lists the tags that are attached to the specified IAM instance profile. The returned list of tags is sorted by tag key.
+    - Instance
+    - Instance Metadata
+
   * - ListInstanceProfiles
     - Lists the instance profiles that have the specified path prefix. If there are none, the operation returns an empty list.
     - Instance
@@ -498,28 +506,23 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Instance
     - Instance Metadata
 
-  * - ListInstanceProfileTags
-    - Lists the tags that are attached to the specified IAM instance profile. The returned list of tags is sorted by tag key.
-    - Instance
-    - Instance Metadata
+  * - ListMFADeviceTags
+    - Lists the tags that are attached to the specified IAM virtual multi-factor authentication (MFA) device. The returned list of tags is sorted by tag key.
+    - User Account
+    - User Account Authentication
 
   * - ListMFADevices
     - Lists the MFA devices for an IAM user. If the request includes a IAM user name, then this operation lists all the MFA devices associated with the specified user. If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the request for this operation.
     - User Account
     - User Account Authentication
 
-  * - ListMFADeviceTags
-    - Lists the tags that are attached to the specified IAM virtual multi-factor authentication (MFA) device. The returned list of tags is sorted by tag key.
-    - User Account
-    - User Account Authentication
-
-  * - ListOpenIDConnectProviders
-    - Lists information about the IAM OpenID Connect (OIDC) provider resource objects defined in the AWS account.
+  * - ListOpenIDConnectProviderTags
+    - Lists the tags that are attached to the specified OpenID Connect (OIDC)-compatible identity provider. The returned list of tags is sorted by tag key.
     - Active Directory
     - Active Directory Object Enumeration
 
-  * - ListOpenIDConnectProviderTags
-    - Lists the tags that are attached to the specified OpenID Connect (OIDC)-compatible identity provider. The returned list of tags is sorted by tag key.
+  * - ListOpenIDConnectProviders
+    - Lists information about the IAM OpenID Connect (OIDC) provider resource objects defined in the AWS account.
     - Active Directory
     - Active Directory Object Enumeration
 
@@ -530,13 +533,13 @@ visualize the sensor coverage in ATT&CK Navigator.
 
   * - ListPoliciesGrantingServiceAccess
     - Retrieves a list of policies that the IAM identity (user, group, or role) can use to access each specified service. The list of policies returned by the operation depends on the ARN of the identity that you provide.
-    - User Account
-    - User Account Metadata
+    - Group
+    - Group Metadata
 
   * - ListPoliciesGrantingServiceAccess
     - Retrieves a list of policies that the IAM identity (user, group, or role) can use to access each specified service. The list of policies returned by the operation depends on the ARN of the identity that you provide.
-    - Group
-    - Group Metadata
+    - User Account
+    - User Account Metadata
 
   * - ListPolicyTags
     - Lists the tags that are attached to the specified IAM customer managed policy. The returned list of tags is sorted by tag key.
@@ -553,25 +556,30 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account
     - User Account Metadata
 
+  * - ListRoleTags
+    - Lists the tags that are attached to the specified role. The returned list of tags is sorted by tag key.
+    - User Account
+    - User Account Metadata
+
   * - ListRoles
     - Lists the IAM roles that have the specified path prefix. If there are none, the operation returns an empty list.
     - User Account
     - User Account Metadata
 
-  * - ListRoleTags
-    - Lists the tags that are attached to the specified role. The returned list of tags is sorted by tag key.
-    - User Account
-    - User Account Metadata
+  * - ListSAMLProviderTags
+    - Lists the tags that are attached to the specified Security Assertion Markup Language (SAML) identity provider. The returned list of tags is sorted by tag key.
+    - Active Directory
+    - Active Directory Object Enumeration
 
   * - ListSAMLProviders
     - Lists the SAML provider resource objects defined in IAM in the account.
     - Active Directory
     - Active Directory Object Enumeration
 
-  * - ListSAMLProviderTags
-    - Lists the tags that are attached to the specified Security Assertion Markup Language (SAML) identity provider. The returned list of tags is sorted by tag key.
-    - Active Directory
-    - Active Directory Object Enumeration
+  * - ListSSHPublicKeys
+    - Returns information about the SSH public keys associated with the specified IAM user. If none exists, the operation returns an empty list.
+    - User Account
+    - User Account Enumeration
 
   * - ListServerCertificates
     - Lists the server certificates stored in IAM that have the specified path prefix. If none exist, the operation returns an empty list.
@@ -588,23 +596,18 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account
     - User Account Enumeration
 
-  * - ListSSHPublicKeys
-    - Returns information about the SSH public keys associated with the specified IAM user. If none exists, the operation returns an empty list.
-    - User Account
-    - User Account Enumeration
-
   * - ListUserPolicies
     - Lists the names of the inline policies embedded in the specified IAM user.
     - User Account
     - User Account Enumeration
 
-  * - ListUsers
-    - Lists the IAM users that have the specified path prefix. If no path prefix is specified, the operation returns all users in the AWS account.
+  * - ListUserTags
+    - Lists the tags that are attached to the specified IAM user. The returned list of tags is sorted by tag key.
     - User Account
     - User Account Enumeration
 
-  * - ListUserTags
-    - Lists the tags that are attached to the specified IAM user. The returned list of tags is sorted by tag key.
+  * - ListUsers
+    - Lists the IAM users that have the specified path prefix. If no path prefix is specified, the operation returns all users in the AWS account.
     - User Account
     - User Account Enumeration
 
@@ -679,7 +682,7 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Instance Metadata
 
   * - RemoveUserFromGroup
-    - A user has been removed from an IAM group
+    - A user has been removed from an IAM group.
     - Group
     - Group Modification
 
@@ -773,6 +776,11 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account
     - User Account Modification
 
+  * - Untag Policy
+    - Removes the specified tags from the customer managed policy.
+    - User Account
+    - User Account Metadata
+
   * - UntagInstanceProfile
     - Removes the specified tags from the IAM instance profile.
     - Instance
@@ -787,11 +795,6 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Removes the specified tags from the specified OpenID Connect (OIDC)-compatible identity provider in IAM.
     - Active Directory
     - Active Directory Object Modification
-
-  * - Untag Policy
-    - Removes the specified tags from the customer managed policy.
-    - User Account
-    - User Account Metadata
 
   * - UntagRole
     - Removes the specified tags from the role.
@@ -853,6 +856,11 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Active Directory
     - Active Directory Object Modification
 
+  * - UpdateSSHPublicKey
+    - Sets the status of an IAM user's SSH public key to active or inactive. SSH public keys that are inactive cannot be used for authentication. This operation can be used to disable a user's SSH public key as part of a key rotation work flow.
+    - User Account
+    - User Account Modification
+
   * - UpdateServerCertificate
     - Updates the name and/or the path of the specified server certificate stored in IAM.
     - Certificate
@@ -868,13 +876,13 @@ visualize the sensor coverage in ATT&CK Navigator.
     - User Account
     - User Account Modification
 
-  * - UpdateSSHPublicKey
-    - Sets the status of an IAM user's SSH public key to active or inactive. SSH public keys that are inactive cannot be used for authentication. This operation can be used to disable a user's SSH public key as part of a key rotation work flow.
+  * - UpdateUser
+    - Updates the name and/or the path of the specified IAM user.
     - User Account
     - User Account Modification
 
-  * - UpdateUser
-    - Updates the name and/or the path of the specified IAM user.
+  * - UploadSSHPublicKey
+    - Uploads an SSH public key and associates it with the specified IAM user.
     - User Account
     - User Account Modification
 
@@ -887,10 +895,4 @@ visualize the sensor coverage in ATT&CK Navigator.
     - Uploads an X.509 signing certificate and associates it with the specified IAM user.
     - User Account
     - User Account Modification
-
-  * - UploadSSHPublicKey
-    - Uploads an SSH public key and associates it with the specified IAM user.
-    - User Account
-    - User Account Modification
-
 .. /MAPPINGS_TABLE

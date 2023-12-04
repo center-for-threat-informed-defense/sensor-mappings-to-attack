@@ -47,7 +47,6 @@ def write_doc_files(sensor_tables:dict, docs_location:Path):
             if sensor.lower() == "zeek":
                 sensor = sensor.upper()
             file_beginning = header_generator(sensor, "=")
-            file_beginning.append("")
             
             file_beginning.append(".. raw:: html")
             file_beginning.append("")
@@ -64,14 +63,17 @@ def write_doc_files(sensor_tables:dict, docs_location:Path):
 
             file_beginning.append("")
             file_beginning.append(".. MAPPINGS_TABLE")
-            tables.extend(file_beginning)
-            tables.append("")
+            # tables.extend(file_beginning)
             tables.append(".. /MAPPINGS_TABLE")
+            tables.append("")
             with open(old_doc, "w") as _new_file:
                 _new_file.write("\n".join(tables))
-            tables = []
+            # tables = []
         with open(old_doc) as file:
             new_doc = insert_docs(file, tables, "MAPPINGS_TABLE")
+            if new_doc[-1] != "\n":
+                new_doc += "\n"
+                # New line at end of file
         with open(old_doc, "w") as out:
             out.write(new_doc)
 
@@ -83,11 +85,13 @@ def generate_table_from_csv(csv_file):
         reader = csv.DictReader(file)
 
         for row in reader:
-            obj_lines.append({"EVENT ID": row["EVENT ID"],
-                              "EVENT DESCRIPTION": row["EVENT DESCRIPTION"],
-                              "ATT&CK DATA SOURCE": row["ATT&CK DATA SOURCE"],
-                              "ATT&CK DATA COMPONENT": row["ATT&CK DATA COMPONENT"]
-                              })
+            _dict = {"EVENT ID": row["EVENT ID"],
+                    "EVENT DESCRIPTION": row["EVENT DESCRIPTION"],
+                    "ATT&CK DATA SOURCE": row["ATT&CK DATA SOURCE"],
+                    "ATT&CK DATA COMPONENT": row["ATT&CK DATA COMPONENT"]
+                    }
+            if _dict not in obj_lines:
+                obj_lines.append(_dict)
     return obj_lines
 
 
@@ -133,9 +137,21 @@ def generate_mappings_table(sensor_table_lists):
             obj_lines.extend(table_start(sensor))
 
             rows = attack_type_dict[attack_type.lower()]
-            for row in sorted(rows, key=lambda i: i['EVENT ID']):
+            # Check if Event IDs are numerical. If so, convert them for sorting
+            sample = rows[0]["EVENT ID"]
+            try:
+                int(sample)
+                for _dict in rows:
+                    new_event_id = int(_dict.pop("EVENT ID"))
+                    _dict["EVENT ID"] = new_event_id
+            except ValueError:
+                pass
+            for row in sorted(rows, key=lambda i: i["EVENT ID"]):
                 obj_lines.extend(extract_row_data(row))
-            
+                obj_lines.append("")
+            if not obj_lines[-1]:
+                obj_lines.pop()
+                # Remove the last empty line
         sensor_tables[sensor] = obj_lines
     return sensor_tables
 
@@ -145,12 +161,12 @@ def extract_row_data(row: dict):
     result.append(f"  * - {row['EVENT ID']}")
 
     # Handle potential multi-line inputs
-    description = "".join(row['EVENT DESCRIPTION'].splitlines())
+    description = list(filter(None, row["EVENT DESCRIPTION"].splitlines()))
+    description = " ".join(description)
     result.append(f"    - {description}")
 
     result.append(f"    - {row['ATT&CK DATA SOURCE']}")
     result.append(f"    - {row['ATT&CK DATA COMPONENT']}")
-    result.append("")
 
     return result
 
@@ -160,6 +176,7 @@ def header_generator(variable_name: str, symbol: str):
     _header = []
     _header.append(variable_name)
     _header.append("".join(f"{symbol}" for _ in range(len(variable_name))))
+    _header.append("")
     return _header
 
 

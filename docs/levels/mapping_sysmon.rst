@@ -17,7 +17,10 @@ visualize the sensor coverage in ATT&CK Navigator.
         <i class="fa fa-map-signs"></i> Open in ATT&CK Navigator</a>
     </p>
 
-.. MAPPINGS_TABLE Generated at: 2023-10-03T10:40:58.770502Z
+.. MAPPINGS_TABLE Generated at: 2023-12-04T02:13:58.207379Z
+
+Enterprise
+----------
 
 .. list-table::
   :widths: 10 30 20 25
@@ -31,130 +34,130 @@ visualize the sensor coverage in ATT&CK Navigator.
   * - 1
     - A new process has been created
     - Process
-    - process creation
+    - Process Creation
 
   * - 2
     - A process changed a file creation time
     - File
-    - file modification
+    - File Modification
 
   * - 3
     - Network connection
-    - network traffic
-    - network connection creation
+    - Network Traffic
+    - Network Connection Creation
 
   * - 4
-    - Sysmon service state changed
-    - service
-    - service metadata
+    - Sysmon service state changed.
+    - Service
+    - Service Metadata
 
   * - 5
     - Process terminated
     - Process
-    - process termination
+    - Process Termination
 
   * - 6
     - Driver loaded
     - Driver
-    - Driver load
+    - Driver Load
 
   * - 7
     - Image Loaded
-    - module
-    - module load
+    - Module
+    - Module Load
 
   * - 8
     - The CreateRemoteThread event detects when a process creates a thread in another process.
     - Process
-    - process modification
+    - Process Modification
 
   * - 9
     - The RawAccessRead event detects when a process conducts reading operations from the drive using the \.\ denotation
     - File
-    - file access
+    - File Access
 
   * - 10
     - ProcessAccess
     - Process
-    - process access
+    - Process Access
 
   * - 11
     - FileCreate
     - File
-    - file creation
+    - File Creation
 
   * - 12
     - RegistryEvent (Object create and delete)
-    - windows registry
-    - windows registry key creation
+    - Windows Registry
+    - Windows Registry Key Creation
 
   * - 12
     - RegistryEvent (Object create and delete)
-    - windows registry
-    - windows registry key deletion
+    - Windows Registry
+    - Windows Registry Key Deletion
 
   * - 13
     - RegistryEvent (Value Set)
-    - windows registry
-    - windows registry key modification
+    - Windows Registry
+    - Windows Registry Key Modification
 
   * - 14
     - RegistryEvent (Key and Value Rename)
-    - windows registry
-    - windows registry key modification
+    - Windows Registry
+    - Windows Registry Key Modification
 
   * - 15
     - FileCreateStreamHash
     - File
-    - file creation
+    - File Creation
 
   * - 17
     - PipeEvent (Pipe Created)
-    - named pipe
-    - named pipe created
+    - Named Pipe
+    - Named Pipe Metadata
 
   * - 18
     - PipeEvent (Pipe Connected)
     - Named Pipe
     - Named Pipe Connection
 
-  * - 19
-    - WmiEvent (WmiEventFilter activity detected).
-    - wmi
-    - wmi creation
+  * - 18
+    - PipeEvent (Pipe Connected)
+    - Named Pipe
+    - Named Pipe Metadata
 
   * - 19
     - WmiEvent (WmiEventFilter activity detected).
-    - wmi
-    - wmi deletion
+    - WMI
+    - WMI Creation
+
+  * - 19
+    - WmiEvent (WmiEventFilter activity detected).
+    - WMI
+    - WMI Deletion
 
   * - 20
     - WmiEvent (WmiEventConsumer activity detected).
-    - wmi
-    - wmi creation
+    - WMI
+    - WMI Creation
 
   * - 20
     - WmiEvent (WmiEventConsumer activity detected).
-    - wmi
-    - wmi deletion
+    - WMI
+    - WMI Deletion
 
   * - 23
     - FileDelete
     - File
-    - file deletion
-
-  * - 25
-    - Process Tampering
-    - Process
-    - process modification
+    - File Deletion
 
   * - 26
-    - File Delete logged
+    - File Delete logged.
     - File
-    - file deletion
+    - File Deletion
 
   * - 30
     - EventID(30)
     - Process
-    - process metadata
+    - Process Metadata
 .. /MAPPINGS_TABLE
