@@ -20,6 +20,7 @@ You can download a spreadsheet containing the mappings for all sensors or dive i
 details for a specific sensor:
 
 .. toctree::
+    :maxdepth: 1
 
     mapping_auditd
     mapping_cloudtrail
