@@ -10,11 +10,12 @@ representions of information that can be collected to concrete logs, sensors, an
 security capabilities that provide that type of data.
 
 This project is created and maintained by `MITRE Engenuity Center for Threat-Informed
-Defense (Center)
-<https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/sensor-mappings-to-attack/#research-participants>`_
-and is funded by our `research participants <https://TODO>`_, in futherance of our
-mission to advance the start of the art and the state of the practice in threat-informed
-defense globally. This work complements the Center's `Security Stack Mappings
+Defense (Center) <https://ctid.mitre-engenuity.org/>`_ and is funded by our `research
+participants
+<https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/sensor-mappings-to-attack/#research-participants>`_,
+in futherance of our mission to advance the start of the art and the state of the
+practice in threat-informed defense globally. This work complements the Center's
+`Security Stack Mappings
 <https://github.com/center-for-threat-informed-defense/security-stack-mappings>`_
 project by allowing defenders to use both resources to understand their overall
 defensive coverage and make threat-informed decisions.

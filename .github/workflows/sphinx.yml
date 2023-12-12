@@ -27,8 +27,6 @@ jobs:
       run: poetry install
     - name: Validate STIX bundles
       run: poetry run python src/util/cli_validator.py
-    - name: Build HTML docs
-      run: poetry run make docs-ci
     - name: Copy Mappings Excel to Website
       run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor ID to Data Source.xlsx" docs/extra/xlsx
     - name: Copy Mappings CSVs to Website
@@ -37,6 +35,8 @@ jobs:
       run: mkdir docs/extra/navigator && cp mappings/layers/enterprise/*.json docs/extra/navigator
     - name: Copy STIX Bundles to Website
       run: mkdir docs/extra/stix && cp mappings/stix/enterprise/*.json docs/extra/stix
+    - name: Build HTML docs
+      run: poetry run make docs-ci
     - name: Upload HTML docs
       uses: actions/upload-artifact@v3
       with:
