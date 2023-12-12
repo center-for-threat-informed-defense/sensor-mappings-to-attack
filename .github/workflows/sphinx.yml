@@ -30,7 +30,7 @@ jobs:
     - name: Build HTML docs
       run: poetry run make docs-ci
     - name: Copy Mappings Excel to Website
-      run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor to Data Source.xlsx" docs/extra/xlsx
+      run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor ID to Data Source.xlsx" docs/extra/xlsx
     - name: Copy Mappings CSVs to Website
       run: mkdir docs/extra/csv && cp mappings/input/enterprise/csv/*.csv docs/extra/csv
     - name: Copy Navigator Layers to Website
@@ -43,28 +43,27 @@ jobs:
         name: sensor-mappings-to-attack-docs-html
         path: docs/_build/dirhtml/
 
-  # # TODO Uncomment before publishing repository.
-  # github_pages:
-  #   # This job only runs when committing or merging to main branch.
-  #   if: github.ref_name == 'main'
-  #   needs: docs
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: github-pages
-  #     url: $\{\{ steps.deployment.outputs.page_url \}\}
+  github_pages:
+    # This job only runs when committing or merging to main branch.
+    if: github.ref_name == 'main'
+    needs: docs
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: $\{\{ steps.deployment.outputs.page_url \}\}
 
-  #   steps:
-  #   - name: Setup Pages
-  #     uses: actions/configure-pages@v2
-  #   - name: Download HTML docs
-  #     uses: actions/download-artifact@v3
-  #     with:
-  #       name: sensor-mappings-to-attack-docs-html
-  #       path: docs
-  #   - name: Upload artifact
-  #     uses: actions/upload-pages-artifact@v1
-  #     with:
-  #       path: ./docs
-  #   - name: Deploy to GitHub Pages
-  #     id: deployment
-  #     uses: actions/deploy-pages@v1
+    steps:
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+    - name: Download HTML docs
+      uses: actions/download-artifact@v3
+      with:
+        name: sensor-mappings-to-attack-docs-html
+        path: docs
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./docs
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1

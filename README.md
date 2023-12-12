@@ -23,12 +23,12 @@ the Center's [Security Stack Mappings](https://github.com/center-for-threat-info
 To get started, read the project website. It provides an overview of the goals and
 methodologies, defines all the key terms, and contains detailed examples.
 
-| Resource                                                                                                                                                                          | Description                                      |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| [Project Website](https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/)                                                                                | Documentation, methodology, use cases, examples. |
-| [Mappings Spreadsheet](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/input/enterprise/xlsx/Sensor%20to%20Data%20Source.xlsx) | Complete list of Sensor Mappings.                |
-| [Navigator Layers](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main/mappings/layers/enterprise)                                          | ATT&CK Navigator views of the Sensor Mappings.   |
-| [STIX Bundles](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main/mappings/stix/enterprise)                                                | Machine-readable list of Sensor Mappings.        |
+| Resource                                                                                                                                                                               | Description                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [Project Website](https://center-for-threat-informed-defense.github.io/sensor-mappings-to-attack/)                                                                                     | Documentation, methodology, use cases, examples. |
+| [Mappings Spreadsheet](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/blob/main/mappings/input/enterprise/xlsx/Sensor%20ID%20to%20Data%20Source.xlsx) | Complete list of Sensor Mappings.                |
+| [Navigator Layers](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main/mappings/layers/enterprise)                                               | ATT&CK Navigator views of the Sensor Mappings.   |
+| [STIX Bundles](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/tree/main/mappings/stix/enterprise)                                                     | Machine-readable list of Sensor Mappings.        |
 
 ## Getting Involved
 
