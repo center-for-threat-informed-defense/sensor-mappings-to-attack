@@ -50,6 +50,13 @@ pages provide definitions for each individual Data Source.
 .. image:: ../_static/attack_ex_pc.png
    :width: 600
 
+Note that the initial SMAP work was developed using ATT&CKv13.1. The mappings include
+some data components that are not represented in ATT&CKv13.1 and may not be represented
+in more recent versions of ATT&CK. The reason for this is that ATT&CK does not include 
+data components that do not currently have a relationship to a (sub-)technique. These 
+mapped data components are being tracked by the ATT&CK team and will be considered for 
+incorporation in future versions of ATT&CK as the overall ATT&CK catalog evolves.
+
 For Process Creation, ATT&CK's definition is : **..the initial construction of an
 executable..**. Through key word review, it can be determined that this is the same as
 **..a process is created..** Therefore, event ID 4688 can be linked with this ATT&CK
