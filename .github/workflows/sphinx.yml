@@ -28,7 +28,7 @@ jobs:
     - name: Validate STIX bundles
       run: poetry run python src/util/cli_validator.py
     - name: Copy Mappings Excel to Website
-      run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor ID to Data Source.xlsx" docs/extra/xlsx
+      run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor Mapping.xlsx" docs/extra/xlsx
     - name: Copy Mappings CSVs to Website
       run: mkdir docs/extra/csv && cp mappings/input/enterprise/csv/*.csv docs/extra/csv
     - name: Copy Navigator Layers to Website
