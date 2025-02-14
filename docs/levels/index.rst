@@ -19,7 +19,7 @@ View Mappings
 .. raw:: html
 
     <p>
-        <a class="btn btn-primary" target="_blank" href="../xlsx/Sensor%20ID%20to%20Data%20Source.xlsx">
+        <a class="btn btn-primary" target="_blank" href="../xlsx/Sensor%20Mappings.xlsx">
         <i class="fa fa-file-excel-o"></i> Download Mappings – Excel</a>
     </p>
 
