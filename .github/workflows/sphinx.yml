@@ -38,7 +38,7 @@ jobs:
     - name: Build HTML docs
       run: poetry run make docs-ci
     - name: Upload HTML docs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: sensor-mappings-to-attack-docs-html
         path: docs/_build/dirhtml/
@@ -54,16 +54,16 @@ jobs:
 
     steps:
     - name: Setup Pages
-      uses: actions/configure-pages@v2
+      uses: actions/configure-pages@v5
     - name: Download HTML docs
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: sensor-mappings-to-attack-docs-html
         path: docs
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./docs
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
