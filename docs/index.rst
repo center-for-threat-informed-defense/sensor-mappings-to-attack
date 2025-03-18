@@ -9,10 +9,10 @@ potentially occurring in their environments. SMAP builds on `MITRE ATT&CK®
 representions of information that can be collected to concrete logs, sensors, and other
 security capabilities that provide that type of data.
 
-This project is created and maintained by `MITRE Engenuity Center for Threat-Informed
-Defense (Center) <https://ctid.mitre-engenuity.org/>`_ and is funded by our `research
+This project is created and maintained by `MITRE Center for Threat-Informed
+Defense (Center) <https://ctid.mitre.org>`_ and is funded by our `research
 participants
-<https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/sensor-mappings-to-attack/#research-participants>`_,
+<https://ctid.mitre.org/projects/sensor-mappings-to-attack#research-participants>`_,
 in futherance of our mission to advance the start of the art and the state of the
 practice in threat-informed defense globally. This work complements the Center's
 `Security Stack Mappings
@@ -35,7 +35,7 @@ defensive coverage and make threat-informed decisions.
 Notice
 ------
 
-© 2023 MITRE Engenuity. Approved for public release. Document number CT0089.
+© 2023 MITRE. Approved for public release. Document number CT0089.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the License at
