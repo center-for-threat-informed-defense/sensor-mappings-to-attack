@@ -8,20 +8,22 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 pytz = "^2023.3"
 stix2 = "^3.0.1"
-pandas = "2.0.0"
+pandas = "^2.2.0"
 tqdm = "^4.66.1"
 openpyxl = "^3.1.2"
 requests = "^2.31.0"
 schema = "^0.7.5"
 python-dateutil = "^2.8.2"
+numpy = "^2.2.0"
+python-slugify = "^8.0.4"
 
 [tool.poetry.group.dev.dependencies]
-sphinx = "^4.5.0"
+sphinx = "6.2"
 sphinx-autobuild = "^2021.3.14"
-sphinx-rtd-theme = "^1.0.0"
+sphinx-wagtail-theme = "^6.5.0"
 
 [build-system]
 requires = ["poetry-core"]
