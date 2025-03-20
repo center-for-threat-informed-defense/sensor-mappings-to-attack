@@ -3,3 +3,6 @@ div.table-responsive table {
     table-layout: fixed;
     word-wrap: break-word;
 }
+.btn-primary {
+    margin: 2px 0px;
+}
