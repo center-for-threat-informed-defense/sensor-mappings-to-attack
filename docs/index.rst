@@ -12,7 +12,7 @@ security capabilities that provide that type of data.
 This project is created and maintained by `MITRE Center for Threat-Informed
 Defense (Center) <https://ctid.mitre.org>`_ and is funded by our `research
 participants
-<https://ctid.mitre.org/projects/sensor-mappings-to-attack#research-participants>`_,
+<https://ctid.mitre.org/projects/sensor-mappings-to-attack#participants-section>`_,
 in futherance of our mission to advance the start of the art and the state of the
 practice in threat-informed defense globally. This work complements the Center's
 `Security Stack Mappings
