@@ -12,7 +12,7 @@
 #
 # import os
 # import sys
-#sys.path.append("/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sphinxcontrib/exceltable")
+# sys.path.append("/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sphinxcontrib/exceltable")
 # sys.path.insert(0, os.path.abspath('..'))
 from slugify import slugify
 
@@ -62,6 +62,7 @@ html_favicon = "_static/favicon.ico"
 html_logo = "_static/ctid_logo_white.png"
 html_css_files = [
     "css/ctid.css",
+    "css/smap.css",
 ]
 html_js_files = [
     "js/ctid.js",
@@ -77,7 +78,10 @@ html_context = {
 }
 
 footer_links = [
-    ["Measure Maximize And Mature Threat-Informed Defense (M3TID)", "https://ctid.mitre.org/projects/measure-maximize-and-mature-threat-informed-defense-m3tid/"],
+    [
+        "Measure Maximize And Mature Threat-Informed Defense (M3TID)",
+        "https://ctid.mitre.org/projects/measure-maximize-and-mature-threat-informed-defense-m3tid/",
+    ],
     ["Summiting The Pyramid", "https://ctid.mitre.org/projects/summiting-the-pyramid/"],
     ["Attack Flow", "https://ctid.mitre.org/projects/attack-flow/"],
 ]
