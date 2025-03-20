@@ -10,7 +10,8 @@ body {
   --mitre-dark-gray: #7e8284;
   --mitre-silver: #d4d4d3;
   --mitre-light-silver: #f1f3f4;
-
+  --me-ext-code: #880132;
+  --me-orange-dark: #c94f1f;
   --text-color-inverse: #ffffff;
 
   color: var(--mitre-black);
@@ -101,10 +102,9 @@ body.theme-dark .admonition p:last-child {
 }
 
 .admonition.caution .admonition-title,
-.admonition.warning .admonition-title {
-  background-color: var(--me-ext-gray-green-dark);
-  /* background-color: var(--me-ext-orange-dark); */
-  color: var(--mitre-black);
+.admonition.warning .admonition-title  {
+  background-color: var(--me-orange-dark);
+  color: var(--text-color-inverse);
 }
 
 .admonition.danger .admonition-title,
@@ -144,17 +144,14 @@ blockquote.epigraph {
   background-color: var(--mitre-light-silver);
   margin: 2em 0;
   padding: 1em;
-  border-top: 3px solid #c9c9c9;
-  border-bottom: 3px solid #c9c9c9;
 }
 
-blockquote.epigraph p {
-  font-size: 16pt;
+body.theme-dark blockquote.epigraph {
+  background-color: var(--mitre-navy);
 }
 
 blockquote.epigraph p.attribution {
   margin: 0;
-  font-size: 12pt;
   font-style: italic;
 }
 
@@ -381,8 +378,8 @@ footer p {
   font-size: 16px;
 }
 
-.highlight-bash .highlight pre {
-  background-color: var(--mitre-black);
+.highlight-bash .highlight pre, pre {
+  background-color: var(--mitre-dark-navy);
   border-radius: var(--border-radius);
 }
 
