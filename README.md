@@ -54,7 +54,7 @@ your ideas and we will consider them as we explore additional research projects.
 Please submit
 [issues](https://github.com/center-for-threat-informed-defense/sensor-mappings-to-attack/issues)
 for any technical questions/concerns or contact
-[ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=subject=Question%20about%20sensor-mappings-to-attack)
+[ctid@mitre.org](mailto:ctid@mitre.org?subject=subject=Question%20about%20sensor-mappings-to-attack)
 directly for more general inquiries.
 
 ## How Do I Contribute?
@@ -64,7 +64,7 @@ see the [guidance for contributors](/CONTRIBUTING.md).
 
 ## Notice
 
-Copyright 2023 MITRE Engenuity. Approved for public release. Document number CT0089.
+Copyright 2023 MITRE. Approved for public release. Document number CT0089.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the License at
