@@ -1,0 +1,8 @@
+/* custom tweaks to smap CSS that are not part of the base ctid.css */
+div.table-responsive table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+.btn-primary {
+    margin: 2px 0px;
+}

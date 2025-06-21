@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.10'
     - name: Install Poetry
       run: curl -sSL https://install.python-poetry.org/ | python -
     - name: Add Poetry to PATH
@@ -28,7 +28,7 @@ jobs:
     - name: Validate STIX bundles
       run: poetry run python src/util/cli_validator.py
     - name: Copy Mappings Excel to Website
-      run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor ID to Data Source.xlsx" docs/extra/xlsx
+      run: mkdir docs/extra/xlsx && cp "mappings/input/enterprise/xlsx/Sensor Mappings.xlsx" docs/extra/xlsx
     - name: Copy Mappings CSVs to Website
       run: mkdir docs/extra/csv && cp mappings/input/enterprise/csv/*.csv docs/extra/csv
     - name: Copy Navigator Layers to Website
@@ -38,7 +38,7 @@ jobs:
     - name: Build HTML docs
       run: poetry run make docs-ci
     - name: Upload HTML docs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: sensor-mappings-to-attack-docs-html
         path: docs/_build/dirhtml/
@@ -56,14 +56,14 @@ jobs:
     - name: Setup Pages
       uses: actions/configure-pages@v2
     - name: Download HTML docs
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: sensor-mappings-to-attack-docs-html
         path: docs
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./docs
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
