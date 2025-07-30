@@ -1,29 +1,29 @@
-EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
-6,Driver loaded,DS0027,Driver,Driver Load,Driver,Loaded,
-9,The RawAccessRead event detects when a process conducts reading operations from the drive using the \.\ denotation,DS0022,File,File Access,Process,Accessed,File
-11,FileCreate,DS0022,File,File Creation,Process/User,Created,File
-15,FileCreateStreamHash,DS0022,File,File Creation,File,Created,File Stream Hash
-23,FileDelete,DS0022,File,File Deletion,Process/User,Deleted,File
-26,File Delete logged.,DS0022,File,File Deletion,Process/User,Deleted,File
-2,A process changed a file creation time,DS0022,File,File Modification,Process/User/File,Modified,File
-7,Image Loaded,DS0011,Module,Module Load,Process/User,Loaded,Module
-18,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Connection,Process,Created,Named Pipe
-17,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Created,Pipe
-17,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
-18,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
-3,Network connection,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To/From,Ip/Port/Device
-10,ProcessAccess,DS0009,Process,Process Access,Process,Accessed,Process
-1,A new process has been created,DS0009,Process,Process Creation,Process/User,Created,Process
-1,A new process has been created,DS0009,Process,Process Creation,Process/User,Executed,Process
-30,EventID(30),DS0009,Process,Process Metadata,Process,Searched,Ldap
-8,The CreateRemoteThread event detects when a process creates a thread in another process.,DS0009,Process,Process Modification,Process,Modified,Process
-5,Process terminated,DS0009,Process,Process Termination,Process/User,Terminated,Process
-4,Sysmon service state changed.,DS0019,Service,Service Metadata,Service,Stopped/Started,Service
-12,RegistryEvent (Object create and delete),DS0024,Windows Registry,Windows Registry Key Creation,Process/User,Created,Registry
-12,RegistryEvent (Object create and delete),DS0024,Windows Registry,Windows Registry Key Deletion,Process/User,Deleted,Registry
-13,RegistryEvent (Value Set),DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
-14,RegistryEvent (Key and Value Rename),DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
-19,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Creation,User,Created,WMI Object
-20,WmiEvent (WmiEventConsumer activity detected).,DS0005,WMI,WMI Creation,User,Created,WMI Object
-19,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
-20,WmiEvent (WmiEventConsumer activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
+EVENT PROVIDER,EVENT ID,EVENT DESCRIPTION,ATT&CK DATA SOURCE ID,ATT&CK DATA SOURCE,ATT&CK DATA COMPONENT,SOURCE,RELATIONSHIP,TARGET
+Microsoft-Windows-Sysmon,6,Driver loaded,DS0027,Driver,Driver Load,Driver,Loaded,
+Microsoft-Windows-Sysmon,9,The RawAccessRead event detects when a process conducts reading operations from the drive using the \.\ denotation,DS0022,File,File Access,Process,Accessed,File
+Microsoft-Windows-Sysmon,11,FileCreate,DS0022,File,File Creation,Process/User,Created,File
+Microsoft-Windows-Sysmon,15,FileCreateStreamHash,DS0022,File,File Creation,File,Created,File Stream Hash
+Microsoft-Windows-Sysmon,23,FileDelete,DS0022,File,File Deletion,Process/User,Deleted,File
+Microsoft-Windows-Sysmon,26,File Delete logged.,DS0022,File,File Deletion,Process/User,Deleted,File
+Microsoft-Windows-Sysmon,2,A process changed a file creation time,DS0022,File,File Modification,Process/User/File,Modified,File
+Microsoft-Windows-Sysmon,7,Image Loaded,DS0011,Module,Module Load,Process/User,Loaded,Module
+Microsoft-Windows-Sysmon,18,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Connection,Process,Created,Named Pipe
+Microsoft-Windows-Sysmon,17,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Created,Pipe
+Microsoft-Windows-Sysmon,17,PipeEvent (Pipe Created),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
+Microsoft-Windows-Sysmon,18,PipeEvent (Pipe Connected),DS0023,Named Pipe,Named Pipe Metadata,Process/User,Connected To,Pipe
+Microsoft-Windows-Sysmon,3,Network connection,DS0029,Network Traffic,Network Connection Creation,Process/User,Connected To/From,Ip/Port/Device
+Microsoft-Windows-Sysmon,10,ProcessAccess,DS0009,Process,Process Access,Process,Accessed,Process
+Microsoft-Windows-Sysmon,1,A new process has been created,DS0009,Process,Process Creation,Process/User,Created,Process
+Microsoft-Windows-Sysmon,1,A new process has been created,DS0009,Process,Process Creation,Process/User,Executed,Process
+Microsoft-Windows-Sysmon,30,EventID(30),DS0009,Process,Process Metadata,Process,Searched,Ldap
+Microsoft-Windows-Sysmon,8,The CreateRemoteThread event detects when a process creates a thread in another process.,DS0009,Process,Process Modification,Process,Modified,Process
+Microsoft-Windows-Sysmon,5,Process terminated,DS0009,Process,Process Termination,Process/User,Terminated,Process
+Microsoft-Windows-Sysmon,4,Sysmon service state changed.,DS0019,Service,Service Metadata,Service,Stopped/Started,Service
+Microsoft-Windows-Sysmon,12,RegistryEvent (Object create and delete),DS0024,Windows Registry,Windows Registry Key Creation,Process/User,Created,Registry
+Microsoft-Windows-Sysmon,12,RegistryEvent (Object create and delete),DS0024,Windows Registry,Windows Registry Key Deletion,Process/User,Deleted,Registry
+Microsoft-Windows-Sysmon,13,RegistryEvent (Value Set),DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
+Microsoft-Windows-Sysmon,14,RegistryEvent (Key and Value Rename),DS0024,Windows Registry,Windows Registry Key Modification,Process/User,Modified,Registry
+Microsoft-Windows-Sysmon,19,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Creation,User,Created,WMI Object
+Microsoft-Windows-Sysmon,20,WmiEvent (WmiEventConsumer activity detected).,DS0005,WMI,WMI Creation,User,Created,WMI Object
+Microsoft-Windows-Sysmon,19,WmiEvent (WmiEventFilter activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
+Microsoft-Windows-Sysmon,20,WmiEvent (WmiEventConsumer activity detected).,DS0005,WMI,WMI Deletion,User,Deleted,WMI Object
